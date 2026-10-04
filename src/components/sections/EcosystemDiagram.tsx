@@ -54,10 +54,11 @@ export function EcosystemDiagram() {
   ];
 
   return (
-    <section id="ecosystem" className="py-24 sm:py-32 bg-charcoal-900 border-t border-charcoal-800 relative">
+    <section id="about" className="py-24 sm:py-32 bg-charcoal-900 border-t border-charcoal-800 relative scroll-mt-20">
+      <div id="ecosystem" className="absolute -top-20" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          badge="Unified Engineering Architecture"
+          badge="About AfriSMME Hub & Ecosystem"
           title="The AfriSMME Integrated"
           highlightedTitle="Hospitality Ecosystem."
           description="In traditional hospitality operations, six different disconnected vendors create friction, delayed finger-pointing, and runaway billing. AfriSMME converges all physical and technical disciplines under one unified orchestration."

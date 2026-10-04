@@ -1,19 +1,22 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { X, PhoneCall, ShieldAlert, ArrowRight } from 'lucide-react';
+import { X, PhoneCall, ShieldAlert, ArrowRight, ChevronDown, Compass, Sparkles, Wrench, ShieldCheck, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { BrandLogo } from '@/components/ui/BrandLogo';
+import { SERVICE_PILLARS } from '@/data/services';
+import { cn } from '@/lib/utils';
 
 interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
-  links: { label: string; href: string }[];
   onOpenAudit?: () => void;
 }
 
-export function MobileMenu({ isOpen, onClose, links, onOpenAudit }: MobileMenuProps) {
+export function MobileMenu({ isOpen, onClose, onOpenAudit }: MobileMenuProps) {
+  const [servicesExpanded, setServicesExpanded] = useState(false);
+
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape' && isOpen) {
@@ -36,9 +39,18 @@ export function MobileMenu({ isOpen, onClose, links, onOpenAudit }: MobileMenuPr
 
   if (!isOpen) return null;
 
+  const pillarIcons: Record<string, React.ReactNode> = {
+    attract: <Compass className="w-3.5 h-3.5 text-bronze-400" />,
+    enhance: <Sparkles className="w-3.5 h-3.5 text-bronze-400" />,
+    restore: <Wrench className="w-3.5 h-3.5 text-bronze-400" />,
+    maintain: <ShieldCheck className="w-3.5 h-3.5 text-bronze-400" />,
+    protect: <ShieldAlert className="w-3.5 h-3.5 text-bronze-400" />,
+    grow: <TrendingUp className="w-3.5 h-3.5 text-bronze-400" />,
+  };
+
   return (
     <div
-      className="fixed inset-0 z-[100] xl:hidden bg-charcoal-950/80 backdrop-blur-xl animate-fade-in"
+      className="fixed inset-0 z-[100] lg:hidden bg-charcoal-950/85 backdrop-blur-xl animate-fade-in"
       role="dialog"
       aria-modal="true"
       aria-label="Navigation Menu"
@@ -57,22 +69,104 @@ export function MobileMenu({ isOpen, onClose, links, onOpenAudit }: MobileMenuPr
           </button>
         </div>
 
-        {/* Navigation list */}
-        <nav className="flex flex-col gap-2 py-6">
+        {/* Clean Main Navigation links */}
+        <nav className="flex flex-col gap-1 py-6">
           <span className="text-[10px] tracking-cinematic uppercase text-ivory-400 font-semibold mb-2">
-            Pillars & Solutions
+            Navigation
           </span>
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={onClose}
-              className="flex items-center justify-between py-3 px-3 rounded-sm text-lg font-display text-ivory-100 hover:text-bronze-300 hover:bg-charcoal-800/60 transition-colors"
+
+          {/* Home */}
+          <Link
+            href="/"
+            onClick={onClose}
+            className="flex items-center justify-between py-3 px-3 rounded-sm text-base font-display text-ivory-100 hover:text-bronze-300 hover:bg-charcoal-800/60 transition-colors"
+          >
+            <span>Home</span>
+            <ArrowRight className="w-4 h-4 text-bronze-500/60" />
+          </Link>
+
+          {/* About Us */}
+          <a
+            href="#about"
+            onClick={onClose}
+            className="flex items-center justify-between py-3 px-3 rounded-sm text-base font-display text-ivory-100 hover:text-bronze-300 hover:bg-charcoal-800/60 transition-colors"
+          >
+            <span>About Us</span>
+            <ArrowRight className="w-4 h-4 text-bronze-500/60" />
+          </a>
+
+          {/* Services with Accordion */}
+          <div>
+            <button
+              type="button"
+              onClick={() => setServicesExpanded(!servicesExpanded)}
+              className="w-full flex items-center justify-between py-3 px-3 rounded-sm text-base font-display text-ivory-100 hover:text-bronze-300 hover:bg-charcoal-800/60 transition-colors"
             >
-              <span>{link.label}</span>
-              <ArrowRight className="w-4 h-4 text-bronze-500/60" />
-            </a>
-          ))}
+              <span>Services</span>
+              <ChevronDown
+                className={cn(
+                  'w-4 h-4 text-bronze-400 transition-transform duration-200',
+                  servicesExpanded && 'rotate-180'
+                )}
+              />
+            </button>
+
+            {servicesExpanded && (
+              <div className="pl-4 pr-2 py-2 space-y-1 bg-charcoal-950/60 rounded-sm my-1 border-l-2 border-bronze-500/40">
+                {SERVICE_PILLARS.map((pillar) => (
+                  <a
+                    key={pillar.id}
+                    href={`#${pillar.id}`}
+                    onClick={onClose}
+                    className="flex items-center justify-between py-2 px-2 text-xs font-mono text-ivory-200 hover:text-bronze-300 hover:bg-charcoal-900 rounded transition-colors"
+                  >
+                    <div className="flex items-center gap-2">
+                      {pillarIcons[pillar.id]}
+                      <span>{pillar.pillarNumber}. {pillar.name}</span>
+                    </div>
+                    <span className="text-[10px] text-ivory-400">View</span>
+                  </a>
+                ))}
+                <a
+                  href="#blueprint"
+                  onClick={onClose}
+                  className="flex items-center gap-2 pt-2 pb-1 px-2 text-[11px] font-mono text-bronze-300 hover:text-ivory-50 border-t border-charcoal-800 mt-2"
+                >
+                  <span>Interactive Blueprint →</span>
+                </a>
+              </div>
+            )}
+          </div>
+
+          {/* The Difference */}
+          <a
+            href="#comparison"
+            onClick={onClose}
+            className="flex items-center justify-between py-3 px-3 rounded-sm text-base font-display text-ivory-100 hover:text-bronze-300 hover:bg-charcoal-800/60 transition-colors"
+          >
+            <span>The Difference</span>
+            <ArrowRight className="w-4 h-4 text-bronze-500/60" />
+          </a>
+
+          {/* Case Studies */}
+          <a
+            href="#case-studies"
+            onClick={onClose}
+            className="flex items-center justify-between py-3 px-3 rounded-sm text-base font-display text-ivory-100 hover:text-bronze-300 hover:bg-charcoal-800/60 transition-colors"
+          >
+            <span>Case Studies</span>
+            <ArrowRight className="w-4 h-4 text-bronze-500/60" />
+          </a>
+
+          {/* Contact */}
+          <a
+            href="#contact"
+            onClick={onClose}
+            className="flex items-center justify-between py-3 px-3 rounded-sm text-base font-display text-ivory-100 hover:text-bronze-300 hover:bg-charcoal-800/60 transition-colors"
+          >
+            <span>Contact</span>
+            <ArrowRight className="w-4 h-4 text-bronze-500/60" />
+          </a>
         </nav>
 
         {/* Emergency Hotline Box */}
@@ -83,7 +177,7 @@ export function MobileMenu({ isOpen, onClose, links, onOpenAudit }: MobileMenuPr
               <p className="text-xs font-semibold text-ivory-100">Rapid Response Hotline</p>
               <p className="text-xs text-ivory-400 mt-0.5">Emergency kitchen & facility dispatch 24/7</p>
               <a
-                href="tel:+27110000000"
+                href="tel:+27118849200"
                 className="inline-flex items-center gap-1.5 text-xs text-bronze-400 font-mono font-medium mt-2 hover:underline"
               >
                 <PhoneCall className="w-3.5 h-3.5" />
