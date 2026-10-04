@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560">
+  <title>Real-World Test: Executive Staff Uniform Suite</title>
+  
+  <rect width="1000" height="560" fill="#0C0E12"/>
+  
+  <!-- Title Header -->
+  <text x="50" y="45" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" letter-spacing="2" fill="#F9F8F5">STAFF APPAREL &amp; UNIFORM EMBROIDERY SPECIFICATION</text>
+  <text x="50" y="68" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="400" fill="undefined">Bullion Gold Thread Blazer Crest  •  Heavy Canvas Apron Badge  •  Brushed Brass Executive Lapel Pin</text>
+
+  <!-- PANEL 1: EXECUTIVE BLAZER CHEST EMBROIDERY -->
+  <g transform="translate(50, 100)">
+    <!-- Charcoal Wool Suiting Texture Base -->
+    <rect width="270" height="400" fill="#181B22" rx="10" stroke="#282E3B" stroke-width="1.5"/>
+    <text x="25" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" letter-spacing="1.5" fill="#C5A880">EXECUTIVE BLAZER</text>
+    <text x="25" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="undefined">Bullion Thread Pocket Crest</text>
+    
+    <!-- Breast Pocket Outline -->
+    <path d="M 55 120 L 215 120 L 215 260 Q 215 310 135 320 Q 55 310 55 260 Z" fill="#14161C" stroke="#2B3240" stroke-width="2"/>
+    <path d="M 62 126 L 208 126 L 208 255 Q 208 300 135 310 Q 62 300 62 255 Z" fill="none" stroke="#222834" stroke-dasharray="3 3" stroke-width="1.5"/>
+    
+    <!-- Embroidered Gold/Bronze Crest -->
+    <g transform="translate(85, 150)">
+      
+    <g class="symbol-concept-01" transform="scale(0.5000)">
+      <!-- Quadrant 01: Top-Right (Operations & Advisory) -->
+      <path d="M 106 20 A 78 78 0 0 1 180 94 L 148 94 A 46 46 0 0 0 106 52 Z" fill="#C5A880"/>
+      
+      <!-- Quadrant 02: Bottom-Right (Facilities Management & FF&E) -->
+      <path d="M 180 106 A 78 78 0 0 1 106 180 L 106 148 A 46 46 0 0 0 148 106 Z" fill="#C5A880"/>
+      
+      <!-- Quadrant 03: Bottom-Left (Supply Chain & Sourcing) -->
+      <path d="M 94 180 A 78 78 0 0 1 20 106 L 52 106 A 46 46 0 0 0 94 148 Z" fill="#C5A880"/>
+      
+      <!-- Quadrant 04: Top-Left (Technology & Guest Systems) -->
+      <path d="M 20 94 A 78 78 0 0 1 94 20 L 94 52 A 46 46 0 0 0 52 94 Z" fill="#C5A880"/>
+      
+      <!-- Central Hub Star: 4-Point Curved Diamond Compass Rose -->
+      <path d="M 100 80 Q 100 100 120 100 Q 100 100 100 120 Q 100 100 80 100 Q 100 100 100 80 Z" fill="#C5A880"/>
+    </g>
+  
+    </g>
+    <text x="135" y="275" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" letter-spacing="2" fill="#C5A880" text-anchor="middle">AFRISMME HUB</text>
+  </g>
+
+  <!-- PANEL 2: SERVICE / OPERATIONS APRON BADGE -->
+  <g transform="translate(365, 100)">
+    <!-- Heavy Duty Deep Forest Green & Charcoal Canvas -->
+    <rect width="270" height="400" fill="#15201A" rx="10" stroke="#253A2E" stroke-width="1.5"/>
+    <text x="25" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" letter-spacing="1.5" fill="#C5A880">OPERATIONS APRON</text>
+    <text x="25" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="undefined">14oz Waxed Canvas Leather Patch</text>
+    
+    <!-- Genuine Leather Embossed Patch -->
+    <rect x="45" y="130" width="180" height="180" rx="8" fill="#1F1A15" stroke="#3D3227" stroke-width="2"/>
+    <rect x="52" y="137" width="166" height="166" rx="6" fill="none" stroke="#5E4E3D" stroke-dasharray="4 3" stroke-width="1.5"/>
+    
+    <!-- Debossed Monogram / Mark -->
+    <g transform="translate(85, 160)">
+      
+    <g class="symbol-concept-01" transform="scale(0.5000)">
+      <!-- Quadrant 01: Top-Right (Operations & Advisory) -->
+      <path d="M 106 20 A 78 78 0 0 1 180 94 L 148 94 A 46 46 0 0 0 106 52 Z" fill="#C5A880"/>
+      
+      <!-- Quadrant 02: Bottom-Right (Facilities Management & FF&E) -->
+      <path d="M 180 106 A 78 78 0 0 1 106 180 L 106 148 A 46 46 0 0 0 148 106 Z" fill="#C5A880"/>
+      
+      <!-- Quadrant 03: Bottom-Left (Supply Chain & Sourcing) -->
+      <path d="M 94 180 A 78 78 0 0 1 20 106 L 52 106 A 46 46 0 0 0 94 148 Z" fill="#C5A880"/>
+      
+      <!-- Quadrant 04: Top-Left (Technology & Guest Systems) -->
+      <path d="M 20 94 A 78 78 0 0 1 94 20 L 94 52 A 46 46 0 0 0 52 94 Z" fill="#C5A880"/>
+      
+      <!-- Central Hub Star: 4-Point Curved Diamond Compass Rose -->
+      <path d="M 100 80 Q 100 100 120 100 Q 100 100 100 120 Q 100 100 80 100 Q 100 100 100 80 Z" fill="#C5A880"/>
+    </g>
+  
+    </g>
+    <text x="135" y="282" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="700" letter-spacing="2" fill="#D8C2A0" text-anchor="middle">HOSPITALITY SUPPORT</text>
+  </g>
+
+  <!-- PANEL 3: BRUSHED BRASS EXECUTIVE LAPEL PIN -->
+  <g transform="translate(680, 100)">
+    <rect width="270" height="400" fill="#16181F" rx="10" stroke="#262A36" stroke-width="1.5"/>
+    <text x="25" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" letter-spacing="1.5" fill="#C5A880">EXECUTIVE LAPEL PIN</text>
+    <text x="25" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="undefined">Cast Brushed Brass (22mm)</text>
+    
+    <!-- Velvet Jewelry Presentation Box -->
+    <rect x="45" y="110" width="180" height="220" rx="12" fill="#0A0B0E" stroke="#20242E" stroke-width="2"/>
+    
+    <!-- Cast Brass Pin Badge -->
+    <circle cx="135" cy="205" r="54" fill="#201C16" stroke="#C5A880" stroke-width="2"/>
+    <circle cx="135" cy="205" r="48" fill="#151310" stroke="#A88A62" stroke-width="1"/>
+    
+    <g transform="translate(100, 170)">
+      
+    <g class="symbol-concept-01" transform="scale(0.3500)">
+      <!-- Quadrant 01: Top-Right (Operations & Advisory) -->
+      <path d="M 106 20 A 78 78 0 0 1 180 94 L 148 94 A 46 46 0 0 0 106 52 Z" fill="#C5A880"/>
+      
+      <!-- Quadrant 02: Bottom-Right (Facilities Management & FF&E) -->
+      <path d="M 180 106 A 78 78 0 0 1 106 180 L 106 148 A 46 46 0 0 0 148 106 Z" fill="#C5A880"/>
+      
+      <!-- Quadrant 03: Bottom-Left (Supply Chain & Sourcing) -->
+      <path d="M 94 180 A 78 78 0 0 1 20 106 L 52 106 A 46 46 0 0 0 94 148 Z" fill="#C5A880"/>
+      
+      <!-- Quadrant 04: Top-Left (Technology & Guest Systems) -->
+      <path d="M 20 94 A 78 78 0 0 1 94 20 L 94 52 A 46 46 0 0 0 52 94 Z" fill="#C5A880"/>
+      
+      <!-- Central Hub Star: 4-Point Curved Diamond Compass Rose -->
+      <path d="M 100 80 Q 100 100 120 100 Q 100 100 100 120 Q 100 100 80 100 Q 100 100 100 80 Z" fill="#C5A880"/>
+    </g>
+  
+    </g>
+    
+    <text x="135" y="285" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="600" letter-spacing="1.5" fill="#C5A880" text-anchor="middle">LEADERSHIP SEAL</text>
+  </g>
+</svg>

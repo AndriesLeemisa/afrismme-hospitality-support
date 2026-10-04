@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560">
+  <title>Real-World Test: Executive Staff Uniform Suite</title>
+  
+  <rect width="1000" height="560" fill="#0C0E12"/>
+  
+  <!-- Title Header -->
+  <text x="50" y="45" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" letter-spacing="2" fill="#F9F8F5">STAFF APPAREL &amp; UNIFORM EMBROIDERY SPECIFICATION</text>
+  <text x="50" y="68" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="400" fill="undefined">Bullion Gold Thread Blazer Crest  •  Heavy Canvas Apron Badge  •  Brushed Brass Executive Lapel Pin</text>
+
+  <!-- PANEL 1: EXECUTIVE BLAZER CHEST EMBROIDERY -->
+  <g transform="translate(50, 100)">
+    <!-- Charcoal Wool Suiting Texture Base -->
+    <rect width="270" height="400" fill="#181B22" rx="10" stroke="#282E3B" stroke-width="1.5"/>
+    <text x="25" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" letter-spacing="1.5" fill="#C5A880">EXECUTIVE BLAZER</text>
+    <text x="25" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="undefined">Bullion Thread Pocket Crest</text>
+    
+    <!-- Breast Pocket Outline -->
+    <path d="M 55 120 L 215 120 L 215 260 Q 215 310 135 320 Q 55 310 55 260 Z" fill="#14161C" stroke="#2B3240" stroke-width="2"/>
+    <path d="M 62 126 L 208 126 L 208 255 Q 208 300 135 310 Q 62 300 62 255 Z" fill="none" stroke="#222834" stroke-dasharray="3 3" stroke-width="1.5"/>
+    
+    <!-- Embroidered Gold/Bronze Crest -->
+    <g transform="translate(85, 150)">
+      
+    <g class="symbol-concept-02" transform="scale(0.5000)">
+      <!-- Ground Foundation Plinth -->
+      <rect x="24" y="172" width="152" height="6" rx="1.5" fill="#C5A880"/>
+      
+      <!-- Left Monumental Pillar -->
+      <rect x="34" y="52" width="24" height="120" rx="1.5" fill="#C5A880"/>
+      <!-- Right Monumental Pillar -->
+      <rect x="142" y="52" width="24" height="120" rx="1.5" fill="#C5A880"/>
+      
+      <!-- Stepped Arch Portal (Sanctuary of Welcome) -->
+      <path d="M 66 172 L 66 104 A 34 34 0 0 1 134 104 L 134 172 L 118 172 L 118 110 A 18 18 0 0 0 82 110 L 82 172 Z" fill="#C5A880"/>
+      
+      <!-- Welcoming Portal Horizon Beacon -->
+      <circle cx="100" cy="138" r="6" fill="#C5A880"/>
+      
+      <!-- Cantilever Floating Canopy (The Grand Overhang) -->
+      <polygon points="18,52 28,38 172,38 182,52" fill="#C5A880"/>
+      
+      <!-- Apex Golden Visionary Pediment -->
+      <polygon points="100,20 115,34 85,34" fill="#C5A880"/>
+    </g>
+  
+    </g>
+    <text x="135" y="275" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" letter-spacing="2" fill="#C5A880" text-anchor="middle">AFRISMME HUB</text>
+  </g>
+
+  <!-- PANEL 2: SERVICE / OPERATIONS APRON BADGE -->
+  <g transform="translate(365, 100)">
+    <!-- Heavy Duty Deep Forest Green & Charcoal Canvas -->
+    <rect width="270" height="400" fill="#15201A" rx="10" stroke="#253A2E" stroke-width="1.5"/>
+    <text x="25" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" letter-spacing="1.5" fill="#C5A880">OPERATIONS APRON</text>
+    <text x="25" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="undefined">14oz Waxed Canvas Leather Patch</text>
+    
+    <!-- Genuine Leather Embossed Patch -->
+    <rect x="45" y="130" width="180" height="180" rx="8" fill="#1F1A15" stroke="#3D3227" stroke-width="2"/>
+    <rect x="52" y="137" width="166" height="166" rx="6" fill="none" stroke="#5E4E3D" stroke-dasharray="4 3" stroke-width="1.5"/>
+    
+    <!-- Debossed Monogram / Mark -->
+    <g transform="translate(85, 160)">
+      
+    <g class="symbol-concept-02" transform="scale(0.5000)">
+      <!-- Ground Foundation Plinth -->
+      <rect x="24" y="172" width="152" height="6" rx="1.5" fill="#C5A880"/>
+      
+      <!-- Left Monumental Pillar -->
+      <rect x="34" y="52" width="24" height="120" rx="1.5" fill="#C5A880"/>
+      <!-- Right Monumental Pillar -->
+      <rect x="142" y="52" width="24" height="120" rx="1.5" fill="#C5A880"/>
+      
+      <!-- Stepped Arch Portal (Sanctuary of Welcome) -->
+      <path d="M 66 172 L 66 104 A 34 34 0 0 1 134 104 L 134 172 L 118 172 L 118 110 A 18 18 0 0 0 82 110 L 82 172 Z" fill="#C5A880"/>
+      
+      <!-- Welcoming Portal Horizon Beacon -->
+      <circle cx="100" cy="138" r="6" fill="#C5A880"/>
+      
+      <!-- Cantilever Floating Canopy (The Grand Overhang) -->
+      <polygon points="18,52 28,38 172,38 182,52" fill="#C5A880"/>
+      
+      <!-- Apex Golden Visionary Pediment -->
+      <polygon points="100,20 115,34 85,34" fill="#C5A880"/>
+    </g>
+  
+    </g>
+    <text x="135" y="282" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="700" letter-spacing="2" fill="#D8C2A0" text-anchor="middle">HOSPITALITY SUPPORT</text>
+  </g>
+
+  <!-- PANEL 3: BRUSHED BRASS EXECUTIVE LAPEL PIN -->
+  <g transform="translate(680, 100)">
+    <rect width="270" height="400" fill="#16181F" rx="10" stroke="#262A36" stroke-width="1.5"/>
+    <text x="25" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" letter-spacing="1.5" fill="#C5A880">EXECUTIVE LAPEL PIN</text>
+    <text x="25" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="undefined">Cast Brushed Brass (22mm)</text>
+    
+    <!-- Velvet Jewelry Presentation Box -->
+    <rect x="45" y="110" width="180" height="220" rx="12" fill="#0A0B0E" stroke="#20242E" stroke-width="2"/>
+    
+    <!-- Cast Brass Pin Badge -->
+    <circle cx="135" cy="205" r="54" fill="#201C16" stroke="#C5A880" stroke-width="2"/>
+    <circle cx="135" cy="205" r="48" fill="#151310" stroke="#A88A62" stroke-width="1"/>
+    
+    <g transform="translate(100, 170)">
+      
+    <g class="symbol-concept-02" transform="scale(0.3500)">
+      <!-- Ground Foundation Plinth -->
+      <rect x="24" y="172" width="152" height="6" rx="1.5" fill="#C5A880"/>
+      
+      <!-- Left Monumental Pillar -->
+      <rect x="34" y="52" width="24" height="120" rx="1.5" fill="#C5A880"/>
+      <!-- Right Monumental Pillar -->
+      <rect x="142" y="52" width="24" height="120" rx="1.5" fill="#C5A880"/>
+      
+      <!-- Stepped Arch Portal (Sanctuary of Welcome) -->
+      <path d="M 66 172 L 66 104 A 34 34 0 0 1 134 104 L 134 172 L 118 172 L 118 110 A 18 18 0 0 0 82 110 L 82 172 Z" fill="#C5A880"/>
+      
+      <!-- Welcoming Portal Horizon Beacon -->
+      <circle cx="100" cy="138" r="6" fill="#C5A880"/>
+      
+      <!-- Cantilever Floating Canopy (The Grand Overhang) -->
+      <polygon points="18,52 28,38 172,38 182,52" fill="#C5A880"/>
+      
+      <!-- Apex Golden Visionary Pediment -->
+      <polygon points="100,20 115,34 85,34" fill="#C5A880"/>
+    </g>
+  
+    </g>
+    
+    <text x="135" y="285" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="600" letter-spacing="1.5" fill="#C5A880" text-anchor="middle">LEADERSHIP SEAL</text>
+  </g>
+</svg>

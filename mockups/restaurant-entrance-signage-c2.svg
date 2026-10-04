@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560">
+  <title>Real-World Test: Restaurant & Hospitality Entrance Signage</title>
+  
+  <!-- Architectural Fluted Dark Granite Wall / Exterior Facade -->
+  <rect width="1000" height="560" fill="#0E1014"/>
+  
+  <!-- Architectural Vertical Stone Joints -->
+  <g stroke="#161A22" stroke-width="2">
+    <line x1="120" y1="0" x2="120" y2="560"/>
+    <line x1="280" y1="0" x2="280" y2="560"/>
+    <line x1="440" y1="0" x2="440" y2="560"/>
+    <line x1="600" y1="0" x2="600" y2="560"/>
+    <line x1="760" y1="0" x2="760" y2="560"/>
+    <line x1="920" y1="0" x2="920" y2="560"/>
+  </g>
+  
+  <!-- Architectural Downlight Ambient Glow (Warm 2700K wash) -->
+  <radialGradient id="signGlow" cx="50%" cy="30%" r="50%">
+    <stop offset="0%" stop-color="#C5A880" stop-opacity="0.18"/>
+    <stop offset="60%" stop-color="#C5A880" stop-opacity="0.04"/>
+    <stop offset="100%" stop-color="#0E1014" stop-opacity="0"/>
+  </radialGradient>
+  <rect x="100" y="40" width="800" height="480" fill="url(#signGlow)"/>
+
+  <!-- Architectural Entrance Portal Canopy -->
+  <rect x="160" y="60" width="680" height="12" fill="#242A35" rx="3"/>
+  <rect x="180" y="72" width="640" height="6" fill="#1A1E26"/>
+  
+  <!-- Architectural Signboard: Brushed Deep Charcoal Plaque with Bronze Trim -->
+  <rect x="200" y="120" width="600" height="280" fill="#13161C" rx="10" stroke="#2E3542" stroke-width="2"/>
+  <rect x="210" y="130" width="580" height="260" fill="none" stroke="#C5A880" stroke-width="1" stroke-opacity="0.35" rx="6"/>
+  
+  <!-- Precision Mounting Standoff Screws (4 corners) -->
+  <circle cx="225" cy="145" r="4.5" fill="#3D4554"/>
+  <circle cx="775" cy="145" r="4.5" fill="#3D4554"/>
+  <circle cx="225" cy="375" r="4.5" fill="#3D4554"/>
+  <circle cx="775" cy="375" r="4.5" fill="#3D4554"/>
+  
+  <!-- Dimensional Brushed Metallic Bronze Symbol (Cast Bronze with drop shadow) -->
+  <g transform="translate(250, 175)">
+    <!-- Cast drop-shadow layer -->
+    <g transform="translate(3, 4)" opacity="0.6">
+      
+    <g class="symbol-concept-02" transform="scale(0.7500)">
+      <!-- Ground Foundation Plinth -->
+      <rect x="24" y="172" width="152" height="6" rx="1.5" fill="#121316"/>
+      
+      <!-- Left Monumental Pillar -->
+      <rect x="34" y="52" width="24" height="120" rx="1.5" fill="#121316"/>
+      <!-- Right Monumental Pillar -->
+      <rect x="142" y="52" width="24" height="120" rx="1.5" fill="#121316"/>
+      
+      <!-- Stepped Arch Portal (Sanctuary of Welcome) -->
+      <path d="M 66 172 L 66 104 A 34 34 0 0 1 134 104 L 134 172 L 118 172 L 118 110 A 18 18 0 0 0 82 110 L 82 172 Z" fill="#121316"/>
+      
+      <!-- Welcoming Portal Horizon Beacon -->
+      <circle cx="100" cy="138" r="6" fill="#121316"/>
+      
+      <!-- Cantilever Floating Canopy (The Grand Overhang) -->
+      <polygon points="18,52 28,38 172,38 182,52" fill="#121316"/>
+      
+      <!-- Apex Golden Visionary Pediment -->
+      <polygon points="100,20 115,34 85,34" fill="#121316"/>
+    </g>
+  
+    </g>
+    <!-- Master Bronze Signage Symbol -->
+    
+    <g class="symbol-concept-02" transform="scale(0.7500)">
+      <!-- Ground Foundation Plinth -->
+      <rect x="24" y="172" width="152" height="6" rx="1.5" fill="#C5A880"/>
+      
+      <!-- Left Monumental Pillar -->
+      <rect x="34" y="52" width="24" height="120" rx="1.5" fill="#C5A880"/>
+      <!-- Right Monumental Pillar -->
+      <rect x="142" y="52" width="24" height="120" rx="1.5" fill="#C5A880"/>
+      
+      <!-- Stepped Arch Portal (Sanctuary of Welcome) -->
+      <path d="M 66 172 L 66 104 A 34 34 0 0 1 134 104 L 134 172 L 118 172 L 118 110 A 18 18 0 0 0 82 110 L 82 172 Z" fill="#C5A880"/>
+      
+      <!-- Welcoming Portal Horizon Beacon -->
+      <circle cx="100" cy="138" r="6" fill="#C5A880"/>
+      
+      <!-- Cantilever Floating Canopy (The Grand Overhang) -->
+      <polygon points="18,52 28,38 172,38 182,52" fill="#C5A880"/>
+      
+      <!-- Apex Golden Visionary Pediment -->
+      <polygon points="100,20 115,34 85,34" fill="#C5A880"/>
+    </g>
+  
+  </g>
+  
+  <!-- Signage Typography in Solid Brushed Champagne Gold -->
+  <g transform="translate(435, 215)">
+    <text x="0" y="38" font-family="'Plus Jakarta Sans', 'Montserrat', sans-serif" font-size="34" font-weight="800" letter-spacing="5" fill="#C5A880">AFRISMME HUB</text>
+    <text x="0" y="70" font-family="'Plus Jakarta Sans', sans-serif" font-size="12.5" font-weight="600" letter-spacing="4" fill="#F9F8F5">HOSPITALITY SUPPORT ECOSYSTEM</text>
+    <line x1="0" y1="88" x2="280" y2="88" stroke="#C5A880" stroke-width="1" stroke-opacity="0.4"/>
+    <text x="0" y="108" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="500" letter-spacing="3" fill="#8E99A8">EXECUTIVE PORTAL &amp; SUITES</text>
+  </g>
+  
+  <!-- Concrete Pavement Base -->
+  <rect x="0" y="520" width="1000" height="40" fill="#161920"/>
+  <line x1="0" y1="520" x2="1000" y2="520" stroke="#252A36" stroke-width="2"/>
+</svg>

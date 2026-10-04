@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <title>concept-03-monogram - Standalone Vector Symbol</title>
+  
+  
+    <g class="symbol-concept-03" transform="scale(1.0000)">
+      <!-- 'A' Monolithic Apex & Diagonal Rafters -->
+      <polygon points="30,76 90,24 110,24 170,76 148,76 100,42 52,76" fill="#C5A880"/>
+      
+      <!-- 'H' Left Monolithic Column -->
+      <rect x="30" y="76" width="22" height="98" rx="1.5" fill="#121316"/>
+      <!-- 'H' Right Monolithic Column -->
+      <rect x="148" y="76" width="22" height="98" rx="1.5" fill="#121316"/>
+      
+      <!-- 'H' Crossbar (Left Wing) -->
+      <rect x="52" y="96" width="30" height="18" fill="#121316"/>
+      <!-- 'H' Crossbar (Right Wing) -->
+      <rect x="118" y="96" width="30" height="18" fill="#121316"/>
+      
+      <!-- Central Hub Diamond Core -->
+      <polygon points="100,84 120,105 100,126 80,105" fill="#C5A880"/>
+      <!-- Inner Diamond Precision Aperture (Negative Space) -->
+      <polygon points="100,94 110,105 100,116 90,105" fill="#F9F8F5"/>
+    </g>
+  
+</svg>

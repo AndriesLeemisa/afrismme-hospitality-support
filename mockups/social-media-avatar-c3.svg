@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560">
+  <title>Real-World Test: Social Media Avatar &amp; Digital Icon Suite</title>
+  
+  <rect width="1000" height="560" fill="#0C0E12"/>
+  
+  <text x="50" y="45" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" letter-spacing="2" fill="#F9F8F5">DIGITAL AVATAR &amp; SOCIAL PROFILE SPECIFICATIONS</text>
+  <text x="50" y="68" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="400" fill="undefined">Optimized with 20% Safe Padding for LinkedIn, X, Instagram, WhatsApp Business, and iOS/Android</text>
+
+  <!-- AVATAR 1: Circular Avatar (e.g. LinkedIn / Instagram 400x400) -->
+  <g transform="translate(80, 110)">
+    <rect width="250" height="380" fill="#14171E" rx="10" stroke="#252B36" stroke-width="1.5"/>
+    <text x="25" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" letter-spacing="1.5" fill="#C5A880">CIRCULAR PROFILE</text>
+    <text x="25" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="undefined">LinkedIn / Instagram / WhatsApp</text>
+    
+    <!-- Circular container -->
+    <circle cx="125" cy="180" r="85" fill="#121316" stroke="#2E3542" stroke-width="2"/>
+    <circle cx="125" cy="180" r="85" fill="none" stroke="#C5A880" stroke-width="1.5" stroke-dasharray="3 3"/>
+    
+    <!-- Scaled Symbol with exact 25% safe padding -->
+    <g transform="translate(65, 120)">
+      
+    <g class="symbol-concept-03" transform="scale(0.6000)">
+      <!-- 'A' Monolithic Apex & Diagonal Rafters -->
+      <polygon points="30,76 90,24 110,24 170,76 148,76 100,42 52,76" fill="#C5A880"/>
+      
+      <!-- 'H' Left Monolithic Column -->
+      <rect x="30" y="76" width="22" height="98" rx="1.5" fill="#C5A880"/>
+      <!-- 'H' Right Monolithic Column -->
+      <rect x="148" y="76" width="22" height="98" rx="1.5" fill="#C5A880"/>
+      
+      <!-- 'H' Crossbar (Left Wing) -->
+      <rect x="52" y="96" width="30" height="18" fill="#C5A880"/>
+      <!-- 'H' Crossbar (Right Wing) -->
+      <rect x="118" y="96" width="30" height="18" fill="#C5A880"/>
+      
+      <!-- Central Hub Diamond Core -->
+      <polygon points="100,84 120,105 100,126 80,105" fill="#C5A880"/>
+      <!-- Inner Diamond Precision Aperture (Negative Space) -->
+      <polygon points="100,94 110,105 100,116 90,105" fill="#F9F8F5"/>
+    </g>
+  
+    </g>
+    
+    <text x="125" y="300" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#F9F8F5" text-anchor="middle">@AfriSMMEHub</text>
+    <text x="125" y="316" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" fill="#8892A0" text-anchor="middle">Corporate Verified Badge</text>
+    
+    <!-- Verified Badge Icon -->
+    <circle cx="125" cy="340" r="9" fill="#C5A880"/>
+    <path d="M 121 340 L 124 343 L 129 337" stroke="#121316" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- AVATAR 2: Rounded Squircle Avatar (e.g. Apple App Store / Android Adaptive) -->
+  <g transform="translate(375, 110)">
+    <rect width="250" height="380" fill="#14171E" rx="10" stroke="#252B36" stroke-width="1.5"/>
+    <text x="25" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" letter-spacing="1.5" fill="#C5A880">SQUIRCLE APP ICON</text>
+    <text x="25" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="undefined">iOS / Android Ecosystem App</text>
+    
+    <!-- Squircle container -->
+    <rect x="40" y="95" width="170" height="170" rx="38" fill="#121316" stroke="#2E3542" stroke-width="2"/>
+    
+    <g transform="translate(65, 120)">
+      
+    <g class="symbol-concept-03" transform="scale(0.6000)">
+      <!-- 'A' Monolithic Apex & Diagonal Rafters -->
+      <polygon points="30,76 90,24 110,24 170,76 148,76 100,42 52,76" fill="#C5A880"/>
+      
+      <!-- 'H' Left Monolithic Column -->
+      <rect x="30" y="76" width="22" height="98" rx="1.5" fill="#121316"/>
+      <!-- 'H' Right Monolithic Column -->
+      <rect x="148" y="76" width="22" height="98" rx="1.5" fill="#121316"/>
+      
+      <!-- 'H' Crossbar (Left Wing) -->
+      <rect x="52" y="96" width="30" height="18" fill="#121316"/>
+      <!-- 'H' Crossbar (Right Wing) -->
+      <rect x="118" y="96" width="30" height="18" fill="#121316"/>
+      
+      <!-- Central Hub Diamond Core -->
+      <polygon points="100,84 120,105 100,126 80,105" fill="#C5A880"/>
+      <!-- Inner Diamond Precision Aperture (Negative Space) -->
+      <polygon points="100,94 110,105 100,116 90,105" fill="#F9F8F5"/>
+    </g>
+  
+    </g>
+    
+    <text x="125" y="300" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#F9F8F5" text-anchor="middle">AfriSMME Hub</text>
+    <text x="125" y="316" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" fill="#8892A0" text-anchor="middle">Enterprise Portal 2.0</text>
+  </g>
+
+  <!-- AVATAR 3: Monochrome Inverted Avatar (Light Background Context) -->
+  <g transform="translate(670, 110)">
+    <rect width="250" height="380" fill="#14171E" rx="10" stroke="#252B36" stroke-width="1.5"/>
+    <text x="25" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" letter-spacing="1.5" fill="#C5A880">INVERTED LIGHT PROFILE</text>
+    <text x="25" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="undefined">High-Contrast Warm Ivory Variant</text>
+    
+    <circle cx="125" cy="180" r="85" fill="#F9F8F5" stroke="#E2DED5" stroke-width="2"/>
+    
+    <g transform="translate(65, 120)">
+      
+    <g class="symbol-concept-03" transform="scale(0.6000)">
+      <!-- 'A' Monolithic Apex & Diagonal Rafters -->
+      <polygon points="30,76 90,24 110,24 170,76 148,76 100,42 52,76" fill="#121316"/>
+      
+      <!-- 'H' Left Monolithic Column -->
+      <rect x="30" y="76" width="22" height="98" rx="1.5" fill="#121316"/>
+      <!-- 'H' Right Monolithic Column -->
+      <rect x="148" y="76" width="22" height="98" rx="1.5" fill="#121316"/>
+      
+      <!-- 'H' Crossbar (Left Wing) -->
+      <rect x="52" y="96" width="30" height="18" fill="#121316"/>
+      <!-- 'H' Crossbar (Right Wing) -->
+      <rect x="118" y="96" width="30" height="18" fill="#121316"/>
+      
+      <!-- Central Hub Diamond Core -->
+      <polygon points="100,84 120,105 100,126 80,105" fill="#121316"/>
+      <!-- Inner Diamond Precision Aperture (Negative Space) -->
+      <polygon points="100,94 110,105 100,116 90,105" fill="#F9F8F5"/>
+    </g>
+  
+    </g>
+    
+    <text x="125" y="300" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#F9F8F5" text-anchor="middle">Black Monochrome</text>
+    <text x="125" y="316" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" fill="#8892A0" text-anchor="middle">100% Solid Ink Density</text>
+  </g>
+</svg>

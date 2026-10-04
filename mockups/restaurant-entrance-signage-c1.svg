@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560">
+  <title>Real-World Test: Restaurant & Hospitality Entrance Signage</title>
+  
+  <!-- Architectural Fluted Dark Granite Wall / Exterior Facade -->
+  <rect width="1000" height="560" fill="#0E1014"/>
+  
+  <!-- Architectural Vertical Stone Joints -->
+  <g stroke="#161A22" stroke-width="2">
+    <line x1="120" y1="0" x2="120" y2="560"/>
+    <line x1="280" y1="0" x2="280" y2="560"/>
+    <line x1="440" y1="0" x2="440" y2="560"/>
+    <line x1="600" y1="0" x2="600" y2="560"/>
+    <line x1="760" y1="0" x2="760" y2="560"/>
+    <line x1="920" y1="0" x2="920" y2="560"/>
+  </g>
+  
+  <!-- Architectural Downlight Ambient Glow (Warm 2700K wash) -->
+  <radialGradient id="signGlow" cx="50%" cy="30%" r="50%">
+    <stop offset="0%" stop-color="#C5A880" stop-opacity="0.18"/>
+    <stop offset="60%" stop-color="#C5A880" stop-opacity="0.04"/>
+    <stop offset="100%" stop-color="#0E1014" stop-opacity="0"/>
+  </radialGradient>
+  <rect x="100" y="40" width="800" height="480" fill="url(#signGlow)"/>
+
+  <!-- Architectural Entrance Portal Canopy -->
+  <rect x="160" y="60" width="680" height="12" fill="#242A35" rx="3"/>
+  <rect x="180" y="72" width="640" height="6" fill="#1A1E26"/>
+  
+  <!-- Architectural Signboard: Brushed Deep Charcoal Plaque with Bronze Trim -->
+  <rect x="200" y="120" width="600" height="280" fill="#13161C" rx="10" stroke="#2E3542" stroke-width="2"/>
+  <rect x="210" y="130" width="580" height="260" fill="none" stroke="#C5A880" stroke-width="1" stroke-opacity="0.35" rx="6"/>
+  
+  <!-- Precision Mounting Standoff Screws (4 corners) -->
+  <circle cx="225" cy="145" r="4.5" fill="#3D4554"/>
+  <circle cx="775" cy="145" r="4.5" fill="#3D4554"/>
+  <circle cx="225" cy="375" r="4.5" fill="#3D4554"/>
+  <circle cx="775" cy="375" r="4.5" fill="#3D4554"/>
+  
+  <!-- Dimensional Brushed Metallic Bronze Symbol (Cast Bronze with drop shadow) -->
+  <g transform="translate(250, 175)">
+    <!-- Cast drop-shadow layer -->
+    <g transform="translate(3, 4)" opacity="0.6">
+      
+    <g class="symbol-concept-01" transform="scale(0.7500)">
+      <!-- Quadrant 01: Top-Right (Operations & Advisory) -->
+      <path d="M 106 20 A 78 78 0 0 1 180 94 L 148 94 A 46 46 0 0 0 106 52 Z" fill="#121316"/>
+      
+      <!-- Quadrant 02: Bottom-Right (Facilities Management & FF&E) -->
+      <path d="M 180 106 A 78 78 0 0 1 106 180 L 106 148 A 46 46 0 0 0 148 106 Z" fill="#121316"/>
+      
+      <!-- Quadrant 03: Bottom-Left (Supply Chain & Sourcing) -->
+      <path d="M 94 180 A 78 78 0 0 1 20 106 L 52 106 A 46 46 0 0 0 94 148 Z" fill="#121316"/>
+      
+      <!-- Quadrant 04: Top-Left (Technology & Guest Systems) -->
+      <path d="M 20 94 A 78 78 0 0 1 94 20 L 94 52 A 46 46 0 0 0 52 94 Z" fill="#121316"/>
+      
+      <!-- Central Hub Star: 4-Point Curved Diamond Compass Rose -->
+      <path d="M 100 80 Q 100 100 120 100 Q 100 100 100 120 Q 100 100 80 100 Q 100 100 100 80 Z" fill="#121316"/>
+    </g>
+  
+    </g>
+    <!-- Master Bronze Signage Symbol -->
+    
+    <g class="symbol-concept-01" transform="scale(0.7500)">
+      <!-- Quadrant 01: Top-Right (Operations & Advisory) -->
+      <path d="M 106 20 A 78 78 0 0 1 180 94 L 148 94 A 46 46 0 0 0 106 52 Z" fill="#C5A880"/>
+      
+      <!-- Quadrant 02: Bottom-Right (Facilities Management & FF&E) -->
+      <path d="M 180 106 A 78 78 0 0 1 106 180 L 106 148 A 46 46 0 0 0 148 106 Z" fill="#C5A880"/>
+      
+      <!-- Quadrant 03: Bottom-Left (Supply Chain & Sourcing) -->
+      <path d="M 94 180 A 78 78 0 0 1 20 106 L 52 106 A 46 46 0 0 0 94 148 Z" fill="#C5A880"/>
+      
+      <!-- Quadrant 04: Top-Left (Technology & Guest Systems) -->
+      <path d="M 20 94 A 78 78 0 0 1 94 20 L 94 52 A 46 46 0 0 0 52 94 Z" fill="#C5A880"/>
+      
+      <!-- Central Hub Star: 4-Point Curved Diamond Compass Rose -->
+      <path d="M 100 80 Q 100 100 120 100 Q 100 100 100 120 Q 100 100 80 100 Q 100 100 100 80 Z" fill="#C5A880"/>
+    </g>
+  
+  </g>
+  
+  <!-- Signage Typography in Solid Brushed Champagne Gold -->
+  <g transform="translate(435, 215)">
+    <text x="0" y="38" font-family="'Plus Jakarta Sans', 'Montserrat', sans-serif" font-size="34" font-weight="800" letter-spacing="5" fill="#C5A880">AFRISMME HUB</text>
+    <text x="0" y="70" font-family="'Plus Jakarta Sans', sans-serif" font-size="12.5" font-weight="600" letter-spacing="4" fill="#F9F8F5">HOSPITALITY SUPPORT ECOSYSTEM</text>
+    <line x1="0" y1="88" x2="280" y2="88" stroke="#C5A880" stroke-width="1" stroke-opacity="0.4"/>
+    <text x="0" y="108" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="500" letter-spacing="3" fill="#8E99A8">EXECUTIVE PORTAL &amp; SUITES</text>
+  </g>
+  
+  <!-- Concrete Pavement Base -->
+  <rect x="0" y="520" width="1000" height="40" fill="#161920"/>
+  <line x1="0" y1="520" x2="1000" y2="520" stroke="#252A36" stroke-width="2"/>
+</svg>

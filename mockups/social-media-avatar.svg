@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560">
+  <title>Restaurants &amp; Hospitality Support - Digital Avatar Suite</title>
+  
+  <rect width="1000" height="560" fill="#0C0E12"/>
+  
+  <text x="50" y="45" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" letter-spacing="2" fill="#F9F8F5">DIGITAL AVATAR &amp; SOCIAL PROFILE SPECIFICATIONS</text>
+  <text x="50" y="68" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="400" fill="#8E99A8">Optimized with 20% Safe Padding for LinkedIn, X, Instagram, WhatsApp Business, and Mobile Platforms</text>
+
+  <!-- CIRCULAR PROFILE -->
+  <g transform="translate(80, 110)">
+    <rect width="250" height="380" fill="#14171E" rx="10" stroke="#252B36" stroke-width="1.5"/>
+    <text x="25" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" letter-spacing="1.5" fill="#C5A880">CIRCULAR PROFILE</text>
+    <text x="25" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#8E99A8">LinkedIn / Instagram / WhatsApp</text>
+    
+    <circle cx="125" cy="180" r="85" fill="#121316" stroke="#2E3540" stroke-width="2"/>
+    <circle cx="125" cy="180" r="85" fill="none" stroke="#C5A880" stroke-width="1.5" stroke-dasharray="3 3"/>
+    
+    <g transform="translate(65, 120)">
+      
+    <g class="master-symbol-rhs" transform="scale(0.6000)">
+      <!-- 1. Ground Foundation Plinth (Operational Support Base) -->
+      <rect x="22" y="172" width="156" height="7" rx="2" fill="#C5A880"/>
+      
+      <!-- 2. Twin Monumental Support Pillars (Facilities & Operations) -->
+      <rect x="34" y="52" width="24" height="120" rx="2" fill="#C5A880"/>
+      <rect x="142" y="52" width="24" height="120" rx="2" fill="#C5A880"/>
+      
+      <!-- 3. Welcoming Hospitality Archway (Sanctuary Portal) -->
+      <path d="M 64 172 L 64 106 A 36 36 0 0 1 136 106 L 136 172 L 118 172 L 118 112 A 18 18 0 0 0 82 112 L 82 172 Z" fill="#C5A880"/>
+      
+      <!-- 4. Warm Hearth Horizon Node (Welcoming Core) -->
+      <circle cx="100" cy="140" r="6.5" fill="#C5A880"/>
+      
+      <!-- 5. Sheltering Cantilever Canopy (Grand Architectural Lintel) -->
+      <polygon points="16,52 26,38 174,38 184,52" fill="#C5A880"/>
+      
+      <!-- 6. Apex Diamond Keystone Beacon (Hospitality Standard of Excellence) -->
+      <polygon points="100,18 114,32 100,44 86,32" fill="#C5A880"/>
+    </g>
+  
+    </g>
+    
+    <text x="125" y="300" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#F9F8F5" text-anchor="middle">@HospitalitySupport</text>
+    <text x="125" y="316" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" fill="#8892A0" text-anchor="middle">Verified Corporate Account</text>
+    
+    <circle cx="125" cy="340" r="9" fill="#C5A880"/>
+    <path d="M 121 340 L 124 343 L 129 337" stroke="#121316" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- SQUIRCLE ICON -->
+  <g transform="translate(375, 110)">
+    <rect width="250" height="380" fill="#14171E" rx="10" stroke="#252B36" stroke-width="1.5"/>
+    <text x="25" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" letter-spacing="1.5" fill="#C5A880">SQUIRCLE APP ICON</text>
+    <text x="25" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#8E99A8">iOS / Android Support App</text>
+    
+    <rect x="40" y="95" width="170" height="170" rx="38" fill="#121316" stroke="#2E3540" stroke-width="2"/>
+    
+    <g transform="translate(65, 120)">
+      
+    <g class="master-symbol-rhs" transform="scale(0.6000)">
+      <!-- 1. Ground Foundation Plinth (Operational Support Base) -->
+      <rect x="22" y="172" width="156" height="7" rx="2" fill="#121316"/>
+      
+      <!-- 2. Twin Monumental Support Pillars (Facilities & Operations) -->
+      <rect x="34" y="52" width="24" height="120" rx="2" fill="#121316"/>
+      <rect x="142" y="52" width="24" height="120" rx="2" fill="#121316"/>
+      
+      <!-- 3. Welcoming Hospitality Archway (Sanctuary Portal) -->
+      <path d="M 64 172 L 64 106 A 36 36 0 0 1 136 106 L 136 172 L 118 172 L 118 112 A 18 18 0 0 0 82 112 L 82 172 Z" fill="#1B3B2B"/>
+      
+      <!-- 4. Warm Hearth Horizon Node (Welcoming Core) -->
+      <circle cx="100" cy="140" r="6.5" fill="#C5A880"/>
+      
+      <!-- 5. Sheltering Cantilever Canopy (Grand Architectural Lintel) -->
+      <polygon points="16,52 26,38 174,38 184,52" fill="#C5A880"/>
+      
+      <!-- 6. Apex Diamond Keystone Beacon (Hospitality Standard of Excellence) -->
+      <polygon points="100,18 114,32 100,44 86,32" fill="#C5A880"/>
+    </g>
+  
+    </g>
+    
+    <text x="125" y="300" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#F9F8F5" text-anchor="middle">Hospitality Support</text>
+    <text x="125" y="316" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" fill="#8892A0" text-anchor="middle">Client Portal App</text>
+  </g>
+
+  <!-- INVERTED LIGHT -->
+  <g transform="translate(670, 110)">
+    <rect width="250" height="380" fill="#14171E" rx="10" stroke="#252B36" stroke-width="1.5"/>
+    <text x="25" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" letter-spacing="1.5" fill="#C5A880">INVERTED LIGHT PROFILE</text>
+    <text x="25" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#8E99A8">High-Contrast Warm Ivory Variant</text>
+    
+    <circle cx="125" cy="180" r="85" fill="#F9F8F5" stroke="#E2DED5" stroke-width="2"/>
+    
+    <g transform="translate(65, 120)">
+      
+    <g class="master-symbol-rhs" transform="scale(0.6000)">
+      <!-- 1. Ground Foundation Plinth (Operational Support Base) -->
+      <rect x="22" y="172" width="156" height="7" rx="2" fill="#121316"/>
+      
+      <!-- 2. Twin Monumental Support Pillars (Facilities & Operations) -->
+      <rect x="34" y="52" width="24" height="120" rx="2" fill="#121316"/>
+      <rect x="142" y="52" width="24" height="120" rx="2" fill="#121316"/>
+      
+      <!-- 3. Welcoming Hospitality Archway (Sanctuary Portal) -->
+      <path d="M 64 172 L 64 106 A 36 36 0 0 1 136 106 L 136 172 L 118 172 L 118 112 A 18 18 0 0 0 82 112 L 82 172 Z" fill="#121316"/>
+      
+      <!-- 4. Warm Hearth Horizon Node (Welcoming Core) -->
+      <circle cx="100" cy="140" r="6.5" fill="#121316"/>
+      
+      <!-- 5. Sheltering Cantilever Canopy (Grand Architectural Lintel) -->
+      <polygon points="16,52 26,38 174,38 184,52" fill="#121316"/>
+      
+      <!-- 6. Apex Diamond Keystone Beacon (Hospitality Standard of Excellence) -->
+      <polygon points="100,18 114,32 100,44 86,32" fill="#121316"/>
+    </g>
+  
+    </g>
+    
+    <text x="125" y="300" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#F9F8F5" text-anchor="middle">Monochrome Black</text>
+    <text x="125" y="316" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" fill="#8892A0" text-anchor="middle">100% Solid Ink Density</text>
+  </g>
+</svg>

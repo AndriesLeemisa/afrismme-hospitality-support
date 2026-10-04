@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560">
+  <title>Real-World Test: Digital Ecosystem Website Header &amp; Portal</title>
+  
+  <rect width="1000" height="560" fill="#0A0C10"/>
+  
+  <!-- Browser Frame Wrapper -->
+  <g transform="translate(40, 30)">
+    <!-- Browser Top Bar -->
+    <rect width="920" height="40" fill="#141820" rx="8" ry="8"/>
+    <!-- Window controls -->
+    <circle cx="25" cy="20" r="5" fill="#EF4444"/>
+    <circle cx="42" cy="20" r="5" fill="#F59E0B"/>
+    <circle cx="59" cy="20" r="5" fill="#10B981"/>
+    <!-- URL Bar -->
+    <rect x="180" y="8" width="560" height="24" rx="4" fill="#0B0D12"/>
+    <text x="200" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" fill="#8E99A8">https://hub.afrismme.com/hospitality-ecosystem</text>
+    
+    <!-- Website Main Viewport -->
+    <rect x="0" y="40" width="920" height="460" fill="#0E1116"/>
+    
+    <!-- CORPORATE STICKY NAVBAR -->
+    <rect x="0" y="40" width="920" height="74" fill="#12151C" stroke="#1F2530" stroke-width="1"/>
+    
+    <!-- Logo Lockup in Nav Bar (x=30, y=52) -->
+    <g transform="translate(30, 50)">
+      
+    <g class="symbol-concept-02" transform="scale(0.2500)">
+      <!-- Ground Foundation Plinth -->
+      <rect x="24" y="172" width="152" height="6" rx="1.5" fill="#C5A880"/>
+      
+      <!-- Left Monumental Pillar -->
+      <rect x="34" y="52" width="24" height="120" rx="1.5" fill="#C5A880"/>
+      <!-- Right Monumental Pillar -->
+      <rect x="142" y="52" width="24" height="120" rx="1.5" fill="#C5A880"/>
+      
+      <!-- Stepped Arch Portal (Sanctuary of Welcome) -->
+      <path d="M 66 172 L 66 104 A 34 34 0 0 1 134 104 L 134 172 L 118 172 L 118 110 A 18 18 0 0 0 82 110 L 82 172 Z" fill="#C5A880"/>
+      
+      <!-- Welcoming Portal Horizon Beacon -->
+      <circle cx="100" cy="138" r="6" fill="#C5A880"/>
+      
+      <!-- Cantilever Floating Canopy (The Grand Overhang) -->
+      <polygon points="18,52 28,38 172,38 182,52" fill="#C5A880"/>
+      
+      <!-- Apex Golden Visionary Pediment -->
+      <polygon points="100,20 115,34 85,34" fill="#C5A880"/>
+    </g>
+  
+    </g>
+    <g transform="translate(90, 68)">
+      <text x="0" y="15" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="800" letter-spacing="2.5" fill="#F9F8F5">AFRISMME HUB</text>
+      <text x="0" y="28" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="600" letter-spacing="2" fill="#C5A880">HOSPITALITY ECOSYSTEM</text>
+    </g>
+    
+    <!-- Navigation Links -->
+    <g transform="translate(380, 82)">
+      <text x="0" y="0" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600" fill="#F9F8F5">Ecosystem Overview</text>
+      <text x="140" y="0" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="500" fill="#8E99A8">Facilities &amp; FF&amp;E</text>
+      <text x="260" y="0" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="500" fill="#8E99A8">Procurement Hub</text>
+      <text x="390" y="0" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="500" fill="#8E99A8">Technology</text>
+    </g>
+    
+    <!-- Executive CTA Button -->
+    <rect x="800" y="58" width="95" height="36" rx="5" fill="#C5A880"/>
+    <text x="847" y="80" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#121316" text-anchor="middle">CLIENT PORTAL</text>
+    
+    <!-- HERO SECTION BELOW HEADER -->
+    <g transform="translate(60, 160)">
+      <text x="0" y="30" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" letter-spacing="3" fill="#C5A880">INTEGRATED ENTERPRISE INFRASTRUCTURE</text>
+      <text x="0" y="70" font-family="'Plus Jakarta Sans', 'Montserrat', sans-serif" font-size="34" font-weight="800" fill="#F9F8F5">Architecting the Future of</text>
+      <text x="0" y="112" font-family="'Plus Jakarta Sans', 'Montserrat', sans-serif" font-size="34" font-weight="800" fill="#C5A880">African Hospitality Operations</text>
+      
+      <text x="0" y="148" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#9CA3AF">Strategic facilities management, acoustic interior architecture, AI operational workflows,</text>
+      <text x="0" y="168" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#9CA3AF">and enterprise supply chains for leading hotels, resorts, and premium hospitality groups.</text>
+      
+      <!-- Action Buttons -->
+      <rect x="0" y="200" width="160" height="42" rx="6" fill="#C5A880"/>
+      <text x="80" y="226" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#121316" text-anchor="middle">EXPLORE SOLUTIONS</text>
+      
+      <rect x="175" y="200" width="160" height="42" rx="6" fill="none" stroke="#2E3542" stroke-width="1.5"/>
+      <text x="255" y="226" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600" fill="#F9F8F5" text-anchor="middle">PORTAL DEMO</text>
+    </g>
+    
+    <!-- Subtle Watermark Symbol in Hero Graphic Area -->
+    <g transform="translate(680, 150)" opacity="0.12">
+      
+    <g class="symbol-concept-02" transform="scale(1.0000)">
+      <!-- Ground Foundation Plinth -->
+      <rect x="24" y="172" width="152" height="6" rx="1.5" fill="#C5A880"/>
+      
+      <!-- Left Monumental Pillar -->
+      <rect x="34" y="52" width="24" height="120" rx="1.5" fill="#C5A880"/>
+      <!-- Right Monumental Pillar -->
+      <rect x="142" y="52" width="24" height="120" rx="1.5" fill="#C5A880"/>
+      
+      <!-- Stepped Arch Portal (Sanctuary of Welcome) -->
+      <path d="M 66 172 L 66 104 A 34 34 0 0 1 134 104 L 134 172 L 118 172 L 118 110 A 18 18 0 0 0 82 110 L 82 172 Z" fill="#C5A880"/>
+      
+      <!-- Welcoming Portal Horizon Beacon -->
+      <circle cx="100" cy="138" r="6" fill="#C5A880"/>
+      
+      <!-- Cantilever Floating Canopy (The Grand Overhang) -->
+      <polygon points="18,52 28,38 172,38 182,52" fill="#C5A880"/>
+      
+      <!-- Apex Golden Visionary Pediment -->
+      <polygon points="100,20 115,34 85,34" fill="#C5A880"/>
+    </g>
+  
+    </g>
+  </g>
+</svg>

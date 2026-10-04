@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480">
+  <title>concept-02-architecture - Primary Corporate Logo</title>
+  <!-- Premium Warm Ivory Canvas -->
+  <rect width="800" height="480" fill="#F9F8F5"/>
+  <rect x="24" y="24" width="752" height="432" fill="none" stroke="#E2DED5" stroke-width="1" rx="8"/>
+  
+  <!-- Centered Stacked Presentation -->
+  <g transform="translate(305, 90)">
+    
+    <g class="symbol-concept-02" transform="scale(0.9500)">
+      <!-- Ground Foundation Plinth -->
+      <rect x="24" y="172" width="152" height="6" rx="1.5" fill="#121316"/>
+      
+      <!-- Left Monumental Pillar -->
+      <rect x="34" y="52" width="24" height="120" rx="1.5" fill="#121316"/>
+      <!-- Right Monumental Pillar -->
+      <rect x="142" y="52" width="24" height="120" rx="1.5" fill="#121316"/>
+      
+      <!-- Stepped Arch Portal (Sanctuary of Welcome) -->
+      <path d="M 66 172 L 66 104 A 34 34 0 0 1 134 104 L 134 172 L 118 172 L 118 110 A 18 18 0 0 0 82 110 L 82 172 Z" fill="#1B3B2B"/>
+      
+      <!-- Welcoming Portal Horizon Beacon -->
+      <circle cx="100" cy="138" r="6" fill="#C5A880"/>
+      
+      <!-- Cantilever Floating Canopy (The Grand Overhang) -->
+      <polygon points="18,52 28,38 172,38 182,52" fill="#C5A880"/>
+      
+      <!-- Apex Golden Visionary Pediment -->
+      <polygon points="100,20 115,34 85,34" fill="#C5A880"/>
+    </g>
+  
+  </g>
+  
+  <g transform="translate(0, 325)">
+    <text x="400" y="36" font-family="'Plus Jakarta Sans', 'Montserrat', 'Inter', -apple-system, sans-serif" font-size="34" font-weight="800" letter-spacing="6" fill="#121316" text-anchor="middle">AFRISMME HUB</text>
+    <text x="400" y="66" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="12" font-weight="600" letter-spacing="4.5" fill="#A88A62" text-anchor="middle">HOSPITALITY SUPPORT ECOSYSTEM</text>
+    <text x="400" y="95" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="500" letter-spacing="3" fill="#8C93A0" text-anchor="middle">STRATEGIC OPERATIONS  •  FACILITIES  •  TECHNOLOGY  •  PROCUREMENT</text>
+  </g>
+</svg>

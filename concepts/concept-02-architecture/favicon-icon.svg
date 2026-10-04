@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <title>concept-02-architecture Favicon</title>
+  <rect width="32" height="32" fill="#121316" rx="7"/>
+  <g transform="translate(2, 2)">
+    
+    <g class="symbol-concept-02" transform="scale(0.1400)">
+      <!-- Ground Foundation Plinth -->
+      <rect x="24" y="172" width="152" height="6" rx="1.5" fill="#C5A880"/>
+      
+      <!-- Left Monumental Pillar -->
+      <rect x="34" y="52" width="24" height="120" rx="1.5" fill="#C5A880"/>
+      <!-- Right Monumental Pillar -->
+      <rect x="142" y="52" width="24" height="120" rx="1.5" fill="#C5A880"/>
+      
+      <!-- Stepped Arch Portal (Sanctuary of Welcome) -->
+      <path d="M 66 172 L 66 104 A 34 34 0 0 1 134 104 L 134 172 L 118 172 L 118 110 A 18 18 0 0 0 82 110 L 82 172 Z" fill="#C5A880"/>
+      
+      <!-- Welcoming Portal Horizon Beacon -->
+      <circle cx="100" cy="138" r="6" fill="#C5A880"/>
+      
+      <!-- Cantilever Floating Canopy (The Grand Overhang) -->
+      <polygon points="18,52 28,38 172,38 182,52" fill="#C5A880"/>
+      
+      <!-- Apex Golden Visionary Pediment -->
+      <polygon points="100,20 115,34 85,34" fill="#C5A880"/>
+    </g>
+  
+  </g>
+</svg>

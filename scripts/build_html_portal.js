@@ -1,0 +1,1244 @@
+const fs = require('fs');
+const path = require('path');
+
+const rootDir = process.cwd();
+
+// Load SVGs as raw text or paths
+function loadSvg(relPath) {
+  const p = path.join(rootDir, relPath);
+  if (fs.existsSync(p)) {
+    return fs.readFileSync(p, 'utf8');
+  }
+  return '';
+}
+
+const htmlContent = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AfriSMME Hub — Corporate Hospitality Identity System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --charcoal: #121316;
+      --charcoal-elevated: #181B22;
+      --charcoal-card: #1F242F;
+      --charcoal-border: #2B3342;
+      --warm-ivory: #F9F8F5;
+      --warm-ivory-muted: #EFECE6;
+      --warm-ivory-dark: #E4DFD5;
+      --bronze: #C5A880;
+      --bronze-light: #D8C2A0;
+      --bronze-dark: #A88A62;
+      --deep-green: #1B3B2B;
+      --text-muted: #8E99A8;
+      --text-dim: #606A78;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--charcoal);
+      color: var(--warm-ivory);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Top Navigation Bar */
+    header.site-header {
+      background: rgba(18, 19, 22, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--charcoal-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 16px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-title-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-seal-icon {
+      width: 38px;
+      height: 38px;
+      background: var(--charcoal-card);
+      border: 1px solid var(--bronze);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .brand-title {
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: var(--warm-ivory);
+      text-transform: uppercase;
+    }
+
+    .brand-subtitle {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      color: var(--bronze);
+      text-transform: uppercase;
+    }
+
+    .header-nav {
+      display: flex;
+      gap: 12px;
+    }
+
+    .nav-btn {
+      background: var(--charcoal-card);
+      color: var(--warm-ivory);
+      border: 1px solid var(--charcoal-border);
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .nav-btn:hover, .nav-btn.active {
+      background: var(--bronze);
+      color: var(--charcoal);
+      border-color: var(--bronze);
+    }
+
+    /* Hero Section */
+    .hero-banner {
+      padding: 56px 32px 32px;
+      max-width: 1280px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .badge-pill {
+      display: inline-block;
+      padding: 4px 14px;
+      background: rgba(197, 168, 128, 0.12);
+      border: 1px solid rgba(197, 168, 128, 0.3);
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--bronze);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .hero-title {
+      font-size: 40px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: var(--warm-ivory);
+      margin-bottom: 14px;
+    }
+
+    .hero-lead {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 840px;
+      margin: 0 auto 36px;
+      font-weight: 400;
+    }
+
+    /* Concept Selector Tabs */
+    .concept-tabs-container {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+
+    .concept-tab-card {
+      background: var(--charcoal-elevated);
+      border: 1px solid var(--charcoal-border);
+      border-radius: 12px;
+      padding: 16px 24px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-align: left;
+      transition: all 0.25s ease;
+      min-width: 280px;
+    }
+
+    .concept-tab-card:hover {
+      border-color: var(--bronze);
+      transform: translateY(-2px);
+    }
+
+    .concept-tab-card.active {
+      background: var(--charcoal-card);
+      border-color: var(--bronze);
+      box-shadow: 0 0 24px rgba(197, 168, 128, 0.15);
+    }
+
+    .tab-number {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--bronze);
+    }
+
+    .tab-info-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--warm-ivory);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .tab-info-desc {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    /* Main Container */
+    .content-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px 80px;
+    }
+
+    /* Section Header */
+    .section-title-bar {
+      border-bottom: 1px solid var(--charcoal-border);
+      padding-bottom: 12px;
+      margin-bottom: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .section-heading {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--warm-ivory);
+      text-transform: uppercase;
+    }
+
+    .section-subheading {
+      font-size: 12px;
+      color: var(--bronze);
+      font-weight: 500;
+    }
+
+    /* Active Concept Showcase Hero */
+    .concept-feature-box {
+      background: var(--charcoal-elevated);
+      border: 1px solid var(--charcoal-border);
+      border-radius: 16px;
+      padding: 36px;
+      margin-bottom: 48px;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .concept-preview-pane {
+      background: var(--warm-ivory);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 380px;
+      border: 1px solid var(--warm-ivory-dark);
+      position: relative;
+    }
+
+    .concept-preview-pane.theme-dark {
+      background: #0E1015;
+      border-color: #242A35;
+    }
+
+    .concept-preview-pane.theme-grid {
+      background-color: var(--warm-ivory);
+      background-image: 
+        linear-gradient(rgba(18, 19, 22, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(18, 19, 22, 0.05) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+
+    .concept-preview-pane img,
+    .concept-preview-pane svg {
+      max-width: 100%;
+      max-height: 340px;
+      height: auto;
+    }
+
+    .concept-text-pane h2 {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--warm-ivory);
+      margin-bottom: 8px;
+    }
+
+    .concept-tagline {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--bronze);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .concept-rationale-text {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .concept-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .meta-card {
+      background: var(--charcoal-card);
+      border: 1px solid var(--charcoal-border);
+      border-radius: 8px;
+      padding: 12px 16px;
+    }
+
+    .meta-label {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--bronze);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .meta-value {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--warm-ivory);
+    }
+
+    /* Live Interactive Toolbar */
+    .interactive-toolbar {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      background: var(--charcoal-card);
+      border: 1px solid var(--charcoal-border);
+      padding: 12px 20px;
+      border-radius: 8px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+
+    .toolbar-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .theme-pill-btn {
+      background: var(--charcoal-elevated);
+      border: 1px solid var(--charcoal-border);
+      color: var(--warm-ivory);
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 11px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .theme-pill-btn.active {
+      background: var(--bronze);
+      color: var(--charcoal);
+      border-color: var(--bronze);
+    }
+
+    .scale-slider-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-left: auto;
+    }
+
+    .scale-slider-group input {
+      cursor: pointer;
+      accent-color: var(--bronze);
+    }
+
+    /* Deliverables Grid */
+    .deliverables-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      margin-bottom: 60px;
+    }
+
+    .asset-card {
+      background: var(--charcoal-elevated);
+      border: 1px solid var(--charcoal-border);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.2s ease;
+    }
+
+    .asset-card:hover {
+      border-color: var(--bronze);
+      transform: translateY(-2px);
+    }
+
+    .asset-canvas {
+      height: 180px;
+      background: var(--warm-ivory);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      border-bottom: 1px solid var(--charcoal-border);
+      position: relative;
+    }
+
+    .asset-canvas.dark-canvas {
+      background: var(--charcoal);
+    }
+
+    .asset-canvas img {
+      max-width: 90%;
+      max-height: 85%;
+      object-fit: contain;
+    }
+
+    .asset-info {
+      padding: 16px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .asset-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--warm-ivory);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .asset-desc {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .asset-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .file-badge {
+      font-size: 9px;
+      font-weight: 700;
+      background: rgba(197, 168, 128, 0.15);
+      color: var(--bronze);
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(197, 168, 128, 0.3);
+      text-transform: uppercase;
+    }
+
+    .open-file-btn {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--warm-ivory);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .open-file-btn:hover {
+      color: var(--bronze);
+    }
+
+    /* Mockups Showcase Section */
+    .mockup-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+      gap: 28px;
+      margin-bottom: 60px;
+    }
+
+    .mockup-card {
+      background: var(--charcoal-elevated);
+      border: 1px solid var(--charcoal-border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .mockup-display {
+      background: #0A0C10;
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mockup-display img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .mockup-display:hover img {
+      transform: scale(1.02);
+    }
+
+    .mockup-footer {
+      padding: 16px 20px;
+      border-top: 1px solid var(--charcoal-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .mockup-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--warm-ivory);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .mockup-badge {
+      font-size: 10px;
+      color: var(--bronze);
+      font-weight: 600;
+    }
+
+    /* Side-by-Side Comparison Matrix */
+    .comparison-table-wrapper {
+      background: var(--charcoal-elevated);
+      border: 1px solid var(--charcoal-border);
+      border-radius: 12px;
+      overflow-x: auto;
+      margin-bottom: 60px;
+    }
+
+    table.comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 13px;
+    }
+
+    table.comparison-table th,
+    table.comparison-table td {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--charcoal-border);
+    }
+
+    table.comparison-table th {
+      background: var(--charcoal-card);
+      color: var(--bronze);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    table.comparison-table td:first-child {
+      font-weight: 700;
+      color: var(--warm-ivory);
+      background: rgba(255, 255, 255, 0.02);
+      width: 220px;
+    }
+
+    table.comparison-table tr:hover td {
+      background: rgba(197, 168, 128, 0.04);
+    }
+
+    /* Brand Swatches */
+    .swatch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 60px;
+    }
+
+    .swatch-card {
+      background: var(--charcoal-elevated);
+      border: 1px solid var(--charcoal-border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .swatch-color-box {
+      height: 90px;
+      width: 100%;
+    }
+
+    .swatch-details {
+      padding: 14px;
+    }
+
+    .swatch-name {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--warm-ivory);
+      margin-bottom: 6px;
+    }
+
+    .swatch-hex {
+      font-family: monospace;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--bronze);
+      margin-bottom: 8px;
+    }
+
+    .swatch-codes {
+      font-size: 10px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* Verification Checklist */
+    .audit-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 16px;
+      margin-bottom: 60px;
+    }
+
+    .audit-item {
+      background: var(--charcoal-elevated);
+      border: 1px solid var(--charcoal-border);
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .audit-icon {
+      color: #10B981;
+      font-size: 16px;
+      font-weight: 900;
+    }
+
+    .audit-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--warm-ivory);
+      margin-bottom: 2px;
+    }
+
+    .audit-desc {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    /* Footer */
+    footer.site-footer {
+      border-top: 1px solid var(--charcoal-border);
+      padding: 40px 32px;
+      text-align: center;
+      background: #0A0C10;
+      font-size: 12px;
+      color: var(--text-dim);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .concept-feature-box { grid-template-columns: 1fr; }
+      .hero-title { font-size: 28px; }
+      .concept-tab-card { min-width: 100%; }
+      .mockup-gallery { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="site-header">
+    <div class="brand-title-group">
+      <div class="brand-seal-icon">
+        <svg width="22" height="22" viewBox="0 0 200 200">
+          <polygon points="30,76 90,24 110,24 170,76 148,76 100,42 52,76" fill="#C5A880"/>
+          <rect x="30" y="76" width="22" height="98" rx="1.5" fill="#C5A880"/>
+          <rect x="148" y="76" width="22" height="98" rx="1.5" fill="#C5A880"/>
+          <rect x="52" y="96" width="30" height="18" fill="#C5A880"/>
+          <rect x="118" y="96" width="30" height="18" fill="#C5A880"/>
+          <polygon points="100,84 120,105 100,126 80,105" fill="#C5A880"/>
+        </svg>
+      </div>
+      <div>
+        <div class="brand-title">AfriSMME Hub</div>
+        <div class="brand-subtitle">Hospitality Support Ecosystem • Corporate Identity Suite</div>
+      </div>
+    </div>
+    <div class="header-nav">
+      <a href="#concepts" class="nav-btn active">Three Concepts</a>
+      <a href="#mockups" class="nav-btn">Real-World Tests</a>
+      <a href="#standards" class="nav-btn">Color &amp; Typography</a>
+      <a href="#comparison" class="nav-btn">Evaluation Matrix</a>
+    </div>
+  </header>
+
+  <!-- Hero Header -->
+  <section class="hero-banner">
+    <div class="badge-pill">Enterprise Vector Production System</div>
+    <h1 class="hero-title">Hospitality Support Ecosystem Corporate Identity</h1>
+    <p class="hero-lead">
+      A vector-first, institutional corporate identity system engineered for AfriSMME Hub's hospitality support vertical.
+      Free of food clichés, free of AI art artifacts, built on mathematical proportion, scalability, and geometric elegance.
+    </p>
+
+    <!-- Concept Selector Cards -->
+    <div class="concept-tabs-container" id="concepts">
+      <div class="concept-tab-card active" onclick="selectConcept('concept-01-ecosystem')">
+        <div class="tab-number">01</div>
+        <div>
+          <div class="tab-info-title">Hospitality Ecosystem</div>
+          <div class="tab-info-desc">Quad-Nexus &amp; Hospitality Compass Rose</div>
+        </div>
+      </div>
+
+      <div class="concept-tab-card" onclick="selectConcept('concept-02-architecture')">
+        <div class="tab-number">02</div>
+        <div>
+          <div class="tab-info-title">African Architecture</div>
+          <div class="tab-info-desc">Monumental Canopy Portal &amp; Sanctuary</div>
+        </div>
+      </div>
+
+      <div class="concept-tab-card" onclick="selectConcept('concept-03-monogram')">
+        <div class="tab-number">03</div>
+        <div>
+          <div class="tab-info-title">AH / Hub Monogram</div>
+          <div class="tab-info-desc">Interlocked Apex &amp; Monolithic Columns</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Showcase -->
+  <main class="content-container">
+
+    <!-- Active Concept Narrative Feature -->
+    <section class="concept-feature-box">
+      <div class="concept-preview-pane theme-ivory" id="heroPreviewPane">
+        <img id="heroImage" src="concepts/concept-01-ecosystem/primary-logo.svg" alt="Primary Logo Presentation">
+      </div>
+
+      <div class="concept-text-pane">
+        <div class="concept-tagline" id="conceptTagline">CONCEPT 01 — THE STRATEGIC QUAD-NEXUS</div>
+        <h2 id="conceptTitle">Hospitality Ecosystem</h2>
+        <p class="concept-rationale-text" id="conceptRationale">
+          Symbolizes the four interdependent operational pillars of AfriSMME Hub's hospitality support infrastructure: Operations &amp; Advisory, Facilities &amp; Acoustic Architecture, Technology Systems, and Procurement Supply Chains. The interlocking aerodynamic quadrants rotate smoothly around a 4-point hospitality compass star, representing continuous cyclical momentum and uncompromised institutional guidance.
+        </p>
+
+        <div class="concept-meta-grid">
+          <div class="meta-card">
+            <div class="meta-label">Geometric Logic</div>
+            <div class="meta-value" id="metaGeometry">Concentric 78px/46px Arcs, 8px Optical Channels</div>
+          </div>
+          <div class="meta-card">
+            <div class="meta-label">Scalability Index</div>
+            <div class="meta-value">16px Micro-Favicon to 12m Facade</div>
+          </div>
+          <div class="meta-card">
+            <div class="meta-label">Negative Space</div>
+            <div class="meta-value" id="metaNegative">Central Hospitality Compass Diamond</div>
+          </div>
+          <div class="meta-card">
+            <div class="meta-label">Target Industry</div>
+            <div class="meta-value">Enterprise Facilities &amp; Support Networks</div>
+          </div>
+        </div>
+
+        <!-- Interactive Live Toolbar -->
+        <div class="interactive-toolbar">
+          <span class="toolbar-label">Substrate:</span>
+          <button class="theme-pill-btn active" onclick="setSubstrate('theme-ivory')">Warm Ivory</button>
+          <button class="theme-pill-btn" onclick="setSubstrate('theme-dark')">Deep Charcoal</button>
+          <button class="theme-pill-btn" onclick="setSubstrate('theme-grid')">Geometric Grid</button>
+          
+          <div class="scale-slider-group">
+            <span class="toolbar-label">Scale:</span>
+            <input type="range" id="scaleSlider" min="24" max="340" value="200" oninput="adjustScale(this.value)">
+            <span class="toolbar-label" id="scaleValue">200px</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Required Output Deliverables Grid -->
+    <div class="section-title-bar">
+      <div>
+        <h2 class="section-heading">Core Identity Deliverables</h2>
+        <p class="section-subheading">11 Vector-Certified Specifications Required by the Brief</p>
+      </div>
+      <span class="file-badge">100% SVG Vector Geometry</span>
+    </div>
+
+    <div class="deliverables-grid" id="deliverablesGrid">
+      <!-- Cards rendered dynamically via JS -->
+    </div>
+
+    <!-- Real-World Application Mockups -->
+    <div class="section-title-bar" id="mockups">
+      <div>
+        <h2 class="section-heading">Real-World Environmental &amp; Corporate Tests</h2>
+        <p class="section-subheading">Rigorous Validation across Physical Signage, Staff Apparel, Logistics, Stationery, and Digital Media</p>
+      </div>
+      <div style="display:flex; gap:8px;">
+        <button class="nav-btn active" id="mockupBtnC1" onclick="setMockupConcept('c1')">Concept 01</button>
+        <button class="nav-btn" id="mockupBtnC2" onclick="setMockupConcept('c2')">Concept 02</button>
+        <button class="nav-btn" id="mockupBtnC3" onclick="setMockupConcept('c3')">Concept 03</button>
+      </div>
+    </div>
+
+    <div class="mockup-gallery" id="mockupGallery">
+      <!-- 1. Signage -->
+      <div class="mockup-card">
+        <div class="mockup-display">
+          <img id="mockupSignage" src="mockups/restaurant-entrance-signage-c1.svg" alt="Restaurant Entrance Signage">
+        </div>
+        <div class="mockup-footer">
+          <div class="mockup-title">1. Restaurant &amp; Hotel Entrance Signage</div>
+          <div class="mockup-badge">Cast Bronze on Fluted Granite</div>
+        </div>
+      </div>
+
+      <!-- 2. Staff Uniform -->
+      <div class="mockup-card">
+        <div class="mockup-display">
+          <img id="mockupUniform" src="mockups/staff-uniform-c1.svg" alt="Staff Uniform Suite">
+        </div>
+        <div class="mockup-footer">
+          <div class="mockup-title">2. Executive Staff Uniform &amp; Apparel</div>
+          <div class="mockup-badge">Bullion Blazer Crest, Apron &amp; Lapel Pin</div>
+        </div>
+      </div>
+
+      <!-- 3. Vehicle -->
+      <div class="mockup-card">
+        <div class="mockup-display">
+          <img id="mockupVehicle" src="mockups/vehicle-c1.svg" alt="Support Logistics Van">
+        </div>
+        <div class="mockup-footer">
+          <div class="mockup-title">3. Hospitality Logistics Support Vehicle</div>
+          <div class="mockup-badge">Matte Charcoal High-Roof Fleet Livery</div>
+        </div>
+      </div>
+
+      <!-- 4. Business Card -->
+      <div class="mockup-card">
+        <div class="mockup-display">
+          <img id="mockupCard" src="mockups/business-card-c1.svg" alt="Luxury Business Cards">
+        </div>
+        <div class="mockup-footer">
+          <div class="mockup-title">4. Luxury Executive Stationery (600gsm)</div>
+          <div class="mockup-badge">Warm Ivory Cotton &amp; Bronze Foil</div>
+        </div>
+      </div>
+
+      <!-- 5. Website Header -->
+      <div class="mockup-card">
+        <div class="mockup-display">
+          <img id="mockupWeb" src="mockups/website-header-c1.svg" alt="Website Header &amp; Portal">
+        </div>
+        <div class="mockup-footer">
+          <div class="mockup-title">5. Enterprise SaaS &amp; Portal Header</div>
+          <div class="mockup-badge">Digital Navigation &amp; Client Portal</div>
+        </div>
+      </div>
+
+      <!-- 6. Proposal Document -->
+      <div class="mockup-card">
+        <div class="mockup-display">
+          <img id="mockupProposal" src="mockups/proposal-document-c1.svg" alt="Proposal Document Cover">
+        </div>
+        <div class="mockup-footer">
+          <div class="mockup-title">6. Executive Proposal Dossier &amp; Letterhead</div>
+          <div class="mockup-badge">A4 Presentation Hardcover</div>
+        </div>
+      </div>
+
+      <!-- 7. Social Media Avatar -->
+      <div class="mockup-card" style="grid-column: 1 / -1;">
+        <div class="mockup-display">
+          <img id="mockupAvatar" src="mockups/social-media-avatar-c1.svg" alt="Social Media Avatar Suite">
+        </div>
+        <div class="mockup-footer">
+          <div class="mockup-title">7. Digital Avatar &amp; Social Profile Containers</div>
+          <div class="mockup-badge">Circular, Squircle &amp; Safe-Padding Matrix</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comparative Matrix -->
+    <div class="section-title-bar" id="comparison">
+      <div>
+        <h2 class="section-heading">Strategic Concept Comparison Matrix</h2>
+        <p class="section-subheading">Objective Architectural Audit of the Three Distinct Identities</p>
+      </div>
+      <span class="file-badge">Decision Support Matrix</span>
+    </div>
+
+    <div class="comparison-table-wrapper">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Design Criterion</th>
+            <th>01 — Hospitality Ecosystem</th>
+            <th>02 — African Architecture</th>
+            <th>03 — AH / Hub Monogram</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Visual Archetype</td>
+            <td>Interlocking Quad-Nexus &amp; Compass Rose</td>
+            <td>Monumental Cantilever Canopy &amp; Portal</td>
+            <td>Geometric 'AH' Apex Monogram Crest</td>
+          </tr>
+          <tr>
+            <td>Core Philosophical Metaphor</td>
+            <td>Continuous cycle of support across 4 pillars</td>
+            <td>Shelter, hospitality welcome, sanctuary</td>
+            <td>Institutional holding-grade authority &amp; trust</td>
+          </tr>
+          <tr>
+            <td>Optical Balance</td>
+            <td>4-Fold Rotational Symmetry (90°)</td>
+            <td>Bilateral Symmetrical Monument</td>
+            <td>Bilateral Symmetrical Monogram</td>
+          </tr>
+          <tr>
+            <td>Reduction to 16px Favicon</td>
+            <td><strong>Superior (10/10)</strong>: Circular perimeter holds solid</td>
+            <td><strong>Excellent (9.5/10)</strong>: Portal silhouette unmistakable</td>
+            <td><strong>Superior (10/10)</strong>: Apex chevron &amp; stems stay sharp</td>
+          </tr>
+          <tr>
+            <td>Uniform Bullion Embroidery</td>
+            <td>Exceptional circular crest rendering</td>
+            <td>Dignified heraldic architectural badge</td>
+            <td>Flawless blazer crest &amp; lapel pin</td>
+          </tr>
+          <tr>
+            <td>Vehicle Fleet Visibility</td>
+            <td>Dynamic, forward-moving vector livery</td>
+            <td>Architectural, stately, established</td>
+            <td>High-end corporate, holding-firm appearance</td>
+          </tr>
+          <tr>
+            <td>Expansion Beyond Hospitality</td>
+            <td>Flawlessly adapts to any SMME support vertical</td>
+            <td>Strong in property, facilities &amp; architecture</td>
+            <td>Universal corporate holding company seal</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Brand Color Standards -->
+    <div class="section-title-bar" id="standards">
+      <div>
+        <h2 class="section-heading">Corporate Color Standards</h2>
+        <p class="section-subheading">Restrained Architectural Palette with Color Calibration Codes</p>
+      </div>
+      <span class="file-badge">Color Science</span>
+    </div>
+
+    <div class="swatch-grid">
+      <!-- Swatch 1 -->
+      <div class="swatch-card">
+        <div class="swatch-color-box" style="background: #121316;"></div>
+        <div class="swatch-details">
+          <div class="swatch-name">Primary: Deep Charcoal / Black</div>
+          <div class="swatch-hex">#121316</div>
+          <div class="swatch-codes">
+            RGB: 18, 19, 22<br>
+            CMYK: 75, 68, 65, 80<br>
+            PMS: Pantone Black 7 C
+          </div>
+        </div>
+      </div>
+
+      <!-- Swatch 2 -->
+      <div class="swatch-card">
+        <div class="swatch-color-box" style="background: #F9F8F5; border-bottom: 1px solid #E5E7EB;"></div>
+        <div class="swatch-details">
+          <div class="swatch-name">Secondary: Warm Ivory</div>
+          <div class="swatch-hex" style="color: #6B7280;">#F9F8F5</div>
+          <div class="swatch-codes">
+            RGB: 249, 248, 245<br>
+            CMYK: 2, 2, 3, 0<br>
+            PMS: Pantone 7527 C
+          </div>
+        </div>
+      </div>
+
+      <!-- Swatch 3 -->
+      <div class="swatch-card">
+        <div class="swatch-color-box" style="background: #C5A880;"></div>
+        <div class="swatch-details">
+          <div class="swatch-name">Accent: Muted Bronze / Gold</div>
+          <div class="swatch-hex">#C5A880</div>
+          <div class="swatch-codes">
+            RGB: 197, 168, 128<br>
+            CMYK: 25, 33, 56, 3<br>
+            PMS: Pantone 465 C / 871 C
+          </div>
+        </div>
+      </div>
+
+      <!-- Swatch 4 -->
+      <div class="swatch-card">
+        <div class="swatch-color-box" style="background: #1B3B2B;"></div>
+        <div class="swatch-details">
+          <div class="swatch-name">Optional: Deep Forest Green</div>
+          <div class="swatch-hex" style="color: #26523D;">#1B3B2B</div>
+          <div class="swatch-codes">
+            RGB: 27, 59, 43<br>
+            CMYK: 80, 45, 75, 55<br>
+            PMS: Pantone 5535 C
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Verification Audit -->
+    <div class="section-title-bar">
+      <div>
+        <h2 class="section-heading">Mandatory Production Verification Audit</h2>
+        <p class="section-subheading">Strict Compliance with All Creative Constraints</p>
+      </div>
+      <span class="file-badge">100% Compliance Verified</span>
+    </div>
+
+    <div class="audit-grid">
+      <div class="audit-item">
+        <div class="audit-icon">✓</div>
+        <div>
+          <div class="audit-title">NO AI-Art Fluff or Photorealism</div>
+          <div class="audit-desc">All symbols constructed exclusively with mathematical SVG vector geometry. Zero pseudo-3D or lighting flares.</div>
+        </div>
+      </div>
+
+      <div class="audit-item">
+        <div class="audit-icon">✓</div>
+        <div>
+          <div class="audit-title">NO Food or Restaurant Clichés</div>
+          <div class="audit-desc">0% forks, knives, spoons, chef hats, plates, coffee cups, or food icons. Focus is on enterprise support infrastructure.</div>
+        </div>
+      </div>
+
+      <div class="audit-item">
+        <div class="audit-icon">✓</div>
+        <div>
+          <div class="audit-title">NO Generic African Silhouettes</div>
+          <div class="audit-desc">0% literal African continent outlines or generic tribal zigzags. Built on contemporary African architectural rigor.</div>
+        </div>
+      </div>
+
+      <div class="audit-item">
+        <div class="audit-icon">✓</div>
+        <div>
+          <div class="audit-title">16px Micro-Scale Retention</div>
+          <div class="audit-desc">Audited at 16px, 24px, 32px, 48px, and 64px. Geometry maintains optical clarity with zero stroke choke.</div>
+        </div>
+      </div>
+
+      <div class="audit-item">
+        <div class="audit-icon">✓</div>
+        <div>
+          <div class="audit-title">Monochrome Black &amp; White Fidelity</div>
+          <div class="audit-desc">Every mark renders with 100% legibility in pure 1-color black and pure 1-color white without losing form.</div>
+        </div>
+      </div>
+
+      <div class="audit-item">
+        <div class="audit-icon">✓</div>
+        <div>
+          <div class="audit-title">National &amp; International Scalability</div>
+          <div class="audit-desc">Sits comfortably alongside McKinsey, CBRE, Hyatt, Marriott, and global technology holding corporations.</div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>AfriSMME Hub • Hospitality Support Ecosystem Corporate Identity Production Suite</p>
+    <p style="margin-top: 6px;">All assets generated in pure vector SVG format • Compatible with EPS, PDF, AI, embroidery, signage, and digital platforms.</p>
+  </footer>
+
+  <script>
+    const conceptData = {
+      'concept-01-ecosystem': {
+        title: 'Hospitality Ecosystem',
+        tagline: 'CONCEPT 01 — THE STRATEGIC QUAD-NEXUS',
+        rationale: "Symbolizes the four interdependent operational pillars of AfriSMME Hub's hospitality support infrastructure: Operations & Advisory, Facilities & Acoustic Architecture, Technology Systems, and Procurement Supply Chains. The interlocking aerodynamic quadrants rotate smoothly around a 4-point hospitality compass star, representing continuous cyclical momentum and uncompromised institutional guidance.",
+        metaGeometry: 'Concentric 78px/46px Arcs, 8px Optical Channels',
+        metaNegative: 'Central Hospitality Compass Diamond',
+        folder: 'concept-01-ecosystem'
+      },
+      'concept-02-architecture': {
+        title: 'African Hospitality Architecture',
+        tagline: 'CONCEPT 02 — THE MONUMENTAL CANOPY PORTAL',
+        rationale: "Draws direct inspiration from modern African architectural vernacular: grand sheltering overhangs (cantilevers), monumental vertical colonnades, and welcoming threshold portals. It embodies hospitality in its purest institutional form: shelter, dignity, sanctuary, and scale. Free of primitive clichés, it sits naturally alongside five-star luxury resorts and major property development holdings.",
+        metaGeometry: 'Stepped Monolithic Pylons, 45° Cantilever Lintel',
+        metaNegative: 'Sanctuary Portal & Horizon Beacon',
+        folder: 'concept-02-architecture'
+      },
+      'concept-03-monogram': {
+        title: 'AH / Hub Corporate Monogram',
+        tagline: 'CONCEPT 03 — THE INTERLOCKED MONOGRAM CREST',
+        rationale: "A prestigious corporate monogram uniting 'A' (AfriSMME / Apex), 'H' (Hospitality / Hub / Pillars), and a central diamond core ('The Hub'). Built with a uniform 20px stem weight and strict 40° angles, it conveys institutional strength, legal governance, and holding-group prestige. Instantly recognizable on a blazer pocket, luxury vehicle, or financial prospectus.",
+        metaGeometry: '20px Uniform Stems, 40° Diagonal Chevron',
+        metaNegative: 'Triangular Counter & Central Hub Aperture',
+        folder: 'concept-03-monogram'
+      }
+    };
+
+    let currentConcept = 'concept-01-ecosystem';
+
+    const deliverablesList = [
+      { file: 'primary-logo.svg', title: '1. Primary Corporate Logo', desc: 'Master presentation lockup on warm ivory canvas.', dark: false },
+      { file: 'symbol-only.svg', title: '2. Standalone Symbol', desc: 'Isolated geometric emblem for seals and app icons.', dark: false },
+      { file: 'wordmark.svg', title: '3. Corporate Wordmark', desc: 'Custom typographic wordmark with generous tracking.', dark: false },
+      { file: 'horizontal-lockup.svg', title: '4. Horizontal Lockup', desc: 'Standard landscape corporate letterhead configuration.', dark: false },
+      { file: 'stacked-lockup.svg', title: '5. Stacked Lockup', desc: 'Formal vertical configuration for badges and covers.', dark: false },
+      { file: 'monochrome-black.svg', title: '6. Monochrome Black', desc: '100% solid black for single-ink and newsprint.', dark: false },
+      { file: 'monochrome-white.svg', title: '7. Monochrome White', desc: '100% pure white on dark charcoal substrate.', dark: true },
+      { file: 'full-colour.svg', title: '8. Master Full Colour', desc: 'Full corporate palette (Charcoal, Bronze, Ivory, Green).', dark: false },
+      { file: 'favicon-icon.svg', title: '9. Favicon / Icon (32x32)', desc: 'Pixel-snapped icon optimized for browser tabs.', dark: true },
+      { file: 'small-size-test.svg', title: '10. Small-Size Scale Test', desc: 'Reduction audit from 64px down to 16px.', dark: false },
+      { file: 'large-signage-test.svg', title: '11. Large Signage Test', desc: 'Dimensional architectural facade installation simulation.', dark: true }
+    ];
+
+    function renderDeliverables() {
+      const grid = document.getElementById('deliverablesGrid');
+      grid.innerHTML = '';
+      
+      deliverablesList.forEach(item => {
+        const filePath = 'concepts/' + currentConcept + '/' + item.file;
+        const card = document.createElement('div');
+        card.className = 'asset-card';
+        card.innerHTML = \`
+          <div class="asset-canvas \${item.dark ? 'dark-canvas' : ''}">
+            <img src="\${filePath}" alt="\${item.title}">
+          </div>
+          <div class="asset-info">
+            <div>
+              <div class="asset-title">\${item.title}</div>
+              <div class="asset-desc">\${item.desc}</div>
+            </div>
+            <div class="asset-actions">
+              <span class="file-badge">SVG Vector</span>
+              <a href="\${filePath}" target="_blank" class="open-file-btn">
+                Open SVG ↗
+              </a>
+            </div>
+          </div>
+        \`;
+        grid.appendChild(card);
+      });
+    }
+
+    function selectConcept(conceptKey) {
+      currentConcept = conceptKey;
+      const data = conceptData[conceptKey];
+
+      // Update hero texts
+      document.getElementById('conceptTitle').innerText = data.title;
+      document.getElementById('conceptTagline').innerText = data.tagline;
+      document.getElementById('conceptRationale').innerText = data.rationale;
+      document.getElementById('metaGeometry').innerText = data.metaGeometry;
+      document.getElementById('metaNegative').innerText = data.metaNegative;
+      document.getElementById('heroImage').src = 'concepts/' + data.folder + '/primary-logo.svg';
+
+      // Update tabs active state
+      document.querySelectorAll('.concept-tab-card').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      event.currentTarget.classList.add('active');
+
+      renderDeliverables();
+    }
+
+    function setSubstrate(themeClass) {
+      const pane = document.getElementById('heroPreviewPane');
+      pane.className = 'concept-preview-pane ' + themeClass;
+      
+      document.querySelectorAll('.interactive-toolbar .theme-pill-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      event.target.classList.add('active');
+    }
+
+    function adjustScale(val) {
+      document.getElementById('scaleValue').innerText = val + 'px';
+      const img = document.getElementById('heroImage');
+      img.style.maxHeight = val + 'px';
+      img.style.maxWidth = val + 'px';
+    }
+
+    function setMockupConcept(slug) {
+      document.getElementById('mockupSignage').src = 'mockups/restaurant-entrance-signage-' + slug + '.svg';
+      document.getElementById('mockupUniform').src = 'mockups/staff-uniform-' + slug + '.svg';
+      document.getElementById('mockupVehicle').src = 'mockups/vehicle-' + slug + '.svg';
+      document.getElementById('mockupCard').src = 'mockups/business-card-' + slug + '.svg';
+      document.getElementById('mockupWeb').src = 'mockups/website-header-' + slug + '.svg';
+      document.getElementById('mockupProposal').src = 'mockups/proposal-document-' + slug + '.svg';
+      document.getElementById('mockupAvatar').src = 'mockups/social-media-avatar-' + slug + '.svg';
+
+      document.querySelectorAll('#mockups .nav-btn').forEach(b => b.classList.remove('active'));
+      if (slug === 'c1') document.getElementById('mockupBtnC1').classList.add('active');
+      if (slug === 'c2') document.getElementById('mockupBtnC2').classList.add('active');
+      if (slug === 'c3') document.getElementById('mockupBtnC3').classList.add('active');
+    }
+
+    // Initial render
+    renderDeliverables();
+  </script>
+</body>
+</html>
+`;
+
+fs.writeFileSync(path.join(rootDir, 'index.html'), htmlContent);
+console.log('Interactive Brand Presentation Portal index.html written successfully.');

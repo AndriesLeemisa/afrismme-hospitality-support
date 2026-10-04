@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440" width="440" height="440">
+  <title>Restaurants &amp; Hospitality Support - Stacked Lockup</title>
+  
+  
+  <!-- Centered Symbol (170x170 at x=135, y=50) -->
+  <g transform="translate(135, 50)">
+    
+    <g class="master-symbol-rhs" transform="scale(0.8500)">
+      <!-- 1. Ground Foundation Plinth (Operational Support Base) -->
+      <rect x="22" y="172" width="156" height="7" rx="2" fill="#121316"/>
+      
+      <!-- 2. Twin Monumental Support Pillars (Facilities & Operations) -->
+      <rect x="34" y="52" width="24" height="120" rx="2" fill="#121316"/>
+      <rect x="142" y="52" width="24" height="120" rx="2" fill="#121316"/>
+      
+      <!-- 3. Welcoming Hospitality Archway (Sanctuary Portal) -->
+      <path d="M 64 172 L 64 106 A 36 36 0 0 1 136 106 L 136 172 L 118 172 L 118 112 A 18 18 0 0 0 82 112 L 82 172 Z" fill="#1B3B2B"/>
+      
+      <!-- 4. Warm Hearth Horizon Node (Welcoming Core) -->
+      <circle cx="100" cy="140" r="6.5" fill="#C5A880"/>
+      
+      <!-- 5. Sheltering Cantilever Canopy (Grand Architectural Lintel) -->
+      <polygon points="16,52 26,38 174,38 184,52" fill="#C5A880"/>
+      
+      <!-- 6. Apex Diamond Keystone Beacon (Hospitality Standard of Excellence) -->
+      <polygon points="100,18 114,32 100,44 86,32" fill="#C5A880"/>
+    </g>
+  
+  </g>
+  
+  <!-- Centered Wordmark -->
+  <g transform="translate(0, 275)">
+    <text x="220" y="32" font-family="'Plus Jakarta Sans', 'Montserrat', sans-serif" font-size="24" font-weight="800" letter-spacing="3.5" fill="#121316" text-anchor="middle">RESTAURANTS &amp; HOSPITALITY</text>
+    <text x="220" y="58" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700" letter-spacing="4.5" fill="#A88A62" text-anchor="middle">SUPPORT ECOSYSTEM</text>
+    <text x="220" y="82" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="500" letter-spacing="2.5" fill="#8E99A8" text-anchor="middle">AN AFRISMME HUB ENTERPRISE</text>
+  </g>
+</svg>

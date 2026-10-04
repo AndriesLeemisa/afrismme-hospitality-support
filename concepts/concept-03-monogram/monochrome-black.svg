@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 160" width="640" height="160">
+  <title>concept-03-monogram - Horizontal Corporate Lockup</title>
+  
+  <!-- Symbol (120x120 centered vertically at x=30, y=20) -->
+  <g transform="translate(30, 20)">
+    
+    <g class="symbol-concept-03" transform="scale(0.6000)">
+      <!-- 'A' Monolithic Apex & Diagonal Rafters -->
+      <polygon points="30,76 90,24 110,24 170,76 148,76 100,42 52,76" fill="#121316"/>
+      
+      <!-- 'H' Left Monolithic Column -->
+      <rect x="30" y="76" width="22" height="98" rx="1.5" fill="#121316"/>
+      <!-- 'H' Right Monolithic Column -->
+      <rect x="148" y="76" width="22" height="98" rx="1.5" fill="#121316"/>
+      
+      <!-- 'H' Crossbar (Left Wing) -->
+      <rect x="52" y="96" width="30" height="18" fill="#121316"/>
+      <!-- 'H' Crossbar (Right Wing) -->
+      <rect x="118" y="96" width="30" height="18" fill="#121316"/>
+      
+      <!-- Central Hub Diamond Core -->
+      <polygon points="100,84 120,105 100,126 80,105" fill="#121316"/>
+      <!-- Inner Diamond Precision Aperture (Negative Space) -->
+      <polygon points="100,94 110,105 100,116 90,105" fill="#F9F8F5"/>
+    </g>
+  
+  </g>
+  <!-- Divider -->
+  <line x1="175" y1="36" x2="175" y2="124" stroke="#D1D5DB" stroke-width="1.5"/>
+  <!-- Wordmark -->
+  <g transform="translate(200, 48)">
+    <text x="0" y="34" font-family="'Plus Jakarta Sans', 'Montserrat', 'Inter', -apple-system, sans-serif" font-size="32" font-weight="800" letter-spacing="5" fill="#121316">AFRISMME HUB</text>
+    <text x="0" y="60" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="11" font-weight="600" letter-spacing="4" fill="#4B5563">HOSPITALITY SUPPORT ECOSYSTEM</text>
+  </g>
+</svg>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560">
+  <title>Restaurants &amp; Hospitality Support - Staff Uniform Suite</title>
+  
+  <rect width="1000" height="560" fill="#0C0E12"/>
+  
+  <text x="50" y="45" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" letter-spacing="2" fill="#F9F8F5">STAFF APPAREL &amp; UNIFORM EMBROIDERY SPECIFICATION</text>
+  <text x="50" y="68" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="400" fill="#8E99A8">Bullion Gold Thread Blazer Crest  •  Heavy Canvas Apron Badge  •  Brushed Brass Executive Lapel Pin</text>
+
+  <!-- PANEL 1: EXECUTIVE BLAZER -->
+  <g transform="translate(50, 100)">
+    <rect width="270" height="400" fill="#181B22" rx="10" stroke="#282E3B" stroke-width="1.5"/>
+    <text x="25" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" letter-spacing="1.5" fill="#C5A880">EXECUTIVE BLAZER</text>
+    <text x="25" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#8E99A8">Bullion Thread Pocket Crest</text>
+    
+    <path d="M 55 120 L 215 120 L 215 260 Q 215 310 135 320 Q 55 310 55 260 Z" fill="#14161C" stroke="#2B3240" stroke-width="2"/>
+    <path d="M 62 126 L 208 126 L 208 255 Q 208 300 135 310 Q 62 300 62 255 Z" fill="none" stroke="#222834" stroke-dasharray="3 3" stroke-width="1.5"/>
+    
+    <g transform="translate(85, 145)">
+      
+    <g class="master-symbol-rhs" transform="scale(0.5000)">
+      <!-- 1. Ground Foundation Plinth (Operational Support Base) -->
+      <rect x="22" y="172" width="156" height="7" rx="2" fill="#C5A880"/>
+      
+      <!-- 2. Twin Monumental Support Pillars (Facilities & Operations) -->
+      <rect x="34" y="52" width="24" height="120" rx="2" fill="#C5A880"/>
+      <rect x="142" y="52" width="24" height="120" rx="2" fill="#C5A880"/>
+      
+      <!-- 3. Welcoming Hospitality Archway (Sanctuary Portal) -->
+      <path d="M 64 172 L 64 106 A 36 36 0 0 1 136 106 L 136 172 L 118 172 L 118 112 A 18 18 0 0 0 82 112 L 82 172 Z" fill="#C5A880"/>
+      
+      <!-- 4. Warm Hearth Horizon Node (Welcoming Core) -->
+      <circle cx="100" cy="140" r="6.5" fill="#C5A880"/>
+      
+      <!-- 5. Sheltering Cantilever Canopy (Grand Architectural Lintel) -->
+      <polygon points="16,52 26,38 174,38 184,52" fill="#C5A880"/>
+      
+      <!-- 6. Apex Diamond Keystone Beacon (Hospitality Standard of Excellence) -->
+      <polygon points="100,18 114,32 100,44 86,32" fill="#C5A880"/>
+    </g>
+  
+    </g>
+    <text x="135" y="272" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="800" letter-spacing="1.5" fill="#C5A880" text-anchor="middle">RESTAURANTS &amp; HOSPITALITY</text>
+    <text x="135" y="286" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="600" letter-spacing="2" fill="#F9F8F5" text-anchor="middle">SUPPORT</text>
+  </g>
+
+  <!-- PANEL 2: OPERATIONS APRON -->
+  <g transform="translate(365, 100)">
+    <rect width="270" height="400" fill="#15201A" rx="10" stroke="#253A2E" stroke-width="1.5"/>
+    <text x="25" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" letter-spacing="1.5" fill="#C5A880">OPERATIONS APRON</text>
+    <text x="25" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#8E99A8">14oz Waxed Canvas Leather Patch</text>
+    
+    <rect x="45" y="130" width="180" height="180" rx="8" fill="#1F1A15" stroke="#3D3227" stroke-width="2"/>
+    <rect x="52" y="137" width="166" height="166" rx="6" fill="none" stroke="#5E4E3D" stroke-dasharray="4 3" stroke-width="1.5"/>
+    
+    <g transform="translate(85, 155)">
+      
+    <g class="master-symbol-rhs" transform="scale(0.5000)">
+      <!-- 1. Ground Foundation Plinth (Operational Support Base) -->
+      <rect x="22" y="172" width="156" height="7" rx="2" fill="#C5A880"/>
+      
+      <!-- 2. Twin Monumental Support Pillars (Facilities & Operations) -->
+      <rect x="34" y="52" width="24" height="120" rx="2" fill="#C5A880"/>
+      <rect x="142" y="52" width="24" height="120" rx="2" fill="#C5A880"/>
+      
+      <!-- 3. Welcoming Hospitality Archway (Sanctuary Portal) -->
+      <path d="M 64 172 L 64 106 A 36 36 0 0 1 136 106 L 136 172 L 118 172 L 118 112 A 18 18 0 0 0 82 112 L 82 172 Z" fill="#C5A880"/>
+      
+      <!-- 4. Warm Hearth Horizon Node (Welcoming Core) -->
+      <circle cx="100" cy="140" r="6.5" fill="#C5A880"/>
+      
+      <!-- 5. Sheltering Cantilever Canopy (Grand Architectural Lintel) -->
+      <polygon points="16,52 26,38 174,38 184,52" fill="#C5A880"/>
+      
+      <!-- 6. Apex Diamond Keystone Beacon (Hospitality Standard of Excellence) -->
+      <polygon points="100,18 114,32 100,44 86,32" fill="#C5A880"/>
+    </g>
+  
+    </g>
+    <text x="135" y="280" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="700" letter-spacing="1.5" fill="#D8C2A0" text-anchor="middle">HOSPITALITY SUPPORT</text>
+  </g>
+
+  <!-- PANEL 3: BRASS LAPEL PIN -->
+  <g transform="translate(680, 100)">
+    <rect width="270" height="400" fill="#16181F" rx="10" stroke="#262A36" stroke-width="1.5"/>
+    <text x="25" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" letter-spacing="1.5" fill="#C5A880">EXECUTIVE LAPEL PIN</text>
+    <text x="25" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#8E99A8">Cast Brushed Brass (22mm)</text>
+    
+    <rect x="45" y="110" width="180" height="220" rx="12" fill="#0A0B0E" stroke="#20242E" stroke-width="2"/>
+    
+    <circle cx="135" cy="205" r="54" fill="#201C16" stroke="#C5A880" stroke-width="2"/>
+    <circle cx="135" cy="205" r="48" fill="#151310" stroke="#A88A62" stroke-width="1"/>
+    
+    <g transform="translate(100, 170)">
+      
+    <g class="master-symbol-rhs" transform="scale(0.3500)">
+      <!-- 1. Ground Foundation Plinth (Operational Support Base) -->
+      <rect x="22" y="172" width="156" height="7" rx="2" fill="#C5A880"/>
+      
+      <!-- 2. Twin Monumental Support Pillars (Facilities & Operations) -->
+      <rect x="34" y="52" width="24" height="120" rx="2" fill="#C5A880"/>
+      <rect x="142" y="52" width="24" height="120" rx="2" fill="#C5A880"/>
+      
+      <!-- 3. Welcoming Hospitality Archway (Sanctuary Portal) -->
+      <path d="M 64 172 L 64 106 A 36 36 0 0 1 136 106 L 136 172 L 118 172 L 118 112 A 18 18 0 0 0 82 112 L 82 172 Z" fill="#C5A880"/>
+      
+      <!-- 4. Warm Hearth Horizon Node (Welcoming Core) -->
+      <circle cx="100" cy="140" r="6.5" fill="#C5A880"/>
+      
+      <!-- 5. Sheltering Cantilever Canopy (Grand Architectural Lintel) -->
+      <polygon points="16,52 26,38 174,38 184,52" fill="#C5A880"/>
+      
+      <!-- 6. Apex Diamond Keystone Beacon (Hospitality Standard of Excellence) -->
+      <polygon points="100,18 114,32 100,44 86,32" fill="#C5A880"/>
+    </g>
+  
+    </g>
+    
+    <text x="135" y="285" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="600" letter-spacing="1.5" fill="#C5A880" text-anchor="middle">SUPPORT CORPS</text>
+  </g>
+</svg>

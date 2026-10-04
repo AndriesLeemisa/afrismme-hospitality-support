@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 160" width="640" height="160">
+  <title>concept-02-architecture - Horizontal Corporate Lockup</title>
+  <rect width="640" height="160" fill="#121316" rx="12"/>
+  <!-- Symbol (120x120 centered vertically at x=30, y=20) -->
+  <g transform="translate(30, 20)">
+    
+    <g class="symbol-concept-02" transform="scale(0.6000)">
+      <!-- Ground Foundation Plinth -->
+      <rect x="24" y="172" width="152" height="6" rx="1.5" fill="#FFFFFF"/>
+      
+      <!-- Left Monumental Pillar -->
+      <rect x="34" y="52" width="24" height="120" rx="1.5" fill="#FFFFFF"/>
+      <!-- Right Monumental Pillar -->
+      <rect x="142" y="52" width="24" height="120" rx="1.5" fill="#FFFFFF"/>
+      
+      <!-- Stepped Arch Portal (Sanctuary of Welcome) -->
+      <path d="M 66 172 L 66 104 A 34 34 0 0 1 134 104 L 134 172 L 118 172 L 118 110 A 18 18 0 0 0 82 110 L 82 172 Z" fill="#FFFFFF"/>
+      
+      <!-- Welcoming Portal Horizon Beacon -->
+      <circle cx="100" cy="138" r="6" fill="#FFFFFF"/>
+      
+      <!-- Cantilever Floating Canopy (The Grand Overhang) -->
+      <polygon points="18,52 28,38 172,38 182,52" fill="#FFFFFF"/>
+      
+      <!-- Apex Golden Visionary Pediment -->
+      <polygon points="100,20 115,34 85,34" fill="#FFFFFF"/>
+    </g>
+  
+  </g>
+  <!-- Divider -->
+  <line x1="175" y1="36" x2="175" y2="124" stroke="#2E3540" stroke-width="1.5"/>
+  <!-- Wordmark -->
+  <g transform="translate(200, 48)">
+    <text x="0" y="34" font-family="'Plus Jakarta Sans', 'Montserrat', 'Inter', -apple-system, sans-serif" font-size="32" font-weight="800" letter-spacing="5" fill="#FFFFFF">AFRISMME HUB</text>
+    <text x="0" y="60" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="11" font-weight="600" letter-spacing="4" fill="#9CA3AF">HOSPITALITY SUPPORT ECOSYSTEM</text>
+  </g>
+</svg>

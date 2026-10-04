@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 460" width="960" height="460">
+  <title>concept-03-monogram - Large Architectural Facade Signage Simulation</title>
+  
+  <rect width="960" height="460" fill="#0D0E11"/>
+  
+  <line x1="0" y1="120" x2="960" y2="120" stroke="#1A1D24" stroke-width="1.5"/>
+  <line x1="0" y1="340" x2="960" y2="340" stroke="#1A1D24" stroke-width="1.5"/>
+  <line x1="320" y1="0" x2="320" y2="460" stroke="#1A1D24" stroke-width="1.5"/>
+  <line x1="640" y1="0" x2="640" y2="460" stroke="#1A1D24" stroke-width="1.5"/>
+
+  <rect x="140" y="100" width="680" height="240" fill="#14171D" stroke="#2E3540" stroke-width="2" rx="12"/>
+  
+  <circle cx="160" cy="120" r="4" fill="#3A404D"/>
+  <circle cx="800" cy="120" r="4" fill="#3A404D"/>
+  <circle cx="160" cy="320" r="4" fill="#3A404D"/>
+  <circle cx="800" cy="320" r="4" fill="#3A404D"/>
+  
+  <g transform="translate(192, 142)">
+    
+    <g class="symbol-concept-03" transform="scale(0.7800)">
+      <!-- 'A' Monolithic Apex & Diagonal Rafters -->
+      <polygon points="30,76 90,24 110,24 170,76 148,76 100,42 52,76" fill="#121316"/>
+      
+      <!-- 'H' Left Monolithic Column -->
+      <rect x="30" y="76" width="22" height="98" rx="1.5" fill="#121316"/>
+      <!-- 'H' Right Monolithic Column -->
+      <rect x="148" y="76" width="22" height="98" rx="1.5" fill="#121316"/>
+      
+      <!-- 'H' Crossbar (Left Wing) -->
+      <rect x="52" y="96" width="30" height="18" fill="#121316"/>
+      <!-- 'H' Crossbar (Right Wing) -->
+      <rect x="118" y="96" width="30" height="18" fill="#121316"/>
+      
+      <!-- Central Hub Diamond Core -->
+      <polygon points="100,84 120,105 100,126 80,105" fill="#121316"/>
+      <!-- Inner Diamond Precision Aperture (Negative Space) -->
+      <polygon points="100,94 110,105 100,116 90,105" fill="#F9F8F5"/>
+    </g>
+  
+  </g>
+  <g transform="translate(190, 140)">
+    
+    <g class="symbol-concept-03" transform="scale(0.7800)">
+      <!-- 'A' Monolithic Apex & Diagonal Rafters -->
+      <polygon points="30,76 90,24 110,24 170,76 148,76 100,42 52,76" fill="#C5A880"/>
+      
+      <!-- 'H' Left Monolithic Column -->
+      <rect x="30" y="76" width="22" height="98" rx="1.5" fill="#C5A880"/>
+      <!-- 'H' Right Monolithic Column -->
+      <rect x="148" y="76" width="22" height="98" rx="1.5" fill="#C5A880"/>
+      
+      <!-- 'H' Crossbar (Left Wing) -->
+      <rect x="52" y="96" width="30" height="18" fill="#C5A880"/>
+      <!-- 'H' Crossbar (Right Wing) -->
+      <rect x="118" y="96" width="30" height="18" fill="#C5A880"/>
+      
+      <!-- Central Hub Diamond Core -->
+      <polygon points="100,84 120,105 100,126 80,105" fill="#C5A880"/>
+      <!-- Inner Diamond Precision Aperture (Negative Space) -->
+      <polygon points="100,94 110,105 100,116 90,105" fill="#F9F8F5"/>
+    </g>
+  
+  </g>
+  
+  <g transform="translate(380, 175)">
+    <text x="0" y="44" font-family="'Plus Jakarta Sans', 'Montserrat', sans-serif" font-size="38" font-weight="800" letter-spacing="6" fill="#C5A880">AFRISMME HUB</text>
+    <text x="0" y="78" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600" letter-spacing="5" fill="#F9F8F5">HOSPITALITY SUPPORT ECOSYSTEM</text>
+    <text x="0" y="108" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="500" letter-spacing="3" fill="#8892A0">EXECUTIVE CORPORATE HEADQUARTERS</text>
+  </g>
+</svg>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560">
+  <title>Real-World Test: Hospitality Support Fleet Vehicle Livery</title>
+  
+  <!-- Architectural Garage / Clean Logistics Bay Background -->
+  <rect width="1000" height="560" fill="#0F1116"/>
+  
+  <!-- Title Header -->
+  <text x="50" y="45" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" letter-spacing="2" fill="#F9F8F5">HOSPITALITY SUPPORT FLEET VEHICLE LIVERY</text>
+  <text x="50" y="68" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="400" fill="undefined">High-Roof Commercial Support Van  •  Matte Charcoal Finish with Metallic Bronze Vector Graphics</text>
+
+  <!-- Road / Floor Plane -->
+  <rect x="0" y="480" width="1000" height="80" fill="#0A0C0E"/>
+  <line x1="0" y1="480" x2="1000" y2="480" stroke="#1D222A" stroke-width="2"/>
+
+  <!-- VEHICLE PROFILE (High-Roof Modern Support Van) -->
+  <g id="van-body" transform="translate(100, 130)">
+    <!-- Shadow under chassis -->
+    <ellipse cx="400" cy="350" rx="380" ry="14" fill="#000000" opacity="0.75"/>
+    
+    <!-- Van Body Shell in Matte Deep Charcoal -->
+    <path d="M 60 320 L 730 320 Q 745 320 745 305 L 745 130 Q 745 90 700 90 L 260 90 Q 220 90 180 150 L 90 230 Q 60 260 60 320 Z" fill="#171A21" stroke="#2B3240" stroke-width="2"/>
+    
+    <!-- Windshield & Front Cab Windows -->
+    <path d="M 185 150 L 255 105 L 255 220 L 115 220 Z" fill="#0B0D12" stroke="#28303E" stroke-width="1.5"/>
+    <rect x="270" y="105" width="110" height="115" rx="3" fill="#0B0D12" stroke="#28303E" stroke-width="1.5"/>
+    
+    <!-- Front Bumper & Headlight Unit -->
+    <path d="M 60 290 L 80 290 L 80 260 L 60 265 Z" fill="#E5E7EB" opacity="0.9"/>
+    <path d="M 60 295 L 60 330 L 100 330 L 100 315 Z" fill="#101216"/>
+    
+    <!-- Side Door Seam Lines -->
+    <line x1="395" y1="90" x2="395" y2="320" stroke="#101318" stroke-width="2"/>
+    <line x1="580" y1="90" x2="580" y2="320" stroke="#101318" stroke-width="2"/>
+    
+    <!-- Wheels & Tires -->
+    <!-- Front Wheel -->
+    <g transform="translate(170, 320)">
+      <circle cx="0" cy="0" r="48" fill="#0D0E12" stroke="#222732" stroke-width="4"/>
+      <circle cx="0" cy="0" r="32" fill="#1C212A"/>
+      <circle cx="0" cy="0" r="14" fill="#3D4554"/>
+      <!-- Alloy Spokes -->
+      <line x1="-28" y1="0" x2="28" y2="0" stroke="#3D4554" stroke-width="3"/>
+      <line x1="0" y1="-28" x2="0" y2="28" stroke="#3D4554" stroke-width="3"/>
+    </g>
+    <!-- Rear Wheel -->
+    <g transform="translate(620, 320)">
+      <circle cx="0" cy="0" r="48" fill="#0D0E12" stroke="#222732" stroke-width="4"/>
+      <circle cx="0" cy="0" r="32" fill="#1C212A"/>
+      <circle cx="0" cy="0" r="14" fill="#3D4554"/>
+      <!-- Alloy Spokes -->
+      <line x1="-28" y1="0" x2="28" y2="0" stroke="#3D4554" stroke-width="3"/>
+      <line x1="0" y1="-28" x2="0" y2="28" stroke="#3D4554" stroke-width="3"/>
+    </g>
+
+    <!-- VEHICLE LIVERY GRAPHICS (VECTOR EMBEDDED) -->
+    <!-- Accent Bronze Architectural Pinstripe spanning van side -->
+    <line x1="120" y1="230" x2="745" y2="230" stroke="#C5A880" stroke-width="2.5"/>
+    <line x1="260" y1="235" x2="745" y2="235" stroke="#A88A62" stroke-width="1"/>
+
+    <!-- Primary Side Door Emblem (Scalable clean vector) -->
+    <g transform="translate(415, 115)">
+      
+    <g class="symbol-concept-02" transform="scale(0.4750)">
+      <!-- Ground Foundation Plinth -->
+      <rect x="24" y="172" width="152" height="6" rx="1.5" fill="#C5A880"/>
+      
+      <!-- Left Monumental Pillar -->
+      <rect x="34" y="52" width="24" height="120" rx="1.5" fill="#C5A880"/>
+      <!-- Right Monumental Pillar -->
+      <rect x="142" y="52" width="24" height="120" rx="1.5" fill="#C5A880"/>
+      
+      <!-- Stepped Arch Portal (Sanctuary of Welcome) -->
+      <path d="M 66 172 L 66 104 A 34 34 0 0 1 134 104 L 134 172 L 118 172 L 118 110 A 18 18 0 0 0 82 110 L 82 172 Z" fill="#C5A880"/>
+      
+      <!-- Welcoming Portal Horizon Beacon -->
+      <circle cx="100" cy="138" r="6" fill="#C5A880"/>
+      
+      <!-- Cantilever Floating Canopy (The Grand Overhang) -->
+      <polygon points="18,52 28,38 172,38 182,52" fill="#C5A880"/>
+      
+      <!-- Apex Golden Visionary Pediment -->
+      <polygon points="100,20 115,34 85,34" fill="#C5A880"/>
+    </g>
+  
+    </g>
+    
+    <!-- Livery Typography -->
+    <g transform="translate(525, 135)">
+      <text x="0" y="24" font-family="'Plus Jakarta Sans', 'Montserrat', sans-serif" font-size="22" font-weight="800" letter-spacing="3.5" fill="#F9F8F5">AFRISMME HUB</text>
+      <text x="0" y="44" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="600" letter-spacing="2.5" fill="#C5A880">HOSPITALITY SUPPORT ECOSYSTEM</text>
+      <text x="0" y="62" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="500" letter-spacing="1.5" fill="#8E99A8">24/7 RAPID RESPONSE &amp; FACILITIES INTEGRATION</text>
+    </g>
+
+    <!-- Front Door Crest & Unit ID -->
+    <g transform="translate(290, 160)">
+      
+    <g class="symbol-concept-02" transform="scale(0.1700)">
+      <!-- Ground Foundation Plinth -->
+      <rect x="24" y="172" width="152" height="6" rx="1.5" fill="#FFFFFF"/>
+      
+      <!-- Left Monumental Pillar -->
+      <rect x="34" y="52" width="24" height="120" rx="1.5" fill="#FFFFFF"/>
+      <!-- Right Monumental Pillar -->
+      <rect x="142" y="52" width="24" height="120" rx="1.5" fill="#FFFFFF"/>
+      
+      <!-- Stepped Arch Portal (Sanctuary of Welcome) -->
+      <path d="M 66 172 L 66 104 A 34 34 0 0 1 134 104 L 134 172 L 118 172 L 118 110 A 18 18 0 0 0 82 110 L 82 172 Z" fill="#FFFFFF"/>
+      
+      <!-- Welcoming Portal Horizon Beacon -->
+      <circle cx="100" cy="138" r="6" fill="#FFFFFF"/>
+      
+      <!-- Cantilever Floating Canopy (The Grand Overhang) -->
+      <polygon points="18,52 28,38 172,38 182,52" fill="#FFFFFF"/>
+      
+      <!-- Apex Golden Visionary Pediment -->
+      <polygon points="100,20 115,34 85,34" fill="#FFFFFF"/>
+    </g>
+  
+      <text x="42" y="16" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="700" fill="#F9F8F5">UNIT 08</text>
+      <text x="42" y="26" font-family="'Plus Jakarta Sans', sans-serif" font-size="6.5" fill="#8892A0">SUPPORT</text>
+    </g>
+  </g>
+</svg>
