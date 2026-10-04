@@ -177,14 +177,6 @@ export function Navbar({ onOpenAudit }: NavbarProps) {
                 The Difference
               </a>
 
-              {/* Case Studies */}
-              <a
-                href="#case-studies"
-                className="text-xs tracking-wider uppercase font-medium text-ivory-200/90 hover:text-bronze-300 transition-colors duration-200 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-bronze-400 hover:after:w-full after:transition-all after:duration-300"
-              >
-                Case Studies
-              </a>
-
               {/* Contact */}
               <a
                 href="#contact"

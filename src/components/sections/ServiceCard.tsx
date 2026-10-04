@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { ServicePillarData } from '@/types';
 import { Button } from '@/components/ui/Button';
-import { Compass, Sparkles, Wrench, ShieldCheck, ShieldAlert, TrendingUp, Check } from 'lucide-react';
+import { Compass, Sparkles, Wrench, ShieldCheck, ShieldAlert, TrendingUp } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface ServiceCardProps {
@@ -23,7 +23,7 @@ const iconMap: Record<string, React.ReactNode> = {
   TrendingUp: <TrendingUp className="w-5 h-5 text-bronze-400" />,
 };
 
-export function ServiceCard({ pillar, index, onSelect, onRequestQuote }: ServiceCardProps) {
+export function ServiceCard({ pillar, onRequestQuote }: ServiceCardProps) {
   return (
     <article
       id={pillar.id}
@@ -44,7 +44,7 @@ export function ServiceCard({ pillar, index, onSelect, onRequestQuote }: Service
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900 via-charcoal-900/40 to-transparent" />
 
         {/* Pillar Number Badge */}
-        <div className="absolute top-4 left-4 z-10 flex items-center gap-2 px-3 py-1 rounded bg-charcoal-950/85 backdrop-blur-md border border-bronze-500/30">
+        <div className="absolute top-4 left-4 z-10 flex items-center gap-2 px-3 py-1 rounded bg-charcoal-950/90 border border-bronze-500/40">
           <span className="font-mono text-xs font-semibold text-bronze-300">
             {pillar.pillarNumber}
           </span>
@@ -53,14 +53,11 @@ export function ServiceCard({ pillar, index, onSelect, onRequestQuote }: Service
           </span>
         </div>
 
-        {/* Dynamic Metric Pill */}
-        <div className="absolute bottom-4 right-4 z-10 px-3.5 py-1.5 rounded bg-charcoal-950/90 backdrop-blur-md border border-charcoal-700 text-right">
-          <div className="font-display text-base font-bold text-bronze-300 leading-tight">
-            {pillar.metric.value}
-          </div>
-          <div className="text-[10px] text-ivory-300 font-normal leading-tight">
-            {pillar.metric.label}
-          </div>
+        {/* Technical Standard Badge */}
+        <div className="absolute bottom-4 right-4 z-10 px-3 py-1.5 rounded bg-charcoal-950/90 border border-charcoal-700 text-right max-w-[200px]">
+          <span className="text-[10px] font-mono text-bronze-300 font-medium block truncate">
+            {pillar.technicalStandard.title}
+          </span>
         </div>
       </div>
 

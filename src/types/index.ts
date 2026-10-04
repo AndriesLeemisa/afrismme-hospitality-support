@@ -24,25 +24,12 @@ export interface ServicePillarData {
   accentColor: string;
   features: string[];
   detailedServices: ServiceDetail[];
-  metric: {
-    value: string;
-    label: string;
+  technicalStandard: {
+    title: string;
+    description: string;
   };
   ctaLabel: string;
   route: string;
-}
-
-export interface CaseStudyData {
-  id: string;
-  clientName: string;
-  venueType: string;
-  location: string;
-  challenge: string;
-  intervention: string;
-  results: string[];
-  turnaroundTime: string;
-  image: string;
-  pillarsInvolved: ServicePillarId[];
 }
 
 export interface HotspotData {
@@ -50,7 +37,7 @@ export interface HotspotData {
   title: string;
   category: string;
   description: string;
-  impact: string;
+  technicalSpec: string;
   xPercent: number; // 0 - 100% position on desktop layout
   yPercent: number;
 }
@@ -63,7 +50,6 @@ export interface AssessmentQuestion {
   options: {
     label: string;
     description: string;
-    score: number;
     recommendedPillars: ServicePillarId[];
   }[];
 }

@@ -7,7 +7,6 @@ import { ServicePillarsSection } from '@/components/sections/ServicePillarsSecti
 import { InteractiveHotspot } from '@/components/interactive/InteractiveHotspot';
 import { ProcessTimeline } from '@/components/sections/ProcessTimeline';
 import { EcosystemDiagram } from '@/components/sections/EcosystemDiagram';
-import { CaseStudiesSection } from '@/components/sections/CaseStudiesSection';
 import { ComparisonMatrix } from '@/components/sections/ComparisonMatrix';
 import { ExecutiveStandards } from '@/components/sections/ExecutiveStandards';
 import { DigitalAssessmentTool } from '@/components/interactive/DigitalAssessmentTool';
@@ -56,10 +55,7 @@ export default function HomePage() {
         {/* 5. Integrated Hospitality Support Ecosystem */}
         <EcosystemDiagram />
 
-        {/* 6. Case Studies & Turnarounds */}
-        <CaseStudiesSection />
-
-        {/* 7. Strategic Market Differentiation Matrix */}
+        {/* 6. Strategic Market Differentiation Matrix */}
         <ComparisonMatrix />
 
         {/* 8. Tangible Executive Craftsmanship & Collateral */}

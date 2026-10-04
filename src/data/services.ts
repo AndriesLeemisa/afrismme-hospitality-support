@@ -1,4 +1,4 @@
-import { ServicePillarData, CaseStudyData, HotspotData } from '@/types';
+import { ServicePillarData, HotspotData } from '@/types';
 
 export const SERVICE_PILLARS: ServicePillarData[] = [
   {
@@ -6,7 +6,7 @@ export const SERVICE_PILLARS: ServicePillarData[] = [
     pillarNumber: '01',
     name: 'ATTRACT',
     tagline: 'Exterior Architectural Presence & Terrace Optimization',
-    description: 'Transform your venue’s first impression into high-converting foot traffic. We engineer bespoke architectural brass signage, weather-defying heavy-duty commercial terrace systems, and high-impact facade illumination.',
+    description: 'Transform your venue’s exterior and patio infrastructure. We engineer bespoke architectural brass signage, weather-defying heavy-duty commercial cantilever systems, and calibrated facade illumination.',
     iconName: 'Compass',
     image: '/images/outdoor_umbrellas_terrace.jpg',
     imageAlt: 'Luxury outdoor dining terrace with commercial cantilever umbrellas and ambient lighting',
@@ -25,18 +25,18 @@ export const SERVICE_PILLARS: ServicePillarData[] = [
       },
       {
         title: 'All-Weather Alfresco Systems',
-        description: 'Engineered commercial-grade cantilever umbrellas, motorized windbreaks, and discrete radiant heating that monetize outdoor real estate 365 days a year.',
-        deliverables: ['Wind-rated structural fabric', 'Integrated water guttering', 'Overnight rapid anchorage installation'],
+        description: 'Engineered commercial-grade cantilever umbrellas, motorized windbreaks, and discrete radiant heating that maximize outdoor capacity in all weather.',
+        deliverables: ['Wind-rated structural fabric', 'Integrated water guttering', 'Overnight anchorage installation'],
       },
       {
         title: 'Facade & Entrance Illumination',
-        description: 'Curated warm-temperature lighting profiles that draw evening patrons from across the street without visual glare or light spillage.',
-        deliverables: ['CRI 95+ warm ambient luminaires', 'Smart astronomical timer controls', 'Architectural wash fixtures'],
+        description: 'Curated warm-temperature lighting profiles that draw evening patrons without visual glare or light spillage.',
+        deliverables: ['CRI 95+ warm ambient luminaires', 'Astronomical timer controls', 'Architectural wash fixtures'],
       },
     ],
-    metric: {
-      value: '+38%',
-      label: 'Average Terrace Seating Capacity Utilization',
+    technicalStandard: {
+      title: 'Marine-Grade Wind & Weather Rating',
+      description: 'Cantilever terrace assemblies engineered for heavy gust resistance with integrated drainage and concealed subterranean anchors.',
     },
     ctaLabel: 'Commission Exterior Enhancement',
     route: '#attract',
@@ -46,7 +46,7 @@ export const SERVICE_PILLARS: ServicePillarData[] = [
     pillarNumber: '02',
     name: 'ENHANCE',
     tagline: 'Acoustic Architecture, Spatial Intimacy & Banquettes',
-    description: 'Unchecked dining room reverberation destroys guest intimacy and average spend. We implement discrete acoustic absorption, custom ergonomic banquettes, and spatial lighting balances that keep patrons lingering longer.',
+    description: 'Unchecked dining room reverberation destroys guest intimacy and comfort. We implement discrete acoustic absorption, custom ergonomic banquettes, and spatial lighting balances tailored for conversation.',
     iconName: 'Sparkles',
     image: '/images/acoustic_privacy_booth.jpg',
     imageAlt: 'Custom acoustic dining privacy booth with rich timber joinery and tailored upholstery',
@@ -61,11 +61,11 @@ export const SERVICE_PILLARS: ServicePillarData[] = [
       {
         title: 'Hospitality Acoustic Engineering',
         description: 'Eliminate unbearable dining cacophony without visible foam panels. We embed high-performance sound absorption into timber battens, fabric panels, and art installations.',
-        deliverables: ['Decibel & reverberation time (RT60) testing', 'Concealed acoustic wall/ceiling assemblies', 'Speech clarity optimization'],
+        deliverables: ['Decibel & reverberation time (RT60) diagnostics', 'Concealed acoustic wall/ceiling assemblies', 'Speech clarity balancing'],
       },
       {
         title: 'Ergonomic Banquette & Booth Design',
-        description: 'Handcrafted seating with high-resilience foam densities and commercial stain-guarded textiles engineered for 4+ hour guest comfort.',
+        description: 'Handcrafted seating with high-resilience foam densities and commercial contract-grade stain-guarded textiles engineered for sustained guest comfort.',
         deliverables: ['Custom millwork construction', 'Contract-grade leather & velvet finishes', 'Integrated USB/lighting provisions'],
       },
       {
@@ -74,9 +74,9 @@ export const SERVICE_PILLARS: ServicePillarData[] = [
         deliverables: ['Architectural screen partitions', 'Planter baffle integrations', 'Zoned acoustic balancing'],
       },
     ],
-    metric: {
-      value: '1.8 hrs',
-      label: 'Average Dwell Time Extension per Reservation',
+    technicalStandard: {
+      title: 'NRC-Rated Acoustic Dampening',
+      description: 'Targeted reduction of reverberation time (RT60) to optimal speech clarity curves without unsightly industrial panels.',
     },
     ctaLabel: 'Engineer Dining Intimacy',
     route: '#enhance',
@@ -93,7 +93,7 @@ export const SERVICE_PILLARS: ServicePillarData[] = [
     accentColor: '#A88754',
     features: [
       'Dark-Hours Overnight Service (Zero Daytime Downtime)',
-      'Hand-Rubbed Danish Oil & Food-Safe Timber Refinishing',
+      'Hand-Rubbed Organic & Food-Safe Timber Refinishing',
       'On-Site Leather Re-dyeing & Deep Conditioning',
       'Architectural Brass & Bronze De-oxidizing & Lacquering',
     ],
@@ -114,9 +114,9 @@ export const SERVICE_PILLARS: ServicePillarData[] = [
         deliverables: ['Brass de-tarnishing', 'Marble & granite chip repair', 'Anti-microbial protective sealant'],
       },
     ],
-    metric: {
-      value: '0 hrs',
-      label: 'Daytime Revenue Lost to Maintenance',
+    technicalStandard: {
+      title: 'Zero-VOC Food-Safe Certification',
+      description: 'All hardwax oils and sealants cure overnight without chemical off-gassing, ready for culinary service by 07:00.',
     },
     ctaLabel: 'Schedule Overnight Restoration',
     route: '#restore',
@@ -126,7 +126,7 @@ export const SERVICE_PILLARS: ServicePillarData[] = [
     pillarNumber: '04',
     name: 'MAINTAIN',
     tagline: 'Preventative Facility Care & Rapid Response Fleet',
-    description: 'An unexpected kitchen hood failure, cold-room breakdown, or electrical trip will shutter a weekend service. Our dedicated mobile response fleet and proactive lifecycle maintenance keep mission-critical infrastructure flawless.',
+    description: 'An unexpected kitchen hood failure, cold-room breakdown, or electrical trip will shutter a service. Our dedicated mobile response fleet and proactive lifecycle maintenance keep mission-critical infrastructure protected.',
     iconName: 'ShieldCheck',
     image: '/images/mockup_fleet_vehicle.jpg',
     imageAlt: 'AfriSMME Hospitality Support branded rapid response emergency fleet vehicle',
@@ -141,22 +141,22 @@ export const SERVICE_PILLARS: ServicePillarData[] = [
       {
         title: 'Rapid Deployment Mobile Fleet',
         description: 'Fully equipped mobile technical workshops carrying emergency replacement motors, valves, switches, and commercial spares ready for immediate dispatch.',
-        deliverables: ['Under 60-minute emergency dispatch window', 'Certified commercial gas & electrical technicians', 'Stocked original OEM components'],
+        deliverables: ['Fast emergency dispatch window', 'Certified commercial gas & electrical technicians', 'Stocked original OEM components'],
       },
       {
         title: 'Extraction & HVAC Optimization',
-        description: 'Complete degreasing, belt tensioning, airflow balancing, and motor diagnostic care preventing kitchen backdrafts and catastrophic fire triggers.',
-        deliverables: ['CFM airflow certification', 'Duct integrity inspection', 'SANS/NFPA compliant compliance certification'],
+        description: 'Complete degreasing, belt tensioning, airflow balancing, and motor diagnostic care preventing kitchen backdrafts and fire hazards.',
+        deliverables: ['Airflow CFM certification', 'Duct integrity inspection', 'SANS / NFPA 96 compliance records'],
       },
       {
         title: 'Cold-Chain & Refrigeration Protection',
-        description: 'Continuous condenser cleaning, door seal renewals, and digital probe calibration safeguarding thousands of dollars in perishable stock.',
-        deliverables: ['Digital temperature audit logs', 'Compressor health diagnostics', 'Gasket & latch airtight maintenance'],
+        description: 'Continuous condenser cleaning, door seal renewals, and digital probe calibration safeguarding perishable culinary stock.',
+        deliverables: ['Temperature audit logs', 'Compressor health diagnostics', 'Gasket & latch airtight maintenance'],
       },
     ],
-    metric: {
-      value: '99.8%',
-      label: 'Average Critical Kitchen Equipment Uptime',
+    technicalStandard: {
+      title: 'SANS 10400 & NFPA 96 Aligned',
+      description: 'Scheduled mechanical servicing, commercial hood degreasing, and cold-chain calibrations backed by full engineering compliance logs.',
     },
     ctaLabel: 'Enquire About Fleet SLA',
     route: '#maintain',
@@ -166,7 +166,7 @@ export const SERVICE_PILLARS: ServicePillarData[] = [
     pillarNumber: '05',
     name: 'PROTECT',
     tagline: 'Compliance, Hygiene Protocols & Brand Shield',
-    description: 'Protecting your liquor license, health inspection score, and physical assets is non-negotiable. We conduct meticulous fire suppression audits, acoustic containment checks, and staff operational uniform standards.',
+    description: 'Protecting your liquor license, health inspection status, and physical assets is non-negotiable. We conduct meticulous fire suppression audits, acoustic containment checks, and staff operational uniform standards.',
     iconName: 'ShieldAlert',
     image: '/images/mockup_uniform_crest.jpg',
     imageAlt: 'AfriSMME tailored hospitality uniform crest showing immaculate operational standards',
@@ -180,13 +180,13 @@ export const SERVICE_PILLARS: ServicePillarData[] = [
     detailedServices: [
       {
         title: 'HACCP & Health Inspection Readiness',
-        description: 'Rigorous mock audits covering cross-contamination zoning, sanitation stations, temperature registers, and food prep surfaces to ensure a 100% clean audit pass.',
+        description: 'Rigorous mock audits covering cross-contamination zoning, sanitation stations, temperature registers, and food prep surfaces.',
         deliverables: ['Compliance risk matrix report', 'Corrective action plan', 'Staff hygiene protocol checklists'],
       },
       {
         title: 'Acoustic & Environmental Noise Compliance',
-        description: 'Keep neighboring properties and local municipal sound authorities satisfied with calibrated decibel boundary buffers and acoustic attenuation barriers.',
-        deliverables: ['Boundary dB(A) perimeter measurements', 'Vibration isolation damping for sound systems', 'Municipal permit compliance documentation'],
+        description: 'Keep neighboring properties and local municipal sound authorities satisfied with calibrated boundary buffers and acoustic attenuation barriers.',
+        deliverables: ['Boundary dB(A) perimeter measurements', 'Vibration isolation damping for sound systems', 'Municipal compliance documentation'],
       },
       {
         title: 'Staff Presence & Apparel Engineering',
@@ -194,9 +194,9 @@ export const SERVICE_PILLARS: ServicePillarData[] = [
         deliverables: ['Tailored antimicrobial fabrics', 'Reinforced stress seams', 'Brand crest embroidery & livery design'],
       },
     ],
-    metric: {
-      value: '100%',
-      label: 'First-Time Municipal Inspection Pass Rate',
+    technicalStandard: {
+      title: 'HACCP & Municipal Regulatory Shield',
+      description: 'Systematic audits across fire suppression, kitchen hygiene zoning, and decibel boundary compliance.',
     },
     ctaLabel: 'Audit Venue Compliance',
     route: '#protect',
@@ -206,37 +206,37 @@ export const SERVICE_PILLARS: ServicePillarData[] = [
     pillarNumber: '06',
     name: 'GROW',
     tagline: 'Operational Telemetry, Smart Kitchens & Capacity Lift',
-    description: 'Bridge physical hospitality craftsmanship with modern technology. We design high-efficiency kitchen display workflows, AI-assisted turnover forecasting, and space reconfiguration that adds covers without adding chaos.',
+    description: 'Bridge physical hospitality craftsmanship with modern technology. We design high-efficiency kitchen display workflows, turnover forecasting, and space reconfiguration that adds covers without adding chaos.',
     iconName: 'TrendingUp',
     image: '/images/hospitality_tech_ai.jpg',
-    imageAlt: 'Futuristic hospitality tech interface with analytics, table turnover tracking, and smart operational management',
+    imageAlt: 'Hospitality tech interface with operational management, kitchen display routing, and capacity layout',
     accentColor: '#D4B886',
     features: [
       'Intelligent Floorplan Re-Engineering & Cover Optimization',
       'Smart KDS (Kitchen Display System) & Expeditor Line Flow',
-      'AI Table Turnover & Food Cost Waste Forecasting',
+      'Table Turnover & Inventory Waste Tracking',
       'POS & Reservation Systems High-Speed Data Integration',
     ],
     detailedServices: [
       {
         title: 'Floorplan Optimization & Yield Management',
-        description: 'Mathematically model guest flow, server sightlines, and flexible table sizing (2-top to 8-top conversions) to add 15-25% more covers on peak nights.',
+        description: 'Model guest flow, server sightlines, and flexible table sizing (2-top to 8-top conversions) to maximize covers during peak reservation windows.',
         deliverables: ['CAD dynamic seating layouts', 'Server travel route optimization', 'Emergency egress certified plans'],
       },
       {
         title: 'Kitchen Expeditor & Line Redesign',
-        description: 'Reconfigure prep stations, pass shelving, and heat lamp zones to shave 3-5 minutes off ticket execution times during rush services.',
-        deliverables: ['Ergonomic station motion study', 'Speed-of-service audit', 'Custom stainless steel pass additions'],
+        description: 'Reconfigure prep stations, pass shelving, and heat lamp zones to streamline ticket execution times during rush services.',
+        deliverables: ['Ergonomic station motion study', 'Speed-of-service audit', 'Stainless steel pass modifications'],
       },
       {
-        title: 'Hospitality Tech & AI Telemetry',
-        description: 'Integrate inventory telemetry, predictive prep orders, and guest preference tracking to eliminate stock spoilage and elevate repeat visit loyalty.',
-        deliverables: ['Telemetry dashboard configuration', 'POS & inventory sync architecture', 'Real-time alert thresholds'],
+        title: 'Hospitality Tech & Telemetry',
+        description: 'Integrate inventory telemetry and guest preference tracking to minimize stock spoilage and streamline front-of-house service.',
+        deliverables: ['Telemetry dashboard configuration', 'POS & inventory sync architecture', 'Operational alert thresholds'],
       },
     ],
-    metric: {
-      value: '+24%',
-      label: 'Average Weekend Gross Yield Improvement',
+    technicalStandard: {
+      title: 'Ergonomic Kitchen & Floorplan CAD',
+      description: 'Mathematically designed server travel paths and expeditor station geometry certified for fire egress and peak-hour volume.',
     },
     ctaLabel: 'Scale Venue Capacity',
     route: '#grow',
@@ -248,8 +248,8 @@ export const VENUE_HOTSPOTS: HotspotData[] = [
     id: 'hotspot-terrace',
     title: 'Alfresco Weather Armor',
     category: 'ATTRACT',
-    description: 'Heavy-duty 4.5m cantilever umbrella systems with integrated perimeter heaters and water gutters, converting exposed patios into year-round revenue.',
-    impact: '+42 Seated Covers in Rain or Shine',
+    description: 'Heavy-duty commercial cantilever umbrella systems with integrated perimeter heaters and water gutters, converting exposed patios into year-round seating.',
+    technicalSpec: 'Wind-rated commercial canopy with integrated infrared heating & rain gutters',
     xPercent: 18,
     yPercent: 32,
   },
@@ -257,8 +257,8 @@ export const VENUE_HOTSPOTS: HotspotData[] = [
     id: 'hotspot-acoustics',
     title: 'Concealed Acoustic Absorption',
     category: 'ENHANCE',
-    description: 'Perforated micro-timber acoustic ceilings and velvet sound-trap wall panels lowering reverberation from 2.4s to a comfortable 0.9s.',
-    impact: 'Reverberation reduced by 62%',
+    description: 'Perforated micro-timber acoustic ceilings and velvet sound-trap wall panels that eliminate painful dining room flutter echoes.',
+    technicalSpec: 'NRC-rated acoustic absorption concealed behind timber battens & architectural fabrics',
     xPercent: 48,
     yPercent: 20,
   },
@@ -267,7 +267,7 @@ export const VENUE_HOTSPOTS: HotspotData[] = [
     title: 'Custom Deep Banquettes',
     category: 'ENHANCE',
     description: 'High-resilience dual-density foam cores wrapped in stain-resistant cognac leather with integrated discreet brass table stanchions.',
-    impact: 'Increased Dwell Time & Desert Orders',
+    technicalSpec: 'High-density contract foam cores with commercial rub-count stain-guarded leather',
     xPercent: 35,
     yPercent: 68,
   },
@@ -276,92 +276,34 @@ export const VENUE_HOTSPOTS: HotspotData[] = [
     title: 'Hardwood Table Refinishing',
     category: 'RESTORE',
     description: 'Solid oak and walnut tops stripped and sealed overnight with food-safe hardwax oil, eliminating wine stains and silverware scuffs.',
-    impact: 'Zero Service Hours Lost',
+    technicalSpec: 'Zero-VOC food-safe hardwax oil application cured between 23:00 and 07:00',
     xPercent: 64,
     yPercent: 72,
   },
   {
     id: 'hotspot-tech',
-    title: 'Digital Expeditor & Kitchen AI',
+    title: 'Digital Expeditor & Kitchen Routing',
     category: 'GROW',
-    description: 'Low-latency kitchen display systems linked to predictive table turnover telemetry, synchronizing front and back of house.',
-    impact: 'Ticket times reduced by 4.2 mins',
+    description: 'Low-latency kitchen display systems linked to expeditor station geometry, synchronizing front and back of house.',
+    technicalSpec: 'Ergonomic pass layout with stainless heat bridges and synchronized KDS monitors',
     xPercent: 82,
     yPercent: 45,
   },
 ];
 
-export const CASE_STUDIES: CaseStudyData[] = [
-  {
-    id: 'case-conservatory',
-    clientName: 'The Conservatory & Glasshouse Lounge',
-    venueType: 'Fine Dining & Botanical Cocktail Room',
-    location: 'Sandton, Johannesburg',
-    challenge: 'High glass and polished marble caused painful acoustic reverberation (RT60 of 2.6s), making normal conversation impossible on busy nights and prompting early guest departures.',
-    intervention: 'Engineered a dual intervention: bespoke fabric-wrapped micro-perforated acoustic ceiling baffles matching the architectural bronze trim, plus 14 custom upholstered velvet privacy booths.',
-    results: [
-      'Reverberation time slashed to 0.85s (optimal dining acoustic curve)',
-      'Dessert and digestif spend increased by 28%',
-      'Table dwell time rose from 65 mins to 110 mins per seating',
-    ],
-    turnaroundTime: 'Overnight installation across 3 dark shifts',
-    image: '/images/acoustic_privacy_booth.jpg',
-    pillarsInvolved: ['enhance', 'restore'],
-  },
-  {
-    id: 'case-harbor-terrace',
-    clientName: 'The Grand Terrace Bistro & Oyster Bar',
-    venueType: 'Upscale Waterfront Bistro',
-    location: 'V&A Waterfront, Cape Town',
-    challenge: 'Coastal squalls and sudden wind gusts regularly forced the closure of a 60-seat outdoor terrace, forfeiting over R140,000 in weekly revenue during shoulder seasons.',
-    intervention: 'Installed engineered heavy-duty marine-grade cantilever umbrella systems with concealed ground anchorages, motorized glass drop-screens, and directional infrared heating.',
-    results: [
-      'Patiotrade active 340+ days a year despite seaside wind',
-      'Terrace capacity boosted by 52 permanent covers',
-      'R1.85M annual incremental gross revenue realized in year one',
-    ],
-    turnaroundTime: '4 days total turnaround without closing indoor dining',
-    image: '/images/outdoor_umbrellas_terrace.jpg',
-    pillarsInvolved: ['attract', 'protect', 'grow'],
-  },
-  {
-    id: 'case-heritage-grill',
-    clientName: 'The Sterling Heritage Steakhouse',
-    venueType: 'Historic Club Dining Room',
-    location: 'Pretoria East',
-    challenge: 'Decades of heavy service left 48 solid Rhodesian teak dining tables scratched, stained, and structurally loose, while worn leather banquettes looked fatigued.',
-    intervention: 'Executed our signature dark-hours overnight restoration protocol. Tables re-trued, hand-rubbed with matte organic hardwax oil, and leather re-conditioned with bespoke waxes.',
-    results: [
-      'All 48 tables and 18 banquettes revived to pristine showroom state',
-      'Zero daytime service cancellation or customer disruption',
-      'Saved R420,000 compared to full furniture replacement costs',
-    ],
-    turnaroundTime: '48 hours (night-time only: 22:30 to 07:00)',
-    image: '/images/furniture_restoration_detail.jpg',
-    pillarsInvolved: ['restore', 'maintain'],
-  },
-];
-
-export const BRAND_STATS = [
-  { value: '380+', label: 'Hospitality Venues Supported', sub: 'Across Southern Africa' },
-  { value: '0 hrs', label: 'Daytime Revenue Lost', sub: 'Dark-hours overnight execution' },
-  { value: '99.8%', label: 'Critical System Uptime', sub: 'Dedicated rapid response fleet' },
-  { value: '+26%', label: 'Average Spend Lift', sub: 'Through acoustic & comfort engineering' },
-];
-
 export const PROCESS_STEPS = [
   {
     step: '01',
-    title: 'Diagnostic Audit & Acoustic Mapping',
-    description: 'Our technical directors conduct a comprehensive on-site survey: measuring sound reverberation (RT60), inspecting timber and leather wear, testing HVAC and cold storage, and mapping foot traffic bottlenecks.',
+    title: 'Diagnostic Audit & Acoustic Survey',
+    description: 'Our technical directors conduct an on-site survey: measuring sound reverberation (RT60), inspecting timber and leather wear, testing HVAC and cold storage, and mapping foot traffic bottlenecks.',
     duration: '24–48 Hours',
-    deliverable: 'Hospitality Diagnostic Scorecard & Engineering Proposal',
+    deliverable: 'Diagnostic Facility Assessment & Technical Proposal',
   },
   {
     step: '02',
     title: 'Precision Fabrication & Staging',
     description: 'All structural components—from CNC brass signage and acoustic panels to custom banquette joinery and umbrella anchors—are pre-fabricated off-site in our master workshops to exact millimetric tolerances.',
-    duration: '5–10 Days',
+    duration: 'Scheduled Production',
     deliverable: 'Pre-assembled modular components ready for rapid deployment',
   },
   {
@@ -373,9 +315,9 @@ export const PROCESS_STEPS = [
   },
   {
     step: '04',
-    title: 'Proactive Maintenance & Emergency SLA',
+    title: 'Proactive Maintenance & Fleet SLA',
     description: 'We don’t walk away after installation. Your venue is onboarded to our rapid mobile fleet dispatch network with scheduled preventative servicing, compliance certifications, and 24/7 hotline support.',
     duration: 'Ongoing SLA',
-    deliverable: 'Guaranteed 60-min response dispatch & quarterly health audits',
+    deliverable: 'Guaranteed emergency response dispatch & scheduled health audits',
   },
 ];

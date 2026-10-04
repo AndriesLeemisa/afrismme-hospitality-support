@@ -5,8 +5,7 @@ import Image from 'next/image';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Button } from '@/components/ui/Button';
-import { BRAND_STATS } from '@/data/services';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, ShieldCheck, Clock, Layers } from 'lucide-react';
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
@@ -22,7 +21,7 @@ export function Hero({ onOpenAudit }: HeroProps) {
   const headlineRef = useRef<HTMLHeadingElement>(null);
   const subheadRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
-  const statsRef = useRef<HTMLDivElement>(null);
+  const badgesRef = useRef<HTMLDivElement>(null);
   const imageWrapperRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -58,9 +57,9 @@ export function Hero({ onOpenAudit }: HeroProps) {
           '-=0.6'
         )
         .fromTo(
-          statsRef.current,
-          { opacity: 0, y: 25 },
-          { opacity: 1, y: 0, duration: 0.9 },
+          badgesRef.current,
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.8 },
           '-=0.5'
         )
         .fromTo(
@@ -77,7 +76,7 @@ export function Hero({ onOpenAudit }: HeroProps) {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-[92vh] lg:min-h-screen flex flex-col justify-between pt-32 sm:pt-36 pb-16 overflow-hidden bg-charcoal-950"
+      className="relative min-h-[85vh] lg:min-h-[92vh] flex flex-col justify-center pt-32 sm:pt-36 pb-20 overflow-hidden bg-charcoal-950"
       aria-label="AfriSMME Hospitality Support Introduction"
     >
       {/* Background authentic luxury dining photograph: CRISP, SHARP, NO BLUR */}
@@ -94,7 +93,7 @@ export function Hero({ onOpenAudit }: HeroProps) {
           className="object-cover object-center filter brightness-[0.72] contrast-[1.02]"
         />
 
-        {/* Clean directional contrast scrim: preserves sharp dining photography while ensuring text clarity */}
+        {/* Clean directional contrast scrim */}
         <div className="absolute inset-0 bg-gradient-to-r from-charcoal-950/95 via-charcoal-950/70 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-transparent to-charcoal-950/25" />
       </div>
@@ -134,7 +133,7 @@ export function Hero({ onOpenAudit }: HeroProps) {
           </p>
 
           {/* Action CTAs */}
-          <div ref={ctaRef} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-5 mb-14">
+          <div ref={ctaRef} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-5 mb-10">
             {onOpenAudit ? (
               <Button
                 variant="primary"
@@ -165,40 +164,23 @@ export function Hero({ onOpenAudit }: HeroProps) {
             >
               Explore the 6 Pillars
             </Button>
-
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center sm:justify-start gap-2 text-xs uppercase tracking-wider text-ivory-300 hover:text-bronze-300 transition-colors py-2 px-3"
-            >
-              <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-              <span>Overnight SLAs Available</span>
-            </a>
           </div>
-        </div>
-      </div>
 
-      {/* Dynamic Key Performance Metrics Strip */}
-      <div
-        ref={statsRef}
-        className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-auto"
-      >
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 pt-6 border-t border-charcoal-700/60">
-          {BRAND_STATS.map((stat, idx) => (
-            <div
-              key={idx}
-              className="p-3.5 sm:p-5 rounded-sm bg-charcoal-950/90 border border-charcoal-700/60 hover:border-bronze-500/40 transition-colors shadow-subtle-dark"
-            >
-              <div className="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold text-ivory-50 tracking-tight text-gold-gradient">
-                {stat.value}
-              </div>
-              <div className="text-xs sm:text-sm font-medium text-ivory-200 mt-1">
-                {stat.label}
-              </div>
-              <div className="text-[10px] sm:text-xs text-ivory-400 mt-0.5">
-                {stat.sub}
-              </div>
+          {/* Verified Standards Badges (Honest, capability-based) */}
+          <div ref={badgesRef} className="flex flex-wrap items-center gap-y-3 gap-x-6 pt-6 border-t border-charcoal-700/60 text-xs text-ivory-300 font-mono">
+            <div className="flex items-center gap-2">
+              <Clock className="w-4 h-4 text-emerald-400" />
+              <span>Overnight Dark-Hours Protocol (23:00–07:00)</span>
             </div>
-          ))}
+            <div className="flex items-center gap-2">
+              <ShieldCheck className="w-4 h-4 text-bronze-400" />
+              <span>SANS 10400 & NFPA 96 Aligned</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Layers className="w-4 h-4 text-bronze-400" />
+              <span>Single Accountable Master SLA</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>

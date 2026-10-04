@@ -122,13 +122,13 @@ export function InteractiveHotspot() {
                 {activeHotspot.description}
               </p>
 
-              {/* Quantified Business Impact Box */}
+              {/* Engineering Specification Box */}
               <div className="p-4 rounded-sm bg-charcoal-900 border border-bronze-500/30">
                 <span className="text-[10px] font-mono uppercase tracking-wider text-bronze-400 block mb-1">
-                  Quantified Margin Impact
+                  Engineering Specification
                 </span>
-                <p className="text-base font-display font-semibold text-ivory-50 text-gold-gradient">
-                  {activeHotspot.impact}
+                <p className="text-sm font-medium text-ivory-100 leading-relaxed">
+                  {activeHotspot.technicalSpec}
                 </p>
               </div>
             </div>

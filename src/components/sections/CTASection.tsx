@@ -93,7 +93,7 @@ export function CTASection({ preselectedPillarId }: CTASectionProps) {
                 </div>
                 <div className="flex items-center gap-2 text-xs text-ivory-300">
                   <Award className="w-4 h-4 text-bronze-400 shrink-0" />
-                  <span>Over 380 Venues Served</span>
+                  <span>Dedicated Account Director</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs text-ivory-300">
                   <ShieldCheck className="w-4 h-4 text-bronze-400 shrink-0" />

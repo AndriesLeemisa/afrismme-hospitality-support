@@ -126,14 +126,17 @@ export function ServicePillarsSection({ onRequestQuote }: ServicePillarsSectionP
                 </div>
               </div>
 
-              {/* Bottom metric & consultation trigger */}
+              {/* Technical standard & consultation trigger */}
               <div className="pt-4 border-t border-charcoal-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div>
-                  <span className="font-display text-2xl font-bold text-bronze-300">
-                    {activePillar.metric.value}
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-bronze-400 block mb-1">
+                    Certified Technical Standard
                   </span>
-                  <p className="text-xs text-ivory-300">
-                    {activePillar.metric.label}
+                  <span className="font-display text-base font-semibold text-ivory-100 block">
+                    {activePillar.technicalStandard.title}
+                  </span>
+                  <p className="text-xs text-ivory-400 mt-0.5 max-w-sm">
+                    {activePillar.technicalStandard.description}
                   </p>
                 </div>
 
