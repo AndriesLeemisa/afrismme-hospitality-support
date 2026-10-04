@@ -5,16 +5,7 @@ import Image from 'next/image';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Button } from '@/components/ui/Button';
-import {
-  ShieldCheck,
-  Clock,
-  Layers,
-  ChevronLeft,
-  ChevronRight,
-  MapPin,
-  Sliders,
-  Sparkles,
-} from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
@@ -30,61 +21,57 @@ interface HeroSlide {
   image: string;
   alt: string;
   title: string;
-  category: string;
   location: string;
-  spec: string;
 }
 
 const HERO_SLIDES: HeroSlide[] = [
   {
-    id: 'safari-lodge',
+    id: 'courtyard-bistro',
     number: '01',
+    image: '/images/hero_courtyard_bistro.jpg',
+    alt: 'Shaded outdoor garden bistro courtyard with canvas parasols, dining tables with checkered tablecloths, and leafy trees',
+    title: 'Garden Courtyard & Veranda Bistros',
+    location: 'Historic Verandas & Shaded Courtyards',
+  },
+  {
+    id: 'safari-lodge',
+    number: '02',
     image: '/images/hero_safari_lodge.jpg',
     alt: 'Luxury African safari lodge outdoor dining deck with timber flooring and warm ambient lanterns overlooking the African bush',
     title: 'Wilderness Lodges & Safari Verandas',
-    category: 'Eco-Tourism & Concession Dining',
-    location: 'Greater Kruger & Sabi Sands Private Reserves',
-    spec: 'Weatherized Teak Decks • Anti-Termite Shielding • Off-Grid Solar Stability',
+    location: 'Private Reserves & Safari Destinations',
   },
   {
     id: 'coastal-terrace',
-    number: '02',
+    number: '03',
     image: '/images/hero_coastal_terrace.jpg',
     alt: 'Upscale coastal dining terrace with striped umbrellas and wicker armchairs looking out to the azure sea',
     title: 'Coastal Terraces & Oceanfront Venues',
-    category: 'Waterfront & Marine Hospitality',
-    location: 'Atlantic Seaboard & Umhlanga Rocks Waterfronts',
-    spec: 'Marine-Grade 316 Stainless • High-Wind Umbrella Anchors • Salt-Mist Barriers',
+    location: 'Atlantic Seaboard & Coastal Waterfronts',
   },
   {
     id: 'rooftop-skyline',
-    number: '03',
+    number: '04',
     image: '/images/hero_rooftop_skyline.jpg',
     alt: 'Metropolitan sunset rooftop dining pavilion with glass edge overlooking glowing city skyline',
     title: 'Urban Sky Lounges & Rooftop Pavilions',
-    category: 'Metropolitan High-Altitude Venues',
-    location: 'Sandton, Rosebank & Cape Town City Bowl Skylines',
-    spec: 'High-Altitude Acoustic Dampening • Wind-Load Glass Balustrades • Concealed Patio Heating',
+    location: 'Metropolitan City Skylines',
   },
   {
     id: 'estate-garden',
-    number: '04',
+    number: '05',
     image: '/images/hero_estate_garden.jpg',
     alt: 'Historic wine estate outdoor garden dining pergola surrounded by lush trees and manicured lawns',
-    title: 'Heritage Cape Dutch Estates & Verandas',
-    category: 'Historic Wine Valley Destinations',
-    location: 'Franschhoek & Stellenbosch Historic Wine Valleys',
-    spec: 'Historic Masonry Preservation • Retractable Louvred Pergolas • Microclimate Misting',
+    title: 'Heritage Estates & Veranda Pavilions',
+    location: 'Historic Cape Dutch Wine Valleys',
   },
   {
     id: 'luxury-lounge',
-    number: '05',
+    number: '06',
     image: '/images/hero_luxury_lounge.jpg',
     alt: 'Sophisticated boutique hotel lounge and bar interior with custom architectural millwork and warm ambient lighting',
-    title: 'Executive Hotel Suites & Cocktail Salons',
-    category: 'Five-Star Boutique Interiors',
-    location: 'Flagship Urban Hotels & Diplomatic Salons',
-    spec: 'Zero-VOC Food-Safe Hardwax Finishes • Whisper-Quiet Concealed HVAC • Micro-Zoned Illumination',
+    title: 'Executive Hotel Lounges & Dining Salons',
+    location: 'Boutique Hotels & Private Dining Suites',
   },
 ];
 
@@ -99,9 +86,7 @@ export function Hero({ onOpenAudit }: HeroProps) {
   const headlineRef = useRef<HTMLHeadingElement>(null);
   const subheadRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
-  const badgesRef = useRef<HTMLDivElement>(null);
-  const hudRef = useRef<HTMLDivElement>(null);
-  const hudTextRef = useRef<HTMLDivElement>(null);
+  const navRef = useRef<HTMLDivElement>(null);
   const progressBarRef = useRef<HTMLDivElement>(null);
   const slidesContainerRef = useRef<HTMLDivElement>(null);
   const slideElementsRef = useRef<(HTMLDivElement | null)[]>([]);
@@ -118,38 +103,32 @@ export function Hero({ onOpenAudit }: HeroProps) {
 
       tl.fromTo(
         badgeRef.current,
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.8, delay: 0.15 }
+        { opacity: 0, y: 15 },
+        { opacity: 1, y: 0, duration: 0.7, delay: 0.1 }
       )
         .fromTo(
           headlineRef.current,
-          { opacity: 0, y: 28 },
-          { opacity: 1, y: 0, duration: 1.1 },
+          { opacity: 0, y: 25 },
+          { opacity: 1, y: 0, duration: 1.0 },
           '-=0.5'
         )
         .fromTo(
           subheadRef.current,
-          { opacity: 0, y: 22 },
-          { opacity: 1, y: 0, duration: 0.9 },
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.8 },
           '-=0.7'
         )
         .fromTo(
           ctaRef.current,
-          { opacity: 0, y: 18 },
-          { opacity: 1, y: 0, duration: 0.8 },
+          { opacity: 0, y: 15 },
+          { opacity: 1, y: 0, duration: 0.7 },
           '-=0.6'
         )
         .fromTo(
-          badgesRef.current,
-          { opacity: 0, y: 18 },
+          navRef.current,
+          { opacity: 0, y: 15 },
           { opacity: 1, y: 0, duration: 0.8 },
           '-=0.5'
-        )
-        .fromTo(
-          hudRef.current,
-          { opacity: 0, y: 25 },
-          { opacity: 1, y: 0, duration: 0.9 },
-          '-=0.6'
         );
     }, heroRef);
 
@@ -168,11 +147,11 @@ export function Hero({ onOpenAudit }: HeroProps) {
         // Fade out current slide
         gsap.to(currentSlideEl, {
           opacity: 0,
-          duration: 1.2,
+          duration: 1.1,
           ease: 'power2.inOut',
         });
 
-        // Ken Burns push-in & fade in incoming slide
+        // Ken Burns zoom & fade in incoming slide
         gsap.fromTo(
           nextSlideEl,
           { opacity: 0, scale: 1.0 },
@@ -182,15 +161,6 @@ export function Hero({ onOpenAudit }: HeroProps) {
             duration: SLIDE_DURATION / 1000,
             ease: 'sine.out',
           }
-        );
-      }
-
-      // Animate HUD caption text change
-      if (hudTextRef.current) {
-        gsap.fromTo(
-          hudTextRef.current,
-          { opacity: 0, y: 8 },
-          { opacity: 1, y: 0, duration: 0.55, ease: 'power2.out' }
         );
       }
 
@@ -223,9 +193,8 @@ export function Hero({ onOpenAudit }: HeroProps) {
     goToSlide(prevIdx);
   }, [activeIndex, goToSlide]);
 
-  // Automatic slideshow timer with pause-on-hover support
+  // Automatic slideshow timer with pause-on-hover
   useEffect(() => {
-    // Initial progress bar animation on first mount
     if (progressBarRef.current) {
       gsap.fromTo(
         progressBarRef.current,
@@ -266,11 +235,11 @@ export function Hero({ onOpenAudit }: HeroProps) {
       ref={heroRef}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
-      className="relative min-h-[90vh] lg:min-h-[96vh] flex flex-col justify-between pt-32 sm:pt-36 pb-12 overflow-hidden bg-charcoal-950"
+      className="relative min-h-[85vh] lg:min-h-[92vh] flex flex-col justify-between pt-32 sm:pt-36 pb-8 sm:pb-10 overflow-hidden bg-charcoal-950"
       aria-label="AfriSMME Hospitality Support Introduction"
     >
       {/* =========================================================================
-          CINEMATIC GSAP BACKGROUND SLIDESHOW: CRISP, UNBLURRED, SOPHISTICATED
+          AUTHENTIC HOSPITALITY PHOTOGRAPHY: CRISP, UNBLURRED, CINEMATIC
           ========================================================================= */}
       <div
         ref={slidesContainerRef}
@@ -295,54 +264,51 @@ export function Hero({ onOpenAudit }: HeroProps) {
               fill
               priority={idx === 0}
               sizes="100vw"
-              className="object-cover object-center filter brightness-[0.74] contrast-[1.03]"
+              className="object-cover object-center filter brightness-[0.76] contrast-[1.03]"
             />
           </div>
         ))}
 
-        {/* Sophisticated Architectural Scrim & Directional Lighting */}
-        {/* Left directional scrim: keeps typography 100% legible without blurring imagery */}
-        <div className="absolute inset-0 bg-gradient-to-r from-charcoal-950 via-charcoal-950/80 to-transparent w-full md:w-[70%]" />
+        {/* Sophisticated Architectural Scrim & Directional Contrast */}
+        {/* Left directional scrim: maintains typography clarity without washing out the photo */}
+        <div className="absolute inset-0 bg-gradient-to-r from-charcoal-950/95 via-charcoal-950/70 to-transparent w-full md:w-[65%]" />
         
-        {/* Bottom fade: seamless transition into next section */}
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/45 to-transparent h-full" />
+        {/* Bottom subtle gradient for clean transition */}
+        <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/40 to-transparent h-full" />
         
-        {/* Top subtle vignette: clean header integration */}
-        <div className="absolute inset-0 bg-gradient-to-b from-charcoal-950/85 via-transparent to-transparent h-36" />
+        {/* Top vignette for clean navigation integration */}
+        <div className="absolute inset-0 bg-gradient-to-b from-charcoal-950/80 via-transparent to-transparent h-28" />
 
         {/* Subtle radial focus vignette on the photography */}
         <div
-          className="absolute inset-0 opacity-40 mix-blend-multiply pointer-events-none"
+          className="absolute inset-0 opacity-35 mix-blend-multiply pointer-events-none"
           style={{
             background:
-              'radial-gradient(circle at 72% 42%, transparent 35%, rgba(8,9,11,0.75) 100%)',
+              'radial-gradient(circle at 75% 45%, transparent 35%, rgba(8,9,11,0.7) 100%)',
           }}
         />
-
-        {/* Soft luxury champagne bronze ambient glow in upper corner */}
-        <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-bronze-500/10 blur-3xl pointer-events-none" />
       </div>
 
       {/* =========================================================================
-          MAIN EDITORIAL CONTENT
+          MAIN EDITORIAL CONTENT: DECLUTTERED, CONFIDENT, IMPACTFUL
           ========================================================================= */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto">
-        <div className="max-w-3xl lg:max-w-4xl">
+        <div className="max-w-2xl lg:max-w-3xl">
           {/* Eyebrow Pill */}
           <div
             ref={badgeRef}
-            className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-charcoal-950/90 border border-bronze-500/40 mb-6 shadow-subtle-dark"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-charcoal-950/90 border border-bronze-500/40 mb-5 shadow-subtle-dark"
           >
-            <span className="w-2 h-2 rounded-full bg-bronze-400 animate-pulse" />
-            <span className="text-[11px] sm:text-xs font-mono uppercase tracking-widest text-bronze-300 font-medium">
-              Turnkey Hospitality Engineering & Facility Support
+            <span className="w-1.5 h-1.5 rounded-full bg-bronze-400 animate-pulse" />
+            <span className="text-[11px] font-mono uppercase tracking-widest text-bronze-300 font-medium">
+              Restaurant & Hospitality Engineering
             </span>
           </div>
 
-          {/* Master Headline: Confident, architectural, editorial */}
+          {/* Master Headline: Large, editorial, uncluttered */}
           <h1
             ref={headlineRef}
-            className="text-4xl sm:text-6xl md:text-7xl lg:text-[4.75rem] font-display font-medium text-ivory-50 tracking-tight leading-[1.06] text-balance mb-6"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-medium text-ivory-50 tracking-tight leading-[1.08] text-balance mb-5"
           >
             We Engineer, Restore & Protect Africa’s{' '}
             <span className="italic font-light text-gold-gradient">
@@ -350,17 +316,16 @@ export function Hero({ onOpenAudit }: HeroProps) {
             </span>
           </h1>
 
-          {/* Subheading */}
+          {/* Single Focused Editorial Subheading */}
           <p
             ref={subheadRef}
-            className="text-lg sm:text-xl md:text-2xl text-ivory-200/95 font-normal leading-relaxed text-balance max-w-3xl mb-10"
+            className="text-base sm:text-lg md:text-xl text-ivory-200/90 font-normal leading-relaxed text-balance max-w-2xl mb-8"
           >
-            From bespoke architectural terrace systems and discrete dining room acoustics to overnight timber restoration and 24/7 preventative kitchen fleet care—delivered with{' '}
-            <strong className="text-bronze-300 font-semibold">zero daytime service disruption</strong>.
+            Architectural terrace systems, dining room acoustics, and overnight dark-hours facility restoration—delivered with zero daytime service disruption.
           </p>
 
-          {/* Action CTAs */}
-          <div ref={ctaRef} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-5 mb-10">
+          {/* Clean Action Buttons */}
+          <div ref={ctaRef} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4">
             {onOpenAudit ? (
               <Button
                 variant="primary"
@@ -392,101 +357,62 @@ export function Hero({ onOpenAudit }: HeroProps) {
               Explore the 6 Pillars
             </Button>
           </div>
-
-          {/* Verified Standards Badges (Honest, capability-based) */}
-          <div
-            ref={badgesRef}
-            className="flex flex-wrap items-center gap-y-3 gap-x-6 pt-6 border-t border-charcoal-700/60 text-xs text-ivory-300 font-mono"
-          >
-            <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4 text-emerald-400" />
-              <span>Overnight Dark-Hours Protocol (23:00–07:00)</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-bronze-400" />
-              <span>SANS 10400 & NFPA 96 Aligned</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Layers className="w-4 h-4 text-bronze-400" />
-              <span>Single Accountable Master SLA</span>
-            </div>
-          </div>
         </div>
       </div>
 
       {/* =========================================================================
-          CINEMATIC VENUE HUD & GSAP SLIDESHOW CONTROLS (BOTTOM BAR)
+          DECLUTTERED MINIMALIST SLIDESHOW CONTROLS (UNOBTRUSIVE)
           ========================================================================= */}
       <div
-        ref={hudRef}
-        className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-8 mt-4"
+        ref={navRef}
+        className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-4"
       >
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 p-4 sm:p-5 rounded-xl bg-charcoal-950/85 border border-charcoal-800/80 backdrop-blur-md shadow-2xl">
-          {/* Active Venue Caption HUD */}
-          <div ref={hudTextRef} className="flex-1 min-w-0">
-            <div className="flex items-center gap-2 mb-1.5">
-              <span className="inline-flex items-center justify-center px-2 py-0.5 rounded bg-bronze-500/20 text-bronze-300 font-mono text-[10px] tracking-wider uppercase font-semibold">
-                Venue Environment {currentSlide.number} / {String(HERO_SLIDES.length).padStart(2, '0')}
-              </span>
-              <span className="text-xs text-ivory-400 font-sans truncate">
-                {currentSlide.category}
-              </span>
-            </div>
-
-            <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4">
-              <h2 className="text-base sm:text-lg font-display font-medium text-ivory-100 tracking-tight truncate">
-                {currentSlide.title}
-              </h2>
-              <div className="flex items-center gap-1.5 text-xs text-bronze-300 font-mono">
-                <MapPin className="w-3.5 h-3.5 text-bronze-400 shrink-0" />
-                <span className="truncate">{currentSlide.location}</span>
-              </div>
-            </div>
-
-            <p className="text-[11px] sm:text-xs text-ivory-300 font-mono mt-1 truncate">
-              <span className="text-bronze-400 font-medium">Engineered Focus:</span> {currentSlide.spec}
-            </p>
+        <div className="flex items-center justify-between gap-4 py-2 border-t border-charcoal-800/60">
+          {/* Subtle Venue Title */}
+          <div className="flex items-center gap-2.5 min-w-0">
+            <span className="font-mono text-xs text-bronze-400 font-semibold tracking-wider">
+              {currentSlide.number} / {String(HERO_SLIDES.length).padStart(2, '0')}
+            </span>
+            <span className="w-1 h-1 rounded-full bg-charcoal-600 hidden sm:inline-block" />
+            <span className="text-xs text-ivory-300 font-medium truncate">
+              {currentSlide.title}
+            </span>
           </div>
 
-          {/* Slideshow Timeline Controls */}
-          <div className="flex items-center gap-3 sm:gap-4 shrink-0">
-            {/* Numbered Slide Selectors */}
-            <div className="flex items-center gap-1 sm:gap-1.5">
+          {/* Minimal Controls */}
+          <div className="flex items-center gap-2 shrink-0">
+            {/* Slide Dots / Pills */}
+            <div className="flex items-center gap-1">
               {HERO_SLIDES.map((slide, idx) => {
                 const isActive = idx === activeIndex;
                 return (
                   <button
                     key={slide.id}
                     onClick={() => goToSlide(idx)}
-                    aria-label={`Jump to venue slide ${slide.number}: ${slide.title}`}
-                    className={`relative px-2.5 py-1.5 rounded text-xs font-mono transition-all duration-300 ${
+                    aria-label={`Switch to slide ${slide.number}`}
+                    className={`h-1.5 transition-all duration-300 rounded-full ${
                       isActive
-                        ? 'text-bronze-300 bg-bronze-500/20 font-bold border border-bronze-500/50'
-                        : 'text-ivory-400 hover:text-ivory-100 hover:bg-charcoal-800/60'
+                        ? 'w-6 bg-bronze-400'
+                        : 'w-2 bg-charcoal-700 hover:bg-charcoal-500'
                     }`}
-                  >
-                    <span>{slide.number}</span>
-                    {isActive && (
-                      <span className="absolute bottom-0 left-1 right-1 h-0.5 bg-bronze-400 rounded-full" />
-                    )}
-                  </button>
+                  />
                 );
               })}
             </div>
 
-            {/* Next / Prev Navigation Chevrons */}
-            <div className="flex items-center gap-1 pl-2 border-l border-charcoal-800">
+            {/* Subtle Prev / Next Arrows */}
+            <div className="flex items-center gap-1 ml-2">
               <button
                 onClick={prevSlide}
-                aria-label="Previous venue slide"
-                className="w-8 h-8 rounded-lg flex items-center justify-center bg-charcoal-900 border border-charcoal-700 text-ivory-300 hover:text-bronze-300 hover:border-bronze-500/60 transition-colors"
+                aria-label="Previous slide"
+                className="w-7 h-7 rounded-md flex items-center justify-center text-ivory-400 hover:text-ivory-100 hover:bg-charcoal-800/80 transition-colors"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
               <button
                 onClick={nextSlide}
-                aria-label="Next venue slide"
-                className="w-8 h-8 rounded-lg flex items-center justify-center bg-charcoal-900 border border-charcoal-700 text-ivory-300 hover:text-bronze-300 hover:border-bronze-500/60 transition-colors"
+                aria-label="Next slide"
+                className="w-7 h-7 rounded-md flex items-center justify-center text-ivory-400 hover:text-ivory-100 hover:bg-charcoal-800/80 transition-colors"
               >
                 <ChevronRight className="w-4 h-4" />
               </button>
@@ -494,11 +420,11 @@ export function Hero({ onOpenAudit }: HeroProps) {
           </div>
         </div>
 
-        {/* Global Slide Progress Bar Indicator */}
-        <div className="relative w-full h-1 bg-charcoal-800/80 rounded-full overflow-hidden mt-2">
+        {/* Discreet Slide Progress Line */}
+        <div className="relative w-full h-[2px] bg-charcoal-800/50 rounded-full overflow-hidden mt-1">
           <div
             ref={progressBarRef}
-            className="absolute top-0 bottom-0 left-0 w-full bg-gradient-to-r from-bronze-500 to-bronze-300 rounded-full origin-left"
+            className="absolute top-0 bottom-0 left-0 w-full bg-bronze-400/80 rounded-full origin-left"
             style={{ transform: 'scaleX(0)' }}
           />
         </div>
