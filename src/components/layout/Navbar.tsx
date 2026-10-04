@@ -188,12 +188,6 @@ export function Navbar({ onOpenAudit }: NavbarProps) {
 
             {/* Live Status & CTA Cluster */}
             <div className="hidden sm:flex items-center gap-3 xl:gap-4 shrink-0">
-              {/* Emergency Fleet indicator */}
-              <div className="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-full bg-charcoal-900/80 border border-charcoal-700/80 text-[11px] font-mono text-ivory-300">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                <span className="text-ivory-400">Fleet Dispatch:</span>
-                <span className="text-emerald-400 font-medium">Standby</span>
-              </div>
 
               {onOpenAudit ? (
                 <button
