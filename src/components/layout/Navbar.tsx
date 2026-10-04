@@ -33,6 +33,7 @@ export function Navbar({ onOpenAudit }: { onOpenAudit?: () => void }) {
     { label: 'Protect', href: '#protect' },
     { label: 'Grow', href: '#grow' },
     { label: 'Blueprint', href: '#blueprint' },
+    { label: 'Difference', href: '#comparison' },
     { label: 'Case Studies', href: '#case-studies' },
   ];
 

@@ -8,6 +8,7 @@ import { InteractiveHotspot } from '@/components/interactive/InteractiveHotspot'
 import { ProcessTimeline } from '@/components/sections/ProcessTimeline';
 import { EcosystemDiagram } from '@/components/sections/EcosystemDiagram';
 import { CaseStudiesSection } from '@/components/sections/CaseStudiesSection';
+import { ComparisonMatrix } from '@/components/sections/ComparisonMatrix';
 import { ExecutiveStandards } from '@/components/sections/ExecutiveStandards';
 import { DigitalAssessmentTool } from '@/components/interactive/DigitalAssessmentTool';
 import { CTASection } from '@/components/sections/CTASection';
@@ -58,13 +59,16 @@ export default function HomePage() {
         {/* 6. Case Studies & Turnarounds */}
         <CaseStudiesSection />
 
-        {/* 7. Tangible Executive Craftsmanship & Collateral */}
+        {/* 7. Strategic Market Differentiation Matrix */}
+        <ComparisonMatrix />
+
+        {/* 8. Tangible Executive Craftsmanship & Collateral */}
         <ExecutiveStandards />
 
-        {/* 8. Rapid Digital Diagnostic Tool */}
+        {/* 9. Rapid Digital Diagnostic Tool */}
         <DigitalAssessmentTool />
 
-        {/* 9. Commission & Emergency SLA CTA */}
+        {/* 10. Commission & Emergency SLA CTA */}
         <CTASection preselectedPillarId={selectedPillarForQuote} />
       </main>
 

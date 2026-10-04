@@ -1,0 +1,997 @@
+const fs = require('fs');
+const path = require('path');
+
+const rootDir = process.cwd();
+
+const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurants &amp; Hospitality Support — Corporate Brand Identity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --charcoal: #121316;
+      --charcoal-elevated: #181B22;
+      --charcoal-card: #1F242F;
+      --charcoal-border: #2B3342;
+      --warm-ivory: #F9F8F5;
+      --warm-ivory-dark: #E4DFD5;
+      --bronze: #C5A880;
+      --bronze-light: #D8C2A0;
+      --bronze-dark: #A88A62;
+      --deep-green: #1B3B2B;
+      --text-muted: #8E99A8;
+      --text-dim: #606A78;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--charcoal);
+      color: var(--warm-ivory);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Top Sticky Header */
+    header.site-header {
+      background: rgba(18, 19, 22, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--charcoal-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 16px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-title-group {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-seal {
+      width: 40px;
+      height: 40px;
+      background: var(--charcoal-card);
+      border: 1.5px solid var(--bronze);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .brand-title {
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: var(--warm-ivory);
+      text-transform: uppercase;
+    }
+
+    .brand-sub {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--bronze);
+      text-transform: uppercase;
+    }
+
+    .header-links {
+      display: flex;
+      gap: 12px;
+    }
+
+    .nav-btn {
+      background: var(--charcoal-card);
+      color: var(--warm-ivory);
+      border: 1px solid var(--charcoal-border);
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .nav-btn:hover {
+      background: var(--bronze);
+      color: var(--charcoal);
+      border-color: var(--bronze);
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      padding: 60px 32px 36px;
+      max-width: 1280px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .badge-pill {
+      display: inline-block;
+      padding: 5px 16px;
+      background: rgba(197, 168, 128, 0.12);
+      border: 1px solid rgba(197, 168, 128, 0.35);
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      color: var(--bronze);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .hero-title {
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: var(--warm-ivory);
+      margin-bottom: 14px;
+    }
+
+    .hero-subtitle {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 820px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+
+    /* Content Area */
+    .content-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px 80px;
+    }
+
+    /* Master Feature Card */
+    .master-feature-box {
+      background: var(--charcoal-elevated);
+      border: 1px solid var(--charcoal-border);
+      border-radius: 16px;
+      padding: 40px;
+      margin-bottom: 56px;
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .master-preview-pane {
+      background: var(--warm-ivory);
+      border-radius: 12px;
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 420px;
+      border: 1px solid var(--warm-ivory-dark);
+      transition: background 0.3s ease;
+    }
+
+    .master-preview-pane.theme-dark {
+      background: #0E1015;
+      border-color: #242A35;
+    }
+
+    .master-preview-pane.theme-grid {
+      background-color: var(--warm-ivory);
+      background-image: 
+        linear-gradient(rgba(18, 19, 22, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(18, 19, 22, 0.06) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+
+    .master-preview-pane img {
+      max-width: 100%;
+      max-height: 380px;
+      height: auto;
+      transition: max-height 0.2s ease;
+    }
+
+    .master-info-pane h2 {
+      font-size: 30px;
+      font-weight: 800;
+      color: var(--warm-ivory);
+      margin-bottom: 6px;
+    }
+
+    .master-tagline {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--bronze);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .master-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .concept-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .meta-card {
+      background: var(--charcoal-card);
+      border: 1px solid var(--charcoal-border);
+      border-radius: 8px;
+      padding: 12px 16px;
+    }
+
+    .meta-label {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--bronze);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .meta-value {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--warm-ivory);
+    }
+
+    /* Toolbar */
+    .interactive-toolbar {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      background: var(--charcoal-card);
+      border: 1px solid var(--charcoal-border);
+      padding: 12px 20px;
+      border-radius: 8px;
+      flex-wrap: wrap;
+    }
+
+    .toolbar-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .theme-pill-btn {
+      background: var(--charcoal-elevated);
+      border: 1px solid var(--charcoal-border);
+      color: var(--warm-ivory);
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-size: 11px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .theme-pill-btn.active {
+      background: var(--bronze);
+      color: var(--charcoal);
+      border-color: var(--bronze);
+    }
+
+    .scale-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-left: auto;
+    }
+
+    .scale-group input {
+      accent-color: var(--bronze);
+      cursor: pointer;
+    }
+
+    /* Section Bar */
+    .section-bar {
+      border-bottom: 1px solid var(--charcoal-border);
+      padding-bottom: 12px;
+      margin-bottom: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: var(--warm-ivory);
+      text-transform: uppercase;
+    }
+
+    .section-sub {
+      font-size: 12px;
+      color: var(--bronze);
+      font-weight: 500;
+    }
+
+    /* Deliverables Grid */
+    .deliverables-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      margin-bottom: 64px;
+    }
+
+    .asset-card {
+      background: var(--charcoal-elevated);
+      border: 1px solid var(--charcoal-border);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.2s ease;
+    }
+
+    .asset-card:hover {
+      border-color: var(--bronze);
+      transform: translateY(-2px);
+    }
+
+    .asset-canvas {
+      height: 180px;
+      background: var(--warm-ivory);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      border-bottom: 1px solid var(--charcoal-border);
+    }
+
+    .asset-canvas.dark-canvas {
+      background: var(--charcoal);
+    }
+
+    .asset-canvas img {
+      max-width: 90%;
+      max-height: 85%;
+      object-fit: contain;
+    }
+
+    .asset-info {
+      padding: 16px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .asset-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--warm-ivory);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+
+    .asset-desc {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .asset-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .badge-svg {
+      font-size: 9px;
+      font-weight: 700;
+      background: rgba(197, 168, 128, 0.15);
+      color: var(--bronze);
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(197, 168, 128, 0.3);
+      text-transform: uppercase;
+    }
+
+    .open-link {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--warm-ivory);
+      text-decoration: none;
+    }
+
+    .open-link:hover {
+      color: var(--bronze);
+    }
+
+    /* Mockups Gallery */
+    .mockup-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+      gap: 28px;
+      margin-bottom: 64px;
+    }
+
+    .mockup-box {
+      background: var(--charcoal-elevated);
+      border: 1px solid var(--charcoal-border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .mockup-display {
+      background: #0A0C10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mockup-display img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .mockup-display:hover img {
+      transform: scale(1.02);
+    }
+
+    .mockup-caption {
+      padding: 16px 20px;
+      border-top: 1px solid var(--charcoal-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .mockup-caption-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--warm-ivory);
+      text-transform: uppercase;
+    }
+
+    .mockup-caption-tag {
+      font-size: 10px;
+      color: var(--bronze);
+      font-weight: 600;
+    }
+
+    /* Swatches */
+    .swatch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 64px;
+    }
+
+    .swatch-card {
+      background: var(--charcoal-elevated);
+      border: 1px solid var(--charcoal-border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .swatch-box {
+      height: 90px;
+      width: 100%;
+    }
+
+    .swatch-info {
+      padding: 14px;
+    }
+
+    .swatch-name {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--warm-ivory);
+      margin-bottom: 4px;
+    }
+
+    .swatch-hex {
+      font-family: monospace;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--bronze);
+      margin-bottom: 8px;
+    }
+
+    .swatch-codes {
+      font-size: 10px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* Footer */
+    footer.site-footer {
+      border-top: 1px solid var(--charcoal-border);
+      padding: 40px 32px;
+      text-align: center;
+      background: #0A0C10;
+      font-size: 12px;
+      color: var(--text-dim);
+    }
+
+    @media (max-width: 900px) {
+      .master-feature-box { grid-template-columns: 1fr; }
+      .hero-title { font-size: 30px; }
+      .mockup-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="brand-title-group">
+      <div class="brand-seal">
+        <svg width="22" height="22" viewBox="0 0 200 200">
+          <rect x="22" y="172" width="156" height="7" rx="2" fill="#C5A880"/>
+          <rect x="34" y="52" width="24" height="120" rx="2" fill="#C5A880"/>
+          <rect x="142" y="52" width="24" height="120" rx="2" fill="#C5A880"/>
+          <path d="M 64 172 L 64 106 A 36 36 0 0 1 136 106 L 136 172 L 118 172 L 118 112 A 18 18 0 0 0 82 112 L 82 172 Z" fill="#C5A880"/>
+          <polygon points="16,52 26,38 174,38 184,52" fill="#C5A880"/>
+          <polygon points="100,18 114,32 100,44 86,32" fill="#C5A880"/>
+        </svg>
+      </div>
+      <div>
+        <div class="brand-title">Restaurants &amp; Hospitality Support</div>
+        <div class="brand-sub">AfriSMME Hub Corporate Identity</div>
+      </div>
+    </div>
+    <div class="header-links">
+      <a href="#deliverables" class="nav-btn">Vector Assets</a>
+      <a href="#mockups" class="nav-btn">Real-World Mockups</a>
+      <a href="#palette" class="nav-btn">Color Palette</a>
+    </div>
+  </header>
+
+  <section class="hero-banner">
+    <div class="badge-pill">Unified Master Corporate Identity</div>
+    <h1 class="hero-title">Restaurants &amp; Hospitality Support</h1>
+    <p class="hero-subtitle">
+      A single, definitive vector corporate identity engineered to represent the complete ecosystem of restaurant and hospitality support services: facilities engineering, acoustic architecture, preventative maintenance, operational systems, and enterprise procurement.
+    </p>
+  </section>
+
+  <main class="content-container">
+
+    <!-- Master Showcase Box -->
+    <section class="master-feature-box">
+      <div class="master-preview-pane theme-ivory" id="masterPreviewPane">
+        <img id="masterImage" src="logo/primary-logo.svg" alt="Restaurants and Hospitality Support Master Logo">
+      </div>
+
+      <div class="master-info-pane">
+        <div class="master-tagline">THE ARCHITECTURAL CANOPY &amp; PILLARS OF SUPPORT</div>
+        <h2>The Master Identity</h2>
+        <p class="master-desc">
+          The symbol unites the two core dimensions of the brand: <strong>Hospitality</strong> and <strong>Support</strong>. 
+          The grand architectural archway and floating cantilever canopy represent hospitality shelter, dining pavilions, and welcoming sanctuaries of dining excellence. 
+          The twin monolithic pillars, grounding plinth, and apex keystone beacon represent rock-solid support: facilities management, acoustic comfort, operational precision, and infrastructure backing.
+        </p>
+
+        <div class="concept-meta-grid">
+          <div class="meta-card">
+            <div class="meta-label">Design Language</div>
+            <div class="meta-value">Architectural Hospitality Portal &amp; Pillars</div>
+          </div>
+          <div class="meta-card">
+            <div class="meta-label">Support Metaphor</div>
+            <div class="meta-value">Load-Bearing Colonnade &amp; Ground Plinth</div>
+          </div>
+          <div class="meta-card">
+            <div class="meta-label">Negative Space</div>
+            <div class="meta-value">Welcoming Portal Threshold &amp; Hearth Beacon</div>
+          </div>
+          <div class="meta-card">
+            <div class="meta-label">Scalability Guarantee</div>
+            <div class="meta-value">100% Crisp from 16px to Unlimited Facade</div>
+          </div>
+        </div>
+
+        <div class="interactive-toolbar">
+          <span class="toolbar-label">Substrate:</span>
+          <button class="theme-pill-btn active" onclick="setSubstrate('theme-ivory')">Warm Ivory</button>
+          <button class="theme-pill-btn" onclick="setSubstrate('theme-dark')">Deep Charcoal</button>
+          <button class="theme-pill-btn" onclick="setSubstrate('theme-grid')">Geometric Grid</button>
+
+          <div class="scale-group">
+            <span class="toolbar-label">Scale:</span>
+            <input type="range" id="scaleSlider" min="28" max="360" value="220" oninput="adjustScale(this.value)">
+            <span class="toolbar-label" id="scaleDisplay">220px</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deliverables Grid -->
+    <div class="section-bar" id="deliverables">
+      <div>
+        <h2 class="section-title">Core Production Deliverables</h2>
+        <p class="section-sub">11 Standalone Production-Ready Vector Files in \`logo/\`</p>
+      </div>
+      <span class="badge-svg">100% Pure Vector SVG</span>
+    </div>
+
+    <div class="deliverables-grid">
+      <!-- 1 -->
+      <div class="asset-card">
+        <div class="asset-canvas">
+          <img src="logo/primary-logo.svg" alt="Primary Corporate Logo">
+        </div>
+        <div class="asset-info">
+          <div>
+            <div class="asset-title">1. Primary Master Logo</div>
+            <div class="asset-desc">Master presentation lockup on warm ivory canvas.</div>
+          </div>
+          <div class="asset-actions">
+            <span class="badge-svg">SVG</span>
+            <a href="logo/primary-logo.svg" target="_blank" class="open-link">Open SVG ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="asset-card">
+        <div class="asset-canvas">
+          <img src="logo/symbol-only.svg" alt="Standalone Symbol Only">
+        </div>
+        <div class="asset-info">
+          <div>
+            <div class="asset-title">2. Standalone Symbol</div>
+            <div class="asset-desc">Isolated geometric emblem for app icons, seals, and stamps.</div>
+          </div>
+          <div class="asset-actions">
+            <span class="badge-svg">SVG</span>
+            <a href="logo/symbol-only.svg" target="_blank" class="open-link">Open SVG ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="asset-card">
+        <div class="asset-canvas">
+          <img src="logo/wordmark.svg" alt="Corporate Wordmark">
+        </div>
+        <div class="asset-info">
+          <div>
+            <div class="asset-title">3. Wordmark Only</div>
+            <div class="asset-desc">Pure typographic wordmark with calibrated tracking.</div>
+          </div>
+          <div class="asset-actions">
+            <span class="badge-svg">SVG</span>
+            <a href="logo/wordmark.svg" target="_blank" class="open-link">Open SVG ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="asset-card">
+        <div class="asset-canvas">
+          <img src="logo/horizontal-lockup.svg" alt="Horizontal Lockup">
+        </div>
+        <div class="asset-info">
+          <div>
+            <div class="asset-title">4. Horizontal Lockup</div>
+            <div class="asset-desc">Standard landscape configuration for headers and documents.</div>
+          </div>
+          <div class="asset-actions">
+            <span class="badge-svg">SVG</span>
+            <a href="logo/horizontal-lockup.svg" target="_blank" class="open-link">Open SVG ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="asset-card">
+        <div class="asset-canvas">
+          <img src="logo/stacked-lockup.svg" alt="Stacked Lockup">
+        </div>
+        <div class="asset-info">
+          <div>
+            <div class="asset-title">5. Stacked Lockup</div>
+            <div class="asset-desc">Centered portrait lockup for badges, covers, and uniforms.</div>
+          </div>
+          <div class="asset-actions">
+            <span class="badge-svg">SVG</span>
+            <a href="logo/stacked-lockup.svg" target="_blank" class="open-link">Open SVG ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="asset-card">
+        <div class="asset-canvas">
+          <img src="logo/monochrome-black.svg" alt="Monochrome Black">
+        </div>
+        <div class="asset-info">
+          <div>
+            <div class="asset-title">6. Monochrome Black</div>
+            <div class="asset-desc">100% solid ink density for newsprint and single-color laser.</div>
+          </div>
+          <div class="asset-actions">
+            <span class="badge-svg">SVG</span>
+            <a href="logo/monochrome-black.svg" target="_blank" class="open-link">Open SVG ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="asset-card">
+        <div class="asset-canvas dark-canvas">
+          <img src="logo/monochrome-white.svg" alt="Monochrome White">
+        </div>
+        <div class="asset-info">
+          <div>
+            <div class="asset-title">7. Monochrome White</div>
+            <div class="asset-desc">100% pure white reverse knockout on dark substrates.</div>
+          </div>
+          <div class="asset-actions">
+            <span class="badge-svg">SVG</span>
+            <a href="logo/monochrome-white.svg" target="_blank" class="open-link">Open SVG ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="asset-card">
+        <div class="asset-canvas">
+          <img src="logo/full-colour.svg" alt="Master Full Colour">
+        </div>
+        <div class="asset-info">
+          <div>
+            <div class="asset-title">8. Master Full Colour</div>
+            <div class="asset-desc">Master multi-tone palette (Charcoal, Bronze, Ivory, Green).</div>
+          </div>
+          <div class="asset-actions">
+            <span class="badge-svg">SVG</span>
+            <a href="logo/full-colour.svg" target="_blank" class="open-link">Open SVG ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="asset-card">
+        <div class="asset-canvas dark-canvas">
+          <img src="logo/favicon-icon.svg" alt="Favicon 32x32">
+        </div>
+        <div class="asset-info">
+          <div>
+            <div class="asset-title">9. Favicon (32x32)</div>
+            <div class="asset-desc">Pixel-snapped icon optimized for web and app headers.</div>
+          </div>
+          <div class="asset-actions">
+            <span class="badge-svg">SVG</span>
+            <a href="logo/favicon-icon.svg" target="_blank" class="open-link">Open SVG ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="asset-card">
+        <div class="asset-canvas">
+          <img src="logo/small-size-test.svg" alt="Small Size Scale Test">
+        </div>
+        <div class="asset-info">
+          <div>
+            <div class="asset-title">10. Small-Size Scale Test</div>
+            <div class="asset-desc">Rigorous optical legibility test from 64px down to 16px.</div>
+          </div>
+          <div class="asset-actions">
+            <span class="badge-svg">SVG</span>
+            <a href="logo/small-size-test.svg" target="_blank" class="open-link">Open SVG ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 11 -->
+      <div class="asset-card">
+        <div class="asset-canvas dark-canvas">
+          <img src="logo/large-signage-test.svg" alt="Large Signage Test">
+        </div>
+        <div class="asset-info">
+          <div>
+            <div class="asset-title">11. Large Signage Test</div>
+            <div class="asset-desc">Dimensional architectural entrance facade simulation.</div>
+          </div>
+          <div class="asset-actions">
+            <span class="badge-svg">SVG</span>
+            <a href="logo/large-signage-test.svg" target="_blank" class="open-link">Open SVG ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Real-World Mockup Suite -->
+    <div class="section-bar" id="mockups">
+      <div>
+        <h2 class="section-title">Real-World Environmental &amp; Corporate Applications</h2>
+        <p class="section-sub">Tested Across Physical Signage, Staff Apparel, Logistics, Stationery, and Digital Media</p>
+      </div>
+      <span class="badge-svg">7 Production Scenarios</span>
+    </div>
+
+    <div class="mockup-grid">
+      <!-- Mockup 1: Signage -->
+      <div class="mockup-box">
+        <div class="mockup-display">
+          <img src="mockups/restaurant-entrance-signage.svg" alt="Restaurant &amp; Hospitality Entrance Signage">
+        </div>
+        <div class="mockup-caption">
+          <div class="mockup-caption-title">1. Restaurant &amp; Hotel Entrance Signage</div>
+          <div class="mockup-caption-tag">Cast Bronze on Fluted Granite</div>
+        </div>
+      </div>
+
+      <!-- Mockup 2: Staff Uniform -->
+      <div class="mockup-box">
+        <div class="mockup-display">
+          <img src="mockups/staff-uniform.svg" alt="Staff Uniform Suite">
+        </div>
+        <div class="mockup-caption">
+          <div class="mockup-caption-title">2. Staff Apparel &amp; Uniform Suite</div>
+          <div class="mockup-caption-tag">Bullion Blazer Crest, Apron &amp; Pin</div>
+        </div>
+      </div>
+
+      <!-- Mockup 3: Fleet Vehicle -->
+      <div class="mockup-box">
+        <div class="mockup-display">
+          <img src="mockups/vehicle.svg" alt="Support Logistics Van">
+        </div>
+        <div class="mockup-caption">
+          <div class="mockup-caption-title">3. Hospitality Support Fleet Logistics Van</div>
+          <div class="mockup-caption-tag">Matte Charcoal High-Roof Livery</div>
+        </div>
+      </div>
+
+      <!-- Mockup 4: Business Stationery -->
+      <div class="mockup-box">
+        <div class="mockup-display">
+          <img src="mockups/business-card.svg" alt="Luxury Business Cards">
+        </div>
+        <div class="mockup-caption">
+          <div class="mockup-caption-title">4. Luxury Executive Stationery (600gsm)</div>
+          <div class="mockup-caption-tag">Warm Ivory Cotton &amp; Bronze Foil</div>
+        </div>
+      </div>
+
+      <!-- Mockup 5: Website Header -->
+      <div class="mockup-box">
+        <div class="mockup-display">
+          <img src="mockups/website-header.svg" alt="Website Header &amp; Portal">
+        </div>
+        <div class="mockup-caption">
+          <div class="mockup-caption-title">5. Enterprise SaaS &amp; Portal Header</div>
+          <div class="mockup-caption-tag">Digital Navigation &amp; Client Portal</div>
+        </div>
+      </div>
+
+      <!-- Mockup 6: Proposal Document -->
+      <div class="mockup-box">
+        <div class="mockup-display">
+          <img src="mockups/proposal-document.svg" alt="Proposal Document Cover">
+        </div>
+        <div class="mockup-caption">
+          <div class="mockup-caption-title">6. Executive Proposal Dossier &amp; Agreement</div>
+          <div class="mockup-caption-tag">A4 Hardcover Dossier &amp; Letterhead</div>
+        </div>
+      </div>
+
+      <!-- Mockup 7: Social Avatar -->
+      <div class="mockup-box" style="grid-column: 1 / -1;">
+        <div class="mockup-display">
+          <img src="mockups/social-media-avatar.svg" alt="Social Media Avatar Suite">
+        </div>
+        <div class="mockup-caption">
+          <div class="mockup-caption-title">7. Digital Avatar &amp; Social Profile Containers</div>
+          <div class="mockup-caption-tag">Circular, Squircle &amp; Safe-Padding Matrix</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Color Palette -->
+    <div class="section-bar" id="palette">
+      <div>
+        <h2 class="section-title">Master Corporate Color System</h2>
+        <p class="section-sub">Calibrated Standards for Digital, Print, and Architectural Hardware</p>
+      </div>
+      <span class="badge-svg">Precision Codes</span>
+    </div>
+
+    <div class="swatch-grid">
+      <div class="swatch-card">
+        <div class="swatch-box" style="background: #121316;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Primary: Deep Charcoal / Black</div>
+          <div class="swatch-hex">#121316</div>
+          <div class="swatch-codes">
+            RGB: 18, 19, 22<br>
+            CMYK: 75, 68, 65, 80<br>
+            PMS: Pantone Black 7 C
+          </div>
+        </div>
+      </div>
+
+      <div class="swatch-card">
+        <div class="swatch-box" style="background: #F9F8F5; border-bottom: 1px solid #E5E7EB;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Secondary: Warm Ivory</div>
+          <div class="swatch-hex" style="color: #6B7280;">#F9F8F5</div>
+          <div class="swatch-codes">
+            RGB: 249, 248, 245<br>
+            CMYK: 2, 2, 3, 0<br>
+            PMS: Pantone 7527 C
+          </div>
+        </div>
+      </div>
+
+      <div class="swatch-card">
+        <div class="swatch-box" style="background: #C5A880;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Accent: Muted Bronze / Gold</div>
+          <div class="swatch-hex">#C5A880</div>
+          <div class="swatch-codes">
+            RGB: 197, 168, 128<br>
+            CMYK: 25, 33, 56, 3<br>
+            PMS: Pantone 465 C / 871 C
+          </div>
+        </div>
+      </div>
+
+      <div class="swatch-card">
+        <div class="swatch-box" style="background: #1B3B2B;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Optional: Deep Forest Green</div>
+          <div class="swatch-hex" style="color: #26523D;">#1B3B2B</div>
+          <div class="swatch-codes">
+            RGB: 27, 59, 43<br>
+            CMYK: 80, 45, 75, 55<br>
+            PMS: Pantone 5535 C
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Restaurants &amp; Hospitality Support • Corporate Brand Identity Suite</p>
+    <p style="margin-top: 6px;">All assets generated in pure vector SVG format • 100% production ready for embroidery, vehicle livery, signage, and web.</p>
+  </footer>
+
+  <script>
+    function setSubstrate(theme) {
+      const pane = document.getElementById('masterPreviewPane');
+      pane.className = 'master-preview-pane ' + theme;
+      document.querySelectorAll('.interactive-toolbar .theme-pill-btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+
+    function adjustScale(val) {
+      document.getElementById('scaleDisplay').innerText = val + 'px';
+      const img = document.getElementById('masterImage');
+      img.style.maxHeight = val + 'px';
+      img.style.maxWidth = val + 'px';
+    }
+  </script>
+</body>
+</html>
+`;
+
+fs.writeFileSync(path.join(rootDir, 'index.html'), html.trim());
+console.log('index.html updated with Restaurants & Hospitality Support master identity.');

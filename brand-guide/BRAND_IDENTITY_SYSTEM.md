@@ -1,119 +1,56 @@
-# AFRISMME HUB — CORPORATE BRAND IDENTITY SYSTEM
-## HOSPITALITY SUPPORT ECOSYSTEM MASTER BRAND MANUAL (V2.0)
+# RESTAURANTS & HOSPITALITY SUPPORT
+## CORPORATE BRAND IDENTITY SPECIFICATION MANUAL
 
 ---
 
-### EXECUTIVE SUMMARY & MANDATE
+### 1. BRAND ESSENCE & MANDATE
 
-This identity system establishes the permanent corporate visual standard for **AfriSMME Hub's Hospitality Support Ecosystem**.
+**Restaurants & Hospitality Support** is the strategic infrastructure and operations partner for premier restaurants, hotels, convention spaces, and luxury dining destinations.
 
-AfriSMME Hub operates as an integrated infrastructure and strategic support ecosystem for restaurants, luxury hotels, private resorts, convention centers, and commercial hospitality facilities. The ecosystem delivers:
-* Facilities Management & Preventative Physical Maintenance
-* Acoustic Interior Architecture & Bespoke FF&E Fabrication
-* Enterprise Hospitality Procurement & Verified Supply Chains
-* Integrated Operational Intelligence & Workflow Technology
+The company provides:
+* **Facilities Management & Preventative Physical Maintenance**
+* **Acoustic Interior Architecture & Custom FF&E Restoration**
+* **Hospitality Operational Systems & Rapid Intervention**
+* **Commercial Sourcing & Enterprise Procurement**
 
-**Mandatory Creative Directives:**
-* **100% Vector Precision**: Constructed exclusively with geometric curves, strict tangent lines, and optical balance.
-* **Zero Food Clichés**: Absolutely NO cutlery (forks, knives, spoons), chef hats, plates, coffee cups, or generic food icons.
+#### Design Directives:
+* **Zero Food Clichés**: Absolutely NO cutlery (forks, knives, spoons), chef hats, plates, burgers, coffee cups, or generic food icons.
 * **Zero Geographic Clichés**: NO literal African continent silhouettes or generic tribal patterns.
 * **Zero AI-Art Fluff**: NO photorealistic rendering, NO volumetric lighting artifacts, NO excessive gradients, and NO pseudo-3D reflections.
-* **Enterprise Scalability**: Tested and certified from a **16px micro-favicon** up to **unlimited architectural facade signage**.
+* **Vector-First Geometric Architecture**: Built with mathematical curves, monolithic pillars, and balanced negative space.
 
 ---
 
-### THE THREE DISTINCT IDENTITIES
+### 2. THE MASTER SYMBOL: "THE HOSPITALITY ARCH & PILLARS OF SUPPORT"
 
-| Attribute | 01 — HOSPITALITY ECOSYSTEM | 02 — AFRICAN HOSPITALITY ARCHITECTURE | 03 — AH / HUB CORPORATE MONOGRAM |
-| :--- | :--- | :--- | :--- |
-| **Visual Archetype** | Interlocking Quad-Nexus & Compass | Monumental Canopy Portal & Sanctuary | Architectural Monogram Crest |
-| **Primary Meaning** | Synergistic support cycle across 4 pillars | Welcome, shelter, scale, and modern hospitality | Institutional holding-grade seal of excellence |
-| **Geometric Base** | Concentric arcs & 4-point diamond star | Symmetrical monoliths, lintel & parabolic arch | Strict orthogonal stems & 40° chevron apex |
-| **Negative Space** | 8px optical separation & central star | Welcoming open portal & horizon beacon | Interior triangular counter-space & central hub node |
-| **Best Suited For** | Technology, digital portals, supply chain | Luxury lodges, hotel properties, architecture | Corporate holding, legal documents, executive uniforms |
+The symbol unites the two core dimensions of the business:
 
----
+1. **Hospitality (The Archway & Cantilever Shelter)**:
+   * The soaring central parabolic archway represents the hospitality portal — the welcoming gateway, dining room sanctuary, and guest experience.
+   * The floating horizontal cantilever canopy with $45^\circ$ beveled wingtips signifies protective shelter, acoustic comfort, and environmental security.
+   * The warm golden horizon beacon nestled inside the arch represents the welcoming hearth and culinary standard.
 
-### COLOR SYSTEM SPECIFICATION
-
-The brand system uses an architectural, restrained corporate palette. Every identity functions flawlessly across full colour, monochrome black, monochrome white, and single-colour bronze.
-
-#### 1. Primary: Deep Charcoal / Black
-* **Hex Code**: `#121316`
-* **RGB**: `18, 19, 22`
-* **CMYK**: `75, 68, 65, 80`
-* **Pantone Matching System (PMS)**: Pantone Black 7 C
-* **Application**: Primary wordmarks, foundational structural pillars, high-contrast dark substrates.
-
-#### 2. Secondary: Warm Ivory
-* **Hex Code**: `#F9F8F5`
-* **RGB**: `249, 248, 245`
-* **CMYK**: `2, 2, 3, 0`
-* **Pantone Matching System (PMS)**: Pantone 7527 C
-* **Application**: Heavy cotton stationery, background canvas, clean negative space, corporate letterheads.
-
-#### 3. Accent: Muted Bronze / Champagne Gold
-* **Hex Code**: `#C5A880`
-* **RGB**: `197, 168, 128`
-* **CMYK**: `25, 33, 56, 3`
-* **Pantone Matching System (PMS)**: Pantone 465 C / Metallic 871 C
-* **Application**: Primary corporate emblems, metallic foil stamping, architectural brass signage, embroidered crests.
-
-#### 4. Optional Accent: Deep Forest Green
-* **Hex Code**: `#1B3B2B`
-* **RGB**: `27, 59, 43`
-* **CMYK**: `80, 45, 75, 55`
-* **Pantone Matching System (PMS)**: Pantone 5535 C
-* **Application**: Architectural arch fill, sustainable operations badging, executive service aprons.
+2. **Support (The Colonnade & Foundation Plinth)**:
+   * The twin monolithic vertical pillars represent the twin pillars of support: **Facilities Engineering** and **Operational Excellence**.
+   * The grounded horizontal foundation plinth signifies stability, structural reliability, and infrastructure backing.
+   * The apex diamond keystone beacon crowns the canopy, symbolizing the guiding north star of quality and execution.
 
 ---
 
-### TYPOGRAPHY SPECIFICATION
+### 3. MASTER COLOR SYSTEM
 
-* **Primary Corporate Wordmark**: *Plus Jakarta Sans / Montserrat* (Weight: 800 ExtraBold, Letter-Spacing: +5px / 0.18em, Uppercase).
-* **Secondary Descriptor / Sub-Brand**: *Plus Jakarta Sans / Inter* (Weight: 600 SemiBold, Letter-Spacing: +3.8px / 0.22em, Uppercase).
-* **Corporate Body & Editorial**: *Plus Jakarta Sans / Inter* (Weights: 400 Regular, 500 Medium, 700 Bold).
-
----
-
-### CLEAR SPACE & MINIMUM SIZE RULES
-
-1. **Clear Space Margin**:
-   * Minimum clear space around any lockup equals **1.0X**, where **X** is the diameter of the central diamond Hub emblem.
-   * No typography, trim edges, or competing graphic elements may encroach into this perimeter.
-
-2. **Minimum Reproducible Sizing**:
-   * **Digital Screen**:
-     * Standalone Symbol: `16px × 16px`
-     * Horizontal Lockup: `140px × 35px`
-   * **Physical Print**:
-     * Standalone Symbol: `6.5 mm (0.25 in)`
-     * Horizontal Lockup: `28.0 mm (1.10 in)`
-   * **Embroidery / Lapel Badges**:
-     * Minimum emblem diameter: `20.0 mm (0.78 in)`
+| Role | Color Name | Hex Code | RGB | CMYK | Pantone (PMS) | Primary Application |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Primary** | Deep Charcoal / Black | `#121316` | 18, 19, 22 | 75, 68, 65, 80 | Pantone Black 7 C | Wordmarks, structural pillars, dark canvas |
+| **Secondary** | Warm Ivory | `#F9F8F5` | 249, 248, 245 | 2, 2, 3, 0 | Pantone 7527 C | Heavy cotton stationery, positive negative space |
+| **Accent** | Muted Bronze / Gold | `#C5A880` | 197, 168, 128 | 25, 33, 56, 3$ | Pantone 465 C / 871 C | Metallic foil, architectural brass, bullion crests |
+| **Optional** | Deep Forest Green | `#1B3B2B` | 27, 59, 43 | 80, 45, 75, 55 | Pantone 5535 C | Architectural arch fill, sustainable operations |
 
 ---
 
-### VERIFIED ASSET DELIVERABLES MANIFEST
+### 4. REPRODUCTION & CLEAR SPACE RULES
 
-Each concept folder contains the complete suite of 11 standalone production vector files:
-* `primary-logo.svg` — Master presentation lockup on warm ivory canvas.
-* `symbol-only.svg` — Standalone geometric symbol for icons and stamps.
-* `wordmark.svg` — Pure typographic wordmark.
-* `horizontal-lockup.svg` — Standard landscape configuration.
-* `stacked-lockup.svg` — Formal vertical/portrait configuration.
-* `monochrome-black.svg` — 100% solid black for single-ink and newsprint.
-* `monochrome-white.svg` — 100% pure white for dark backgrounds.
-* `full-colour.svg` — Master multi-tone corporate palette.
-* `favicon-icon.svg` — Pixel-snapped 32×32 favicon for web and app headers.
-* `small-size-test.svg` — Legibility test matrix across 64px, 48px, 32px, 24px, 16px.
-* `large-signage-test.svg` — Architectural exterior facade simulation.
-
-**Real-World Application Tests in `mockups/`:**
-* `restaurant-entrance-signage.svg` — Cast bronze dimensional signage on dark granite.
-* `staff-uniform.svg` — Blazer breast crest, canvas apron patch, and brass lapel pin.
-* `vehicle.svg` — Fleet logistics support van livery.
-* `business-card.svg` — Front & back 600gsm cotton stationery.
-* `website-header.svg` — SaaS and enterprise portal navigation.
-* `proposal-document.svg` — Executive master proposal dossier & letterhead.
-* `social-media-avatar.svg` — Circular and squircle digital profile containers.
+* **Clear Space ($1.0X$)**: Minimum clear space around the logo equals the height of the apex diamond keystone ($X$).
+* **Minimum Digital Size**: $16\text{px} \times 16\text{px}$ for standalone symbol; $140\text{px} \times 35\text{px}$ for horizontal lockup.
+* **Minimum Physical Print Size**: $6.5\text{mm}$ ($0.25\text{in}$) for symbol; $28\text{mm}$ ($1.10\text{in}$) for horizontal lockup.
+* **Embroidery Specification**: 20px uniform stroke weight ensures zero thread crowding at $60\text{mm}$–$80\text{mm}$ blazer breast crest scale.
