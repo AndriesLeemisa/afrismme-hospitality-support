@@ -66,9 +66,7 @@ export function Hero({ onOpenAudit }: HeroProps) {
   const [isPaused, setIsPaused] = useState(false);
 
   const heroRef = useRef<HTMLDivElement>(null);
-  const badgeRef = useRef<HTMLDivElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
-  const subheadRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
   const slidesContainerRef = useRef<HTMLDivElement>(null);
   const slideElementsRef = useRef<(HTMLDivElement | null)[]>([]);
@@ -84,25 +82,13 @@ export function Hero({ onOpenAudit }: HeroProps) {
       const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
       tl.fromTo(
-        badgeRef.current,
-        { opacity: 0, y: 12 },
-        { opacity: 1, y: 0, duration: 0.45, delay: 0.05 }
+        headlineRef.current,
+        { opacity: 0, y: 22 },
+        { opacity: 1, y: 0, duration: 0.6, delay: 0.1 }
       )
         .fromTo(
-          headlineRef.current,
-          { opacity: 0, y: 20 },
-          { opacity: 1, y: 0, duration: 0.6 },
-          '-=0.3'
-        )
-        .fromTo(
-          subheadRef.current,
-          { opacity: 0, y: 16 },
-          { opacity: 1, y: 0, duration: 0.5 },
-          '-=0.3'
-        )
-        .fromTo(
           ctaRef.current,
-          { opacity: 0, y: 12 },
+          { opacity: 0, y: 14 },
           { opacity: 1, y: 0, duration: 0.45 },
           '-=0.25'
         );
@@ -253,43 +239,20 @@ export function Hero({ onOpenAudit }: HeroProps) {
       </button>
 
       {/* =========================================================================
-          MAIN EDITORIAL CONTENT: CONFIDENT, IMPACTFUL, UNOBSTRUCTED
+          MAIN EDITORIAL CONTENT: TITLE ONLY, PURE CINEMATIC LUXURY
           ========================================================================= */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto">
-        <div className="max-w-2xl lg:max-w-3xl">
-          {/* Eyebrow Pill */}
-          <div
-            ref={badgeRef}
-            className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-charcoal-950/85 border border-bronze-500/40 mb-6 shadow-subtle-dark"
-          >
-            <span className="w-2 h-2 rounded-full bg-bronze-400 animate-pulse" />
-            <span className="text-xs sm:text-sm font-mono uppercase tracking-widest text-bronze-300 font-medium">
-              Turnkey Hospitality Engineering & Facility Support
-            </span>
-          </div>
-
-          {/* Master Headline: Large, editorial, uncluttered */}
+        <div className="max-w-3xl lg:max-w-4xl">
+          {/* Master Headline: Title Only */}
           <h1
             ref={headlineRef}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-medium text-ivory-50 tracking-tight leading-[1.08] text-balance mb-6"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5rem] font-display font-medium text-ivory-50 tracking-tight leading-[1.06] text-balance mb-8"
           >
             Africa’s Premier Turnkey{' '}
             <span className="italic font-light text-gold-gradient">
               Hospitality Support Fleet.
             </span>
           </h1>
-
-          {/* Single Focused Editorial Subheading */}
-          <p
-            ref={subheadRef}
-            className="text-lg sm:text-xl md:text-2xl text-bronze-200/90 font-normal leading-relaxed text-balance max-w-2xl mb-10"
-          >
-            Bespoke architectural terrace systems, acoustic dining intimacy, and rapid dark-hours facility restoration—executed with{' '}
-            <span className="text-bronze-400 font-semibold">
-              zero daytime service disruption
-            </span>
-            .
-          </p>
 
           {/* Clean Action Buttons */}
           <div ref={ctaRef} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4">
