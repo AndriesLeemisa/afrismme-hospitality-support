@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import { Navbar } from '@/components/layout/Navbar';
 import { Hero } from '@/components/sections/Hero';
-import { HorizontalStatementBanner } from '@/components/sections/HorizontalStatementBanner';
 import { ServicePillarsSection } from '@/components/sections/ServicePillarsSection';
 import { InteractiveHotspot } from '@/components/interactive/InteractiveHotspot';
 import { ProcessTimeline } from '@/components/sections/ProcessTimeline';
@@ -43,9 +42,6 @@ export default function HomePage() {
       <main className="flex-1">
         {/* 1. Immersive Editorial Hero */}
         <Hero onOpenAudit={handleOpenAuditModal} />
-
-        {/* Real-Time Horizontal Statement Banner (Below the Fold) */}
-        <HorizontalStatementBanner />
 
         {/* 2. The 6 Support Pillars */}
         <ServicePillarsSection onRequestQuote={handleRequestQuote} />

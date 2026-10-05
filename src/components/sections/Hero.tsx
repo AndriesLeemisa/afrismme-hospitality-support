@@ -61,15 +61,49 @@ const HERO_SLIDES: HeroSlide[] = [
 
 const SLIDE_DURATION = 3800; // ms per slide (fast, engaging, cinematic)
 
+const HEADLINE_LINE1 = 'We Engineer, Restore & Protect';
+const HEADLINE_LINE2 = 'Africa’s Most Coveted Dining Spaces';
+
 export function Hero({ onOpenAudit }: HeroProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [typedCount, setTypedCount] = useState(0);
+  const [isTypingDone, setIsTypingDone] = useState(false);
 
   const heroRef = useRef<HTMLDivElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
   const slidesContainerRef = useRef<HTMLDivElement>(null);
   const slideElementsRef = useRef<(HTMLDivElement | null)[]>([]);
+
+  // Real-Time Headline Writing Animation on Page Open
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReducedMotion) {
+        setTypedCount(HEADLINE_LINE1.length + HEADLINE_LINE2.length);
+        setIsTypingDone(true);
+        return;
+      }
+    }
+
+    const startTimer = setTimeout(() => {
+      let current = 0;
+      const total = HEADLINE_LINE1.length + HEADLINE_LINE2.length;
+      const interval = setInterval(() => {
+        current++;
+        setTypedCount(current);
+        if (current >= total) {
+          clearInterval(interval);
+          setIsTypingDone(true);
+        }
+      }, 30); // ~30ms per character for smooth real-time writing
+
+      return () => clearInterval(interval);
+    }, 280);
+
+    return () => clearTimeout(startTimer);
+  }, []);
 
   // Initial GSAP Entrance Animation (Crisp & Snappy)
   useEffect(() => {
@@ -243,14 +277,24 @@ export function Hero({ onOpenAudit }: HeroProps) {
           ========================================================================= */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto">
         <div className="max-w-3xl lg:max-w-4xl">
-          {/* Master Headline: Title Only */}
+          {/* Master Headline: Title Only with Real-Time Live Writing */}
           <h1
             ref={headlineRef}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5rem] font-display font-medium text-ivory-50 tracking-tight leading-[1.06] text-balance mb-8"
+            className="text-4xl sm:text-6xl md:text-7xl lg:text-[4.75rem] xl:text-[5.25rem] font-display font-medium text-ivory-50 tracking-tight leading-[1.08] mb-8"
           >
-            Africa’s Premier Turnkey{' '}
-            <span className="italic font-light text-gold-gradient">
-              Hospitality Support Fleet.
+            <span className="block">
+              {HEADLINE_LINE1.slice(0, Math.min(typedCount, HEADLINE_LINE1.length))}
+            </span>
+            <span className="block mt-1 sm:mt-2 italic font-light text-gold-gradient min-h-[1.1em]">
+              {typedCount > HEADLINE_LINE1.length
+                ? HEADLINE_LINE2.slice(0, typedCount - HEADLINE_LINE1.length)
+                : ''}
+              {/* Real-time Blinking Bronze Cursor */}
+              <span
+                className={`inline-block w-[3px] md:w-[4px] lg:w-[5px] h-[0.85em] bg-bronze-400 ml-2 align-baseline shadow-[0_0_12px_#c5a880] transition-opacity duration-300 ${
+                  isTypingDone ? 'animate-pulse opacity-75' : 'opacity-100'
+                }`}
+              />
             </span>
           </h1>
 
