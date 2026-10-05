@@ -19,55 +19,97 @@ interface HeroSlide {
   id: string;
   image: string;
   alt: string;
+  category: string;
+  title: string;
+  location: string;
+  highlight: string;
 }
 
 const HERO_SLIDES: HeroSlide[] = [
   {
-    id: 'luxury-dining',
-    image: '/images/hero_luxury_dining.jpg',
-    alt: 'High-end luxury restaurant dining room with architectural lighting and bespoke furniture',
-  },
-  {
-    id: 'courtyard-bistro',
-    image: '/images/hero_courtyard_bistro.jpg',
-    alt: 'Shaded outdoor garden bistro courtyard with canvas parasols and dining tables under leafy trees',
+    id: 'coastal-terrace',
+    image: '/images/hero/hero-camps-bay-sunset.jpg',
+    alt: 'Luxury coastal outdoor restaurant terrace with dining umbrellas and tables overlooking the ocean',
+    category: 'Outdoor Terraces & Shading Architecture',
+    title: 'Africa’s Most Coveted Dining Spaces',
+    location: 'Camps Bay & Atlantic Seaboard',
+    highlight: 'Weather-defying cantilever shade systems & ambient sunset pergolas',
   },
   {
     id: 'safari-lodge',
-    image: '/images/hero_safari_lodge.jpg',
-    alt: 'Luxury African safari lodge outdoor dining deck with timber flooring and warm ambient lanterns overlooking the African bush',
+    image: '/images/hero/hero-03-thatched-lodge.jpg',
+    alt: 'Luxury African safari lodge outdoor dining pavilion with thatched roofing and infinity deck',
+    category: 'Premier Safari Lodges & Bush Escapes',
+    title: 'Thatched Dining Decks & African Hardwood Joinery',
+    location: 'Greater Kruger & Sabi Sands',
+    highlight: 'Deep-penetrating organic timber oils & overnight silent maintenance',
   },
   {
-    id: 'coastal-terrace',
-    image: '/images/hero_coastal_terrace.jpg',
-    alt: 'Upscale coastal dining terrace with striped umbrellas and wicker armchairs looking out to the azure sea',
+    id: 'country-estate',
+    image: '/images/hero/hero-04-country-estate.jpg',
+    alt: 'Historic wine estate outdoor dining courtyard with parasols and lush gardens',
+    category: 'Historic Wine Estates & Courtyards',
+    title: 'Heritage Dining Pergolas & Restored Oak Tables',
+    location: 'Stellenbosch Valley',
+    highlight: 'Artisanal table restoration cured overnight for 07:00 breakfast service',
   },
   {
-    id: 'rooftop-skyline',
-    image: '/images/hero_rooftop_skyline.jpg',
-    alt: 'Metropolitan sunset rooftop dining pavilion with glass edge overlooking glowing city skyline',
+    id: 'hotel-poolside',
+    image: '/images/hero/hero-06-palm-resort.jpg',
+    alt: '5-star luxury hotel outdoor pool terrace with palm trees and sun umbrellas',
+    category: '5-Star Boutique Hotels & Pool Lounges',
+    title: 'Marine-Grade Cantilever Umbrellas & Cabanas',
+    location: 'Umhlanga Rocks & North Coast',
+    highlight: 'Salt-mist resistant marine hardware & custom contract upholstery',
   },
   {
-    id: 'estate-garden',
-    image: '/images/hero_estate_garden.jpg',
-    alt: 'Historic wine estate outdoor garden dining pergola surrounded by lush trees and manicured lawns',
+    id: 'hotel-dusk',
+    image: '/images/hero/hero-07-hotel-dusk.jpg',
+    alt: 'Grand luxury hotel dining courtyard illuminated at dusk',
+    category: 'Metropolitan Luxury Hotels & Bistros',
+    title: 'Atmospheric Courtyards & Facade Illumination',
+    location: 'Sandton Luxury District',
+    highlight: 'Turnkey physical facility management with single-contract accountability',
   },
   {
-    id: 'luxury-lounge',
-    image: '/images/hero_luxury_lounge.jpg',
-    alt: 'Sophisticated boutique hotel lounge and bar interior with custom architectural millwork and warm ambient lighting',
+    id: 'bistro-patio',
+    image: '/images/hero/hero-08-bistro-patio.jpg',
+    alt: 'Luxury outdoor bistro streetfront patio with tables, chairs, and large dining umbrellas',
+    category: 'Gourmet Bistros & Street Terraces',
+    title: 'European-Style Street Terraces & Café Shading',
+    location: 'Bree Street & Kloof Street',
+    highlight: 'Weather-tight perimeter enclosures & custom architectural parasols',
+  },
+  {
+    id: 'atrium-lounge',
+    image: '/images/hero/hero-13-atrium-lounge.jpg',
+    alt: 'Grand architectural atrium lounge with illuminated arches and luxury teal banquettes',
+    category: 'Grand Atriums & Architectural Lounges',
+    title: 'Grand Vaulted Atrium Lounges & Water Features',
+    location: 'Sandton & Rosebank District',
+    highlight: 'Architectural arch illumination & bespoke curved banquette engineering',
+  },
+  {
+    id: 'canopy-garden',
+    image: '/images/hero/hero-14-canopy-garden.jpg',
+    alt: 'Lush tree canopy shaded garden terrace dining on hardwood timber deck',
+    category: 'Forest Canopies & Garden Dining Decks',
+    title: 'Canopy Garden Terraces & Hardwood Decking',
+    location: 'Constantia Valley & Winelands',
+    highlight: 'Sub-canopy moisture-resistant timber decking & woven armchair suites',
   },
 ];
 
-const SLIDE_DURATION = 3800; // ms per slide (fast, engaging, cinematic)
+const SLIDE_DURATION = 4600; // ms per slide (immersive, cinematic cadence)
 
 const HEADLINE_LINE1 = 'We Engineer, Restore & Protect';
-const HEADLINE_LINE2 = 'Africa’s Most Coveted Dining Spaces';
 
 export function Hero({ onOpenAudit }: HeroProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-  const [typedCount, setTypedCount] = useState(0);
+  const isFirstMount = useRef(true);
+  const [line1Typed, setLine1Typed] = useState(HEADLINE_LINE1);
+  const [line2Typed, setLine2Typed] = useState('');
   const [isTypingDone, setIsTypingDone] = useState(false);
 
   const heroRef = useRef<HTMLDivElement>(null);
@@ -76,39 +118,73 @@ export function Hero({ onOpenAudit }: HeroProps) {
   const slidesContainerRef = useRef<HTMLDivElement>(null);
   const slideElementsRef = useRef<(HTMLDivElement | null)[]>([]);
 
-  // Real-Time Headline Writing Animation: re-triggers as the cinematic GSAP slideshow keeps changing
+  // Real-Time Title Writing Animation:
+  // On mount: writes Line 1 ("We Engineer, Restore & Protect"), then writes Line 2 (first title).
+  // On every subsequent GSAP slide change: Line 1 remains steady while Line 2 types the new image's title in real-time.
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       if (prefersReducedMotion) {
-        setTypedCount(HEADLINE_LINE1.length + HEADLINE_LINE2.length);
+        setLine1Typed(HEADLINE_LINE1);
+        setLine2Typed(HERO_SLIDES[activeIndex].title);
         setIsTypingDone(true);
         return;
       }
     }
 
-    setTypedCount(0);
-    setIsTypingDone(false);
+    const targetLine2 = HERO_SLIDES[activeIndex].title;
+    let timeoutId: NodeJS.Timeout | null = null;
+    let intervalId: NodeJS.Timeout | null = null;
 
-    let current = 0;
-    const total = HEADLINE_LINE1.length + HEADLINE_LINE2.length;
-    let interval: NodeJS.Timeout | null = null;
+    if (isFirstMount.current) {
+      isFirstMount.current = false;
+      setLine1Typed('');
+      setLine2Typed('');
+      setIsTypingDone(false);
 
-    // Small delay as the new slide transitions in
-    const startTimer = setTimeout(() => {
-      interval = setInterval(() => {
-        current++;
-        setTypedCount(current);
-        if (current >= total) {
-          if (interval) clearInterval(interval);
-          setIsTypingDone(true);
-        }
-      }, 22); // ~22ms per character for an energetic, fluid stream (~1.45s write duration)
-    }, 120);
+      let l1Index = 0;
+      timeoutId = setTimeout(() => {
+        intervalId = setInterval(() => {
+          l1Index++;
+          setLine1Typed(HEADLINE_LINE1.slice(0, l1Index));
+          if (l1Index >= HEADLINE_LINE1.length) {
+            if (intervalId) clearInterval(intervalId);
+
+            timeoutId = setTimeout(() => {
+              let l2Index = 0;
+              intervalId = setInterval(() => {
+                l2Index++;
+                setLine2Typed(targetLine2.slice(0, l2Index));
+                if (l2Index >= targetLine2.length) {
+                  if (intervalId) clearInterval(intervalId);
+                  setIsTypingDone(true);
+                }
+              }, 22);
+            }, 60);
+          }
+        }, 22);
+      }, 120);
+    } else {
+      setLine1Typed(HEADLINE_LINE1);
+      setLine2Typed('');
+      setIsTypingDone(false);
+
+      let l2Index = 0;
+      timeoutId = setTimeout(() => {
+        intervalId = setInterval(() => {
+          l2Index++;
+          setLine2Typed(targetLine2.slice(0, l2Index));
+          if (l2Index >= targetLine2.length) {
+            if (intervalId) clearInterval(intervalId);
+            setIsTypingDone(true);
+          }
+        }, 22);
+      }, 80);
+    }
 
     return () => {
-      clearTimeout(startTimer);
-      if (interval) clearInterval(interval);
+      if (timeoutId) clearTimeout(timeoutId);
+      if (intervalId) clearInterval(intervalId);
     };
   }, [activeIndex]);
 
@@ -255,7 +331,7 @@ export function Hero({ onOpenAudit }: HeroProps) {
               src={slide.image}
               alt={slide.alt}
               fill
-              priority={idx === 0}
+              priority={idx < 2}
               sizes="100vw"
               className="object-cover object-center filter brightness-[0.88] contrast-[1.02]"
             />
@@ -289,22 +365,20 @@ export function Hero({ onOpenAudit }: HeroProps) {
       </button>
 
       {/* =========================================================================
-          MAIN EDITORIAL CONTENT: TITLE ONLY, PURE CINEMATIC LUXURY
+          MAIN EDITORIAL CONTENT: CINEMATIC SOPHISTICATION & HIGH CONVERSION
           ========================================================================= */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto">
         <div className="max-w-3xl lg:max-w-4xl">
-          {/* Master Headline: Title Only with Real-Time Live Writing */}
+          {/* Master Headline: Fluid Scale with Real-Time Live Writing for Each Image */}
           <h1
             ref={headlineRef}
-            className="text-4xl sm:text-6xl md:text-7xl lg:text-[4.75rem] xl:text-[5.25rem] font-display font-medium text-ivory-50 tracking-tight leading-[1.08] mb-8"
+            className="text-display-1 font-display font-medium text-ivory-50 tracking-tight leading-[1.04] mb-8"
           >
-            <span className="block">
-              {HEADLINE_LINE1.slice(0, Math.min(typedCount, HEADLINE_LINE1.length))}
+            <span className="block min-h-[1.1em]">
+              {line1Typed}
             </span>
-            <span className="block mt-1 sm:mt-2 italic font-light text-gold-gradient min-h-[1.1em]">
-              {typedCount > HEADLINE_LINE1.length
-                ? HEADLINE_LINE2.slice(0, typedCount - HEADLINE_LINE1.length)
-                : ''}
+            <span className="block mt-1 sm:mt-2 italic font-light text-gold-gradient min-h-[2.2em] sm:min-h-[1.15em]">
+              {line2Typed}
               {/* Real-time Blinking Bronze Cursor */}
               <span
                 className={`inline-block w-[3px] md:w-[4px] lg:w-[5px] h-[0.85em] bg-bronze-400 ml-2 align-baseline shadow-[0_0_12px_#c5a880] transition-opacity duration-300 ${
@@ -314,7 +388,7 @@ export function Hero({ onOpenAudit }: HeroProps) {
             </span>
           </h1>
 
-          {/* Clean Action Buttons */}
+          {/* High-Impact Action Buttons */}
           <div ref={ctaRef} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4">
             {onOpenAudit ? (
               <Button
@@ -351,24 +425,36 @@ export function Hero({ onOpenAudit }: HeroProps) {
       </div>
 
       {/* =========================================================================
-          DISCREET CINEMATIC INDICATORS (PURE MINIMALISM, ZERO OBSTRUCTION)
+          DISCREET CINEMATIC INDICATORS & LOCATION STAMP WITH INTERACTIVE SWITCHING
           ========================================================================= */}
-      <div className="relative z-20 flex items-center justify-center gap-2 pt-6">
-        {HERO_SLIDES.map((slide, idx) => {
-          const isActive = idx === activeIndex;
-          return (
-            <button
-              key={slide.id}
-              onClick={() => goToSlide(idx)}
-              aria-label={`Switch to slide ${idx + 1}`}
-              className={`h-1.5 transition-all duration-500 rounded-full ${
-                isActive
-                  ? 'w-7 bg-bronze-400 shadow-sm shadow-bronze-400/50'
-                  : 'w-2 bg-white/30 hover:bg-white/60'
-              }`}
-            />
-          );
-        })}
+      <div className="relative z-20 flex flex-col sm:flex-row items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-6 pb-2 gap-3">
+        {/* Subtle Architectural Location Stamp */}
+        <div className="flex items-center gap-2.5 text-xs font-mono uppercase tracking-wider text-ivory-300/80 bg-charcoal-950/60 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/10 transition-opacity duration-300 shadow-sm">
+          <span className="w-1.5 h-1.5 rounded-full bg-bronze-400 animate-pulse" />
+          <span className="text-ivory-200 font-medium">{HERO_SLIDES[activeIndex].location}</span>
+          <span className="text-white/30">•</span>
+          <span className="text-bronze-300/90 hidden md:inline">{HERO_SLIDES[activeIndex].category}</span>
+        </div>
+
+        {/* 17 Slide Navigation Indicators */}
+        <div className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto max-w-full py-1">
+          {HERO_SLIDES.map((slide, idx) => {
+            const isActive = idx === activeIndex;
+            return (
+              <button
+                key={slide.id}
+                onClick={() => goToSlide(idx)}
+                aria-label={`Switch to slide ${idx + 1}: ${slide.title}`}
+                title={`${slide.title} (${slide.location})`}
+                className={`h-2 transition-all duration-300 rounded-full focus:outline-none focus:ring-1 focus:ring-bronze-400 ${
+                  isActive
+                    ? 'w-7 sm:w-8 bg-bronze-400 shadow-sm shadow-bronze-400/60'
+                    : 'w-2 sm:w-2.5 bg-white/30 hover:bg-white/70'
+                }`}
+              />
+            );
+          })}
+        </div>
       </div>
     </section>
   );

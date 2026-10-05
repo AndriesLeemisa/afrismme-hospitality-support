@@ -155,6 +155,16 @@ export function MobileMenu({ isOpen, onClose, onOpenAudit }: MobileMenuProps) {
             <ArrowRight className="w-4 h-4 text-bronze-500/60" />
           </a>
 
+          {/* Ecosystem */}
+          <a
+            href="/#ecosystem"
+            onClick={onClose}
+            className="flex items-center justify-between py-3 px-3 rounded-sm text-base font-display text-ivory-100 hover:text-bronze-300 hover:bg-charcoal-800/60 transition-colors"
+          >
+            <span>The Ecosystem</span>
+            <ArrowRight className="w-4 h-4 text-bronze-500/60" />
+          </a>
+
           {/* Contact */}
           <a
             href="/#contact"

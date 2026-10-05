@@ -108,13 +108,13 @@ export function AboutSection({ onOpenAudit }: AboutSectionProps) {
           {/* Right Column: Narrative & Values */}
           <div className="lg:col-span-6 space-y-6">
             <div className="space-y-4">
-              <h3 className="text-2xl sm:text-3xl font-display font-medium text-ivory-50 leading-snug">
+              <h3 className="text-display-3 font-display font-medium text-ivory-50 leading-snug">
                 Engineering Hospitality Excellence Behind the Scenes
               </h3>
-              <p className="text-base text-ivory-300 leading-relaxed font-normal">
+              <p className="text-base text-ivory-300/90 leading-relaxed font-normal text-pretty">
                 Africa’s luxury dining and hospitality sector operates on uncompromising guest expectations. The subtle acoustics of a private alcove, the tactile warmth of hand-rubbed African hardwood, and the comfort of an all-weather terrace directly drive guest dwell time, spend per head, and repeat reservations.
               </p>
-              <p className="text-base text-ivory-300 leading-relaxed font-normal">
+              <p className="text-base text-ivory-300/90 leading-relaxed font-normal text-pretty">
                 Traditional contractors create chaos: daytime drilling, noxious chemical fumes, displaced tables, and compromised reservations. AfriSMME Hub solves this by deploying specialized master artisans and technical engineers under our strict dark-hours execution protocol.
               </p>
             </div>

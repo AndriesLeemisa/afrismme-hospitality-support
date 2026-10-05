@@ -161,7 +161,7 @@ export function ComparisonMatrix() {
     : criteria.filter((c) => c.category === activeFilter);
 
   return (
-    <section id="comparison" className="py-24 sm:py-32 bg-charcoal-900 border-t border-charcoal-800 relative overflow-hidden">
+    <section id="comparison" className="py-24 sm:py-32 bg-charcoal-900 border-t border-charcoal-800 relative overflow-hidden scroll-mt-20">
       {/* Background ambient lighting */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[900px] h-[400px] bg-bronze-500/5 rounded-full blur-[140px] pointer-events-none" />
 

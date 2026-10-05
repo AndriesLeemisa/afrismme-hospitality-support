@@ -43,17 +43,17 @@ export function SectionHeading({
         )}
       </div>
 
-      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-medium tracking-tight text-ivory-50 leading-[1.1] text-balance">
+      <h2 className="text-display-2 font-display font-medium tracking-tight text-ivory-50 leading-[1.08] text-balance">
         {title}{' '}
         {highlightedTitle && (
-          <span className="italic font-light text-bronze-300 font-display">
+          <span className="italic font-light text-gold-gradient font-display">
             {highlightedTitle}
           </span>
         )}
       </h2>
 
       {description && (
-        <p className="mt-5 text-base sm:text-lg md:text-xl text-ivory-300/80 font-normal leading-relaxed text-balance max-w-2xl">
+        <p className="mt-5 text-lead text-ivory-300/85 font-normal leading-relaxed text-pretty max-w-2xl">
           {description}
         </p>
       )}

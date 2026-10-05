@@ -23,8 +23,9 @@
   }
 
   html {
-    font-size: 17.5px; /* Increased font-size across entire website */
+    font-size: 16px; /* Standard base; headings scale fluidly via the display-* tokens */
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem; /* Anchor targets clear the fixed navbar */
     background-color: #08090b;
     color: #f7f4ee;
     font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
@@ -32,16 +33,18 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1440px) {
     html {
-      font-size: 18.5px; /* Scaled up for tablet and desktop readability */
+      font-size: 17px; /* Gentle uplift for wide editorial displays */
     }
   }
 
-  @media (min-width: 1440px) {
-    html {
-      font-size: 19.5px; /* Confident, editorial scale for wide displays */
-    }
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
   }
 
   body {

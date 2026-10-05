@@ -50,6 +50,15 @@ const config: Config = {
           500: '#478463',
         },
       },
+      // Harmonised editorial type scale (fluid, ratio ~1.25 → 1.333 across viewports)
+      fontSize: {
+        '2xs': ['0.6875rem', { lineHeight: '1rem', letterSpacing: '0.04em' }],
+        'display-1': ['clamp(2.5rem, 1.55rem + 3.8vw, 5rem)', { lineHeight: '1.02', letterSpacing: '-0.025em' }],
+        'display-2': ['clamp(2rem, 1.45rem + 2.2vw, 3.5rem)', { lineHeight: '1.08', letterSpacing: '-0.02em' }],
+        'display-3': ['clamp(1.5rem, 1.25rem + 1vw, 2.125rem)', { lineHeight: '1.18', letterSpacing: '-0.01em' }],
+        'display-4': ['clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem)', { lineHeight: '1.25' }],
+        lead: ['clamp(1.0625rem, 1rem + 0.3vw, 1.25rem)', { lineHeight: '1.65' }],
+      },
       fontFamily: {
         sans: ['var(--font-sans)', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
         display: ['var(--font-display)', 'Georgia', 'serif'],

@@ -9,7 +9,11 @@ import { Button } from '@/components/ui/Button';
 import { CheckCircle2, RefreshCw, Send, Sparkles } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
-export function DigitalAssessmentTool() {
+interface DigitalAssessmentToolProps {
+  isModal?: boolean;
+}
+
+export function DigitalAssessmentTool({ isModal = false }: DigitalAssessmentToolProps) {
   const [currentStep, setCurrentStep] = useState(0);
   const [selectedOptions, setSelectedOptions] = useState<Record<string, number>>({});
   const [isCompleted, setIsCompleted] = useState(false);
@@ -72,20 +76,10 @@ export function DigitalAssessmentTool() {
     setSubmitted(true);
   };
 
-  return (
-    <section id="audit-tool" className="py-24 sm:py-32 bg-charcoal-900 border-t border-charcoal-800 relative">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          badge="Rapid Facility Diagnostic"
-          title="Identify Your Venue’s"
-          highlightedTitle="Operational Priorities."
-          description="Answer 3 targeted operational questions to map your physical and mechanical challenges to specific engineering solutions and schedule a zero-downtime dark-hours audit."
-          align="center"
-        />
-
-        <div className="bg-charcoal-950 border border-charcoal-700/80 rounded-sm p-6 sm:p-10 shadow-elevated-dark relative overflow-hidden">
-          {/* Subtle backdrop glow */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-bronze-500/5 rounded-full blur-3xl pointer-events-none" />
+  const assessmentCard = (
+    <div className="bg-charcoal-950 border border-charcoal-700/80 rounded-sm p-6 sm:p-10 shadow-elevated-dark relative overflow-hidden">
+      {/* Subtle backdrop glow */}
+      <div className="absolute top-0 right-0 w-64 h-64 bg-bronze-500/5 rounded-full blur-3xl pointer-events-none" />
 
           {!isCompleted ? (
             <div>
@@ -376,6 +370,35 @@ export function DigitalAssessmentTool() {
             </div>
           )}
         </div>
+      );
+
+  if (isModal) {
+    return (
+      <div className="w-full">
+        <div className="mb-6 pb-4 border-b border-charcoal-800">
+          <span className="text-[10px] font-mono uppercase tracking-widest text-bronze-400 font-semibold block mb-1">
+            Rapid Facility Diagnostic
+          </span>
+          <h3 className="font-display text-2xl font-semibold text-ivory-50">
+            Identify Your Venue&apos;s Operational Priorities
+          </h3>
+        </div>
+        {assessmentCard}
+      </div>
+    );
+  }
+
+  return (
+    <section id="audit-tool" className="py-24 sm:py-32 bg-charcoal-900 border-t border-charcoal-800 relative scroll-mt-20">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <SectionHeading
+          badge="Rapid Facility Diagnostic"
+          title="Identify Your Venue’s"
+          highlightedTitle="Operational Priorities."
+          description="Answer 3 targeted operational questions to map your physical and mechanical challenges to specific engineering solutions and schedule a zero-downtime dark-hours audit."
+          align="center"
+        />
+        {assessmentCard}
       </div>
     </section>
   );

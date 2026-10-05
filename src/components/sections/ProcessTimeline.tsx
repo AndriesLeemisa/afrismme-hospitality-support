@@ -7,7 +7,7 @@ import { Clock, Shield, Sparkles, CheckCircle2, ArrowRight } from 'lucide-react'
 
 export function ProcessTimeline() {
   return (
-    <section id="process" className="py-24 sm:py-32 bg-charcoal-950 relative overflow-hidden">
+    <section id="process" className="py-24 sm:py-32 bg-charcoal-950 relative overflow-hidden scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           badge="Execution Methodology"

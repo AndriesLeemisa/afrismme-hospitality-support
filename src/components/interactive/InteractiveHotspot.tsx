@@ -31,7 +31,7 @@ export function InteractiveHotspot() {
           {/* Visual Blueprint Canvas with Hotspot Markers */}
           <div className="lg:col-span-8 relative aspect-[16/10] rounded-sm overflow-hidden border border-charcoal-700 bg-charcoal-950 shadow-elevated-dark group">
             <Image
-              src="/images/hero_luxury_dining.jpg"
+              src="/images/hero/hero-michelin-dining-room.jpg"
               alt="Interactive Dining Room Architectural Layout"
               fill
               sizes="(max-width: 1024px) 100vw, 66vw"

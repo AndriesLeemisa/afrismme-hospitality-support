@@ -39,7 +39,7 @@ export function ContactForm({ preselectedPillarId }: ContactFormProps) {
   };
 
   return (
-    <div id="contact" className="w-full">
+    <div className="w-full">
       {!submitted ? (
         <form
           onSubmit={handleSubmit}

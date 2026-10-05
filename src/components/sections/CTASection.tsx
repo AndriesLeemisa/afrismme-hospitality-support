@@ -11,7 +11,7 @@ interface CTASectionProps {
 
 export function CTASection({ preselectedPillarId }: CTASectionProps) {
   return (
-    <section id="contact-section" className="py-24 sm:py-32 bg-charcoal-950 relative overflow-hidden">
+    <section id="contact" className="py-24 sm:py-32 bg-charcoal-950 relative overflow-hidden scroll-mt-20">
       {/* Background ambient lighting */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-bronze-500/5 rounded-full blur-[140px] pointer-events-none" />
 
@@ -25,14 +25,14 @@ export function CTASection({ preselectedPillarId }: CTASectionProps) {
                 ACTIVE DEPLOYMENT QUEUE
               </div>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-medium text-ivory-50 tracking-tight leading-[1.1] mb-6">
+              <h2 className="text-display-2 font-display font-medium text-ivory-50 tracking-tight leading-[1.08] mb-6 text-balance">
                 Protect Your Standards.{' '}
                 <span className="italic font-light text-gold-gradient">
                   Elevate Your Margin.
                 </span>
               </h2>
 
-              <p className="text-base text-ivory-300/90 leading-relaxed font-normal mb-8">
+              <p className="text-lead text-ivory-300/90 leading-relaxed font-normal mb-8 text-pretty">
                 Whether you need immediate overnight timber refinishing, custom acoustic baffles to silence dining cacophony, or emergency kitchen extraction fleet dispatch—AfriSMME is your turnkey operational partner.
               </p>
 

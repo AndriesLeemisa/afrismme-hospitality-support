@@ -51,7 +51,7 @@ export function AuditModal({ isOpen, onClose }: AuditModalProps) {
         </button>
 
         <div className="p-4 sm:p-6">
-          <DigitalAssessmentTool />
+          <DigitalAssessmentTool isModal />
         </div>
       </div>
     </div>

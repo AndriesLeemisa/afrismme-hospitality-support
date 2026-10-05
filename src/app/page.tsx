@@ -3,13 +3,11 @@
 import React, { useState } from 'react';
 import { Navbar } from '@/components/layout/Navbar';
 import { Hero } from '@/components/sections/Hero';
-import { AboutSection } from '@/components/sections/AboutSection';
+import { VenueShowcaseSection } from '@/components/sections/VenueShowcaseSection';
 import { ServicePillarsSection } from '@/components/sections/ServicePillarsSection';
 import { InteractiveHotspot } from '@/components/interactive/InteractiveHotspot';
 import { ProcessTimeline } from '@/components/sections/ProcessTimeline';
-import { EcosystemDiagram } from '@/components/sections/EcosystemDiagram';
 import { ComparisonMatrix } from '@/components/sections/ComparisonMatrix';
-import { ExecutiveStandards } from '@/components/sections/ExecutiveStandards';
 import { DigitalAssessmentTool } from '@/components/interactive/DigitalAssessmentTool';
 import { CTASection } from '@/components/sections/CTASection';
 import { Footer } from '@/components/layout/Footer';
@@ -20,7 +18,13 @@ export default function HomePage() {
   const [selectedPillarForQuote, setSelectedPillarForQuote] = useState<string | undefined>(undefined);
 
   const handleOpenAuditModal = () => {
-    setIsAuditModalOpen(true);
+    // If the audit tool is already present on the page, scroll smoothly to it
+    const inlineAudit = document.getElementById('audit-tool');
+    if (inlineAudit) {
+      inlineAudit.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      setIsAuditModalOpen(true);
+    }
   };
 
   const handleCloseAuditModal = () => {
@@ -29,7 +33,7 @@ export default function HomePage() {
 
   const handleRequestQuote = (pillarId: string) => {
     setSelectedPillarForQuote(pillarId);
-    const contactElement = document.getElementById('contact-section');
+    const contactElement = document.getElementById('contact');
     if (contactElement) {
       contactElement.scrollIntoView({ behavior: 'smooth' });
     }
@@ -41,34 +45,28 @@ export default function HomePage() {
       <Navbar onOpenAudit={handleOpenAuditModal} />
 
       <main className="flex-1">
-        {/* 1. Immersive Editorial Hero */}
+        {/* 1. Immersive Editorial Hero with Realistic Outdoor & Lodge Photography */}
         <Hero onOpenAudit={handleOpenAuditModal} />
 
-        {/* 2. About AfriSMME Hub & Operational Philosophy (Second Section) */}
-        <AboutSection onOpenAudit={handleOpenAuditModal} />
+        {/* 2. Specialized Hospitality Sectors (Terraces, Lodges, Boutique Hotels, Estates, Bistros, Bars) */}
+        <VenueShowcaseSection onRequestQuote={handleRequestQuote} />
 
-        {/* 3. The 6 Support Pillars */}
+        {/* 3. The 6 Support Pillars (Interactive Architectural Deep Dive) */}
         <ServicePillarsSection onRequestQuote={handleRequestQuote} />
 
-        {/* 3. Interactive Architectural Blueprint */}
+        {/* 4. Interactive Architectural Blueprint */}
         <InteractiveHotspot />
 
-        {/* 4. The Dark-Hours Execution Cadence */}
+        {/* 5. The Dark-Hours Execution Cadence (23:00 to 07:00 Silent Protocol) */}
         <ProcessTimeline />
-
-        {/* 5. Integrated Hospitality Support Ecosystem */}
-        <EcosystemDiagram />
 
         {/* 6. Strategic Market Differentiation Matrix */}
         <ComparisonMatrix />
 
-        {/* 8. Tangible Executive Craftsmanship & Collateral */}
-        <ExecutiveStandards />
-
-        {/* 9. Rapid Digital Diagnostic Tool */}
+        {/* 7. Rapid Facility Diagnostic Tool */}
         <DigitalAssessmentTool />
 
-        {/* 10. Commission & Emergency SLA CTA */}
+        {/* 9. Commission & Emergency SLA CTA */}
         <CTASection preselectedPillarId={selectedPillarForQuote} />
       </main>
 

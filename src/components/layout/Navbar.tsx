@@ -198,6 +198,14 @@ export function Navbar({ onOpenAudit }: NavbarProps) {
                 )}
               </div>
 
+              {/* Ecosystem */}
+              <a
+                href={isHomePage ? '#ecosystem' : '/#ecosystem'}
+                className="whitespace-nowrap text-sm tracking-wider uppercase font-medium text-ivory-200/90 hover:text-bronze-300 transition-colors duration-200 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-bronze-400 hover:after:w-full after:transition-all after:duration-300"
+              >
+                Ecosystem
+              </a>
+
               {/* Contact */}
               <a
                 href={isHomePage ? '#contact' : '/#contact'}

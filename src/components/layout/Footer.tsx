@@ -43,66 +43,34 @@ export function Footer() {
             <h3 className="text-xs uppercase tracking-cinematic text-bronze-400 font-semibold mb-5 font-mono">
               Support Pillars
             </h3>
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-2.5 text-sm">
               <li>
-                <a href="#attract" className="text-ivory-300 hover:text-bronze-300 transition-colors font-medium">
+                <a href="/#attract" className="text-ivory-300 hover:text-bronze-300 transition-colors">
                   01. Attract (Exterior & Terrace)
                 </a>
-                <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mt-1 pl-3 text-xs">
-                  <a
-                    href="https://afrishades.co.za/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-bronze-400/90 hover:text-bronze-300 inline-flex items-center gap-1 transition-colors"
-                  >
-                    <span>Afrishades</span>
-                    <ExternalLink className="w-2.5 h-2.5" />
-                  </a>
-                  <span className="text-charcoal-700">&bull;</span>
-                  <a
-                    href="https://www.caneafrica.co.za/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-bronze-400/90 hover:text-bronze-300 inline-flex items-center gap-1 transition-colors"
-                  >
-                    <span>Cane Africa</span>
-                    <ExternalLink className="w-2.5 h-2.5" />
-                  </a>
-                </div>
               </li>
               <li>
-                <a href="#enhance" className="text-ivory-300 hover:text-bronze-300 transition-colors">
+                <a href="/#enhance" className="text-ivory-300 hover:text-bronze-300 transition-colors">
                   02. Enhance (Acoustics & Booths)
                 </a>
               </li>
               <li>
-                <a href="#restore" className="text-ivory-300 hover:text-bronze-300 transition-colors font-medium">
+                <a href="/#restore" className="text-ivory-300 hover:text-bronze-300 transition-colors">
                   03. Restore (Overnight Revival)
                 </a>
-                <div className="mt-1 pl-3 text-xs">
-                  <a
-                    href="https://wooddoctor.co.za/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-bronze-400/90 hover:text-bronze-300 inline-flex items-center gap-1 transition-colors"
-                  >
-                    <span>The Wood Doctor</span>
-                    <ExternalLink className="w-2.5 h-2.5" />
-                  </a>
-                </div>
               </li>
               <li>
-                <a href="#maintain" className="text-ivory-300 hover:text-bronze-300 transition-colors">
+                <a href="/#maintain" className="text-ivory-300 hover:text-bronze-300 transition-colors">
                   04. Maintain (Rapid Fleet SLA)
                 </a>
               </li>
               <li>
-                <a href="#protect" className="text-ivory-300 hover:text-bronze-300 transition-colors">
+                <a href="/#protect" className="text-ivory-300 hover:text-bronze-300 transition-colors">
                   05. Protect (Compliance Shield)
                 </a>
               </li>
               <li>
-                <a href="#grow" className="text-ivory-300 hover:text-bronze-300 transition-colors">
+                <a href="/#grow" className="text-ivory-300 hover:text-bronze-300 transition-colors">
                   06. Grow (Kitchen Tech & Yield)
                 </a>
               </li>
@@ -184,6 +152,9 @@ export function Footer() {
             <Link href="/about" className="hover:text-bronze-300 transition-colors">
               About Us
             </Link>
+            <a href="/#pillars" className="hover:text-bronze-300 transition-colors">
+              The 6 Pillars
+            </a>
             <a href="/#audit-tool" className="hover:text-bronze-300 transition-colors">
               Facility Diagnostic
             </a>
