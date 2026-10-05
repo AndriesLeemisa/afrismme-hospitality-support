@@ -69,21 +69,21 @@ export function Navbar({ onOpenAudit }: NavbarProps) {
             </Link>
 
             {/* Clean, Uncrowded Main Navigation */}
-            <nav className="hidden lg:flex items-center gap-7 xl:gap-8" aria-label="Main Navigation">
+            <nav className="hidden lg:flex items-center gap-7 xl:gap-9" aria-label="Main Navigation">
               {/* Home */}
               <Link
                 href="/"
-                className="text-xs tracking-wider uppercase font-medium text-ivory-200/90 hover:text-bronze-300 transition-colors duration-200 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-bronze-400 hover:after:w-full after:transition-all after:duration-300"
+                className="whitespace-nowrap text-sm tracking-wider uppercase font-medium text-ivory-200/90 hover:text-bronze-300 transition-colors duration-200 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-bronze-400 hover:after:w-full after:transition-all after:duration-300"
               >
                 Home
               </Link>
 
-              {/* About Us */}
+              {/* About */}
               <a
                 href="#about"
-                className="text-xs tracking-wider uppercase font-medium text-ivory-200/90 hover:text-bronze-300 transition-colors duration-200 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-bronze-400 hover:after:w-full after:transition-all after:duration-300"
+                className="whitespace-nowrap text-sm tracking-wider uppercase font-medium text-ivory-200/90 hover:text-bronze-300 transition-colors duration-200 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-bronze-400 hover:after:w-full after:transition-all after:duration-300"
               >
-                About Us
+                About
               </a>
 
               {/* Services with Dropdown Menu */}
@@ -96,7 +96,7 @@ export function Navbar({ onOpenAudit }: NavbarProps) {
                 <a
                   href="#pillars"
                   className={cn(
-                    'inline-flex items-center gap-1.5 text-xs tracking-wider uppercase font-medium transition-colors duration-200 relative py-1',
+                    'whitespace-nowrap inline-flex items-center gap-1.5 text-sm tracking-wider uppercase font-medium transition-colors duration-200 relative py-1',
                     servicesDropdownOpen ? 'text-bronze-300' : 'text-ivory-200/90 hover:text-bronze-300'
                   )}
                   onClick={() => setServicesDropdownOpen(false)}
@@ -146,64 +146,51 @@ export function Navbar({ onOpenAudit }: NavbarProps) {
                         ))}
                       </div>
 
-                      <div className="mt-3 pt-2.5 border-t border-charcoal-800 flex items-center justify-between px-2">
+                      {/* Dropdown Quick Actions */}
+                      <div className="mt-3 pt-2.5 border-t border-charcoal-800 space-y-1.5">
                         <a
-                          href="#blueprint"
+                          href="#comparison"
                           onClick={() => setServicesDropdownOpen(false)}
-                          className="text-[11px] font-mono text-bronze-300 hover:text-ivory-50 flex items-center gap-1 transition-colors"
+                          className="flex items-center justify-between p-2 rounded-sm bg-charcoal-900/60 hover:bg-charcoal-900 border border-charcoal-800 text-[11px] font-mono text-bronze-300 hover:text-ivory-50 transition-colors"
                         >
-                          <Layers className="w-3 h-3 text-bronze-400" />
-                          <span>Interactive Blueprint</span>
-                          <ArrowRight className="w-3 h-3" />
+                          <span>The Difference (Strategic Comparison)</span>
+                          <ArrowRight className="w-3 h-3 text-bronze-400" />
                         </a>
-                        <a
-                          href="#pillars"
-                          onClick={() => setServicesDropdownOpen(false)}
-                          className="text-[10px] font-mono text-ivory-400 hover:text-ivory-200"
+
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setServicesDropdownOpen(false);
+                            if (onOpenAudit) {
+                              onOpenAudit();
+                            } else {
+                              const el = document.getElementById('audit-tool');
+                              if (el) el.scrollIntoView({ behavior: 'smooth' });
+                            }
+                          }}
+                          className="w-full flex items-center justify-between p-2 rounded-sm bg-bronze-500/10 hover:bg-bronze-500/20 border border-bronze-500/30 text-[11px] font-mono text-bronze-300 hover:text-ivory-50 transition-colors text-left"
                         >
-                          View All
-                        </a>
+                          <span>Facility Diagnostic Audit</span>
+                          <ArrowRight className="w-3 h-3 text-bronze-400" />
+                        </button>
                       </div>
                     </div>
                   </div>
                 )}
               </div>
 
-              {/* The Difference */}
-              <a
-                href="#comparison"
-                className="text-xs tracking-wider uppercase font-medium text-ivory-200/90 hover:text-bronze-300 transition-colors duration-200 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-bronze-400 hover:after:w-full after:transition-all after:duration-300"
-              >
-                The Difference
-              </a>
-
               {/* Contact */}
               <a
                 href="#contact"
-                className="text-xs tracking-wider uppercase font-medium text-ivory-200/90 hover:text-bronze-300 transition-colors duration-200 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-bronze-400 hover:after:w-full after:transition-all after:duration-300"
+                className="whitespace-nowrap text-sm tracking-wider uppercase font-medium text-ivory-200/90 hover:text-bronze-300 transition-colors duration-200 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-bronze-400 hover:after:w-full after:transition-all after:duration-300"
               >
                 Contact
               </a>
             </nav>
 
-            {/* Live Status & CTA Cluster */}
-            <div className="hidden sm:flex items-center gap-3 xl:gap-4 shrink-0">
-
-              {onOpenAudit ? (
-                <button
-                  type="button"
-                  onClick={onOpenAudit}
-                  className="text-xs uppercase tracking-wider font-semibold py-2.5 px-3.5 sm:px-4 rounded-sm border border-bronze-500/40 text-bronze-300 hover:bg-bronze-500/10 hover:border-bronze-300 transition-all duration-200"
-                >
-                  Diagnostic Audit
-                </button>
-              ) : (
-                <Button href="#audit-tool" variant="outline" size="sm">
-                  Diagnostic Audit
-                </Button>
-              )}
-
-              <Button href="#contact" variant="primary" size="sm" withArrow>
+            {/* Single Clean Primary CTA */}
+            <div className="hidden sm:flex items-center shrink-0">
+              <Button href="#contact" variant="primary" size="sm" withArrow className="whitespace-nowrap font-semibold">
                 Request Support
               </Button>
             </div>
