@@ -23,6 +23,7 @@
   }
 
   html {
+    font-size: 17.5px; /* Increased font-size across entire website */
     scroll-behavior: smooth;
     background-color: #08090b;
     color: #f7f4ee;
@@ -31,12 +32,25 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  @media (min-width: 768px) {
+    html {
+      font-size: 18.5px; /* Scaled up for tablet and desktop readability */
+    }
+  }
+
+  @media (min-width: 1440px) {
+    html {
+      font-size: 19.5px; /* Confident, editorial scale for wide displays */
+    }
+  }
+
   body {
     background-color: #08090b;
     color: #f7f4ee;
     overflow-x: hidden;
     min-height: 100vh;
     font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
   }
 
   ::selection {

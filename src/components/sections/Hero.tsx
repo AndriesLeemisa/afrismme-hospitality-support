@@ -260,31 +260,31 @@ export function Hero({ onOpenAudit }: HeroProps) {
           {/* Eyebrow Pill */}
           <div
             ref={badgeRef}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-charcoal-950/80 border border-bronze-500/40 mb-5 shadow-subtle-dark"
+            className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-charcoal-950/85 border border-bronze-500/40 mb-6 shadow-subtle-dark"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-bronze-400 animate-pulse" />
-            <span className="text-[11px] font-mono uppercase tracking-widest text-bronze-300 font-medium">
-              Restaurant & Hospitality Engineering
+            <span className="w-2 h-2 rounded-full bg-bronze-400 animate-pulse" />
+            <span className="text-xs sm:text-sm font-mono uppercase tracking-widest text-bronze-300 font-medium">
+              Turnkey Hospitality Engineering & Facility Support
             </span>
           </div>
 
           {/* Master Headline: Large, editorial, uncluttered */}
           <h1
             ref={headlineRef}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-medium text-ivory-50 tracking-tight leading-[1.08] text-balance mb-5"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-medium text-ivory-50 tracking-tight leading-[1.08] text-balance mb-6"
           >
-            We Engineer, Restore & Protect Africa’s{' '}
+            Africa’s Premier Turnkey{' '}
             <span className="italic font-light text-gold-gradient">
-              Most Coveted Dining Spaces.
+              Hospitality Support Fleet.
             </span>
           </h1>
 
           {/* Single Focused Editorial Subheading */}
           <p
             ref={subheadRef}
-            className="text-base sm:text-lg md:text-xl text-ivory-200/90 font-normal leading-relaxed text-balance max-w-2xl mb-8"
+            className="text-lg sm:text-xl md:text-2xl text-ivory-200/95 font-normal leading-relaxed text-balance max-w-2xl mb-10"
           >
-            Architectural terrace systems, dining room acoustics, and overnight dark-hours facility restoration—delivered with zero daytime service disruption.
+            Bespoke architectural terrace systems, acoustic dining intimacy, and rapid dark-hours facility restoration—executed with zero daytime service disruption.
           </p>
 
           {/* Clean Action Buttons */}
