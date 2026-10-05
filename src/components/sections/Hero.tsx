@@ -76,7 +76,7 @@ export function Hero({ onOpenAudit }: HeroProps) {
   const slidesContainerRef = useRef<HTMLDivElement>(null);
   const slideElementsRef = useRef<(HTMLDivElement | null)[]>([]);
 
-  // Real-Time Headline Writing Animation on Page Open
+  // Real-Time Headline Writing Animation: re-triggers as the cinematic GSAP slideshow keeps changing
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -87,23 +87,30 @@ export function Hero({ onOpenAudit }: HeroProps) {
       }
     }
 
+    setTypedCount(0);
+    setIsTypingDone(false);
+
+    let current = 0;
+    const total = HEADLINE_LINE1.length + HEADLINE_LINE2.length;
+    let interval: NodeJS.Timeout | null = null;
+
+    // Small delay as the new slide transitions in
     const startTimer = setTimeout(() => {
-      let current = 0;
-      const total = HEADLINE_LINE1.length + HEADLINE_LINE2.length;
-      const interval = setInterval(() => {
+      interval = setInterval(() => {
         current++;
         setTypedCount(current);
         if (current >= total) {
-          clearInterval(interval);
+          if (interval) clearInterval(interval);
           setIsTypingDone(true);
         }
-      }, 30); // ~30ms per character for smooth real-time writing
+      }, 22); // ~22ms per character for an energetic, fluid stream (~1.45s write duration)
+    }, 120);
 
-      return () => clearInterval(interval);
-    }, 280);
-
-    return () => clearTimeout(startTimer);
-  }, []);
+    return () => {
+      clearTimeout(startTimer);
+      if (interval) clearInterval(interval);
+    };
+  }, [activeIndex]);
 
   // Initial GSAP Entrance Animation (Crisp & Snappy)
   useEffect(() => {
@@ -180,6 +187,15 @@ export function Hero({ onOpenAudit }: HeroProps) {
             ease: 'sine.out',
           }
         );
+
+        // Smooth subtle pulse on headline as slide changes
+        if (headlineRef.current) {
+          gsap.fromTo(
+            headlineRef.current,
+            { opacity: 0.4 },
+            { opacity: 1, duration: 0.35, ease: 'power2.out' }
+          );
+        }
       }
 
       return newIndex;
