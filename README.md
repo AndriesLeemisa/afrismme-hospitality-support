@@ -25,10 +25,12 @@ This digital platform was architected specifically for **AfriSMME Hub Restaurant
 
 1. **01 ATTRACT — Exterior Architectural Presence & Terrace Optimization**
    * Bespoke etched brass signage, heavy-duty cantilever terrace systems, and facade illumination.
+   * **Specialist Division Websites**: [Afrishades](https://afrishades.co.za/) & [Cane Africa](https://www.caneafrica.co.za/)
 2. **02 ENHANCE — Acoustic Architecture, Spatial Intimacy & Banquettes**
    * Concealed sound-absorption panels (NRC-certified), custom ergonomic leather banquettes, and zoned dining intimacy.
 3. **03 RESTORE — Artisanal Wood, Leather & Rapid Overnight Turnaround**
    * Hand-rubbed zero-VOC food-safe oils, table de-staining, fine leather pigment revival, and brass polishing.
+   * **Specialist Division Website**: [The Wood Doctor](https://wooddoctor.co.za/)
 4. **04 MAINTAIN — Preventative Facility Care & Rapid Response Fleet**
    * Sub-60 minute dispatch mobile workshops, commercial kitchen extraction hoods, cold-chain refrigeration checks.
 5. **05 PROTECT — Compliance, Hygiene Protocols & Brand Shield**

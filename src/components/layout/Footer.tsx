@@ -45,9 +45,30 @@ export function Footer() {
             </h3>
             <ul className="space-y-3 text-sm">
               <li>
-                <a href="#attract" className="text-ivory-300 hover:text-bronze-300 transition-colors">
+                <a href="#attract" className="text-ivory-300 hover:text-bronze-300 transition-colors font-medium">
                   01. Attract (Exterior & Terrace)
                 </a>
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mt-1 pl-3 text-xs">
+                  <a
+                    href="https://afrishades.co.za/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-bronze-400/90 hover:text-bronze-300 inline-flex items-center gap-1 transition-colors"
+                  >
+                    <span>Afrishades</span>
+                    <ExternalLink className="w-2.5 h-2.5" />
+                  </a>
+                  <span className="text-charcoal-700">&bull;</span>
+                  <a
+                    href="https://www.caneafrica.co.za/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-bronze-400/90 hover:text-bronze-300 inline-flex items-center gap-1 transition-colors"
+                  >
+                    <span>Cane Africa</span>
+                    <ExternalLink className="w-2.5 h-2.5" />
+                  </a>
+                </div>
               </li>
               <li>
                 <a href="#enhance" className="text-ivory-300 hover:text-bronze-300 transition-colors">
@@ -55,9 +76,20 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#restore" className="text-ivory-300 hover:text-bronze-300 transition-colors">
+                <a href="#restore" className="text-ivory-300 hover:text-bronze-300 transition-colors font-medium">
                   03. Restore (Overnight Revival)
                 </a>
+                <div className="mt-1 pl-3 text-xs">
+                  <a
+                    href="https://wooddoctor.co.za/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-bronze-400/90 hover:text-bronze-300 inline-flex items-center gap-1 transition-colors"
+                  >
+                    <span>The Wood Doctor</span>
+                    <ExternalLink className="w-2.5 h-2.5" />
+                  </a>
+                </div>
               </li>
               <li>
                 <a href="#maintain" className="text-ivory-300 hover:text-bronze-300 transition-colors">
@@ -149,10 +181,13 @@ export function Footer() {
           </p>
 
           <div className="flex items-center gap-6">
-            <a href="#audit-tool" className="hover:text-bronze-300 transition-colors">
+            <Link href="/about" className="hover:text-bronze-300 transition-colors">
+              About Us
+            </Link>
+            <a href="/#audit-tool" className="hover:text-bronze-300 transition-colors">
               Facility Diagnostic
             </a>
-            <a href="#contact" className="hover:text-bronze-300 transition-colors">
+            <a href="/#contact" className="hover:text-bronze-300 transition-colors">
               Request Assessment
             </a>
             <span className="text-charcoal-700">|</span>

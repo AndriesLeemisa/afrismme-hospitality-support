@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/Button';
 import { BrandLogo } from '@/components/ui/BrandLogo';
@@ -18,6 +19,9 @@ export function Navbar({ onOpenAudit }: NavbarProps) {
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
+  const isAboutPage = pathname === '/about';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -73,18 +77,28 @@ export function Navbar({ onOpenAudit }: NavbarProps) {
               {/* Home */}
               <Link
                 href="/"
-                className="whitespace-nowrap text-sm tracking-wider uppercase font-medium text-ivory-200/90 hover:text-bronze-300 transition-colors duration-200 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-bronze-400 hover:after:w-full after:transition-all after:duration-300"
+                className={cn(
+                  'whitespace-nowrap text-sm tracking-wider uppercase font-medium transition-colors duration-200 relative py-1 after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:bg-bronze-400 after:transition-all after:duration-300',
+                  isHomePage
+                    ? 'text-bronze-300 after:w-full'
+                    : 'text-ivory-200/90 hover:text-bronze-300 after:w-0 hover:after:w-full'
+                )}
               >
                 Home
               </Link>
 
               {/* About */}
-              <a
-                href="#about"
-                className="whitespace-nowrap text-sm tracking-wider uppercase font-medium text-ivory-200/90 hover:text-bronze-300 transition-colors duration-200 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-bronze-400 hover:after:w-full after:transition-all after:duration-300"
+              <Link
+                href="/about"
+                className={cn(
+                  'whitespace-nowrap text-sm tracking-wider uppercase font-medium transition-colors duration-200 relative py-1 after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:bg-bronze-400 after:transition-all after:duration-300',
+                  isAboutPage
+                    ? 'text-bronze-300 after:w-full'
+                    : 'text-ivory-200/90 hover:text-bronze-300 after:w-0 hover:after:w-full'
+                )}
               >
                 About
-              </a>
+              </Link>
 
               {/* Services with Dropdown Menu */}
               <div
@@ -94,7 +108,7 @@ export function Navbar({ onOpenAudit }: NavbarProps) {
                 onMouseLeave={() => setServicesDropdownOpen(false)}
               >
                 <a
-                  href="#pillars"
+                  href={isHomePage ? '#pillars' : '/#pillars'}
                   className={cn(
                     'whitespace-nowrap inline-flex items-center gap-1.5 text-sm tracking-wider uppercase font-medium transition-colors duration-200 relative py-1',
                     servicesDropdownOpen ? 'text-bronze-300' : 'text-ivory-200/90 hover:text-bronze-300'
@@ -122,7 +136,7 @@ export function Navbar({ onOpenAudit }: NavbarProps) {
                         {SERVICE_PILLARS.map((pillar) => (
                           <a
                             key={pillar.id}
-                            href={`#${pillar.id}`}
+                            href={isHomePage ? `#${pillar.id}` : `/#${pillar.id}`}
                             onClick={() => setServicesDropdownOpen(false)}
                             className="flex items-center justify-between p-2.5 rounded-sm hover:bg-charcoal-900 transition-colors group/item"
                           >
@@ -137,6 +151,11 @@ export function Navbar({ onOpenAudit }: NavbarProps) {
                                 <span className="text-[10px] text-ivory-400 block line-clamp-1">
                                   {pillar.tagline}
                                 </span>
+                                {pillar.externalLinks && pillar.externalLinks.length > 0 && (
+                                  <span className="text-[9px] font-mono text-bronze-400/90 block mt-0.5">
+                                    {pillar.externalLinks.map((l) => l.name).join(' & ')}
+                                  </span>
+                                )}
                               </div>
                             </div>
                             <span className="text-[10px] font-mono text-bronze-400 font-semibold">
@@ -149,7 +168,7 @@ export function Navbar({ onOpenAudit }: NavbarProps) {
                       {/* Dropdown Quick Actions */}
                       <div className="mt-3 pt-2.5 border-t border-charcoal-800 space-y-1.5">
                         <a
-                          href="#comparison"
+                          href={isHomePage ? '#comparison' : '/#comparison'}
                           onClick={() => setServicesDropdownOpen(false)}
                           className="flex items-center justify-between p-2 rounded-sm bg-charcoal-900/60 hover:bg-charcoal-900 border border-charcoal-800 text-[11px] font-mono text-bronze-300 hover:text-ivory-50 transition-colors"
                         >
@@ -181,7 +200,7 @@ export function Navbar({ onOpenAudit }: NavbarProps) {
 
               {/* Contact */}
               <a
-                href="#contact"
+                href={isHomePage ? '#contact' : '/#contact'}
                 className="whitespace-nowrap text-sm tracking-wider uppercase font-medium text-ivory-200/90 hover:text-bronze-300 transition-colors duration-200 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-bronze-400 hover:after:w-full after:transition-all after:duration-300"
               >
                 Contact
@@ -190,7 +209,7 @@ export function Navbar({ onOpenAudit }: NavbarProps) {
 
             {/* Single Clean Primary CTA */}
             <div className="hidden sm:flex items-center shrink-0">
-              <Button href="#contact" variant="primary" size="sm" withArrow className="whitespace-nowrap font-semibold">
+              <Button href={isHomePage ? '#contact' : '/#contact'} variant="primary" size="sm" withArrow className="whitespace-nowrap font-semibold">
                 Request Support
               </Button>
             </div>
@@ -198,7 +217,7 @@ export function Navbar({ onOpenAudit }: NavbarProps) {
             {/* Mobile Hamburger Toggle */}
             <div className="flex items-center gap-2.5 lg:hidden">
               <a
-                href="#contact"
+                href={isHomePage ? '#contact' : '/#contact'}
                 className="hidden xs:inline-flex text-xs uppercase tracking-wider font-semibold py-2 px-3 rounded-sm bg-bronze-500 text-charcoal-950 hover:bg-bronze-400"
               >
                 Quote

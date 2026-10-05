@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { ServicePillarData } from '@/types';
 import { Button } from '@/components/ui/Button';
-import { Compass, Sparkles, Wrench, ShieldCheck, ShieldAlert, TrendingUp } from 'lucide-react';
+import { Compass, Sparkles, Wrench, ShieldCheck, ShieldAlert, TrendingUp, ExternalLink } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface ServiceCardProps {
@@ -79,7 +79,7 @@ export function ServiceCard({ pillar, onRequestQuote }: ServiceCardProps) {
         </p>
 
         {/* Key Features Bullet List */}
-        <div className="space-y-2.5 pt-4 border-t border-charcoal-800 mb-8 mt-auto">
+        <div className="space-y-2.5 pt-4 border-t border-charcoal-800 mb-6 mt-auto">
           {pillar.features.map((feature, fIdx) => (
             <div key={fIdx} className="flex items-start gap-2.5 text-xs text-ivory-200">
               <span className="w-1.5 h-1.5 rounded-full bg-bronze-400 mt-1.5 shrink-0" />
@@ -87,6 +87,36 @@ export function ServiceCard({ pillar, onRequestQuote }: ServiceCardProps) {
             </div>
           ))}
         </div>
+
+        {/* Specialist Division & Partner Links */}
+        {pillar.externalLinks && pillar.externalLinks.length > 0 && (
+          <div className="pt-3 pb-3 mb-4 border-t border-charcoal-800/80">
+            <span className="text-[10px] font-mono uppercase tracking-wider text-bronze-400 font-semibold block mb-2">
+              Specialist Division Portals
+            </span>
+            <div className="flex flex-col gap-1.5">
+              {pillar.externalLinks.map((link) => (
+                <a
+                  key={link.url}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group/link flex items-center justify-between p-2 rounded-sm bg-charcoal-950/70 border border-charcoal-800 hover:border-bronze-500/50 hover:bg-charcoal-900 transition-all duration-200"
+                >
+                  <span className="text-xs font-medium text-ivory-200 group-hover/link:text-bronze-300 transition-colors">
+                    {link.name}
+                  </span>
+                  <div className="flex items-center gap-1.5 text-[10px] font-mono text-ivory-400">
+                    <span className="hidden sm:inline group-hover/link:text-ivory-300">
+                      {link.url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')}
+                    </span>
+                    <ExternalLink className="w-3 h-3 text-bronze-400 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Action Button */}
         <div className="pt-2">

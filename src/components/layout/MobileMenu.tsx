@@ -86,14 +86,14 @@ export function MobileMenu({ isOpen, onClose, onOpenAudit }: MobileMenuProps) {
           </Link>
 
           {/* About Us */}
-          <a
-            href="#about"
+          <Link
+            href="/about"
             onClick={onClose}
             className="flex items-center justify-between py-3 px-3 rounded-sm text-base font-display text-ivory-100 hover:text-bronze-300 hover:bg-charcoal-800/60 transition-colors"
           >
             <span>About Us</span>
             <ArrowRight className="w-4 h-4 text-bronze-500/60" />
-          </a>
+          </Link>
 
           {/* Services with Accordion */}
           <div>
@@ -116,19 +116,26 @@ export function MobileMenu({ isOpen, onClose, onOpenAudit }: MobileMenuProps) {
                 {SERVICE_PILLARS.map((pillar) => (
                   <a
                     key={pillar.id}
-                    href={`#${pillar.id}`}
+                    href={`/#${pillar.id}`}
                     onClick={onClose}
                     className="flex items-center justify-between py-2 px-2 text-xs font-mono text-ivory-200 hover:text-bronze-300 hover:bg-charcoal-900 rounded transition-colors"
                   >
                     <div className="flex items-center gap-2">
                       {pillarIcons[pillar.id]}
-                      <span>{pillar.pillarNumber}. {pillar.name}</span>
+                      <div>
+                        <span className="block">{pillar.pillarNumber}. {pillar.name}</span>
+                        {pillar.externalLinks && pillar.externalLinks.length > 0 && (
+                          <span className="text-[9px] text-bronze-400 block font-sans">
+                            {pillar.externalLinks.map((l) => l.name).join(' & ')}
+                          </span>
+                        )}
+                      </div>
                     </div>
                     <span className="text-[10px] text-ivory-400">View</span>
                   </a>
                 ))}
                 <a
-                  href="#blueprint"
+                  href="/#blueprint"
                   onClick={onClose}
                   className="flex items-center gap-2 pt-2 pb-1 px-2 text-[11px] font-mono text-bronze-300 hover:text-ivory-50 border-t border-charcoal-800 mt-2"
                 >
@@ -140,7 +147,7 @@ export function MobileMenu({ isOpen, onClose, onOpenAudit }: MobileMenuProps) {
 
           {/* The Difference */}
           <a
-            href="#comparison"
+            href="/#comparison"
             onClick={onClose}
             className="flex items-center justify-between py-3 px-3 rounded-sm text-base font-display text-ivory-100 hover:text-bronze-300 hover:bg-charcoal-800/60 transition-colors"
           >
@@ -150,7 +157,7 @@ export function MobileMenu({ isOpen, onClose, onOpenAudit }: MobileMenuProps) {
 
           {/* Contact */}
           <a
-            href="#contact"
+            href="/#contact"
             onClick={onClose}
             className="flex items-center justify-between py-3 px-3 rounded-sm text-base font-display text-ivory-100 hover:text-bronze-300 hover:bg-charcoal-800/60 transition-colors"
           >
@@ -190,7 +197,7 @@ export function MobileMenu({ isOpen, onClose, onOpenAudit }: MobileMenuProps) {
               </Button>
             )}
             <Button
-              href="#contact"
+              href="/#contact"
               variant="primary"
               size="md"
               onClick={onClose}

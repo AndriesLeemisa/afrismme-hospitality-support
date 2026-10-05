@@ -40,6 +40,20 @@ export const SERVICE_PILLARS: ServicePillarData[] = [
     },
     ctaLabel: 'Commission Exterior Enhancement',
     route: '#attract',
+    externalLinks: [
+      {
+        name: 'Afrishades',
+        url: 'https://afrishades.co.za/',
+        label: 'Afrishades Outdoor Living & Shading Solutions',
+        description: 'Engineered commercial cantilever umbrellas, custom canopies & architectural patio shading systems.',
+      },
+      {
+        name: 'Cane Africa',
+        url: 'https://www.caneafrica.co.za/',
+        label: 'Cane Africa Hospitality Furniture',
+        description: 'Handcrafted natural cane, wicker & bespoke outdoor terrace furniture built for hospitality resilience.',
+      },
+    ],
   },
   {
     id: 'enhance',
@@ -120,6 +134,14 @@ export const SERVICE_PILLARS: ServicePillarData[] = [
     },
     ctaLabel: 'Schedule Overnight Restoration',
     route: '#restore',
+    externalLinks: [
+      {
+        name: 'The Wood Doctor',
+        url: 'https://wooddoctor.co.za/',
+        label: 'The Wood Doctor Specialist Portal',
+        description: 'Master artisanal wood restoration, timber revitalisation & overnight commercial furniture repair.',
+      },
+    ],
   },
   {
     id: 'maintain',

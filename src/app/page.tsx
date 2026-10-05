@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Navbar } from '@/components/layout/Navbar';
 import { Hero } from '@/components/sections/Hero';
+import { AboutSection } from '@/components/sections/AboutSection';
 import { ServicePillarsSection } from '@/components/sections/ServicePillarsSection';
 import { InteractiveHotspot } from '@/components/interactive/InteractiveHotspot';
 import { ProcessTimeline } from '@/components/sections/ProcessTimeline';
@@ -43,7 +44,10 @@ export default function HomePage() {
         {/* 1. Immersive Editorial Hero */}
         <Hero onOpenAudit={handleOpenAuditModal} />
 
-        {/* 2. The 6 Support Pillars */}
+        {/* 2. About AfriSMME Hub & Operational Philosophy (Second Section) */}
+        <AboutSection onOpenAudit={handleOpenAuditModal} />
+
+        {/* 3. The 6 Support Pillars */}
         <ServicePillarsSection onRequestQuote={handleRequestQuote} />
 
         {/* 3. Interactive Architectural Blueprint */}

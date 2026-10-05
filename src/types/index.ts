@@ -12,6 +12,13 @@ export interface ServiceDetail {
   deliverables: string[];
 }
 
+export interface PillarPartnerLink {
+  name: string;
+  url: string;
+  label?: string;
+  description?: string;
+}
+
 export interface ServicePillarData {
   id: ServicePillarId;
   pillarNumber: string;
@@ -30,6 +37,7 @@ export interface ServicePillarData {
   };
   ctaLabel: string;
   route: string;
+  externalLinks?: PillarPartnerLink[];
 }
 
 export interface HotspotData {

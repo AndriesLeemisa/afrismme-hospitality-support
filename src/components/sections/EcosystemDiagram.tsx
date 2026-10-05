@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { SectionHeading } from '@/components/ui/SectionHeading';
-import { Compass, Sparkles, Wrench, ShieldCheck, ShieldAlert, TrendingUp, Layers, CheckCircle2 } from 'lucide-react';
+import { Compass, Sparkles, Wrench, ShieldCheck, ShieldAlert, TrendingUp, Layers, CheckCircle2, ExternalLink } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export function EcosystemDiagram() {
@@ -15,6 +15,10 @@ export function EcosystemDiagram() {
       icon: <Compass className="w-5 h-5" />,
       desc: 'Etched brass signage, weather cantilever umbrellas, curbside LED ambiance.',
       coordination: 'Ensures outdoor seating converts directly to higher table count without weather risk.',
+      externalLinks: [
+        { name: 'Afrishades', url: 'https://afrishades.co.za/' },
+        { name: 'Cane Africa', url: 'https://www.caneafrica.co.za/' },
+      ],
     },
     {
       title: 'Acoustic Architecture',
@@ -22,6 +26,7 @@ export function EcosystemDiagram() {
       icon: <Sparkles className="w-5 h-5" />,
       desc: 'NRC-certified sound baffles, luxury velvet privacy booths, banquettes.',
       coordination: 'Extends reservation dwell time by 1.8 hours and boosts dessert spend.',
+      externalLinks: [] as { name: string; url: string }[],
     },
     {
       title: 'Artisanal Restoration',
@@ -29,6 +34,9 @@ export function EcosystemDiagram() {
       icon: <Wrench className="w-5 h-5" />,
       desc: 'Hand-rubbed organic hardwax oils, brass de-oxidizing, leather dyeing.',
       coordination: 'Revives furniture during 23:00–07:00 dark hours with zero lost covers.',
+      externalLinks: [
+        { name: 'The Wood Doctor', url: 'https://wooddoctor.co.za/' },
+      ],
     },
     {
       title: 'Rapid Response Fleet',
@@ -152,6 +160,29 @@ export function EcosystemDiagram() {
                   {nodes[activeNode].coordination}
                 </p>
               </div>
+
+              {/* Specialist Division Web Portals */}
+              {nodes[activeNode].externalLinks && nodes[activeNode].externalLinks.length > 0 && (
+                <div className="p-3.5 rounded-sm bg-charcoal-900/90 border border-bronze-500/30 mb-6">
+                  <span className="text-[10px] uppercase font-mono tracking-wider text-bronze-400 block mb-2 font-semibold">
+                    Associated Division Websites:
+                  </span>
+                  <div className="flex flex-wrap gap-2">
+                    {nodes[activeNode].externalLinks.map((link) => (
+                      <a
+                        key={link.url}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm bg-charcoal-950 border border-charcoal-700 text-xs text-ivory-100 hover:text-bronze-300 hover:border-bronze-400 transition-all duration-200"
+                      >
+                        <span className="font-medium">{link.name}</span>
+                        <ExternalLink className="w-3 h-3 text-bronze-400" />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               <div className="space-y-2 text-xs text-ivory-300">
                 <div className="flex items-center gap-2">

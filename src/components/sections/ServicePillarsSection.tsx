@@ -7,7 +7,7 @@ import { SectionHeading } from '@/components/ui/SectionHeading';
 import { ServiceCard } from './ServiceCard';
 import { Button } from '@/components/ui/Button';
 import { ServicePillarData } from '@/types';
-import { Check, ShieldCheck, ArrowRight, Clock, Award, Sparkles } from 'lucide-react';
+import { Check, ShieldCheck, ArrowRight, Clock, Award, Sparkles, ExternalLink } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface ServicePillarsSectionProps {
@@ -124,6 +124,49 @@ export function ServicePillarsSection({ onRequestQuote }: ServicePillarsSectionP
                     </div>
                   ))}
                 </div>
+
+                {/* Specialist Division Websites & Portals (if available) */}
+                {activePillar.externalLinks && activePillar.externalLinks.length > 0 && (
+                  <div className="mb-8 p-4 sm:p-5 rounded-sm bg-gradient-to-r from-charcoal-950 via-charcoal-900 to-charcoal-950 border border-bronze-500/30">
+                    <div className="flex items-center justify-between mb-3 pb-2 border-b border-charcoal-800">
+                      <span className="text-[11px] font-mono uppercase tracking-widest text-bronze-300 font-semibold flex items-center gap-1.5">
+                        <Sparkles className="w-3.5 h-3.5 text-bronze-400" />
+                        Specialist Division Websites ({activePillar.name})
+                      </span>
+                      <span className="text-[10px] font-mono text-ivory-400">
+                        Official Portals
+                      </span>
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      {activePillar.externalLinks.map((link) => (
+                        <a
+                          key={link.url}
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group/portal p-3.5 rounded-sm bg-charcoal-950/90 border border-charcoal-750 hover:border-bronze-400/80 hover:bg-charcoal-900 transition-all duration-200 flex flex-col justify-between"
+                        >
+                          <div>
+                            <div className="flex items-center justify-between gap-1 mb-1.5">
+                              <span className="text-sm font-semibold text-ivory-100 group-hover/portal:text-bronze-300 transition-colors">
+                                {link.name}
+                              </span>
+                              <ExternalLink className="w-3.5 h-3.5 text-bronze-400 group-hover/portal:translate-x-0.5 group-hover/portal:-translate-y-0.5 transition-transform shrink-0" />
+                            </div>
+                            {link.description && (
+                              <p className="text-xs text-ivory-300/80 leading-relaxed mb-2">
+                                {link.description}
+                              </p>
+                            )}
+                          </div>
+                          <span className="text-[11px] font-mono text-bronze-400 flex items-center gap-1 group-hover/portal:underline">
+                            {link.url.replace(/^https?:\/\//, '').replace(/\/$/, '')} &rarr;
+                          </span>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* Technical standard & consultation trigger */}
