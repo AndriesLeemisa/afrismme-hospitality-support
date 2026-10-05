@@ -282,9 +282,13 @@ export function Hero({ onOpenAudit }: HeroProps) {
           {/* Single Focused Editorial Subheading */}
           <p
             ref={subheadRef}
-            className="text-lg sm:text-xl md:text-2xl text-ivory-200/95 font-normal leading-relaxed text-balance max-w-2xl mb-10"
+            className="text-lg sm:text-xl md:text-2xl text-bronze-200/90 font-normal leading-relaxed text-balance max-w-2xl mb-10"
           >
-            Bespoke architectural terrace systems, acoustic dining intimacy, and rapid dark-hours facility restoration—executed with zero daytime service disruption.
+            Bespoke architectural terrace systems, acoustic dining intimacy, and rapid dark-hours facility restoration—executed with{' '}
+            <span className="text-bronze-400 font-semibold">
+              zero daytime service disruption
+            </span>
+            .
           </p>
 
           {/* Clean Action Buttons */}
