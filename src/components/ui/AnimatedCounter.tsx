@@ -48,7 +48,7 @@ export function AnimatedCounter({ value, label, sub, className }: AnimatedCounte
 
       gsap.to(counterObj, {
         count: targetNumber,
-        duration: 2.2,
+        duration: 1.2,
         ease: 'power2.out',
         scrollTrigger: {
           trigger: containerRef.current,

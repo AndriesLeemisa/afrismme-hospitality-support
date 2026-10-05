@@ -59,7 +59,7 @@ const HERO_SLIDES: HeroSlide[] = [
   },
 ];
 
-const SLIDE_DURATION = 6500; // ms per slide
+const SLIDE_DURATION = 3800; // ms per slide (fast, engaging, cinematic)
 
 export function Hero({ onOpenAudit }: HeroProps) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -73,7 +73,7 @@ export function Hero({ onOpenAudit }: HeroProps) {
   const slidesContainerRef = useRef<HTMLDivElement>(null);
   const slideElementsRef = useRef<(HTMLDivElement | null)[]>([]);
 
-  // Initial GSAP Entrance Animation
+  // Initial GSAP Entrance Animation (Crisp & Snappy)
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
@@ -85,33 +85,42 @@ export function Hero({ onOpenAudit }: HeroProps) {
 
       tl.fromTo(
         badgeRef.current,
-        { opacity: 0, y: 15 },
-        { opacity: 1, y: 0, duration: 0.7, delay: 0.1 }
+        { opacity: 0, y: 12 },
+        { opacity: 1, y: 0, duration: 0.45, delay: 0.05 }
       )
         .fromTo(
           headlineRef.current,
-          { opacity: 0, y: 25 },
-          { opacity: 1, y: 0, duration: 1.0 },
-          '-=0.5'
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.6 },
+          '-=0.3'
         )
         .fromTo(
           subheadRef.current,
-          { opacity: 0, y: 20 },
-          { opacity: 1, y: 0, duration: 0.8 },
-          '-=0.7'
+          { opacity: 0, y: 16 },
+          { opacity: 1, y: 0, duration: 0.5 },
+          '-=0.3'
         )
         .fromTo(
           ctaRef.current,
-          { opacity: 0, y: 15 },
-          { opacity: 1, y: 0, duration: 0.7 },
-          '-=0.6'
+          { opacity: 0, y: 12 },
+          { opacity: 1, y: 0, duration: 0.45 },
+          '-=0.25'
         );
+
+      // Start gentle Ken Burns push on initial slide
+      if (slideElementsRef.current[0]) {
+        gsap.fromTo(
+          slideElementsRef.current[0],
+          { scale: 1.0 },
+          { scale: 1.035, duration: SLIDE_DURATION / 1000, ease: 'sine.out' }
+        );
+      }
     }, heroRef);
 
     return () => ctx.revert();
   }, []);
 
-  // Slide Switch Handler with GSAP Cinematic Crossfade and Subtle Zoom
+  // Slide Switch Handler with Crisp GSAP Crossfade and Continuous Cinematic Zoom
   const goToSlide = useCallback((newIndex: number) => {
     setActiveIndex((prevIndex) => {
       if (prevIndex === newIndex) return prevIndex;
@@ -120,20 +129,33 @@ export function Hero({ onOpenAudit }: HeroProps) {
       const nextSlideEl = slideElementsRef.current[newIndex];
 
       if (currentSlideEl && nextSlideEl) {
-        // Smooth crossfade out current slide
+        gsap.killTweensOf(currentSlideEl);
+        gsap.killTweensOf(nextSlideEl);
+
+        // Fast, smooth crossfade out
         gsap.to(currentSlideEl, {
           opacity: 0,
-          duration: 1.2,
+          duration: 0.65,
           ease: 'power2.inOut',
         });
 
-        // Ken Burns zoom & fade in incoming slide
+        // Fast fade-in for opacity so the photo is promptly vivid
         gsap.fromTo(
           nextSlideEl,
-          { opacity: 0, scale: 1.0 },
+          { opacity: 0 },
           {
             opacity: 1,
-            scale: 1.04,
+            duration: 0.65,
+            ease: 'power2.out',
+          }
+        );
+
+        // Continuous subtle Ken Burns push across the slide duration
+        gsap.fromTo(
+          nextSlideEl,
+          { scale: 1.0 },
+          {
+            scale: 1.035,
             duration: SLIDE_DURATION / 1000,
             ease: 'sine.out',
           }

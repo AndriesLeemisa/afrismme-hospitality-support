@@ -54,15 +54,15 @@ export function ImageReveal({
       if (revealDirection === 'scale') {
         gsap.fromTo(
           imgRef.current,
-          { scale: 1.15, filter: 'brightness(0.85)' },
+          { scale: 1.12, filter: 'brightness(0.9)' },
           {
             scale: 1,
             filter: 'brightness(1)',
-            duration: 1.6,
+            duration: 0.85,
             ease: 'power3.out',
             scrollTrigger: {
               trigger: containerRef.current,
-              start: 'top 85%',
+              start: 'top 88%',
               toggleActions: 'play none none none',
             },
           }
@@ -71,20 +71,20 @@ export function ImageReveal({
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: containerRef.current,
-            start: 'top 85%',
+            start: 'top 88%',
             toggleActions: 'play none none none',
           },
         });
 
         tl.to(overlayRef.current, {
           yPercent: -100,
-          duration: 1.1,
-          ease: 'power4.inOut',
+          duration: 0.7,
+          ease: 'power3.inOut',
         }).fromTo(
           imgRef.current,
-          { scale: 1.1 },
-          { scale: 1, duration: 1.4, ease: 'power2.out' },
-          '-=0.8'
+          { scale: 1.08 },
+          { scale: 1, duration: 0.85, ease: 'power2.out' },
+          '-=0.5'
         );
       }
     }, containerRef);

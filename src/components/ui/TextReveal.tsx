@@ -42,7 +42,7 @@ export function TextReveal({
         {
           opacity: 1,
           y: 0,
-          duration: 1.1,
+          duration: 0.65,
           delay,
           ease: 'power3.out',
           scrollTrigger: {
