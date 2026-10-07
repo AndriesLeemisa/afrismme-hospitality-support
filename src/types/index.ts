@@ -61,3 +61,26 @@ export interface AssessmentQuestion {
     recommendedPillars: ServicePillarId[];
   }[];
 }
+
+export interface ProcessStepData {
+  step: string;
+  title: string;
+  tagline?: string;
+  description: string;
+  duration: string;
+  deliverable: string;
+}
+
+export interface EcosystemDivisionData {
+  id: string;
+  number: string;
+  name: string;
+  role: string;
+  category: string;
+  website?: string;
+  image: string;
+  alt: string;
+  description: string;
+  features: string[];
+}
+

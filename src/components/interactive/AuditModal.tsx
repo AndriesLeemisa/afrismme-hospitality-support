@@ -37,7 +37,7 @@ export function AuditModal({ isOpen, onClose }: AuditModalProps) {
       className="fixed inset-0 z-[120] bg-charcoal-950/85 backdrop-blur-xl flex items-center justify-center p-4 sm:p-6 overflow-y-auto animate-fade-in"
       role="dialog"
       aria-modal="true"
-      aria-label="Diagnostic Audit Modal"
+      aria-label="Restaurant & Hospitality Support Assessment Modal"
     >
       <div className="relative w-full max-w-4xl my-8 bg-charcoal-950 border border-charcoal-700 rounded-sm shadow-2xl overflow-hidden">
         {/* Close Button */}

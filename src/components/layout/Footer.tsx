@@ -22,18 +22,18 @@ export function Footer() {
             </Link>
 
             <p className="text-sm sm:text-base text-ivory-300/80 font-normal leading-relaxed mb-6 max-w-md">
-              The premier turnkey engineering and facility support ecosystem for luxury restaurants, fine-dining bistros, and boutique hospitality venues across Southern Africa. Zero daytime disruption.
+              The integrated hospitality support ecosystem helping restaurants, boutique hotels, and safari lodges identify, solve, restore, maintain, and grow—through one coordinated partnership. Zero daytime disruption.
             </p>
 
             {/* Quick credentials badges */}
             <div className="flex flex-wrap gap-2.5">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-charcoal-900 border border-charcoal-700/80 text-[11px] font-mono text-ivory-200">
-                <ShieldCheck className="w-3.5 h-3.5 text-bronze-400" />
-                HACCP & NFPA 96 Aligned
+                <Clock className="w-3.5 h-3.5 text-emerald-400" />
+                Zero Daytime Disruption
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-charcoal-900 border border-charcoal-700/80 text-[11px] font-mono text-ivory-200">
-                <Clock className="w-3.5 h-3.5 text-emerald-400" />
-                Overnight Dark-Hours Deploy
+                <ShieldCheck className="w-3.5 h-3.5 text-bronze-400" />
+                Coordinated Ecosystem
               </span>
             </div>
           </div>
@@ -46,7 +46,7 @@ export function Footer() {
             <ul className="space-y-2.5 text-sm">
               <li>
                 <a href="/#attract" className="text-ivory-300 hover:text-bronze-300 transition-colors">
-                  01. Attract (Exterior & Terrace)
+                  01. Attract (Exterior & Shade)
                 </a>
               </li>
               <li>
@@ -56,22 +56,22 @@ export function Footer() {
               </li>
               <li>
                 <a href="/#restore" className="text-ivory-300 hover:text-bronze-300 transition-colors">
-                  03. Restore (Overnight Revival)
+                  03. Restore (Furniture & Timber)
                 </a>
               </li>
               <li>
                 <a href="/#maintain" className="text-ivory-300 hover:text-bronze-300 transition-colors">
-                  04. Maintain (Rapid Fleet SLA)
+                  04. Maintain (Preventative Care)
                 </a>
               </li>
               <li>
                 <a href="/#protect" className="text-ivory-300 hover:text-bronze-300 transition-colors">
-                  05. Protect (Compliance Shield)
+                  05. Protect (Safety & Compliance)
                 </a>
               </li>
               <li>
                 <a href="/#grow" className="text-ivory-300 hover:text-bronze-300 transition-colors">
-                  06. Grow (Kitchen Tech & Yield)
+                  06. Grow (Digital, AI & Menus)
                 </a>
               </li>
             </ul>
@@ -80,7 +80,7 @@ export function Footer() {
           {/* Column 4: Operational Hubs */}
           <div className="flex flex-col">
             <h3 className="text-xs uppercase tracking-cinematic text-bronze-400 font-semibold mb-5 font-mono">
-              Operational Hubs
+              Hospitality Footprint
             </h3>
             <ul className="space-y-2.5 text-sm text-ivory-300/90">
               <li className="flex items-center gap-2">
@@ -103,20 +103,24 @@ export function Footer() {
                 <span className="w-1.5 h-1.5 rounded-full bg-bronze-400" />
                 Franschhoek & Stellenbosch
               </li>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-bronze-400" />
+                Greater Kruger & Safari Lodges
+              </li>
             </ul>
           </div>
 
           {/* Column 5: Direct Dispatch & Contact */}
           <div className="flex flex-col">
             <h3 className="text-xs uppercase tracking-cinematic text-bronze-400 font-semibold mb-5 font-mono">
-              Rapid Response
+              Support & Inquiries
             </h3>
             <div className="space-y-3.5 text-sm">
               <div className="flex items-start gap-2.5">
                 <PhoneCall className="w-4 h-4 text-bronze-400 shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-[11px] text-ivory-400 uppercase tracking-wider">Emergency Hotline</p>
-                  <a href="tel:+27110000000" className="text-ivory-100 font-mono hover:text-bronze-300">
+                  <p className="text-[11px] text-ivory-400 uppercase tracking-wider">Direct Hotline</p>
+                  <a href="tel:+27118849200" className="text-ivory-100 font-mono hover:text-bronze-300">
                     +27 (0) 11 884 9200
                   </a>
                 </div>
@@ -125,7 +129,7 @@ export function Footer() {
               <div className="flex items-start gap-2.5">
                 <Mail className="w-4 h-4 text-bronze-400 shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-[11px] text-ivory-400 uppercase tracking-wider">Audit & Proposals</p>
+                  <p className="text-[11px] text-ivory-400 uppercase tracking-wider">Assessments & Proposals</p>
                   <a href="mailto:hospitality@afrismme.com" className="text-ivory-100 hover:text-bronze-300">
                     hospitality@afrismme.com
                   </a>
@@ -135,7 +139,7 @@ export function Footer() {
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-bronze-400 shrink-0 mt-0.5" />
                 <p className="text-xs text-ivory-300 leading-relaxed">
-                  Central Engineering Workshop, Sandton Technical District, Gauteng
+                  Support Across South Africa & Southern Africa
                 </p>
               </div>
             </div>
@@ -145,7 +149,7 @@ export function Footer() {
         {/* Bottom Bar: Copyright & AfriSMME Ecosystem */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-ivory-400">
           <p>
-            &copy; {currentYear} AfriSMME Hub. All rights reserved. A Scinovalities enterprise.
+            &copy; {currentYear} AfriSMME Hub. All rights reserved. Digital & Technology Partner — Scinovalities.
           </p>
 
           <div className="flex items-center gap-6">
@@ -153,17 +157,23 @@ export function Footer() {
               About Us
             </Link>
             <a href="/#pillars" className="hover:text-bronze-300 transition-colors">
-              The 6 Pillars
+              Product & Services
+            </a>
+            <a href="/#ecosystem" className="hover:text-bronze-300 transition-colors">
+              Ecosystem
+            </a>
+            <a href="/#technology" className="hover:text-bronze-300 transition-colors">
+              Technology
             </a>
             <a href="/#audit-tool" className="hover:text-bronze-300 transition-colors">
-              Facility Diagnostic
+              Assessment
             </a>
             <a href="/#contact" className="hover:text-bronze-300 transition-colors">
-              Request Assessment
+              Contact
             </a>
             <span className="text-charcoal-700">|</span>
             <span className="text-ivory-400 font-mono">
-              Zero-Downtime Hospitality Engineering
+              Identify. Solve. Restore. Maintain. Grow.
             </span>
           </div>
         </div>

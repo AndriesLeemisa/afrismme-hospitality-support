@@ -21,10 +21,10 @@ export function InteractiveHotspot() {
     <section id="blueprint" className="py-24 sm:py-32 bg-charcoal-900 border-y border-charcoal-800 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          badge="Interactive Architectural Anatomy"
-          title="Where Engineering Interventions"
-          highlightedTitle="Directly Unlock Gross Margin."
-          description="Click the strategic hotspots on the dining floor below to reveal where invisible acoustic damping, precision timber refinishing, and terrace armor protect revenue."
+          badge="Anatomy of a Thriving Venue"
+          title="Where Coordinated Interventions"
+          highlightedTitle="Directly Elevate Experience & Margin."
+          description="Explore the hotspots below to see how acoustic comfort, furniture restoration, all-weather terrace shading, and digital systems work together to transform hospitality performance."
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
@@ -125,7 +125,7 @@ export function InteractiveHotspot() {
               {/* Engineering Specification Box */}
               <div className="p-4 rounded-sm bg-charcoal-900 border border-bronze-500/30">
                 <span className="text-[10px] font-mono uppercase tracking-wider text-bronze-400 block mb-1">
-                  Engineering Specification
+                  Implementation Impact
                 </span>
                 <p className="text-sm font-medium text-ivory-100 leading-relaxed">
                   {activeHotspot.technicalSpec}

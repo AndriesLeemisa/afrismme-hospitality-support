@@ -212,25 +212,25 @@ export function DigitalAssessmentTool({ isModal = false }: DigitalAssessmentTool
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 p-6 rounded-sm bg-charcoal-900 border border-charcoal-700/80">
                 <div className="flex flex-col justify-center">
                   <span className="text-[11px] font-mono uppercase text-ivory-400 mb-1">
-                    Diagnostic Status
+                    Assessment Status
                   </span>
                   <div className="font-display text-2xl font-bold text-bronze-300">
                     Profile Mapped
                   </div>
                   <span className="text-xs text-ivory-300 mt-1">
-                    Scope of work defined
+                    Priorities & gaps identified
                   </span>
                 </div>
 
                 <div className="md:col-span-2 flex flex-col justify-center border-t md:border-t-0 md:border-l border-charcoal-800 pt-4 md:pt-0 md:pl-6">
                   <span className="text-[11px] font-mono uppercase text-bronze-400 mb-1">
-                    Operational Deployment Recommendation
+                    Ecosystem Roadmap Recommendation
                   </span>
                   <h4 className="font-display text-xl font-semibold text-ivory-50 mb-2">
-                    Turnkey Engineering Protocol
+                    Coordinated Hospitality Support Plan
                   </h4>
                   <p className="text-xs sm:text-sm text-ivory-300 leading-relaxed">
-                    Based on your venue profile and primary operational friction points, the pillars below represent the required mechanical, acoustic, and physical restoration steps. All works are pre-fabricated off-site and deployed overnight.
+                    Based on your venue profile and priority operational areas, the pillars below represent the most impactful physical, digital, and operational solutions. All interventions are coordinated through our specialist partners with zero daytime trading disruption.
                   </p>
                 </div>
               </div>
@@ -238,7 +238,7 @@ export function DigitalAssessmentTool({ isModal = false }: DigitalAssessmentTool
               {/* Recommended Pillars List */}
               <div className="mb-10">
                 <h4 className="text-xs uppercase font-mono tracking-cinematic text-bronze-400 font-semibold mb-4">
-                  Recommended Engineering Pillars for Your Venue:
+                  Recommended Support Pillars for Your Venue:
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                   {recommendedPillars.map((pillar) => (
@@ -281,11 +281,11 @@ export function DigitalAssessmentTool({ isModal = false }: DigitalAssessmentTool
                   <div className="flex items-center gap-2 mb-4">
                     <Sparkles className="w-4 h-4 text-bronze-400" />
                     <h4 className="font-display text-lg font-semibold text-ivory-50">
-                      Request Technical Specification & On-Site Survey
+                      Request Full Hospitality Assessment & Proposal
                     </h4>
                   </div>
                   <p className="text-xs text-ivory-300 mb-6">
-                    Our Senior Technical Director will review your diagnostic profile and conduct a physical acoustic & equipment inspection at your venue.
+                    Our team will review your assessment responses and arrange a comprehensive walkthrough or consultation to evaluate physical, operational, and digital opportunities.
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
@@ -348,7 +348,7 @@ export function DigitalAssessmentTool({ isModal = false }: DigitalAssessmentTool
                     className="w-full py-3.5 px-6 rounded-sm bg-bronze-500 text-charcoal-950 font-semibold text-xs uppercase tracking-wider hover:bg-bronze-400 transition-colors flex items-center justify-center gap-2"
                   >
                     <Send className="w-4 h-4" />
-                    <span>Schedule On-Site Technical Audit</span>
+                    <span>Submit Hospitality Assessment Request</span>
                   </button>
                 </form>
               ) : (
@@ -357,13 +357,13 @@ export function DigitalAssessmentTool({ isModal = false }: DigitalAssessmentTool
                     <CheckCircle2 className="w-6 h-6" />
                   </div>
                   <h4 className="font-display text-2xl font-semibold text-ivory-50 mb-2">
-                    Diagnostic Request Received
+                    Assessment Request Received
                   </h4>
                   <p className="text-sm text-ivory-300 max-w-lg mx-auto mb-4">
-                    Thank you, {contactName}. Our Technical Director is reviewing {venueName}&apos;s profile. We will contact you at {contactPhone} to confirm your on-site acoustic and facility audit.
+                    Thank you, {contactName}. We are reviewing {venueName}&apos;s assessment profile. Our team will contact you at {contactPhone} to discuss prioritized recommendations and coordinate next steps.
                   </p>
                   <span className="text-xs font-mono text-bronze-300">
-                    Emergency rapid fleet dispatch remains on active standby.
+                    Zero daytime disruption. Turnkey ecosystem coordination.
                   </span>
                 </div>
               )}
@@ -377,10 +377,10 @@ export function DigitalAssessmentTool({ isModal = false }: DigitalAssessmentTool
       <div className="w-full">
         <div className="mb-6 pb-4 border-b border-charcoal-800">
           <span className="text-[10px] font-mono uppercase tracking-widest text-bronze-400 font-semibold block mb-1">
-            Rapid Facility Diagnostic
+            Venue Assessment
           </span>
-          <h3 className="font-display text-2xl font-semibold text-ivory-50">
-            Identify Your Venue&apos;s Operational Priorities
+          <h3 className="font-display text-xl sm:text-2xl font-semibold text-ivory-50">
+            Restaurant & Hospitality Support Assessment
           </h3>
         </div>
         {assessmentCard}
@@ -389,13 +389,13 @@ export function DigitalAssessmentTool({ isModal = false }: DigitalAssessmentTool
   }
 
   return (
-    <section id="audit-tool" className="py-24 sm:py-32 bg-charcoal-900 border-t border-charcoal-800 relative scroll-mt-20">
+    <section id="audit-tool" className="py-20 sm:py-28 bg-charcoal-900 border-t border-charcoal-800 relative scroll-mt-20">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          badge="Rapid Facility Diagnostic"
-          title="Identify Your Venue’s"
-          highlightedTitle="Operational Priorities."
-          description="Answer 3 targeted operational questions to map your physical and mechanical challenges to specific engineering solutions and schedule a zero-downtime dark-hours audit."
+          badge="Venue Assessment"
+          title="Assess your venue's"
+          highlightedTitle="gaps and opportunities."
+          description="A quick diagnostic across physical comfort, terrace spaces, digital presence, and maintenance to unlock better guest experiences and revenue."
           align="center"
         />
         {assessmentCard}

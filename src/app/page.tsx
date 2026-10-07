@@ -3,10 +3,12 @@
 import React, { useState } from 'react';
 import { Navbar } from '@/components/layout/Navbar';
 import { Hero } from '@/components/sections/Hero';
-import { VenueShowcaseSection } from '@/components/sections/VenueShowcaseSection';
-import { ServicePillarsSection } from '@/components/sections/ServicePillarsSection';
-import { InteractiveHotspot } from '@/components/interactive/InteractiveHotspot';
+import { RestaurantOwnerProblemSection } from '@/components/sections/RestaurantOwnerProblemSection';
 import { ProcessTimeline } from '@/components/sections/ProcessTimeline';
+import { ServicePillarsSection } from '@/components/sections/ServicePillarsSection';
+import { EcosystemSection } from '@/components/sections/EcosystemSection';
+import { TechnologyPartnerSection } from '@/components/sections/TechnologyPartnerSection';
+import { VenueShowcaseSection } from '@/components/sections/VenueShowcaseSection';
 import { ComparisonMatrix } from '@/components/sections/ComparisonMatrix';
 import { DigitalAssessmentTool } from '@/components/interactive/DigitalAssessmentTool';
 import { CTASection } from '@/components/sections/CTASection';
@@ -18,7 +20,6 @@ export default function HomePage() {
   const [selectedPillarForQuote, setSelectedPillarForQuote] = useState<string | undefined>(undefined);
 
   const handleOpenAuditModal = () => {
-    // If the audit tool is already present on the page, scroll smoothly to it
     const inlineAudit = document.getElementById('audit-tool');
     if (inlineAudit) {
       inlineAudit.scrollIntoView({ behavior: 'smooth' });
@@ -41,39 +42,42 @@ export default function HomePage() {
 
   return (
     <div className="relative min-h-screen bg-charcoal-950 text-ivory-100 flex flex-col">
-      {/* Fixed Navigation Bar */}
       <Navbar onOpenAudit={handleOpenAuditModal} />
 
       <main className="flex-1">
-        {/* 1. Immersive Editorial Hero with Realistic Outdoor & Lodge Photography */}
+        {/* 1. Hero: Identify. Solve. Restore. Maintain. Grow. */}
         <Hero onOpenAudit={handleOpenAuditModal} />
 
-        {/* 2. Specialized Hospitality Sectors (Terraces, Lodges, Boutique Hotels, Estates, Bistros, Bars) */}
-        <VenueShowcaseSection onRequestQuote={handleRequestQuote} />
+        {/* 2. The Operator's Reality: 6 Core Venue Challenges */}
+        <RestaurantOwnerProblemSection onOpenAudit={handleOpenAuditModal} />
 
-        {/* 3. The 6 Support Pillars (Interactive Architectural Deep Dive) */}
-        <ServicePillarsSection onRequestQuote={handleRequestQuote} />
-
-        {/* 4. Interactive Architectural Blueprint */}
-        <InteractiveHotspot />
-
-        {/* 5. The Dark-Hours Execution Cadence (23:00 to 07:00 Silent Protocol) */}
+        {/* 3. Methodology: 5 Steps + Zero Daytime Disruption */}
         <ProcessTimeline />
 
-        {/* 6. Strategic Market Differentiation Matrix */}
+        {/* 4. Hospitality Solutions: Six Pillars */}
+        <ServicePillarsSection onRequestQuote={handleRequestQuote} />
+
+        {/* 5. The Ecosystem: Six Specialist Divisions */}
+        <EcosystemSection />
+
+        {/* 6. Technology Partner: Scinovalities */}
+        <TechnologyPartnerSection />
+
+        {/* 7. Who We Support: Hospitality Sectors Across South Africa */}
+        <VenueShowcaseSection />
+
+        {/* 8. The Difference: Strategic Comparison */}
         <ComparisonMatrix />
 
-        {/* 7. Rapid Facility Diagnostic Tool */}
+        {/* 9. Interactive Assessment Tool */}
         <DigitalAssessmentTool />
 
-        {/* 9. Commission & Emergency SLA CTA */}
+        {/* 10. Direct Inquiry & Contact */}
         <CTASection preselectedPillarId={selectedPillarForQuote} />
       </main>
 
-      {/* Comprehensive Editorial Footer */}
       <Footer />
 
-      {/* Floating Audit Modal */}
       <AuditModal
         isOpen={isAuditModalOpen}
         onClose={handleCloseAuditModal}

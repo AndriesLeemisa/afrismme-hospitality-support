@@ -31,18 +31,18 @@ const HERO_SLIDES: HeroSlide[] = [
     image: '/images/hero/hero-camps-bay-sunset.jpg',
     alt: 'Luxury coastal outdoor restaurant terrace with dining umbrellas and tables overlooking the ocean',
     category: 'Outdoor Terraces & Shading Architecture',
-    title: 'Africa’s Most Coveted Dining Spaces',
-    location: 'Camps Bay & Atlantic Seaboard',
-    highlight: 'Weather-defying cantilever shade systems & ambient sunset pergolas',
+    title: 'Africa’s Premier Dining & Hospitality Spaces',
+    location: 'Hospitality Support Across South Africa',
+    highlight: 'Commercial cantilever shade systems & ambient outdoor pergolas',
   },
   {
     id: 'safari-lodge',
     image: '/images/hero/hero-03-thatched-lodge.jpg',
     alt: 'Luxury African safari lodge outdoor dining pavilion with thatched roofing and infinity deck',
     category: 'Premier Safari Lodges & Bush Escapes',
-    title: 'Thatched Dining Decks & African Hardwood Joinery',
+    title: 'Thatched Dining Decks & Hardwood Joinery',
     location: 'Greater Kruger & Sabi Sands',
-    highlight: 'Deep-penetrating organic timber oils & overnight silent maintenance',
+    highlight: 'Organic timber oils & dark-hours preventative maintenance',
   },
   {
     id: 'country-estate',
@@ -50,59 +50,59 @@ const HERO_SLIDES: HeroSlide[] = [
     alt: 'Historic wine estate outdoor dining courtyard with parasols and lush gardens',
     category: 'Historic Wine Estates & Courtyards',
     title: 'Heritage Dining Pergolas & Restored Oak Tables',
-    location: 'Stellenbosch Valley',
-    highlight: 'Artisanal table restoration cured overnight for 07:00 breakfast service',
+    location: 'Stellenbosch & Franschhoek',
+    highlight: 'Artisanal table restoration cured overnight without trading disruption',
   },
   {
     id: 'hotel-poolside',
     image: '/images/hero/hero-06-palm-resort.jpg',
     alt: '5-star luxury hotel outdoor pool terrace with palm trees and sun umbrellas',
-    category: '5-Star Boutique Hotels & Pool Lounges',
-    title: 'Marine-Grade Cantilever Umbrellas & Cabanas',
-    location: 'Umhlanga Rocks & North Coast',
-    highlight: 'Salt-mist resistant marine hardware & custom contract upholstery',
+    category: 'Boutique Hotels & Pool Lounges',
+    title: 'Commercial Cantilever Umbrellas & Cabanas',
+    location: 'Umhlanga Rocks & Coastal Hubs',
+    highlight: 'Weather-resistant shade hardware & contract upholstery',
   },
   {
     id: 'hotel-dusk',
     image: '/images/hero/hero-07-hotel-dusk.jpg',
     alt: 'Grand luxury hotel dining courtyard illuminated at dusk',
-    category: 'Metropolitan Luxury Hotels & Bistros',
+    category: 'Metropolitan Hotels & Bistros',
     title: 'Atmospheric Courtyards & Facade Illumination',
-    location: 'Sandton Luxury District',
-    highlight: 'Turnkey physical facility management with single-contract accountability',
+    location: 'Sandton & Johannesburg',
+    highlight: 'Turnkey physical facility management with single-partner accountability',
   },
   {
     id: 'bistro-patio',
     image: '/images/hero/hero-08-bistro-patio.jpg',
     alt: 'Luxury outdoor bistro streetfront patio with tables, chairs, and large dining umbrellas',
     category: 'Gourmet Bistros & Street Terraces',
-    title: 'European-Style Street Terraces & Café Shading',
-    location: 'Bree Street & Kloof Street',
-    highlight: 'Weather-tight perimeter enclosures & custom architectural parasols',
+    title: 'Streetfront Terraces & Café Shading',
+    location: 'Bree Street, Kloof & Rosebank',
+    highlight: 'All-weather terrace protection & custom architectural parasols',
   },
   {
     id: 'atrium-lounge',
     image: '/images/hero/hero-13-atrium-lounge.jpg',
     alt: 'Grand architectural atrium lounge with illuminated arches and luxury teal banquettes',
     category: 'Grand Atriums & Architectural Lounges',
-    title: 'Grand Vaulted Atrium Lounges & Water Features',
-    location: 'Sandton & Rosebank District',
-    highlight: 'Architectural arch illumination & bespoke curved banquette engineering',
+    title: 'Vaulted Atrium Lounges & Custom Banquettes',
+    location: 'Sandton, Menlyn & Pretoria',
+    highlight: 'Architectural lighting & bespoke banquette seating',
   },
   {
     id: 'canopy-garden',
     image: '/images/hero/hero-14-canopy-garden.jpg',
     alt: 'Lush tree canopy shaded garden terrace dining on hardwood timber deck',
     category: 'Forest Canopies & Garden Dining Decks',
-    title: 'Canopy Garden Terraces & Hardwood Decking',
-    location: 'Constantia Valley & Winelands',
-    highlight: 'Sub-canopy moisture-resistant timber decking & woven armchair suites',
+    title: 'Garden Terraces & Hardwood Decking',
+    location: 'Constantia Valley & Country Escapes',
+    highlight: 'Weather-resistant timber decking & outdoor seating suites',
   },
 ];
 
 const SLIDE_DURATION = 4600; // ms per slide (immersive, cinematic cadence)
 
-const HEADLINE_LINE1 = 'We Engineer, Restore & Protect';
+const HEADLINE_LINE1 = 'Identify. Solve. Restore. Maintain. Grow.';
 
 export function Hero({ onOpenAudit }: HeroProps) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -369,10 +369,16 @@ export function Hero({ onOpenAudit }: HeroProps) {
           ========================================================================= */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto">
         <div className="max-w-3xl lg:max-w-4xl">
+          {/* Ecosystem Pillar Badge */}
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-charcoal-950/80 backdrop-blur-md border border-bronze-500/30 text-[11px] font-mono uppercase tracking-wider text-bronze-300 mb-5 shadow-sm">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+            <span>AfriSMME Hub • Restaurant & Hospitality Support Ecosystem</span>
+          </div>
+
           {/* Master Headline: Fluid Scale with Real-Time Live Writing for Each Image */}
           <h1
             ref={headlineRef}
-            className="text-display-1 font-display font-medium text-ivory-50 tracking-tight leading-[1.04] mb-8"
+            className="text-display-1 font-display font-medium text-ivory-50 tracking-tight leading-[1.04] mb-5 sm:mb-6"
           >
             <span className="block min-h-[1.1em]">
               {line1Typed}
@@ -388,6 +394,11 @@ export function Hero({ onOpenAudit }: HeroProps) {
             </span>
           </h1>
 
+          {/* Core Strategic Narrative Subtitle */}
+          <p className="text-base sm:text-lg lg:text-xl text-ivory-200/90 font-normal leading-relaxed mb-8 max-w-2xl text-pretty">
+            We help restaurants, lodges, and hospitality venues improve their guest experience, physical spaces, operations, and technology through one coordinated ecosystem.
+          </p>
+
           {/* High-Impact Action Buttons */}
           <div ref={ctaRef} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4">
             {onOpenAudit ? (
@@ -398,7 +409,7 @@ export function Hero({ onOpenAudit }: HeroProps) {
                 withArrow
                 className="text-center shadow-lg shadow-bronze-500/10"
               >
-                Launch Diagnostic Audit
+                Assess Your Venue
               </Button>
             ) : (
               <Button
@@ -408,7 +419,7 @@ export function Hero({ onOpenAudit }: HeroProps) {
                 withArrow
                 className="text-center shadow-lg shadow-bronze-500/10"
               >
-                Launch Diagnostic Audit
+                Assess Your Venue
               </Button>
             )}
 
@@ -418,7 +429,7 @@ export function Hero({ onOpenAudit }: HeroProps) {
               size="lg"
               className="text-center"
             >
-              Explore the 6 Pillars
+              Explore Solutions
             </Button>
           </div>
         </div>

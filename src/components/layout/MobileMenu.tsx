@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { X, PhoneCall, ShieldAlert, ArrowRight, ChevronDown, Compass, Sparkles, Wrench, ShieldCheck, TrendingUp } from 'lucide-react';
+import { X, PhoneCall, ShieldAlert, ArrowRight, ChevronDown, Compass, Sparkles, Wrench, ShieldCheck, TrendingUp, Cpu } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { BrandLogo } from '@/components/ui/BrandLogo';
 import { SERVICE_PILLARS } from '@/data/services';
@@ -75,7 +75,7 @@ export function MobileMenu({ isOpen, onClose, onOpenAudit }: MobileMenuProps) {
             Navigation
           </span>
 
-          {/* Home */}
+          {/* 1. Home */}
           <Link
             href="/"
             onClick={onClose}
@@ -85,24 +85,24 @@ export function MobileMenu({ isOpen, onClose, onOpenAudit }: MobileMenuProps) {
             <ArrowRight className="w-4 h-4 text-bronze-500/60" />
           </Link>
 
-          {/* About Us */}
+          {/* 2. About */}
           <Link
             href="/about"
             onClick={onClose}
             className="flex items-center justify-between py-3 px-3 rounded-sm text-base font-display text-ivory-100 hover:text-bronze-300 hover:bg-charcoal-800/60 transition-colors"
           >
-            <span>About Us</span>
+            <span>About</span>
             <ArrowRight className="w-4 h-4 text-bronze-500/60" />
           </Link>
 
-          {/* Services with Accordion */}
+          {/* 3. Product & Services with Accordion */}
           <div>
             <button
               type="button"
               onClick={() => setServicesExpanded(!servicesExpanded)}
               className="w-full flex items-center justify-between py-3 px-3 rounded-sm text-base font-display text-ivory-100 hover:text-bronze-300 hover:bg-charcoal-800/60 transition-colors"
             >
-              <span>Services</span>
+              <span>Product & Services</span>
               <ChevronDown
                 className={cn(
                   'w-4 h-4 text-bronze-400 transition-transform duration-200',
@@ -113,7 +113,7 @@ export function MobileMenu({ isOpen, onClose, onOpenAudit }: MobileMenuProps) {
 
             {servicesExpanded && (
               <div className="pl-4 pr-2 py-2 space-y-1 bg-charcoal-950/60 rounded-sm my-1 border-l-2 border-bronze-500/40">
-                {SERVICE_PILLARS.map((pillar) => (
+                {SERVICE_PILLARS.slice(0, 5).map((pillar) => (
                   <a
                     key={pillar.id}
                     href={`/#${pillar.id}`}
@@ -124,48 +124,51 @@ export function MobileMenu({ isOpen, onClose, onOpenAudit }: MobileMenuProps) {
                       {pillarIcons[pillar.id]}
                       <div>
                         <span className="block">{pillar.pillarNumber}. {pillar.name}</span>
-                        {pillar.externalLinks && pillar.externalLinks.length > 0 && (
-                          <span className="text-[9px] text-bronze-400 block font-sans">
-                            {pillar.externalLinks.map((l) => l.name).join(' & ')}
-                          </span>
-                        )}
+                        <span className="text-[10px] text-ivory-400 block font-sans">{pillar.tagline}</span>
                       </div>
                     </div>
                     <span className="text-[10px] text-ivory-400">View</span>
                   </a>
                 ))}
+
+                {/* Technology (Scinovalities) placed under Product & Services */}
                 <a
-                  href="/#blueprint"
+                  href="/#technology"
+                  onClick={onClose}
+                  className="flex items-center justify-between py-2 px-2 text-xs font-mono text-bronze-300 hover:text-ivory-50 hover:bg-charcoal-900 rounded transition-colors bg-bronze-500/10 mt-1"
+                >
+                  <div className="flex items-center gap-2">
+                    <Cpu className="w-4 h-4 text-bronze-400" />
+                    <div>
+                      <span className="block font-semibold">Technology (Scinovalities)</span>
+                      <span className="text-[9px] text-ivory-300 block font-sans">Websites, Menus & AI</span>
+                    </div>
+                  </div>
+                  <ArrowRight className="w-3.5 h-3.5 text-bronze-400" />
+                </a>
+
+                <a
+                  href="/#process"
                   onClick={onClose}
                   className="flex items-center gap-2 pt-2 pb-1 px-2 text-[11px] font-mono text-bronze-300 hover:text-ivory-50 border-t border-charcoal-800 mt-2"
                 >
-                  <span>Interactive Blueprint →</span>
+                  <span>How We Work →</span>
                 </a>
               </div>
             )}
           </div>
 
-          {/* The Difference */}
-          <a
-            href="/#comparison"
-            onClick={onClose}
-            className="flex items-center justify-between py-3 px-3 rounded-sm text-base font-display text-ivory-100 hover:text-bronze-300 hover:bg-charcoal-800/60 transition-colors"
-          >
-            <span>The Difference</span>
-            <ArrowRight className="w-4 h-4 text-bronze-500/60" />
-          </a>
-
-          {/* Ecosystem */}
+          {/* 4. Ecosystem */}
           <a
             href="/#ecosystem"
             onClick={onClose}
             className="flex items-center justify-between py-3 px-3 rounded-sm text-base font-display text-ivory-100 hover:text-bronze-300 hover:bg-charcoal-800/60 transition-colors"
           >
-            <span>The Ecosystem</span>
+            <span>Ecosystem</span>
             <ArrowRight className="w-4 h-4 text-bronze-500/60" />
           </a>
 
-          {/* Contact */}
+          {/* 5. Contact */}
           <a
             href="/#contact"
             onClick={onClose}
@@ -176,13 +179,13 @@ export function MobileMenu({ isOpen, onClose, onOpenAudit }: MobileMenuProps) {
           </a>
         </nav>
 
-        {/* Emergency Hotline Box */}
+        {/* Support Hotline Box */}
         <div className="mt-auto pt-6 border-t border-charcoal-800 flex flex-col gap-4">
           <div className="p-4 rounded-sm bg-charcoal-950 border border-charcoal-800 flex items-start gap-3">
             <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 mt-1 shrink-0 animate-pulse" />
             <div>
-              <p className="text-xs font-semibold text-ivory-100">Rapid Response Hotline</p>
-              <p className="text-xs text-ivory-400 mt-0.5">Emergency kitchen & facility dispatch 24/7</p>
+              <p className="text-xs font-semibold text-ivory-100">Hospitality Support Hotline</p>
+              <p className="text-xs text-ivory-400 mt-0.5">Rapid maintenance & venue consultation</p>
               <a
                 href="tel:+27118849200"
                 className="inline-flex items-center gap-1.5 text-xs text-bronze-400 font-mono font-medium mt-2 hover:underline"
@@ -203,7 +206,7 @@ export function MobileMenu({ isOpen, onClose, onOpenAudit }: MobileMenuProps) {
                   onOpenAudit();
                 }}
               >
-                Diagnostic Audit
+                Hospitality Assessment
               </Button>
             )}
             <Button
@@ -213,7 +216,7 @@ export function MobileMenu({ isOpen, onClose, onOpenAudit }: MobileMenuProps) {
               onClick={onClose}
               withArrow
             >
-              Request Venue Proposal
+              Request Assessment
             </Button>
           </div>
         </div>

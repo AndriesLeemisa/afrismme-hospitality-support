@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/Button';
 import { BrandLogo } from '@/components/ui/BrandLogo';
-import { Menu, ChevronDown, Sparkles, Compass, Wrench, ShieldCheck, ShieldAlert, TrendingUp, Layers, ArrowRight } from 'lucide-react';
+import { Menu, ChevronDown, Sparkles, Compass, Wrench, ShieldCheck, ShieldAlert, TrendingUp, Layers, ArrowRight, Cpu } from 'lucide-react';
 import { MobileMenu } from './MobileMenu';
 import { SERVICE_PILLARS } from '@/data/services';
 
@@ -73,8 +73,8 @@ export function Navbar({ onOpenAudit }: NavbarProps) {
             </Link>
 
             {/* Clean, Uncrowded Main Navigation */}
-            <nav className="hidden lg:flex items-center gap-7 xl:gap-9" aria-label="Main Navigation">
-              {/* Home */}
+            <nav className="hidden lg:flex items-center gap-7 xl:gap-8" aria-label="Main Navigation">
+              {/* 1. Home */}
               <Link
                 href="/"
                 className={cn(
@@ -87,7 +87,7 @@ export function Navbar({ onOpenAudit }: NavbarProps) {
                 Home
               </Link>
 
-              {/* About */}
+              {/* 2. About */}
               <Link
                 href="/about"
                 className={cn(
@@ -100,7 +100,7 @@ export function Navbar({ onOpenAudit }: NavbarProps) {
                 About
               </Link>
 
-              {/* Services with Dropdown Menu */}
+              {/* 3. Product & Services (Dropdown Menu including Pillars and Technology) */}
               <div
                 ref={dropdownRef}
                 className="relative"
@@ -115,7 +115,7 @@ export function Navbar({ onOpenAudit }: NavbarProps) {
                   )}
                   onClick={() => setServicesDropdownOpen(false)}
                 >
-                  <span>Services</span>
+                  <span>Product & Services</span>
                   <ChevronDown className={cn('w-3.5 h-3.5 transition-transform duration-200', servicesDropdownOpen ? 'rotate-180 text-bronze-400' : 'text-ivory-400')} />
                 </a>
 
@@ -125,15 +125,16 @@ export function Navbar({ onOpenAudit }: NavbarProps) {
                     <div className="p-4 bg-charcoal-950/95 border border-charcoal-700/90 rounded-sm shadow-elevated-dark backdrop-blur-xl">
                       <div className="px-2.5 pb-2.5 mb-2 border-b border-charcoal-800 flex items-center justify-between">
                         <span className="text-[10px] font-mono tracking-widest uppercase text-bronze-400 font-semibold">
-                          The 6 Support Pillars
+                          Hospitality Offerings
                         </span>
                         <span className="text-[10px] font-mono text-ivory-400">
-                          Turnkey Ecosystem
+                          Integrated Solutions
                         </span>
                       </div>
 
+                      {/* The 5 Core Physical & Facilities Pillars */}
                       <div className="space-y-1">
-                        {SERVICE_PILLARS.map((pillar) => (
+                        {SERVICE_PILLARS.slice(0, 5).map((pillar) => (
                           <a
                             key={pillar.id}
                             href={isHomePage ? `#${pillar.id}` : `/#${pillar.id}`}
@@ -151,11 +152,6 @@ export function Navbar({ onOpenAudit }: NavbarProps) {
                                 <span className="text-[10px] text-ivory-400 block line-clamp-1">
                                   {pillar.tagline}
                                 </span>
-                                {pillar.externalLinks && pillar.externalLinks.length > 0 && (
-                                  <span className="text-[9px] font-mono text-bronze-400/90 block mt-0.5">
-                                    {pillar.externalLinks.map((l) => l.name).join(' & ')}
-                                  </span>
-                                )}
                               </div>
                             </div>
                             <span className="text-[10px] font-mono text-bronze-400 font-semibold">
@@ -163,19 +159,37 @@ export function Navbar({ onOpenAudit }: NavbarProps) {
                             </span>
                           </a>
                         ))}
+
+                        {/* Technology (Scinovalities) placed under Product & Services */}
+                        <a
+                          href={isHomePage ? '#technology' : '/#technology'}
+                          onClick={() => setServicesDropdownOpen(false)}
+                          className="flex items-center justify-between p-2.5 rounded-sm bg-bronze-500/5 hover:bg-charcoal-900 border border-bronze-500/20 hover:border-bronze-500/40 transition-colors group/item mt-1.5"
+                        >
+                          <div className="flex items-center gap-3">
+                            <div className="w-7 h-7 rounded-sm bg-charcoal-900 border border-bronze-500/30 flex items-center justify-center text-bronze-300">
+                              <Cpu className="w-4 h-4 text-bronze-400" />
+                            </div>
+                            <div>
+                              <div className="flex items-center gap-2">
+                                <span className="font-display text-sm font-semibold text-ivory-50 group-hover/item:text-bronze-300 transition-colors block">
+                                  Technology
+                                </span>
+                                <span className="text-[9px] font-mono text-bronze-300 uppercase tracking-wider px-1.5 py-0.5 rounded bg-charcoal-900 border border-bronze-500/30">
+                                  Scinovalities
+                                </span>
+                              </div>
+                              <span className="text-[10px] text-ivory-400 block line-clamp-1">
+                                Websites, Digital Menus & AI Automation
+                              </span>
+                            </div>
+                          </div>
+                          <ArrowRight className="w-3.5 h-3.5 text-bronze-400 shrink-0" />
+                        </a>
                       </div>
 
-                      {/* Dropdown Quick Actions */}
-                      <div className="mt-3 pt-2.5 border-t border-charcoal-800 space-y-1.5">
-                        <a
-                          href={isHomePage ? '#comparison' : '/#comparison'}
-                          onClick={() => setServicesDropdownOpen(false)}
-                          className="flex items-center justify-between p-2 rounded-sm bg-charcoal-900/60 hover:bg-charcoal-900 border border-charcoal-800 text-[11px] font-mono text-bronze-300 hover:text-ivory-50 transition-colors"
-                        >
-                          <span>The Difference (Strategic Comparison)</span>
-                          <ArrowRight className="w-3 h-3 text-bronze-400" />
-                        </a>
-
+                      {/* Dropdown Quick Action */}
+                      <div className="mt-3 pt-2.5 border-t border-charcoal-800">
                         <button
                           type="button"
                           onClick={() => {
@@ -189,7 +203,7 @@ export function Navbar({ onOpenAudit }: NavbarProps) {
                           }}
                           className="w-full flex items-center justify-between p-2 rounded-sm bg-bronze-500/10 hover:bg-bronze-500/20 border border-bronze-500/30 text-[11px] font-mono text-bronze-300 hover:text-ivory-50 transition-colors text-left"
                         >
-                          <span>Facility Diagnostic Audit</span>
+                          <span>Assess Your Venue</span>
                           <ArrowRight className="w-3 h-3 text-bronze-400" />
                         </button>
                       </div>
@@ -198,7 +212,7 @@ export function Navbar({ onOpenAudit }: NavbarProps) {
                 )}
               </div>
 
-              {/* Ecosystem */}
+              {/* 4. Ecosystem */}
               <a
                 href={isHomePage ? '#ecosystem' : '/#ecosystem'}
                 className="whitespace-nowrap text-sm tracking-wider uppercase font-medium text-ivory-200/90 hover:text-bronze-300 transition-colors duration-200 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-bronze-400 hover:after:w-full after:transition-all after:duration-300"
@@ -206,7 +220,7 @@ export function Navbar({ onOpenAudit }: NavbarProps) {
                 Ecosystem
               </a>
 
-              {/* Contact */}
+              {/* 5. Contact */}
               <a
                 href={isHomePage ? '#contact' : '/#contact'}
                 className="whitespace-nowrap text-sm tracking-wider uppercase font-medium text-ivory-200/90 hover:text-bronze-300 transition-colors duration-200 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-bronze-400 hover:after:w-full after:transition-all after:duration-300"
@@ -217,8 +231,15 @@ export function Navbar({ onOpenAudit }: NavbarProps) {
 
             {/* Single Clean Primary CTA */}
             <div className="hidden sm:flex items-center shrink-0">
-              <Button href={isHomePage ? '#contact' : '/#contact'} variant="primary" size="sm" withArrow className="whitespace-nowrap font-semibold">
-                Request Support
+              <Button
+                variant="primary"
+                size="sm"
+                onClick={onOpenAudit ? onOpenAudit : undefined}
+                href={!onOpenAudit ? (isHomePage ? '#audit-tool' : '/#audit-tool') : undefined}
+                withArrow
+                className="whitespace-nowrap font-semibold"
+              >
+                Assess Venue
               </Button>
             </div>
 

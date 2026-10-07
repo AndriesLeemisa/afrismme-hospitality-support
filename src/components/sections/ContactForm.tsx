@@ -47,10 +47,10 @@ export function ContactForm({ preselectedPillarId }: ContactFormProps) {
         >
           <div className="mb-8 pb-6 border-b border-charcoal-800">
             <h3 className="font-display text-2xl sm:text-3xl font-semibold text-ivory-50 mb-2">
-              Commission Facility Engineering or Emergency SLA
+              Request a Hospitality Support Assessment
             </h3>
             <p className="text-sm text-ivory-300">
-              Submit your venue specifications. Our technical engineering division will respond with a preliminary diagnostic and deployment proposal within 4 hours.
+              Submit your venue specifications. Our team will review your requirements and coordinate a tailored diagnostic assessment and solution proposal.
             </p>
           </div>
 
@@ -163,8 +163,9 @@ export function ContactForm({ preselectedPillarId }: ContactFormProps) {
                     Pillar {p.pillarNumber}: {p.name} ({p.tagline})
                   </option>
                 ))}
-                <option value="full-audit">Comprehensive 6-Pillar Facility Audit</option>
-                <option value="emergency-sla">24/7 Rapid Emergency Fleet SLA</option>
+                <option value="full-audit">Comprehensive Hospitality Support Assessment (All Areas)</option>
+                <option value="digital-tech">Digital, Websites & AI (Scinovalities)</option>
+                <option value="maintenance-support">Rapid-Response Maintenance Support</option>
               </select>
             </div>
 
@@ -177,10 +178,10 @@ export function ContactForm({ preselectedPillarId }: ContactFormProps) {
                 onChange={(e) => setFormData({ ...formData, urgency: e.target.value })}
                 className="w-full bg-charcoal-950 border border-charcoal-700 rounded-sm px-4 py-3 text-sm text-ivory-100 focus:outline-none focus:border-bronze-400"
               >
-                <option value="Immediate Emergency (<24 Hours)">Immediate Emergency (&lt;24 Hours)</option>
+                <option value="Immediate Emergency (<24 Hours)">Urgent Support Needed (&lt;24 Hours)</option>
                 <option value="Within 7 Days">Within 7 Days</option>
                 <option value="Scheduled Next Month">Scheduled Next Month</option>
-                <option value="Upcoming Re-concepting">Upcoming Re-concepting / Refit</option>
+                <option value="Upcoming Re-concepting">Upcoming Refit / Expansion</option>
               </select>
             </div>
           </div>
@@ -223,7 +224,7 @@ export function ContactForm({ preselectedPillarId }: ContactFormProps) {
               className="w-full sm:w-auto py-4 px-8 rounded-sm bg-bronze-500 text-charcoal-950 font-semibold text-xs uppercase tracking-wider hover:bg-bronze-400 transition-colors flex items-center justify-center gap-2.5 shadow-subtle-dark hover:shadow-bronze-glow"
             >
               <Send className="w-4 h-4" />
-              <span>{isSubmitting ? 'Transmitting Request...' : 'Submit Proposal Commission'}</span>
+              <span>{isSubmitting ? 'Transmitting Request...' : 'Submit Assessment Request'}</span>
             </button>
 
             <span className="text-xs text-ivory-400 flex items-center gap-1.5">
@@ -239,11 +240,11 @@ export function ContactForm({ preselectedPillarId }: ContactFormProps) {
           </div>
 
           <h3 className="font-display text-3xl font-semibold text-ivory-50 mb-3">
-            Commission Request Received
+            Assessment Request Received
           </h3>
 
           <p className="text-base text-ivory-200 max-w-lg mx-auto mb-6 leading-relaxed">
-            Thank you, {formData.fullName}. Your specification for <strong className="text-bronze-300">{formData.venueName}</strong> has been logged in our engineering dispatch queue.
+            Thank you, {formData.fullName}. Your assessment inquiry for <strong className="text-bronze-300">{formData.venueName}</strong> has been received by our support team. We will contact you promptly to review priority recommendations.
           </p>
 
           <div className="p-4 rounded-sm bg-charcoal-950 border border-charcoal-800 max-w-md mx-auto text-left text-xs text-ivory-300 space-y-2 mb-8">
