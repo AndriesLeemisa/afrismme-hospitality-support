@@ -3,31 +3,31 @@
 @tailwind utilities;
 
 :root {
-  --color-charcoal-950: #08090b;
-  --color-charcoal-900: #0e1014;
-  --color-charcoal-850: #14171e;
-  --color-charcoal-800: #1b1f27;
+  --color-charcoal-950: #132a1f;
+  --color-charcoal-900: #1b3b2b;
+  --color-charcoal-850: #214634;
+  --color-charcoal-800: #28523e;
   --color-ivory-50: #fcfbf9;
-  --color-ivory-100: #f7f4ee;
-  --color-ivory-200: #efe9df;
+  --color-ivory-100: #faf8f5;
+  --color-ivory-200: #f3ede2;
   --color-bronze-500: #c5a880;
   --color-bronze-400: #d4b886;
   --color-bronze-600: #a98754;
-  --color-green-900: #0f1d15;
-  --color-green-800: #1a3023;
+  --color-green-900: #1b3b2b;
+  --color-green-800: #28523e;
 }
 
 @layer base {
   * {
-    border-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(197, 168, 128, 0.18);
   }
 
   html {
     font-size: 16px; /* Standard base; headings scale fluidly via the display-* tokens */
     scroll-behavior: smooth;
     scroll-padding-top: 5rem; /* Anchor targets clear the fixed navbar */
-    background-color: #08090b;
-    color: #f7f4ee;
+    background-color: #faf8f5;
+    color: #1b3b2b;
     font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -48,8 +48,8 @@
   }
 
   body {
-    background-color: #08090b;
-    color: #f7f4ee;
+    background-color: #faf8f5;
+    color: #1b3b2b;
     overflow-x: hidden;
     min-height: 100vh;
     font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
@@ -58,7 +58,7 @@
 
   ::selection {
     background-color: #c5a880;
-    color: #08090b;
+    color: #132a1f;
   }
 
   /* Custom scrollbar */
@@ -68,13 +68,13 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #0e1014;
+    background: #f3ede2;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #2c3240;
+    background: #1b3b2b;
     border-radius: 4px;
-    border: 2px solid #0e1014;
+    border: 2px solid #f3ede2;
   }
 
   ::-webkit-scrollbar-thumb:hover {
@@ -88,23 +88,23 @@
   }
 
   .text-gold-gradient {
-    background: linear-gradient(135deg, #f7f4ee 0%, #d4b886 50%, #c5a880 100%);
+    background: linear-gradient(135deg, #fcfbf9 0%, #e2cdaa 50%, #c5a880 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   .border-bronze-subtle {
-    border-color: rgba(197, 168, 128, 0.2);
+    border-color: rgba(197, 168, 128, 0.28);
   }
 
   .bg-glass-dark {
-    background-color: rgba(14, 16, 20, 0.75);
+    background-color: rgba(27, 59, 43, 0.88);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
   }
 
   .bg-glass-card {
-    background-color: rgba(23, 27, 35, 0.65);
+    background-color: rgba(33, 70, 52, 0.78);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
   }

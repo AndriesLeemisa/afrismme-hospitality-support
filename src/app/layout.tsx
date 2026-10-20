@@ -19,12 +19,12 @@ const displayFont = Cormorant_Garamond({
 export const metadata: Metadata = {
   metadataBase: new URL('https://hospitality.afrismme.com'),
   title: 'AfriSMME Hub | Restaurant & Hospitality Support Services',
-  description: 'Turnkey architectural enhancement, dining acoustics, overnight furniture restoration, and preventative facility maintenance for high-end restaurants and hospitality venues across Africa.',
+  description: 'Turnkey architectural enhancement, dining acoustics, bespoke furniture restoration, and preventative facility maintenance for high-end restaurants and hospitality venues across Africa.',
   keywords: [
     'Restaurant support South Africa',
     'Hospitality facility maintenance',
     'Dining room acoustic engineering',
-    'Overnight furniture restoration',
+    'Commercial furniture restoration',
     'Commercial kitchen extraction maintenance',
     'AfriSMME Hub',
     'Luxury restaurant design and support',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   robots: 'index, follow',
   openGraph: {
     title: 'AfriSMME Hub | Restaurant & Hospitality Support Services',
-    description: 'Turnkey architectural enhancement, dining acoustics, overnight furniture restoration, and preventative facility maintenance with zero daytime service disruption.',
+    description: 'Turnkey architectural enhancement, dining acoustics, bespoke furniture restoration, and scheduled preventative facility maintenance.',
     url: 'https://hospitality.afrismme.com',
     siteName: 'AfriSMME Hospitality Support',
     images: [
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'AfriSMME Hub | Restaurant & Hospitality Support Services',
-    description: 'Turnkey architectural enhancement, dining acoustics, overnight furniture restoration, and preventative facility maintenance.',
+    description: 'Turnkey architectural enhancement, dining acoustics, bespoke furniture restoration, and preventative facility maintenance.',
     images: ['/images/hero_luxury_dining.jpg'],
   },
 };
@@ -62,7 +62,7 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
-  themeColor: '#08090B',
+  themeColor: '#1B3B2B',
 };
 
 export default function RootLayout({
@@ -71,8 +71,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${sansFont.variable} ${displayFont.variable} scroll-smooth dark`}>
-      <body className="bg-charcoal-950 text-ivory-100 min-h-screen selection:bg-bronze-500 selection:text-charcoal-950 antialiased font-sans">
+    <html lang="en" className={`${sansFont.variable} ${displayFont.variable} scroll-smooth`}>
+      <body className="bg-ivory-100 text-charcoal-900 min-h-screen selection:bg-bronze-500 selection:text-charcoal-950 antialiased font-sans">
         {children}
       </body>
     </html>

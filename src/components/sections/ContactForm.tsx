@@ -21,7 +21,7 @@ export function ContactForm({ preselectedPillarId }: ContactFormProps) {
     pillar: preselectedPillarId || 'enhance',
     urgency: 'Within 7 Days',
     message: '',
-    requiresOvernight: true,
+    requiresPhasedSchedule: true,
   });
 
   const [submitted, setSubmitted] = useState(false);
@@ -195,25 +195,25 @@ export function ContactForm({ preselectedPillarId }: ContactFormProps) {
               rows={4}
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              placeholder="e.g. We have 32 solid oak tables that need urgent stripping and hardwax oil sealing before the summer season. We need it done strictly overnight between dinner and breakfast service..."
+              placeholder="e.g. We have 32 solid oak tables that need stripping and hardwax oil sealing before the summer season. We would like to schedule phased batch restoration around our trading hours..."
               className="w-full bg-charcoal-950 border border-charcoal-700 rounded-sm p-4 text-sm text-ivory-100 placeholder:text-charcoal-500 focus:outline-none focus:border-bronze-400 focus:ring-1 focus:ring-bronze-400 resize-none"
             />
           </div>
 
-          {/* Overnight requirement checkbox */}
+          {/* Scheduled coordination checkbox */}
           <div className="mb-8 p-4 rounded-sm bg-charcoal-950 border border-charcoal-800 flex items-start gap-3">
             <input
               type="checkbox"
-              id="overnight-check"
-              checked={formData.requiresOvernight}
-              onChange={(e) => setFormData({ ...formData, requiresOvernight: e.target.checked })}
+              id="schedule-check"
+              checked={formData.requiresPhasedSchedule}
+              onChange={(e) => setFormData({ ...formData, requiresPhasedSchedule: e.target.checked })}
               className="mt-1 accent-bronze-500 w-4 h-4 cursor-pointer"
             />
-            <label htmlFor="overnight-check" className="text-xs text-ivory-200 cursor-pointer">
+            <label htmlFor="schedule-check" className="text-xs text-ivory-200 cursor-pointer">
               <span className="font-semibold text-ivory-50 block">
-                Strict Dark-Hours Overnight Protocol Required (23:00 to 07:00)
+                Phased Daytime & Scheduled Maintenance Window Coordination
               </span>
-              Ensure work takes place entirely after closing with zero daytime guest interruption.
+              Coordinate installations, servicing, or batch workshop collections around our quieter daytime slots and planned maintenance schedule.
             </label>
           </div>
 
@@ -258,7 +258,7 @@ export function ContactForm({ preselectedPillarId }: ContactFormProps) {
             </div>
             <div className="flex justify-between">
               <span className="text-ivory-400">Target Protocol:</span>
-              <span>{formData.requiresOvernight ? 'Strict Dark-Hours (Overnight)' : 'Flexible Scheduled'}</span>
+              <span>{formData.requiresPhasedSchedule ? 'Phased Daytime & Scheduled Maintenance' : 'Standard Consultation'}</span>
             </div>
           </div>
 

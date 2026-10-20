@@ -10,24 +10,26 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        'warm-ivory': '#FAF8F5',
         charcoal: {
-          950: '#08090B',
-          900: '#0E1014',
-          850: '#14171E',
-          800: '#1B1F27',
-          750: '#232833',
-          700: '#2C3240',
-          600: '#3D4454',
-          500: '#5A6275',
-          400: '#848D9F',
+          950: '#132A1F', // Deep Cypress Forest Green (replaces pitch black)
+          900: '#1B3B2B', // Signature Botanical Forest Green
+          850: '#214634', // Elevated Botanical Green
+          800: '#28523E', // Rich Emerald Slate
+          750: '#316149',
+          700: '#3C7257',
+          600: '#52876C',
+          500: '#74A089',
+          400: '#9BBAA9',
+          300: '#C2D6CB',
         },
         ivory: {
           50: '#FCFBF9',
-          100: '#F7F4EE',
-          200: '#EFE9DF',
-          300: '#DDD4C4',
-          400: '#C7BBA7',
-          500: '#B0A18C',
+          100: '#FAF8F5', // Warm Architectural Ivory
+          200: '#F3EDE2', // Warm Architectural Sand
+          300: '#E5DEC9',
+          400: '#C8BDA8',
+          500: '#9A8F7E',
         },
         bronze: {
           100: '#F8F3EA',
@@ -41,13 +43,13 @@ const config: Config = {
           900: '#433119',
         },
         naturalgreen: {
-          950: '#0A130E',
-          900: '#0F1D15',
-          850: '#14251B',
-          800: '#1A3023',
-          700: '#244533',
-          600: '#336148',
-          500: '#478463',
+          950: '#132A1F',
+          900: '#1B3B2B',
+          850: '#214634',
+          800: '#28523E',
+          700: '#34664D',
+          600: '#437D60',
+          500: '#589676',
         },
       },
       // Harmonised editorial type scale (fluid, ratio ~1.25 → 1.333 across viewports)

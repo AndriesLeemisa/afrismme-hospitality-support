@@ -40,6 +40,22 @@ This digital platform was architected specifically for **AfriSMME Hub Restaurant
 
 ---
 
+## 📚 Corporate Publication System (Print & Digital Masters)
+
+AfriSMME Hub features a world-class corporate publication suite comprising three distinct documents engineered for hospitality owners, executives, and facility directors:
+
+| Document | Format & Extent | Target Audience | Master PDF | Standalone Print HTML | Digital Web Route |
+|:---|:---:|:---|:---|:---|:---:|
+| **Document A: Corporate Company Profile** | **22 Pages A4** | Hotel Groups, General Managers, Investors, Procurement | [`AfriSMME_Corporate_Profile_Master.pdf`](file:///public/PDFs/AfriSMME_Corporate_Profile_Master.pdf) | [`corporate_profile_print.html`](file:///public/PDFs/corporate_profile_print.html) | [`/corporate-profile`](http://localhost:3000/corporate-profile) |
+| **Document B: Premium Sales Brochure** | **12 Pages A4** | Restaurant Owners, F&B Directors, General Managers | [`AfriSMME_Premium_Sales_Brochure.pdf`](file:///public/PDFs/AfriSMME_Premium_Sales_Brochure.pdf) | [`brochure_print.html`](file:///public/PDFs/brochure_print.html) | [`/brochure`](http://localhost:3000/brochure) |
+| **Document C: Hospitality Support Booklet** | **36 Pages A4** | Operations Directors, Facility Engineers, Tender Boards | [`AfriSMME_Hospitality_Support_Booklet.pdf`](file:///public/PDFs/AfriSMME_Hospitality_Support_Booklet.pdf) | [`booklet_print.html`](file:///public/PDFs/booklet_print.html) | [`/booklet`](http://localhost:3000/booklet) |
+
+### 📖 Design & Asset Documentation
+- **[Brand & Design System Manual](file:///BRAND_DESIGN_SYSTEM.md)**: Corporate visual identity, typography (Cormorant Garamond, Plus Jakarta Sans, JetBrains Mono), exact color metrics (HEX, RGB, CMYK, Pantone), and A4 grid rules.
+- **[Image Asset Library Catalogue](file:///IMAGE_LIBRARY.md)**: 10 photorealistic commercial visuals and 4 architectural vector diagrams with prompt metadata, aspect ratios, lighting specs, and pre-press standards.
+
+---
+
 ## ⚡ Tech Stack & Architecture
 
 * **Framework**: Next.js 14 (App Router)
@@ -48,6 +64,7 @@ This digital platform was architected specifically for **AfriSMME Hub Restaurant
 * **Animation**: GSAP 3 + ScrollTrigger (`@gsap/react`)
 * **Icons**: Lucide React
 * **Image Optimization**: Sharp, next/image with AVIF/WebP, and fetchpriority for LCP compliance
+* **PDF Pre-Press Compilation**: Node.js + Puppeteer Core with headless Chromium, base64 self-contained asset bundling, and CSS Paged Media `@page { size: A4 portrait; margin: 0; }`.
 
 ---
 
@@ -66,3 +83,4 @@ npm.cmd run build
 # Start production server
 npm.cmd run start
 ```
+

@@ -230,7 +230,7 @@ export function DigitalAssessmentTool({ isModal = false }: DigitalAssessmentTool
                     Coordinated Hospitality Support Plan
                   </h4>
                   <p className="text-xs sm:text-sm text-ivory-300 leading-relaxed">
-                    Based on your venue profile and priority operational areas, the pillars below represent the most impactful physical, digital, and operational solutions. All interventions are coordinated through our specialist partners with zero daytime trading disruption.
+                    Based on your venue profile and priority operational areas, the pillars below represent the most impactful physical, digital, and operational solutions. All interventions are coordinated through our specialist partners around your scheduled daytime & maintenance windows.
                   </p>
                 </div>
               </div>
@@ -363,7 +363,7 @@ export function DigitalAssessmentTool({ isModal = false }: DigitalAssessmentTool
                     Thank you, {contactName}. We are reviewing {venueName}&apos;s assessment profile. Our team will contact you at {contactPhone} to discuss prioritized recommendations and coordinate next steps.
                   </p>
                   <span className="text-xs font-mono text-bronze-300">
-                    Zero daytime disruption. Turnkey ecosystem coordination.
+                    Scheduled maintenance windows. Turnkey ecosystem coordination.
                   </span>
                 </div>
               )}

@@ -24,6 +24,7 @@ yarn-error.log*
 # Local Env
 .env*.local
 .env
+.env*
 
 # Vercel
 .vercel
@@ -32,5 +33,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-.vercel
-.env*
+# Scratch
+scratch/

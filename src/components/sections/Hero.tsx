@@ -42,7 +42,7 @@ const HERO_SLIDES: HeroSlide[] = [
     category: 'Premier Safari Lodges & Bush Escapes',
     title: 'Thatched Dining Decks & Hardwood Joinery',
     location: 'Greater Kruger & Sabi Sands',
-    highlight: 'Organic timber oils & dark-hours preventative maintenance',
+    highlight: 'Organic timber oils & scheduled preventative maintenance',
   },
   {
     id: 'country-estate',
@@ -51,7 +51,7 @@ const HERO_SLIDES: HeroSlide[] = [
     category: 'Historic Wine Estates & Courtyards',
     title: 'Heritage Dining Pergolas & Restored Oak Tables',
     location: 'Stellenbosch & Franschhoek',
-    highlight: 'Artisanal table restoration cured overnight without trading disruption',
+    highlight: 'Artisanal table restoration completed in scheduled batches',
   },
   {
     id: 'hotel-poolside',

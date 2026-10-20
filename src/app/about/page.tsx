@@ -15,7 +15,7 @@ const DIVISIONS = [
     number: '01',
     name: 'The Wood Doctor',
     role: 'Furniture & Timber Restoration',
-    description: 'Master workshop restoring dining tables, hardwood millwork, and fine joinery overnight with food-safe natural oils.',
+    description: 'Master workshop restoring dining tables, hardwood millwork, and fine joinery in scheduled batches with food-safe natural oils.',
     image: '/images/furniture_restoration_detail.jpg',
     website: 'https://wooddoctor.co.za/',
   },
@@ -67,8 +67,8 @@ const PRINCIPLES = [
   },
   {
     icon: Clock,
-    title: 'Zero Daytime Disruption',
-    description: 'Physical work is executed during dark hours (23:00 to 07:00). Your dining room opens on time, odor-free, and fully set.',
+    title: 'Scheduled Daytime & Maintenance Windows',
+    description: 'Physical work is planned around your standard daytime maintenance slots, quieter trading periods, and phased workshop batches.',
   },
   {
     icon: Layers,
@@ -81,19 +81,19 @@ export default function AboutPage() {
   const [isAuditModalOpen, setIsAuditModalOpen] = useState(false);
 
   return (
-    <div className="relative min-h-screen bg-charcoal-950 text-ivory-100 flex flex-col">
+    <div className="relative min-h-screen bg-ivory-100 text-charcoal-950 flex flex-col">
       <Navbar onOpenAudit={() => setIsAuditModalOpen(true)} />
 
       <main className="flex-1">
         {/* Editorial Header */}
-        <section className="pt-36 sm:pt-44 pb-20 sm:pb-24 bg-charcoal-950 border-b border-charcoal-800">
+        <section className="pt-36 sm:pt-44 pb-20 sm:pb-24 bg-charcoal-900 border-b border-charcoal-800 text-ivory-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center gap-2 text-xs font-mono text-ivory-400 mb-6">
+            <div className="flex items-center gap-2 text-xs font-mono text-ivory-300 mb-6">
               <Link href="/" className="hover:text-bronze-300 transition-colors">
                 Home
               </Link>
-              <ChevronRight className="w-3.5 h-3.5 text-charcoal-600" />
-              <span className="text-bronze-400 font-semibold uppercase tracking-wider">
+              <ChevronRight className="w-3.5 h-3.5 text-charcoal-500" />
+              <span className="text-bronze-300 font-semibold uppercase tracking-wider">
                 About AfriSMME Hub
               </span>
             </div>
@@ -134,9 +134,10 @@ export default function AboutPage() {
         </section>
 
         {/* Operating Principles */}
-        <section className="py-20 sm:py-24 bg-charcoal-900 border-b border-charcoal-800">
+        <section className="py-20 sm:py-24 bg-ivory-200 border-b border-ivory-300">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <SectionHeading
+              theme="light"
               badge="Our Model"
               title="Built for the realities"
               highlightedTitle="of hospitality trading."
@@ -145,12 +146,12 @@ export default function AboutPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {PRINCIPLES.map(({ icon: Icon, title, description }) => (
-                <div key={title} className="p-8 rounded-sm bg-charcoal-950 border border-charcoal-800">
-                  <div className="w-10 h-10 rounded-sm bg-bronze-500/10 border border-bronze-500/30 flex items-center justify-center text-bronze-400 mb-6">
+                <div key={title} className="p-8 rounded-sm bg-ivory-50 border border-ivory-300 shadow-sm">
+                  <div className="w-10 h-10 rounded-sm bg-charcoal-900 flex items-center justify-center text-bronze-300 mb-6">
                     <Icon className="w-5 h-5" />
                   </div>
-                  <h3 className="font-display text-xl font-semibold text-ivory-50 mb-3">{title}</h3>
-                  <p className="text-sm text-ivory-300 leading-relaxed font-normal">{description}</p>
+                  <h3 className="font-display text-xl font-semibold text-charcoal-950 mb-3">{title}</h3>
+                  <p className="text-sm text-charcoal-800 leading-relaxed font-normal">{description}</p>
                 </div>
               ))}
             </div>
@@ -158,9 +159,10 @@ export default function AboutPage() {
         </section>
 
         {/* The 6 Specialist Divisions */}
-        <section id="divisions" className="py-20 sm:py-28 bg-charcoal-950 border-b border-charcoal-800 scroll-mt-20">
+        <section id="divisions" className="py-20 sm:py-28 bg-ivory-100 border-b border-ivory-300 scroll-mt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <SectionHeading
+              theme="light"
               badge="Operating Divisions"
               title="Six specialist capabilities."
               highlightedTitle="One master SLA."
@@ -172,10 +174,10 @@ export default function AboutPage() {
               {DIVISIONS.map((div) => (
                 <div
                   key={div.name}
-                  className="rounded-sm bg-charcoal-900 border border-charcoal-800 overflow-hidden flex flex-col justify-between group hover:border-bronze-500/40 transition-colors"
+                  className="rounded-sm bg-ivory-50 border border-ivory-300 overflow-hidden flex flex-col justify-between group hover:border-bronze-500 transition-colors shadow-sm"
                 >
                   <div>
-                    <div className="relative aspect-[16/10] bg-charcoal-950">
+                    <div className="relative aspect-[16/10] bg-charcoal-900">
                       <Image
                         src={div.image}
                         alt={div.name}
@@ -183,28 +185,28 @@ export default function AboutPage() {
                         sizes="(max-width: 1024px) 100vw, 33vw"
                         className="object-cover transition-transform duration-700 group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900 via-charcoal-900/30 to-transparent" />
-                      <span className="absolute top-3 left-3 text-[10px] font-mono text-bronze-300 font-semibold px-2 py-0.5 rounded bg-charcoal-950/90 border border-bronze-500/30">
+                      <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/60 via-transparent to-transparent" />
+                      <span className="absolute top-3 left-3 text-[10px] font-mono text-bronze-300 font-semibold px-2 py-0.5 rounded bg-charcoal-900/90 border border-bronze-500/30">
                         DIVISION {div.number}
                       </span>
                     </div>
 
                     <div className="p-6">
-                      <span className="text-[11px] font-mono text-bronze-400 uppercase tracking-wider block mb-1">
+                      <span className="text-[11px] font-mono text-bronze-700 font-semibold uppercase tracking-wider block mb-1">
                         {div.role}
                       </span>
-                      <h3 className="font-display text-2xl font-semibold text-ivory-50 mb-3">{div.name}</h3>
-                      <p className="text-sm text-ivory-300 leading-relaxed">{div.description}</p>
+                      <h3 className="font-display text-2xl font-semibold text-charcoal-950 mb-3">{div.name}</h3>
+                      <p className="text-sm text-charcoal-800 leading-relaxed">{div.description}</p>
                     </div>
                   </div>
 
                   {div.website && (
-                    <div className="px-6 pb-6 pt-2 border-t border-charcoal-800/60 mt-auto">
+                    <div className="px-6 pb-6 pt-3 border-t border-ivory-300 mt-auto">
                       <a
                         href={div.website}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-xs font-mono text-bronze-300 hover:text-ivory-50 transition-colors"
+                        className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-charcoal-900 hover:text-bronze-700 transition-colors"
                       >
                         <span>Visit Specialist Portal</span>
                         <ArrowUpRight className="w-3.5 h-3.5" />
@@ -218,7 +220,7 @@ export default function AboutPage() {
         </section>
 
         {/* Operational Footprint & Final CTA */}
-        <section className="py-20 sm:py-24 bg-charcoal-900">
+        <section className="py-20 sm:py-24 bg-charcoal-900 text-ivory-100">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <span className="text-xs font-mono tracking-widest uppercase text-bronze-400 font-semibold block mb-3">
               National Presence

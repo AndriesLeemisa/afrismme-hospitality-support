@@ -15,9 +15,10 @@ const VENUES = [
 
 export function VenueShowcaseSection() {
   return (
-    <section id="venues" className="py-20 sm:py-28 bg-charcoal-950 scroll-mt-20">
+    <section id="venues" className="py-20 sm:py-28 bg-ivory-100 border-t border-ivory-300 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
+          theme="light"
           badge="Who We Support"
           title="Hospitality support"
           highlightedTitle="across South Africa."
@@ -26,7 +27,7 @@ export function VenueShowcaseSection() {
 
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
           {VENUES.map((venue) => (
-            <div key={venue.title} className="group relative aspect-[4/3] rounded-sm overflow-hidden">
+            <div key={venue.title} className="group relative aspect-[4/3] rounded-sm overflow-hidden shadow-sm border border-ivory-300">
               <Image
                 src={venue.image}
                 alt={venue.title}
@@ -34,7 +35,7 @@ export function VenueShowcaseSection() {
                 sizes="(max-width: 1024px) 50vw, 33vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/90 via-charcoal-950/10 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/90 via-charcoal-950/15 to-transparent" />
               <h3 className="absolute bottom-4 left-4 right-4 font-display text-lg sm:text-xl font-semibold text-ivory-50">
                 {venue.title}
               </h3>

@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" width="100%" height="100%">
+  <defs>
+    <linearGradient id="grad3Client" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#214634"/>
+      <stop offset="100%" stop-color="#153023"/>
+    </linearGradient>
+    <linearGradient id="grad3Hub" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2C4F3A"/>
+      <stop offset="100%" stop-color="#193425"/>
+    </linearGradient>
+    <filter id="shadow3" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#091710" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="520" rx="10" fill="#132A1F"/>
+  <rect x="2" y="2" width="996" height="516" rx="8" fill="none" stroke="#28523E" stroke-width="1.5"/>
+
+  <!-- Diagram Header -->
+  <text x="40" y="44" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2.5" fill="#C5A880">GOVERNANCE 03 • CONTRACT ARCHITECTURE</text>
+  <text x="40" y="78" font-family="'Cormorant Garamond', Georgia, serif" font-size="30" font-weight="600" fill="#FAF8F5">The One Coordinated Partner Operating Model</text>
+
+  <!-- Flow 4 Spacious, Proportionate Pillars -->
+
+  <!-- Col 1: CLIENT -->
+  <g transform="translate(32, 108)" filter="url(#shadow3)">
+    <rect width="212" height="352" rx="8" fill="url(#grad3Client)" stroke="#316149" stroke-width="1.5"/>
+    <rect width="212" height="5" rx="2" fill="#9BBAA9"/>
+    <text x="106" y="38" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="14" font-weight="800" letter-spacing="1" fill="#FAF8F5" text-anchor="middle">HOSPITALITY CLIENT</text>
+    <text x="106" y="60" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="11.5" font-weight="600" fill="#C5A880" text-anchor="middle">Venue Executive Leadership</text>
+    <line x1="18" y1="72" x2="194" y2="72" stroke="#28523E" stroke-width="1"/>
+    <text x="18" y="108" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="12.5" font-weight="500" fill="#DCE8E1">• Single Master SLA</text>
+    <text x="18" y="146" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="12.5" font-weight="500" fill="#DCE8E1">• Dedicated Account Director</text>
+    <text x="18" y="184" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="12.5" font-weight="500" fill="#DCE8E1">• Consolidated Billing</text>
+    <text x="18" y="222" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="12.5" font-weight="500" fill="#DCE8E1">• Priority Technical Escalation</text>
+    <text x="18" y="260" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="12.5" font-weight="500" fill="#DCE8E1">• Coordinated Zonal Care</text>
+    <rect x="18" y="304" width="176" height="30" rx="5" fill="#132A1F" stroke="#28523E" stroke-width="1"/>
+    <text x="106" y="323" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="0.5" fill="#C2D6CB" text-anchor="middle">COMMERCIAL CLIENT</text>
+  </g>
+
+  <!-- Arrow 1 to 2 -->
+  <g stroke="#C5A880" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="248" y1="283" x2="264" y2="283"/>
+    <polygon points="259,278 265,283 259,288" fill="#C5A880"/>
+  </g>
+
+  <!-- Col 2: AFRISMME HUB (THE INTEGRATOR) -->
+  <g transform="translate(268, 102)" filter="url(#shadow3)">
+    <rect width="224" height="364" rx="8" fill="url(#grad3Hub)" stroke="#C5A880" stroke-width="2"/>
+    <rect width="224" height="6" rx="2" fill="#C5A880"/>
+    <text x="112" y="40" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="16" font-weight="800" letter-spacing="1.5" fill="#FAF8F5" text-anchor="middle">AFRISMME HUB</text>
+    <text x="112" y="62" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="11.5" font-weight="700" fill="#C5A880" text-anchor="middle">Ecosystem Integrator &amp; PMO</text>
+    <line x1="18" y1="74" x2="206" y2="74" stroke="#316149" stroke-width="1"/>
+    <text x="18" y="110" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="12.5" font-weight="500" fill="#FAF8F5">• 360° Diagnostic Audits</text>
+    <text x="18" y="148" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="12.5" font-weight="500" fill="#FAF8F5">• Scope &amp; Pricing Governance</text>
+    <text x="18" y="186" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="12.5" font-weight="500" fill="#FAF8F5">• Phased &amp; Scheduled Windows</text>
+    <text x="18" y="224" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="12.5" font-weight="500" fill="#FAF8F5">• Multi-Trade Orchestration</text>
+    <text x="18" y="262" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="12.5" font-weight="500" fill="#FAF8F5">• SANS &amp; Safety Verification</text>
+    <rect x="18" y="304" width="188" height="30" rx="5" fill="#132A1F" stroke="#C5A880" stroke-width="1.2"/>
+    <text x="112" y="323" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="11" font-weight="800" letter-spacing="0.5" fill="#E2CA9E" text-anchor="middle">SINGLE CONTRACT HOLDER</text>
+  </g>
+
+  <!-- Arrow 2 to 3 -->
+  <g stroke="#C5A880" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="496" y1="283" x2="512" y2="283"/>
+    <polygon points="507,278 513,283 507,288" fill="#C5A880"/>
+  </g>
+
+  <!-- Col 3: SPECIALIST NETWORK -->
+  <g transform="translate(516, 108)" filter="url(#shadow3)">
+    <rect width="212" height="352" rx="8" fill="#1B3B2B" stroke="#28523E" stroke-width="1.3"/>
+    <rect width="212" height="5" rx="2" fill="#C5A880"/>
+    <text x="106" y="38" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="14" font-weight="800" letter-spacing="1" fill="#FAF8F5" text-anchor="middle">SPECIALIST NETWORK</text>
+    <text x="106" y="60" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="11.5" font-weight="600" fill="#C5A880" text-anchor="middle">Accredited Master Trades</text>
+    <line x1="18" y1="72" x2="194" y2="72" stroke="#28523E" stroke-width="1"/>
+    <text x="18" y="108" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="12.5" font-weight="500" fill="#DCE8E1">• The Wood Doctor: Timber Care</text>
+    <text x="18" y="146" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="12.5" font-weight="500" fill="#DCE8E1">• AfriShades: Cantilever Shade</text>
+    <text x="18" y="184" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="12.5" font-weight="500" fill="#DCE8E1">• Cane Africa: Woven Joinery</text>
+    <text x="18" y="222" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="12.5" font-weight="500" fill="#DCE8E1">• Facilities: Extraction Systems</text>
+    <text x="18" y="260" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="12.5" font-weight="500" fill="#DCE8E1">• Scinovalities: Digital Systems</text>
+    <rect x="18" y="304" width="176" height="30" rx="5" fill="#132A1F" stroke="#28523E" stroke-width="1"/>
+    <text x="106" y="323" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="0.5" fill="#C5A880" text-anchor="middle">SPECIALIST DIVISIONS</text>
+  </g>
+
+  <!-- Arrow 3 to 4 -->
+  <g stroke="#C5A880" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="732" y1="283" x2="748" y2="283"/>
+    <polygon points="743,278 749,283 743,288" fill="#C5A880"/>
+  </g>
+
+  <!-- Col 4: STRATEGIC OUTCOMES -->
+  <g transform="translate(752, 108)" filter="url(#shadow3)">
+    <rect width="216" height="352" rx="8" fill="#1B3B2B" stroke="#28523E" stroke-width="1.3"/>
+    <rect width="216" height="5" rx="2" fill="#2ECC71"/>
+    <text x="108" y="38" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="14" font-weight="800" letter-spacing="1" fill="#C5A880" text-anchor="middle">STRATEGIC OUTCOMES</text>
+    <text x="108" y="60" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="11.5" font-weight="600" fill="#C2D6CB" text-anchor="middle">Documented Commercial Value</text>
+    <line x1="18" y1="72" x2="198" y2="72" stroke="#28523E" stroke-width="1"/>
+    <text x="18" y="108" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="12.5" font-weight="500" fill="#FAF8F5">• Seamless Zonal Coordination</text>
+    <text x="18" y="146" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="12.5" font-weight="500" fill="#FAF8F5">• Maximized Seating Yield</text>
+    <text x="18" y="184" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="12.5" font-weight="500" fill="#FAF8F5">• Capital Asset Preservation</text>
+    <text x="18" y="222" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="12.5" font-weight="500" fill="#FAF8F5">• Full Statutory Compliance</text>
+    <text x="18" y="260" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="12.5" font-weight="500" fill="#FAF8F5">• Prolonged Asset Lifecycles</text>
+    <rect x="20" y="304" width="176" height="30" rx="5" fill="#132A1F" stroke="#2ECC71" stroke-width="1"/>
+    <text x="108" y="323" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="0.5" fill="#2ECC71" text-anchor="middle">MEASURABLE ROI</text>
+  </g>
+
+  <!-- Bottom Baseline Note -->
+  <text x="500" y="495" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="13.5" font-weight="700" letter-spacing="2" fill="#C2D6CB" text-anchor="middle">UNIFIED SERVICE LEVEL AGREEMENT (SLA) • SINGLE-POINT EXECUTIVE ACCOUNTABILITY</text>
+</svg>

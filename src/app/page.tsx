@@ -41,7 +41,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="relative min-h-screen bg-charcoal-950 text-ivory-100 flex flex-col">
+    <div className="relative min-h-screen bg-ivory-100 text-charcoal-950 flex flex-col">
       <Navbar onOpenAudit={handleOpenAuditModal} />
 
       <main className="flex-1">
@@ -51,7 +51,7 @@ export default function HomePage() {
         {/* 2. The Operator's Reality: 6 Core Venue Challenges */}
         <RestaurantOwnerProblemSection onOpenAudit={handleOpenAuditModal} />
 
-        {/* 3. Methodology: 5 Steps + Zero Daytime Disruption */}
+        {/* 3. Methodology: 5 Steps + Scheduled Daytime & Maintenance Execution */}
         <ProcessTimeline />
 
         {/* 4. Hospitality Solutions: Six Pillars */}

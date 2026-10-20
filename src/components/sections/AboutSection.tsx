@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/Button';
-import { ShieldCheck, Moon, Sparkles, ArrowRight, ExternalLink, Award, CheckCircle2 } from 'lucide-react';
+import { ShieldCheck, Clock, Sparkles, ArrowRight, ExternalLink, Award, CheckCircle2 } from 'lucide-react';
 
 interface AboutSectionProps {
   onOpenAudit?: () => void;
@@ -22,7 +22,7 @@ export function AboutSection({ onOpenAudit }: AboutSectionProps) {
           badge="About AfriSMME Hub"
           title="Turnkey Infrastructure & Restoration for"
           highlightedTitle="Africa's Most Coveted Dining Spaces."
-          description="We are the unified engineering and architectural support partner for fine-dining restaurants, wine estates, safari lodges, and luxury bistros. We operate when your dining room is closed—ensuring zero daytime service disruption."
+          description="We are the unified engineering and architectural support partner for fine-dining restaurants, wine estates, safari lodges, and luxury bistros. We coordinate around your daytime schedule, quiet periods, and planned maintenance windows."
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -38,23 +38,23 @@ export function AboutSection({ onOpenAudit }: AboutSectionProps) {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/20 to-transparent" />
               
-              {/* Floating Dark-Hours Badge */}
+              {/* Floating Scheduled Execution Badge */}
               <div className="absolute bottom-5 left-5 right-5 p-4 rounded bg-charcoal-950/90 backdrop-blur-md border border-charcoal-700 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-bronze-500/10 border border-bronze-500/30 flex items-center justify-center shrink-0">
-                    <Moon className="w-5 h-5 text-bronze-400" />
+                    <Clock className="w-5 h-5 text-bronze-400" />
                   </div>
                   <div>
                     <p className="text-xs font-mono uppercase tracking-wider text-bronze-400 font-semibold">
-                      The Dark-Hours Protocol
+                      Phased & Scheduled Execution
                     </p>
                     <p className="text-sm font-display font-medium text-ivory-100">
-                      23:00 to 07:00 Silent Execution
+                      Daytime & Planned Maintenance Windows
                     </p>
                   </div>
                 </div>
                 <span className="hidden sm:inline-block px-2.5 py-1 rounded bg-emerald-500/10 border border-emerald-500/30 text-[10px] font-mono text-emerald-400 uppercase font-semibold">
-                  Zero Lost Covers
+                  Seamless Coordination
                 </span>
               </div>
             </div>
@@ -115,7 +115,7 @@ export function AboutSection({ onOpenAudit }: AboutSectionProps) {
                 Africa’s luxury dining and hospitality sector operates on uncompromising guest expectations. The subtle acoustics of a private alcove, the tactile warmth of hand-rubbed African hardwood, and the comfort of an all-weather terrace directly drive guest dwell time, spend per head, and repeat reservations.
               </p>
               <p className="text-base text-ivory-300/90 leading-relaxed font-normal text-pretty">
-                Traditional contractors create chaos: daytime drilling, noxious chemical fumes, displaced tables, and compromised reservations. AfriSMME Hub solves this by deploying specialized master artisans and technical engineers under our strict dark-hours execution protocol.
+                Traditional contractors create chaos: unplanned disruption, noxious chemical fumes, displaced tables, and compromised reservations. AfriSMME Hub solves this by deploying specialized master artisans and technical engineers through phased zonal schedules and off-site workshop batches.
               </p>
             </div>
 
@@ -124,9 +124,9 @@ export function AboutSection({ onOpenAudit }: AboutSectionProps) {
               <div className="flex items-start gap-3 p-3.5 bg-charcoal-900/40 border border-charcoal-800 rounded-sm">
                 <CheckCircle2 className="w-5 h-5 text-bronze-400 shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="text-sm font-semibold text-ivory-100">07:00 Ready-for-Service Guarantee</h4>
+                  <h4 className="text-sm font-semibold text-ivory-100">Ready-for-Service Handover Guarantee</h4>
                   <p className="text-xs text-ivory-400 mt-0.5">
-                    Every workspace is certified pristine, sanitized, and odor-free before breakfast service begins.
+                    Every workspace is certified pristine, sanitized, and odor-free upon completion of each scheduled phase.
                   </p>
                 </div>
               </div>

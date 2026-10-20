@@ -22,6 +22,9 @@ export function Navbar({ onOpenAudit }: NavbarProps) {
   const pathname = usePathname();
   const isHomePage = pathname === '/';
   const isAboutPage = pathname === '/about';
+  const isCorporateProfilePage = pathname === '/corporate-profile';
+  const isBrochurePage = pathname === '/brochure';
+  const isBookletPage = pathname === '/booklet';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -188,6 +191,34 @@ export function Navbar({ onOpenAudit }: NavbarProps) {
                         </a>
                       </div>
 
+                      {/* Collateral & PDF Resources */}
+                      <div className="mt-2.5 pt-2 border-t border-charcoal-800 grid grid-cols-3 gap-1.5">
+                        <Link
+                          href="/corporate-profile"
+                          onClick={() => setServicesDropdownOpen(false)}
+                          className="p-1.5 rounded bg-charcoal-900/80 hover:bg-charcoal-900 border border-charcoal-800 hover:border-bronze-500/40 text-[10px] font-mono text-ivory-300 hover:text-bronze-300 transition-colors block text-center"
+                        >
+                          <span className="font-semibold block text-ivory-100">Profile</span>
+                          <span className="text-[8px] text-ivory-400">22p Master</span>
+                        </Link>
+                        <Link
+                          href="/brochure"
+                          onClick={() => setServicesDropdownOpen(false)}
+                          className="p-1.5 rounded bg-charcoal-900/80 hover:bg-charcoal-900 border border-charcoal-800 hover:border-bronze-500/40 text-[10px] font-mono text-ivory-300 hover:text-bronze-300 transition-colors block text-center"
+                        >
+                          <span className="font-semibold block text-ivory-100">Brochure</span>
+                          <span className="text-[8px] text-ivory-400">12p Visual</span>
+                        </Link>
+                        <Link
+                          href="/booklet"
+                          onClick={() => setServicesDropdownOpen(false)}
+                          className="p-1.5 rounded bg-charcoal-900/80 hover:bg-charcoal-900 border border-charcoal-800 hover:border-bronze-500/40 text-[10px] font-mono text-ivory-300 hover:text-bronze-300 transition-colors block text-center"
+                        >
+                          <span className="font-semibold block text-ivory-100">Booklet</span>
+                          <span className="text-[8px] text-ivory-400">36p Guide</span>
+                        </Link>
+                      </div>
+
                       {/* Dropdown Quick Action */}
                       <div className="mt-3 pt-2.5 border-t border-charcoal-800">
                         <button
@@ -212,7 +243,46 @@ export function Navbar({ onOpenAudit }: NavbarProps) {
                 )}
               </div>
 
-              {/* 4. Ecosystem */}
+              {/* 4. Corporate Profile */}
+              <Link
+                href="/corporate-profile"
+                className={cn(
+                  'whitespace-nowrap text-sm tracking-wider uppercase font-medium transition-colors duration-200 relative py-1 after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:bg-bronze-400 after:transition-all after:duration-300',
+                  isCorporateProfilePage
+                    ? 'text-bronze-300 after:w-full'
+                    : 'text-ivory-200/90 hover:text-bronze-300 after:w-0 hover:after:w-full'
+                )}
+              >
+                Profile
+              </Link>
+
+              {/* 5. Brochure */}
+              <Link
+                href="/brochure"
+                className={cn(
+                  'whitespace-nowrap text-sm tracking-wider uppercase font-medium transition-colors duration-200 relative py-1 after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:bg-bronze-400 after:transition-all after:duration-300',
+                  isBrochurePage
+                    ? 'text-bronze-300 after:w-full'
+                    : 'text-ivory-200/90 hover:text-bronze-300 after:w-0 hover:after:w-full'
+                )}
+              >
+                Brochure
+              </Link>
+
+              {/* 6. Support Booklet */}
+              <Link
+                href="/booklet"
+                className={cn(
+                  'whitespace-nowrap text-sm tracking-wider uppercase font-medium transition-colors duration-200 relative py-1 after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:bg-bronze-400 after:transition-all after:duration-300',
+                  isBookletPage
+                    ? 'text-bronze-300 after:w-full'
+                    : 'text-ivory-200/90 hover:text-bronze-300 after:w-0 hover:after:w-full'
+                )}
+              >
+                Booklet
+              </Link>
+
+              {/* 6. Ecosystem */}
               <a
                 href={isHomePage ? '#ecosystem' : '/#ecosystem'}
                 className="whitespace-nowrap text-sm tracking-wider uppercase font-medium text-ivory-200/90 hover:text-bronze-300 transition-colors duration-200 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-bronze-400 hover:after:w-full after:transition-all after:duration-300"
@@ -220,7 +290,7 @@ export function Navbar({ onOpenAudit }: NavbarProps) {
                 Ecosystem
               </a>
 
-              {/* 5. Contact */}
+              {/* 7. Contact */}
               <a
                 href={isHomePage ? '#contact' : '/#contact'}
                 className="whitespace-nowrap text-sm tracking-wider uppercase font-medium text-ivory-200/90 hover:text-bronze-300 transition-colors duration-200 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-bronze-400 hover:after:w-full after:transition-all after:duration-300"

@@ -22,14 +22,14 @@ export function Footer() {
             </Link>
 
             <p className="text-sm sm:text-base text-ivory-300/80 font-normal leading-relaxed mb-6 max-w-md">
-              The integrated hospitality support ecosystem helping restaurants, boutique hotels, and safari lodges identify, solve, restore, maintain, and grow—through one coordinated partnership. Zero daytime disruption.
+              The integrated hospitality support ecosystem helping restaurants, boutique hotels, and safari lodges identify, solve, restore, maintain, and grow—through one coordinated partnership and scheduled maintenance execution.
             </p>
 
             {/* Quick credentials badges */}
             <div className="flex flex-wrap gap-2.5">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-charcoal-900 border border-charcoal-700/80 text-[11px] font-mono text-ivory-200">
                 <Clock className="w-3.5 h-3.5 text-emerald-400" />
-                Zero Daytime Disruption
+                Scheduled Daytime & Maintenance Care
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-charcoal-900 border border-charcoal-700/80 text-[11px] font-mono text-ivory-200">
                 <ShieldCheck className="w-3.5 h-3.5 text-bronze-400" />
@@ -108,6 +108,33 @@ export function Footer() {
                 Greater Kruger & Safari Lodges
               </li>
             </ul>
+
+            {/* Field Collateral & Downloadable Resources */}
+            <div className="mt-6 pt-4 border-t border-charcoal-800">
+              <h4 className="text-[11px] uppercase tracking-cinematic text-bronze-400 font-semibold mb-2.5 font-mono">
+                Executive Publications
+              </h4>
+              <ul className="space-y-1.5 text-xs">
+                <li>
+                  <Link href="/corporate-profile" className="text-ivory-300 hover:text-bronze-300 transition-colors flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-bronze-400" />
+                    Corporate Profile (22p Master)
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/brochure" className="text-ivory-300 hover:text-bronze-300 transition-colors flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-bronze-400" />
+                    Premium Sales Brochure (12p)
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/booklet" className="text-ivory-300 hover:text-bronze-300 transition-colors flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-bronze-400" />
+                    Hospitality Support Booklet (36p)
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
 
           {/* Column 5: Direct Dispatch & Contact */}
@@ -120,9 +147,10 @@ export function Footer() {
                 <PhoneCall className="w-4 h-4 text-bronze-400 shrink-0 mt-0.5" />
                 <div>
                   <p className="text-[11px] text-ivory-400 uppercase tracking-wider">Direct Hotline</p>
-                  <a href="tel:+27118849200" className="text-ivory-100 font-mono hover:text-bronze-300">
-                    +27 (0) 11 884 9200
+                  <a href="tel:+27113465018" className="text-ivory-100 font-mono hover:text-bronze-300">
+                    +27 (0)11 346 5018
                   </a>
+                  <span className="text-ivory-400 text-xs block font-mono">+27 (0)83 432 8394</span>
                 </div>
               </div>
 
@@ -130,8 +158,8 @@ export function Footer() {
                 <Mail className="w-4 h-4 text-bronze-400 shrink-0 mt-0.5" />
                 <div>
                   <p className="text-[11px] text-ivory-400 uppercase tracking-wider">Assessments & Proposals</p>
-                  <a href="mailto:hospitality@afrismme.com" className="text-ivory-100 hover:text-bronze-300">
-                    hospitality@afrismme.com
+                  <a href="mailto:info@hospitalitysupport.co.za" className="text-ivory-100 hover:text-bronze-300">
+                    info@hospitalitysupport.co.za
                   </a>
                 </div>
               </div>
@@ -139,7 +167,7 @@ export function Footer() {
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-bronze-400 shrink-0 mt-0.5" />
                 <p className="text-xs text-ivory-300 leading-relaxed">
-                  Support Across South Africa & Southern Africa
+                  Gauteng, Western Cape, KZN &amp; Southern Africa
                 </p>
               </div>
             </div>
@@ -152,13 +180,19 @@ export function Footer() {
             &copy; {currentYear} AfriSMME Hub. All rights reserved. Digital & Technology Partner — Scinovalities.
           </p>
 
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center gap-4 sm:gap-6">
             <Link href="/about" className="hover:text-bronze-300 transition-colors">
               About Us
             </Link>
             <a href="/#pillars" className="hover:text-bronze-300 transition-colors">
               Product & Services
             </a>
+            <Link href="/brochure" className="hover:text-bronze-300 transition-colors text-bronze-300">
+              Brochure
+            </Link>
+            <Link href="/booklet" className="hover:text-bronze-300 transition-colors text-bronze-300">
+              Company Profile
+            </Link>
             <a href="/#ecosystem" className="hover:text-bronze-300 transition-colors">
               Ecosystem
             </a>

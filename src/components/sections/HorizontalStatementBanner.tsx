@@ -103,7 +103,7 @@ export function HorizontalStatementBanner() {
             </span>
             <span className="flex items-center gap-1.5">
               <Clock className="w-4 h-4 text-emerald-400" />
-              <span>Overnight Dark-Hours Protocol</span>
+              <span>Scheduled Maintenance & Phased Delivery</span>
             </span>
           </div>
         </div>
@@ -129,7 +129,7 @@ export function HorizontalStatementBanner() {
         {/* Bottom Details & Replay */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mt-6 sm:mt-8 pt-5 border-t border-charcoal-800/80">
           <p className="text-sm sm:text-base text-ivory-300/90 font-sans max-w-3xl leading-relaxed">
-            A single accountable master partner delivering turnkey exterior architecture, acoustic dining intimacy, and rapid overnight facility restoration across Africa’s finest dining venues.
+            A single accountable master partner delivering turnkey exterior architecture, acoustic dining intimacy, and precision facility restoration across Africa’s finest dining venues.
           </p>
 
           <button

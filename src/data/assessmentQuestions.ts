@@ -37,7 +37,7 @@ export const ASSESSMENT_QUESTIONS: AssessmentQuestion[] = [
     options: [
       {
         label: 'Worn Tables, Banquettes & High-Traffic Furniture',
-        description: 'Tables show scratches or heat marks, leather is worn, but closing for repairs during daytime trading is not an option.',
+        description: 'Tables show scratches or heat marks and leather is worn, requiring phased batch restoration without full venue closure.',
         recommendedPillars: ['restore', 'enhance'],
       },
       {
@@ -116,22 +116,22 @@ export const ASSESSMENT_QUESTIONS: AssessmentQuestion[] = [
   {
     id: 'turnaround_schedule',
     title: 'What is your preferred operational timing for support?',
-    subtitle: 'We work when your venue sleeps so trading revenue is never interrupted.',
+    subtitle: 'We coordinate around your daytime schedule, quiet periods, and planned maintenance windows.',
     category: 'Execution Cadence',
     options: [
       {
-        label: 'Strict Dark-Hours Overnight Only (23:00 to 07:00)',
-        description: 'All physical work must happen while the venue is closed, with complete cleaning before morning service.',
+        label: 'Scheduled Daytime Maintenance Windows & Quiet Trading Days',
+        description: 'Coordinate physical servicing and installations during standard daytime maintenance slots or quieter morning/early-week windows.',
         recommendedPillars: ['restore', 'maintain'],
       },
       {
-        label: 'Phased Zonal Upgrades',
-        description: 'Can cordon off one section or patio while keeping the main dining floor 100% active and generating revenue.',
-        recommendedPillars: ['attract', 'enhance'],
+        label: 'Phased Zonal Upgrades & Off-Site Workshop Batches',
+        description: 'Cordon off one section or rotate furniture in batches to our Kew workshop while keeping the main dining floor active.',
+        recommendedPillars: ['attract', 'enhance', 'restore'],
       },
       {
         label: 'Comprehensive Venue Assessment & Roadmap First',
-        description: 'Conduct a thorough assessment across physical, digital, and operational areas before scheduling interventions.',
+        description: 'Conduct a thorough daytime assessment across physical, digital, and operational areas before scheduling interventions.',
         recommendedPillars: ['grow', 'protect', 'enhance'],
       },
     ],

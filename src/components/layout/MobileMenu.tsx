@@ -158,7 +158,52 @@ export function MobileMenu({ isOpen, onClose, onOpenAudit }: MobileMenuProps) {
             )}
           </div>
 
-          {/* 4. Ecosystem */}
+          {/* 4. Corporate Profile (22-Page Master) */}
+          <Link
+            href="/corporate-profile"
+            onClick={onClose}
+            className="flex items-center justify-between py-3 px-3 rounded-sm text-base font-display text-ivory-100 hover:text-bronze-300 hover:bg-charcoal-800/60 transition-colors"
+          >
+            <div className="flex items-center gap-2">
+              <span>Corporate Profile</span>
+              <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-bronze-500/20 text-bronze-300 border border-bronze-500/30">
+                22p Master
+              </span>
+            </div>
+            <ArrowRight className="w-4 h-4 text-bronze-500/60" />
+          </Link>
+
+          {/* 5. Brochure (12-Page Visual) */}
+          <Link
+            href="/brochure"
+            onClick={onClose}
+            className="flex items-center justify-between py-3 px-3 rounded-sm text-base font-display text-ivory-100 hover:text-bronze-300 hover:bg-charcoal-800/60 transition-colors"
+          >
+            <div className="flex items-center gap-2">
+              <span>Sales Brochure</span>
+              <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-bronze-500/20 text-bronze-300 border border-bronze-500/30">
+                12p Visual
+              </span>
+            </div>
+            <ArrowRight className="w-4 h-4 text-bronze-500/60" />
+          </Link>
+
+          {/* 6. Support Booklet (36-Page Guide) */}
+          <Link
+            href="/booklet"
+            onClick={onClose}
+            className="flex items-center justify-between py-3 px-3 rounded-sm text-base font-display text-ivory-100 hover:text-bronze-300 hover:bg-charcoal-800/60 transition-colors"
+          >
+            <div className="flex items-center gap-2">
+              <span>Support Booklet</span>
+              <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-bronze-500/20 text-bronze-300 border border-bronze-500/30">
+                36p Guide
+              </span>
+            </div>
+            <ArrowRight className="w-4 h-4 text-bronze-500/60" />
+          </Link>
+
+          {/* 6. Ecosystem */}
           <a
             href="/#ecosystem"
             onClick={onClose}
@@ -168,7 +213,7 @@ export function MobileMenu({ isOpen, onClose, onOpenAudit }: MobileMenuProps) {
             <ArrowRight className="w-4 h-4 text-bronze-500/60" />
           </a>
 
-          {/* 5. Contact */}
+          {/* 7. Contact */}
           <a
             href="/#contact"
             onClick={onClose}
