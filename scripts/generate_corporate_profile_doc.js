@@ -1424,7 +1424,7 @@ async function generateCorporateProfile() {
               </div>
               <div style="padding: 1.5mm 0; border-bottom: 1px solid #28523E;">
                 <strong style="color: #C5A880;">STAGE 02 — Dustless Sanding &amp; Mechanical Servicing</strong><br/>
-                Commercial HEPA-filtered sanders strip damaged finishes, or furniture batches are collected for our Kew, Sandton workshop.
+                Commercial HEPA-filtered sanders strip damaged finishes, or furniture batches are collected for our Lyndhurst, Johannesburg workshop.
               </div>
               <div style="padding: 1.5mm 0; border-bottom: 1px solid #28523E;">
                 <strong style="color: #C5A880;">STAGE 03 — Food-Safe Hand-Rubbed Oil Application</strong><br/>
@@ -1744,7 +1744,7 @@ async function generateCorporateProfile() {
           <div>
             <h3 class="card-title">Central Workshop Facilities</h3>
             <p class="body-text">
-              Our central manufacturing and restoration facility is located in Kew, Sandton. Spanning extensive joinery, metal fabrication, and upholstery studios, our workshop handles large-scale batch refurbishments for hotel groups and restaurant chains.
+              Our central manufacturing and restoration facility is located in Lyndhurst, Johannesburg. Spanning extensive joinery, metal fabrication, and upholstery studios, our workshop handles large-scale batch refurbishments for hotel groups and restaurant chains.
             </p>
             <ul class="body-list">
               <li><strong>Joinery &amp; Timber Lab:</strong> Climate-controlled oil curing and dust extraction.</li>
@@ -1828,14 +1828,14 @@ async function generateCorporateProfile() {
             <div style="font-size: 8.5pt; font-weight: 700; color: #C5A880; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2mm;">Headquarters &amp; Central Workshops</div>
             <p class="body-text" style="color: #FAF8F5; line-height: 1.6; margin-bottom: 2.5mm; font-size: 11pt;">
               <strong>AfriSMME Hub (Pty) Ltd</strong><br/>
-              146 10th Road, Kew, Sandton<br/>
-              Johannesburg, 2090<br/>
+              77 Wilmington Crescent, Lyndhurst<br/>
+              Johannesburg, 2192<br/>
               Gauteng, South Africa
             </p>
             <div style="font-size: 9.5pt; color: #A6ADB9; font-family: 'JetBrains Mono', monospace; line-height: 1.55;">
-              <div>Office: <a href="tel:+27113465018" style="color: #C5A880; text-decoration: none;">+27 (0)11 346 5018</a></div>
+              <div>Office: <a href="tel:+27113465018" style="color: #C5A880; text-decoration: none;">+27 (0) 11 346 5018</a></div>
               <div>WhatsApp: <a href="https://wa.me/27834328394" style="color: #C5A880; text-decoration: none;">+27 (0)83 432 8394</a></div>
-              <div>Executive: <a href="mailto:info@hospitalitysupport.co.za" style="color: #C5A880; text-decoration: none;">info@hospitalitysupport.co.za</a></div>
+              <div>Executive: <a href="mailto:info@afrismmehub.co.za" style="color: #C5A880; text-decoration: none;">info@afrismmehub.co.za</a></div>
             </div>
           </div>
 
@@ -1905,7 +1905,8 @@ async function generateCorporateProfile() {
     format: 'A4',
     printBackground: true,
     margin: { top: 0, right: 0, bottom: 0, left: 0 },
-    preferCSSPageSize: true
+    preferCSSPageSize: true,
+    timeout: 120000
   });
 
   await browser.close();

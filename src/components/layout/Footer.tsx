@@ -148,7 +148,7 @@ export function Footer() {
                 <div>
                   <p className="text-[11px] text-ivory-400 uppercase tracking-wider">Direct Hotline</p>
                   <a href="tel:+27113465018" className="text-ivory-100 font-mono hover:text-bronze-300">
-                    +27 (0)11 346 5018
+                    +27 (0) 11 346 5018
                   </a>
                   <span className="text-ivory-400 text-xs block font-mono">+27 (0)83 432 8394</span>
                 </div>
@@ -158,17 +158,23 @@ export function Footer() {
                 <Mail className="w-4 h-4 text-bronze-400 shrink-0 mt-0.5" />
                 <div>
                   <p className="text-[11px] text-ivory-400 uppercase tracking-wider">Assessments & Proposals</p>
-                  <a href="mailto:info@hospitalitysupport.co.za" className="text-ivory-100 hover:text-bronze-300">
-                    info@hospitalitysupport.co.za
+                  <a href="mailto:info@afrismmehub.co.za" className="text-ivory-100 hover:text-bronze-300">
+                    info@afrismmehub.co.za
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-bronze-400 shrink-0 mt-0.5" />
-                <p className="text-xs text-ivory-300 leading-relaxed">
-                  Gauteng, Western Cape, KZN &amp; Southern Africa
-                </p>
+                <div>
+                  <p className="text-[11px] text-ivory-400 uppercase tracking-wider">Corporate Headquarters</p>
+                  <p className="text-xs text-ivory-200 leading-relaxed font-sans">
+                    77 Wilmington Crescent, Lyndhurst, Johannesburg
+                  </p>
+                  <p className="text-[11px] text-ivory-400 leading-relaxed">
+                    Gauteng, Western Cape, KZN &amp; Southern Africa
+                  </p>
+                </div>
               </div>
             </div>
           </div>

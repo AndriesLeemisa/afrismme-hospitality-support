@@ -126,7 +126,7 @@ export const ASSESSMENT_QUESTIONS: AssessmentQuestion[] = [
       },
       {
         label: 'Phased Zonal Upgrades & Off-Site Workshop Batches',
-        description: 'Cordon off one section or rotate furniture in batches to our Kew workshop while keeping the main dining floor active.',
+        description: 'Cordon off one section or rotate furniture in batches to our Lyndhurst workshop while keeping the main dining floor active.',
         recommendedPillars: ['attract', 'enhance', 'restore'],
       },
       {

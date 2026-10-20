@@ -69,8 +69,8 @@ const BOOKLET_SLIDES = [
           />
           <div className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-charcoal-950/95 to-transparent flex justify-between items-end">
             <div>
-              <div className="text-sm font-bold text-warm-ivory">Sandton Headquarters &amp; Workshops</div>
-              <div className="text-xs text-charcoal-400">146 10th Road Kew, Sandton • Servicing Premier Venues</div>
+              <div className="text-sm font-bold text-warm-ivory">Johannesburg Headquarters &amp; Workshops</div>
+              <div className="text-xs text-charcoal-400">77 Wilmington Crescent, Lyndhurst, Johannesburg • Servicing Premier Venues</div>
             </div>
             <span className="text-xs font-bold text-bronze-400 border border-bronze-400/40 px-2 py-0.5 rounded-sm">
               2026 EDITION
@@ -288,7 +288,7 @@ const BOOKLET_SLIDES = [
     title: 'Pillar 03 — RESTORE',
     category: 'Master Restoration',
     heading: 'Phased & Scheduled Timber, Leather & Cane Revival',
-    sub: 'Master craftsmanship coordinated via phased daytime batches and our Kew workshop so your dining room stays welcoming.',
+    sub: 'Master craftsmanship coordinated via phased daytime batches and our Lyndhurst workshop so your dining room stays welcoming.',
     tag: 'Division 03',
     dark: false,
     content: (
@@ -553,7 +553,7 @@ const BOOKLET_SLIDES = [
           <span className="text-xs font-bold uppercase tracking-wider text-bronze-600">Enterprise Development</span>
           <h3 className="text-2xl font-serif font-bold text-charcoal-900 mt-1 mb-3">Our Artisanal Community</h3>
           <p className="text-xs text-charcoal-600 leading-relaxed mb-4">
-            AfriSMME Hub is built on training and certifying local youth and women artisans in our Kew/Sandton workshops in fine carpentry, cane weaving, and commercial facilities care.
+            AfriSMME Hub is built on training and certifying local youth and women artisans in our Lyndhurst, Johannesburg workshops in fine carpentry, cane weaving, and commercial facilities care.
           </p>
           <ul className="text-xs text-charcoal-700 space-y-2 mb-4">
             <li>• <strong>Female Artisan Weavers:</strong> Skilled women hand-weaving all cane and wicker furniture.</li>
@@ -569,7 +569,7 @@ const BOOKLET_SLIDES = [
           <div className="relative h-48 rounded-sm overflow-hidden border border-stone-200">
             <Image src="/real_showcase/artisans_handweaving_clean.jpg" alt="Artisans Weaving" fill className="object-cover" />
             <span className="absolute bottom-2 left-2 bg-charcoal-950/80 text-warm-ivory text-[10px] font-bold px-2 py-0.5 rounded-sm">
-              AfriSMME Female Artisans Hand-Weaving Wicker (Kew Workshop)
+              AfriSMME Female Artisans Hand-Weaving Wicker (Lyndhurst Workshop)
             </span>
           </div>
           <div className="relative h-36 rounded-sm overflow-hidden border border-stone-200">
@@ -623,12 +623,12 @@ const BOOKLET_SLIDES = [
             <div className="text-xs uppercase tracking-widest text-bronze-400 font-bold mb-1">Corporate Headquarters</div>
             <h4 className="text-lg font-bold text-warm-ivory mb-2">AfriSMME Hub</h4>
             <p className="text-xs text-charcoal-300 leading-relaxed mb-4">
-              146 10th Road Kew, Sandton, 2090<br />
+              77 Wilmington Crescent, Lyndhurst, 2192<br />
               Johannesburg, South Africa
             </p>
 
             <div className="space-y-2 text-xs text-charcoal-300 border-t border-charcoal-800 pt-4">
-              <div>Office: <strong className="text-warm-ivory">011 346 5018</strong></div>
+              <div>Office: <strong className="text-warm-ivory">+27 (0) 11 346 5018</strong></div>
               <div>Priority WhatsApp: <strong className="text-bronze-400">083 432 8394</strong></div>
               <div>Email: <strong className="text-warm-ivory">info@afrismmehub.co.za</strong></div>
               <div>Portal: <strong className="text-bronze-400">www.afrismmehub.co.za</strong></div>

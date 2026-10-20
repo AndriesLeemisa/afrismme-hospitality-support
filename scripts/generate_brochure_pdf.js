@@ -700,7 +700,7 @@ const html = `<!DOCTYPE html>
         </div>
         <div class="ba-details">
           <p><strong>The Wear:</strong> UV brittleness and heavy guest use snap synthetic and natural cane, exposing sharp metal frames.</p>
-          <p><strong>The Renewal:</strong> Skilled female artisans in our Kew workshop hand-cane matching weave, re-tensioning the entire structural frame.</p>
+          <p><strong>The Renewal:</strong> Skilled female artisans in our Lyndhurst workshop hand-cane matching weave, re-tensioning the entire structural frame.</p>
         </div>
       </div>
 
@@ -958,7 +958,7 @@ const html = `<!DOCTYPE html>
     <div class="impact-callout">
       <div style="font-size: 16pt;">🤝</div>
       <div style="font-size: 7.7pt; color: #3A4250; line-height: 1.35;">
-        <strong style="color: #121316;">Uplifting Communities Through Training:</strong> AfriSMME Hub directly trains, certifies, and employs local youth and women artisans in our Kew/Sandton workshops. Every table renewed sustains dignified local employment.
+        <strong style="color: #121316;">Uplifting Communities Through Training:</strong> AfriSMME Hub directly trains, certifies, and employs local youth and women artisans in our Lyndhurst, Johannesburg workshops. Every table renewed sustains dignified local employment.
       </div>
     </div>
 
@@ -966,10 +966,10 @@ const html = `<!DOCTYPE html>
     <div class="contact-grid">
       <div class="contact-info">
         <h4>AFRISMME HUB HOSPITALITY SUPPORT</h4>
-        <p>Headquarters &amp; Workshops: 146 10th Road Kew, Sandton, 2090</p>
+        <p>Headquarters &amp; Workshops: 77 Wilmington Crescent, Lyndhurst, Johannesburg, 2192</p>
         <p>Email: <strong>info@afrismmehub.co.za</strong> • Web: <strong>www.afrismmehub.co.za</strong></p>
         <div class="contact-numbers">
-          <span>Office: <strong>011 346 5018</strong></span>
+          <span>Office: <strong>+27 (0) 11 346 5018</strong></span>
           <span>Mobile / WhatsApp: <strong>083 432 8394</strong></span>
         </div>
       </div>

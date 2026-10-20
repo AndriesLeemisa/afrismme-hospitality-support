@@ -2077,7 +2077,7 @@ async function generateSupportBooklet() {
           </div>
           <div style="background: #132A1F; border-left: 3px solid #C5A880; padding: 2mm 3mm; margin-bottom: 1.8mm; border-radius: 2px;">
             <strong style="color: #C5A880;">STAGE 02 — HEPA Dustless Sanding &amp; Batch Collection</strong><br/>
-            Festool multi-disc sanders connected to HEPA extractors strip tables, or furniture batches are rotated to our Kew, Sandton workshop.
+            Festool multi-disc sanders connected to HEPA extractors strip tables, or furniture batches are rotated to our Lyndhurst, Johannesburg workshop.
           </div>
           <div style="background: #132A1F; border-left: 3px solid #C5A880; padding: 2mm 3mm; margin-bottom: 1.8mm; border-radius: 2px;">
             <strong style="color: #C5A880;">STAGE 03 — Kitchen Extraction Chemical Degreasing</strong><br/>
@@ -2448,14 +2448,14 @@ async function generateSupportBooklet() {
             <div style="font-size: 7.5pt; font-weight: 700; color: #C5A880; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2mm;">Central Headquarters &amp; Workshops</div>
             <p style="font-size: 8.5pt; color: #FAF8F5; line-height: 1.6; margin-bottom: 2mm;">
               <strong>AfriSMME Hub (Pty) Ltd</strong><br/>
-              146 10th Road, Kew, Sandton<br/>
-              Johannesburg, 2090<br/>
+              77 Wilmington Crescent, Lyndhurst<br/>
+              Johannesburg, 2192<br/>
               Gauteng, South Africa
             </p>
             <div style="font-size: 7.8pt; color: #A6ADB9; font-family: 'JetBrains Mono', monospace; line-height: 1.5;">
-              <div>Office: <a href="tel:+27113465018" style="color: #C5A880; text-decoration: none;">+27 (0)11 346 5018</a></div>
+              <div>Office: <a href="tel:+27113465018" style="color: #C5A880; text-decoration: none;">+27 (0) 11 346 5018</a></div>
               <div>Mobile / WhatsApp: <a href="https://wa.me/27834328394" style="color: #C5A880; text-decoration: none;">+27 (0)83 432 8394</a></div>
-              <div>Direct Email: <a href="mailto:info@hospitalitysupport.co.za" style="color: #C5A880; text-decoration: none;">info@hospitalitysupport.co.za</a></div>
+              <div>Direct Email: <a href="mailto:info@afrismmehub.co.za" style="color: #C5A880; text-decoration: none;">info@afrismmehub.co.za</a></div>
             </div>
           </div>
 

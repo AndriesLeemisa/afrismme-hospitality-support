@@ -53,7 +53,7 @@ const BEFORE_AFTER_CASES = [
     problem:
       'UV brittleness and heavy patron use snap synthetic and natural cane strands, exposing sharp internal aluminum frames.',
     solution:
-      'Master female artisans in our Kew/Sandton workshop hand-weave matching commercial-grade cane, restoring full structural integrity.',
+      'Master female artisans in our Lyndhurst, Johannesburg workshop hand-weave matching commercial-grade cane, restoring full structural integrity.',
     turnaround: 'Collected & returned in phased batches so terrace capacity is preserved',
     savings: '75% replacement cost savings',
   },
@@ -182,7 +182,7 @@ export default function BrochurePage() {
             </div>
             <div className="bg-charcoal-900/80 border border-charcoal-800 p-3.5 rounded-sm">
               <div className="text-xl font-bold text-emerald-400">Batch Rotation</div>
-              <div className="text-xs text-charcoal-400">Kew Workshop &amp; On-Site</div>
+              <div className="text-xs text-charcoal-400">Lyndhurst Workshop &amp; On-Site</div>
             </div>
             <div className="bg-charcoal-900/80 border border-charcoal-800 p-3.5 rounded-sm">
               <div className="text-xl font-bold text-warm-ivory">Zero-VOC</div>
@@ -715,7 +715,7 @@ export default function BrochurePage() {
             <div className="text-xs uppercase tracking-widest text-bronze-400 font-bold mb-1">Headquarters</div>
             <h4 className="text-base font-bold text-warm-ivory mb-2">AfriSMME Hub</h4>
             <p className="text-xs text-charcoal-300 leading-relaxed">
-              146 10th Road Kew, Sandton, 2090<br />
+              77 Wilmington Crescent, Lyndhurst, 2192<br />
               Johannesburg, South Africa
             </p>
           </div>
@@ -723,7 +723,7 @@ export default function BrochurePage() {
           <div>
             <div className="text-xs uppercase tracking-widest text-bronze-400 font-bold mb-1">Direct Lines</div>
             <div className="text-xs text-charcoal-300 space-y-1">
-              <div>Office: <strong className="text-warm-ivory">011 346 5018</strong></div>
+              <div>Office: <strong className="text-warm-ivory">+27 (0) 11 346 5018</strong></div>
               <div>Priority WhatsApp: <strong className="text-bronze-400">083 432 8394</strong></div>
               <div>Email: <strong className="text-warm-ivory">info@afrismmehub.co.za</strong></div>
             </div>

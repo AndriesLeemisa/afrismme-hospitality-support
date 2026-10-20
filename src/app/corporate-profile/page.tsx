@@ -277,7 +277,7 @@ const PROFILE_PAGES: ProfileSlide[] = [
                 <strong className="text-bronze-400">Step 01 — On-Site Diagnostic &amp; Zone Planning:</strong> We coordinate with your general manager to schedule work during quieter daytime periods or planned maintenance slots.
               </div>
               <div className="p-2.5 bg-charcoal-900 border border-charcoal-800 rounded">
-                <strong className="text-bronze-400">Step 02 — Dustless HEPA Sanding &amp; Workshop Batches:</strong> Furniture is restored in phased batches at our Kew workshop or on-site with HEPA dust containment.
+                <strong className="text-bronze-400">Step 02 — Dustless HEPA Sanding &amp; Workshop Batches:</strong> Furniture is restored in phased batches at our Lyndhurst workshop or on-site with HEPA dust containment.
               </div>
               <div className="p-2.5 bg-charcoal-900 border border-charcoal-800 rounded">
                 <strong className="text-bronze-400">Step 03 — Zero-VOC Hardwax Oil Application:</strong> Natural food-safe plant oils are buffed into timber grain with zero harsh fumes.
@@ -452,10 +452,10 @@ const PROFILE_PAGES: ProfileSlide[] = [
               </strong>
               <div className="text-xs text-charcoal-300 space-y-1.5 font-mono">
                 <div>AfriSMME Hub (Pty) Ltd</div>
-                <div>146 10th Road, Kew, Sandton, Johannesburg</div>
-                <div>Office: +27 (0)11 346 5018</div>
+                <div>77 Wilmington Crescent, Lyndhurst, Johannesburg</div>
+                <div>Office: +27 (0) 11 346 5018</div>
                 <div>Mobile / WhatsApp: +27 (0)83 432 8394</div>
-                <div>Email: info@hospitalitysupport.co.za</div>
+                <div>Email: info@afrismmehub.co.za</div>
               </div>
             </div>
             <div className="bg-charcoal-900 border border-charcoal-800 p-4 rounded-sm flex flex-col justify-between">

@@ -108,7 +108,7 @@ export const SERVICE_PILLARS: ServicePillarData[] = [
     pillarNumber: '03',
     name: 'RESTORE',
     tagline: 'Phased & workshop renewal',
-    description: 'Tables, chairs, upholstery and surfaces restored via phased daytime batches and our Kew workshop so your venue stays welcoming.',
+    description: 'Tables, chairs, upholstery and surfaces restored via phased daytime batches and our Lyndhurst workshop so your venue stays welcoming.',
     iconName: 'Wrench',
     image: '/images/furniture_restoration_detail.jpg',
     imageAlt: 'Master craftsman restoring high-end hardwood restaurant furniture with natural oils and precision joinery',

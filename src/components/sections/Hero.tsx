@@ -112,6 +112,8 @@ export function Hero({ onOpenAudit }: HeroProps) {
   const [line2Typed, setLine2Typed] = useState('');
   const [isTypingDone, setIsTypingDone] = useState(false);
 
+  const isLine1Typing = line1Typed.length < HEADLINE_LINE1.length;
+
   const heroRef = useRef<HTMLDivElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
@@ -380,17 +382,23 @@ export function Hero({ onOpenAudit }: HeroProps) {
             ref={headlineRef}
             className="text-display-1 font-display font-medium text-ivory-50 tracking-tight leading-[1.04] mb-5 sm:mb-6"
           >
-            <span className="block min-h-[1.1em]">
+            <span className="block min-h-[1.1em] text-emerald-400">
               {line1Typed}
+              {/* Real-time Blinking Emerald Cursor while Line 1 is typing */}
+              {isLine1Typing && (
+                <span className="inline-block w-[3px] md:w-[4px] lg:w-[5px] h-[0.85em] bg-emerald-400 ml-2 align-baseline shadow-[0_0_12px_#34d399] animate-pulse" />
+              )}
             </span>
             <span className="block mt-1 sm:mt-2 italic font-light text-gold-gradient min-h-[2.2em] sm:min-h-[1.15em]">
               {line2Typed}
-              {/* Real-time Blinking Bronze Cursor */}
-              <span
-                className={`inline-block w-[3px] md:w-[4px] lg:w-[5px] h-[0.85em] bg-bronze-400 ml-2 align-baseline shadow-[0_0_12px_#c5a880] transition-opacity duration-300 ${
-                  isTypingDone ? 'animate-pulse opacity-75' : 'opacity-100'
-                }`}
-              />
+              {/* Real-time Blinking Bronze Cursor on Line 2 */}
+              {!isLine1Typing && (
+                <span
+                  className={`inline-block w-[3px] md:w-[4px] lg:w-[5px] h-[0.85em] bg-bronze-400 ml-2 align-baseline shadow-[0_0_12px_#c5a880] transition-opacity duration-300 ${
+                    isTypingDone ? 'animate-pulse opacity-75' : 'opacity-100'
+                  }`}
+                />
+              )}
             </span>
           </h1>
 

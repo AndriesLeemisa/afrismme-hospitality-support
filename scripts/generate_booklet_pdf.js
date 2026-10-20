@@ -467,8 +467,8 @@ const html = `<!DOCTYPE html>
         <img src="${imgTerraceLuxury}" alt="Premier Dining Terrace" />
         <div class="cover-hero-badge">
           <div>
-            <div style="font-size: 10pt; font-weight: 800; color: #FAF8F5;">Sandton Headquarters &amp; Artisanal Workshops</div>
-            <div style="font-size: 7.5pt; color: #D8C2A0;">146 10th Road Kew, Sandton • Servicing Premier Venues Nationwide</div>
+            <div style="font-size: 10pt; font-weight: 800; color: #FAF8F5;">Johannesburg Headquarters &amp; Artisanal Workshops</div>
+            <div style="font-size: 7.5pt; color: #D8C2A0;">77 Wilmington Crescent, Lyndhurst, Johannesburg • Servicing Premier Venues Nationwide</div>
           </div>
           <div style="font-size: 8.5pt; font-weight: 800; color: #C5A880; border: 1px solid #C5A880; padding: 4px 10px; border-radius: 4px;">
             2026 EDITION
@@ -759,8 +759,8 @@ const html = `<!DOCTYPE html>
         </div>
 
         <ul class="feature-list" style="margin-top: 8px;">
-          <li><strong>Overnight Table Refinishing:</strong> We arrive at 10 PM after dinner close, sand out rings, and apply rapid-curing, food-safe zero-VOC Danish hardwax oils by 7 AM.</li>
-          <li><strong>Wicker &amp; Cane Re-Weaving:</strong> Skilled female artisans in our Kew workshops re-cane damaged chairs, saving 75% compared to purchasing new.</li>
+          <li><strong>Phased Table Refinishing:</strong> We coordinate daytime maintenance slots, sand out rings, and apply rapid-curing, food-safe zero-VOC Danish hardwax oils by scheduled handover.</li>
+          <li><strong>Wicker &amp; Cane Re-Weaving:</strong> Skilled female artisans in our Lyndhurst workshops re-cane damaged chairs, saving 75% compared to purchasing new.</li>
           <li><strong>Leather Rejuvenation:</strong> On-site deep cleaning, stain barrier conditioning, and bespoke pigment color matching.</li>
         </ul>
       </div>
@@ -1097,7 +1097,7 @@ const html = `<!DOCTYPE html>
         <div style="background: #FFFDF9; border: 1px solid #C5A880; border-radius: 6px; padding: 12px; margin-bottom: 12px;">
           <h4 style="font-size: 9.5pt; font-weight: 800; color: #121316; margin-bottom: 4px;">Our Core Social Commitments:</h4>
           <ul class="feature-list">
-            <li><strong>Women Artisan Weavers:</strong> Training and employing women in our Kew workshops in traditional and modern cane, wicker, and contract upholstery craftsmanship.</li>
+            <li><strong>Women Artisan Weavers:</strong> Training and employing women in our Lyndhurst workshops in traditional and modern cane, wicker, and contract upholstery craftsmanship.</li>
             <li><strong>Youth Apprenticeships:</strong> Accredited vocational mentorship in solid hardwood joinery, timber finishing, and commercial HVAC maintenance.</li>
             <li><strong>Ethical Local Manufacturing:</strong> 100% of furniture manufacturing and restoration work stays within South African communities.</li>
             <li><strong>B-BBEE Level 1 Contributor:</strong> Partnering with AfriSMME directly optimizes your procurement scorecard and ESG impact goals.</li>
@@ -1113,7 +1113,7 @@ const html = `<!DOCTYPE html>
         <div class="img-box" style="height: 190px; margin-bottom: 0;">
           <img src="${imgArtisansWeaving}" alt="Artisans Handweaving Chairs in Workshop" />
           <div style="position: absolute; bottom: 8px; left: 8px; background: rgba(18,19,22,0.85); color: #FAF8F5; font-size: 7pt; font-weight: 700; padding: 3px 8px; border-radius: 3px;">
-            AfriSMME Female Artisans Hand-Weaving Wicker (Kew Workshop)
+            AfriSMME Female Artisans Hand-Weaving Wicker (Lyndhurst Workshop)
           </div>
         </div>
         <div class="img-box" style="height: 140px; margin-bottom: 0;">
@@ -1188,12 +1188,12 @@ const html = `<!DOCTYPE html>
         <div>
           <div style="font-size: 7.5pt; letter-spacing: 1.5px; text-transform: uppercase; color: #C5A880; font-weight: 800; margin-bottom: 4px;">CORPORATE HEADQUARTERS</div>
           <h3 style="font-size: 14pt; font-weight: 800; color: #FAF8F5; margin-bottom: 8px;">AFRISMME HUB</h3>
-          <p style="font-size: 8pt; color: #D8C2A0; margin-bottom: 4px;">146 10th Road Kew, Sandton, 2090</p>
+          <p style="font-size: 8pt; color: #D8C2A0; margin-bottom: 4px;">77 Wilmington Crescent, Lyndhurst, 2192</p>
           <p style="font-size: 8pt; color: #D8C2A0; margin-bottom: 12px;">Johannesburg, Gauteng, South Africa</p>
 
           <div style="border-top: 1px solid #2B3342; padding-top: 10px; margin-bottom: 10px;">
             <div style="font-size: 7.5pt; color: #8E99A8; margin-bottom: 2px;">Direct Office Line:</div>
-            <div style="font-size: 10pt; font-weight: 800; color: #FAF8F5;">011 346 5018</div>
+            <div style="font-size: 10pt; font-weight: 800; color: #FAF8F5;">+27 (0) 11 346 5018</div>
           </div>
 
           <div style="margin-bottom: 10px;">
