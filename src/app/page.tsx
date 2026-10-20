@@ -14,6 +14,7 @@ import { DigitalAssessmentTool } from '@/components/interactive/DigitalAssessmen
 import { CTASection } from '@/components/sections/CTASection';
 import { Footer } from '@/components/layout/Footer';
 import { AuditModal } from '@/components/interactive/AuditModal';
+import { FloatingScrollDock } from '@/components/layout/FloatingScrollDock';
 
 export default function HomePage() {
   const [isAuditModalOpen, setIsAuditModalOpen] = useState(false);
@@ -77,6 +78,8 @@ export default function HomePage() {
       </main>
 
       <Footer />
+
+      <FloatingScrollDock onOpenAudit={handleOpenAuditModal} />
 
       <AuditModal
         isOpen={isAuditModalOpen}

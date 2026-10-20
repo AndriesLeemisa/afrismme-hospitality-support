@@ -85,6 +85,8 @@ const config: Config = {
       animation: {
         'fade-in': 'fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
         'pulse-subtle': 'pulseSubtle 4s ease-in-out infinite',
+        'float-slow': 'floatSlow 5s ease-in-out infinite',
+        'float-gentle': 'floatGentle 3.5s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: {
@@ -94,6 +96,14 @@ const config: Config = {
         pulseSubtle: {
           '0%, 100%': { opacity: '0.9', transform: 'scale(1)' },
           '50%': { opacity: '1', transform: 'scale(1.02)' },
+        },
+        floatSlow: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-8px)' },
+        },
+        floatGentle: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-4px)' },
         },
       },
     },

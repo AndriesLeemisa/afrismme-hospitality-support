@@ -272,7 +272,7 @@ export function ContactForm({ preselectedPillarId }: ContactFormProps) {
             </button>
 
             <a
-              href="https://wa.me/27118849200?text=Hello%20AfriSMME%20Hospitality%20Support,%20I%20have%20submitted%20a%20support%20request."
+              href="https://wa.me/27834328394?text=Hello%20AfriSMME%20Hospitality%20Support,%20I%20have%20submitted%20a%20support%20request."
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs uppercase tracking-wider font-semibold py-3 px-6 rounded-sm bg-emerald-600 text-ivory-50 hover:bg-emerald-500 transition-colors inline-flex items-center gap-2"

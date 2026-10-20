@@ -3,6 +3,7 @@
 import React from 'react';
 import { ContactForm } from './ContactForm';
 import { PhoneCall, MessageSquare, ShieldCheck, Clock } from 'lucide-react';
+import { ScrollFloatReveal } from '@/components/ui/ScrollFloatReveal';
 
 interface CTASectionProps {
   preselectedPillarId?: string;
@@ -14,7 +15,7 @@ export function CTASection({ preselectedPillarId }: CTASectionProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           {/* Left Column: Direct Access */}
-          <div className="lg:col-span-5">
+          <ScrollFloatReveal direction="up" delay={50} className="lg:col-span-5">
             <span className="text-xs tracking-cinematic uppercase text-bronze-700 font-semibold">
               Start The Conversation
             </span>
@@ -30,37 +31,37 @@ export function CTASection({ preselectedPillarId }: CTASectionProps) {
             {/* Direct Access Hotlines */}
             <div className="mt-8 space-y-3">
               <a
-                href="tel:+27118849200"
-                className="p-4 rounded-sm bg-ivory-50 border border-ivory-300 hover:border-bronze-500 flex items-center gap-4 transition-colors group shadow-sm"
+                href="tel:+27113465018"
+                className="p-4 rounded-sm bg-ivory-50 border border-ivory-300 hover:border-bronze-500 flex items-center gap-4 transition-all hover:-translate-y-1 group shadow-sm"
               >
                 <div className="w-10 h-10 rounded-sm bg-charcoal-900 flex items-center justify-center shrink-0 text-bronze-300">
                   <PhoneCall className="w-4 h-4" />
                 </div>
                 <div>
                   <span className="text-[10px] font-mono uppercase tracking-wider text-charcoal-600 block">
-                    Direct Line
+                    Direct Office Hotline
                   </span>
                   <span className="font-display text-lg font-semibold text-charcoal-950 group-hover:text-bronze-700 transition-colors">
-                    +27 (0) 11 884 9200
+                    +27 (0) 11 346 5018
                   </span>
                 </div>
               </a>
 
               <a
-                href="https://wa.me/27118849200?text=Hello%20AfriSMME%20Hospitality%20Support,%20I%20would%20like%20to%20enquire%20about%20a%20venue%20assessment."
+                href="https://wa.me/27834328394?text=Hello%20AfriSMME%20Hospitality%20Support,%20I%20would%20like%20to%20enquire%20about%20a%20venue%20assessment."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 rounded-sm bg-ivory-50 border border-ivory-300 hover:border-emerald-600/60 flex items-center gap-4 transition-colors group shadow-sm"
+                className="p-4 rounded-sm bg-ivory-50 border border-ivory-300 hover:border-emerald-600/60 flex items-center gap-4 transition-all hover:-translate-y-1 group shadow-sm"
               >
                 <div className="w-10 h-10 rounded-sm bg-charcoal-900 flex items-center justify-center shrink-0 text-emerald-300">
                   <MessageSquare className="w-4 h-4" />
                 </div>
                 <div>
                   <span className="text-[10px] font-mono uppercase tracking-wider text-charcoal-600 block">
-                    WhatsApp Support
+                    WhatsApp Priority Support
                   </span>
                   <span className="font-display text-lg font-semibold text-charcoal-950 group-hover:text-charcoal-800 transition-colors">
-                    Connect on WhatsApp
+                    +27 (0) 83 432 8394
                   </span>
                 </div>
               </a>
@@ -77,12 +78,12 @@ export function CTASection({ preselectedPillarId }: CTASectionProps) {
                 Single accountable partner
               </span>
             </div>
-          </div>
+          </ScrollFloatReveal>
 
           {/* Right Column: Contact Form */}
-          <div className="lg:col-span-7">
+          <ScrollFloatReveal direction="up" delay={150} className="lg:col-span-7">
             <ContactForm preselectedPillarId={preselectedPillarId} />
-          </div>
+          </ScrollFloatReveal>
         </div>
       </div>
     </section>

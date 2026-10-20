@@ -183,7 +183,16 @@ export function Footer() {
         {/* Bottom Bar: Copyright & AfriSMME Ecosystem */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-ivory-400">
           <p>
-            &copy; {currentYear} AfriSMME Hub. All rights reserved. Digital & Technology Partner — Scinovalities.
+            &copy; {currentYear} AfriSMME Hub. All rights reserved. Digital & Technology Partner —{' '}
+            <a
+              href="https://scinovalities.co.za/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-ivory-300 hover:text-bronze-300 transition-colors underline underline-offset-2 decoration-charcoal-700"
+            >
+              Scinovalities
+            </a>
+            .
           </p>
 
           <div className="flex flex-wrap items-center gap-4 sm:gap-6">

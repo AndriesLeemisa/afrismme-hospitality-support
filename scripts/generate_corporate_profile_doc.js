@@ -1284,7 +1284,7 @@ async function generateCorporateProfile() {
             <p class="body-text">
               Modern hospitality web platforms, interactive smart menus, AI guest messaging, Google local search optimization, and capacity yield modeling.
             </p>
-            <div style="font-size: 8pt; color: #8E95A5; font-family: 'JetBrains Mono', monospace;">scinovalities.com • Hospitality Tech</div>
+            <div style="font-size: 8pt; color: #8E95A5; font-family: 'JetBrains Mono', monospace;">scinovalities.co.za • Hospitality Tech</div>
           </div>
         </div>
 

@@ -273,7 +273,7 @@ export const SERVICE_PILLARS: ServicePillarData[] = [
     externalLinks: [
       {
         name: 'Scinovalities',
-        url: 'https://scinovalities.com/',
+        url: 'https://scinovalities.co.za/',
         label: 'Scinovalities Digital & AI Partner',
         description: 'Digital, AI, automation, website, and growth technology partner for the AfriSMME hospitality ecosystem.',
       },

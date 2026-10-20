@@ -8,6 +8,7 @@ import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/Button';
 import { CheckCircle2, RefreshCw, Send, Sparkles } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { ScrollFloatReveal } from '@/components/ui/ScrollFloatReveal';
 
 interface DigitalAssessmentToolProps {
   isModal?: boolean;
@@ -391,14 +392,18 @@ export function DigitalAssessmentTool({ isModal = false }: DigitalAssessmentTool
   return (
     <section id="audit-tool" className="py-20 sm:py-28 bg-charcoal-900 border-t border-charcoal-800 relative scroll-mt-20">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          badge="Venue Assessment"
-          title="Assess your venue's"
-          highlightedTitle="gaps and opportunities."
-          description="A quick diagnostic across physical comfort, terrace spaces, digital presence, and maintenance to unlock better guest experiences and revenue."
-          align="center"
-        />
-        {assessmentCard}
+        <ScrollFloatReveal direction="up" delay={30}>
+          <SectionHeading
+            badge="Venue Assessment"
+            title="Assess your venue's"
+            highlightedTitle="gaps and opportunities."
+            description="A quick diagnostic across physical comfort, terrace spaces, digital presence, and maintenance to unlock better guest experiences and revenue."
+            align="center"
+          />
+        </ScrollFloatReveal>
+        <ScrollFloatReveal direction="up" delay={120} hoverFloat>
+          {assessmentCard}
+        </ScrollFloatReveal>
       </div>
     </section>
   );

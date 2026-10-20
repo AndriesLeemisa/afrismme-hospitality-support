@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Globe, QrCode, Cpu, Search, MessageSquare, BarChart3, ArrowUpRight } from 'lucide-react';
+import { ScrollFloatReveal } from '@/components/ui/ScrollFloatReveal';
 
 const CAPABILITIES = [
   { icon: Globe, title: 'Websites & bookings' },
@@ -19,18 +20,24 @@ export function TechnologyPartnerSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Image */}
-          <div className="relative aspect-[4/3] rounded-sm overflow-hidden border border-charcoal-800 order-2 lg:order-1">
+          <ScrollFloatReveal
+            direction="up"
+            delay={80}
+            hoverFloat
+            className="relative aspect-[4/3] rounded-sm overflow-hidden border border-charcoal-800 order-2 lg:order-1 shadow-elevated-dark"
+          >
             <Image
               src="/images/hospitality_tech_ai.jpg"
               alt="Digital and AI systems for hospitality venues"
               fill
+              loading="lazy"
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
+              className="object-cover transition-transform duration-700 hover:scale-105"
             />
-          </div>
+          </ScrollFloatReveal>
 
           {/* Content */}
-          <div className="order-1 lg:order-2">
+          <ScrollFloatReveal direction="up" delay={160} className="order-1 lg:order-2">
             <span className="text-xs tracking-cinematic uppercase text-bronze-400 font-medium">
               Technology Partner
             </span>
@@ -52,15 +59,15 @@ export function TechnologyPartnerSection() {
             </ul>
 
             <a
-              href="https://scinovalities.com/"
+              href="https://scinovalities.co.za/"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 inline-flex items-center gap-2 text-sm text-bronze-300 hover:text-ivory-50 transition-colors"
+              className="mt-8 inline-flex items-center gap-2 text-sm text-bronze-300 hover:text-ivory-50 transition-colors group"
             >
-              Visit Scinovalities
-              <ArrowUpRight className="w-4 h-4" />
+              <span>Visit Scinovalities</span>
+              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
-          </div>
+          </ScrollFloatReveal>
         </div>
       </div>
     </section>

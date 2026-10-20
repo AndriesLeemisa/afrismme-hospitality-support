@@ -372,7 +372,7 @@ export function Hero({ onOpenAudit }: HeroProps) {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto">
         <div className="max-w-3xl lg:max-w-4xl">
           {/* Ecosystem Pillar Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-charcoal-950/80 backdrop-blur-md border border-bronze-500/30 text-[11px] font-mono uppercase tracking-wider text-bronze-300 mb-5 shadow-sm">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-charcoal-950/80 backdrop-blur-md border border-bronze-500/30 text-[11px] font-mono uppercase tracking-wider text-bronze-300 mb-5 shadow-sm animate-float-gentle">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
             <span>AfriSMME Hub • Restaurant & Hospitality Support Ecosystem</span>
           </div>
@@ -448,7 +448,7 @@ export function Hero({ onOpenAudit }: HeroProps) {
           ========================================================================= */}
       <div className="relative z-20 flex flex-col sm:flex-row items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-6 pb-2 gap-3">
         {/* Subtle Architectural Location Stamp */}
-        <div className="flex items-center gap-2.5 text-xs font-mono uppercase tracking-wider text-ivory-300/80 bg-charcoal-950/60 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/10 transition-opacity duration-300 shadow-sm">
+        <div className="flex items-center gap-2.5 text-xs font-mono uppercase tracking-wider text-ivory-300/80 bg-charcoal-950/60 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/10 transition-opacity duration-300 shadow-sm animate-float-slow">
           <span className="w-1.5 h-1.5 rounded-full bg-bronze-400 animate-pulse" />
           <span className="text-ivory-200 font-medium">{HERO_SLIDES[activeIndex].location}</span>
           <span className="text-white/30">•</span>

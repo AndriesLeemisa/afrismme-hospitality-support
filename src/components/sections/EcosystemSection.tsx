@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { ArrowUpRight, ArrowRight } from 'lucide-react';
-
+import { ScrollFloatReveal } from '@/components/ui/ScrollFloatReveal';
 
 const DIVISIONS = [
   {
@@ -33,7 +33,7 @@ const DIVISIONS = [
   {
     name: 'Scinovalities',
     category: 'Digital, AI & technology',
-    website: 'https://scinovalities.com/',
+    website: 'https://scinovalities.co.za/',
     featured: true,
   },
 ];
@@ -42,16 +42,18 @@ export function EcosystemSection() {
   return (
     <section id="ecosystem" className="py-20 sm:py-28 bg-ivory-100 border-t border-ivory-300 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          theme="light"
-          badge="The Ecosystem"
-          title="One ecosystem."
-          highlightedTitle="Specialist capabilities."
-          description="You deal with AfriSMME. We coordinate the right specialists behind the scenes."
-          align="center"
-        />
+        <ScrollFloatReveal direction="up" delay={30}>
+          <SectionHeading
+            theme="light"
+            badge="The Ecosystem"
+            title="One ecosystem."
+            highlightedTitle="Specialist capabilities."
+            description="You deal with AfriSMME. We coordinate the right specialists behind the scenes."
+            align="center"
+          />
+        </ScrollFloatReveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ivory-300 border border-ivory-300 rounded-sm overflow-hidden shadow-sm">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 mt-6">
           {DIVISIONS.map((div, idx) => {
             const inner = (
               <>
@@ -73,29 +75,40 @@ export function EcosystemSection() {
               </>
             );
 
-            const cls = 'group block bg-ivory-50 p-7 sm:p-8 hover:bg-white transition-colors';
+            const cls = 'group block bg-ivory-50 p-7 sm:p-8 rounded-sm border border-ivory-300 hover:border-bronze-500/60 float-card-shadow transition-all h-full';
 
-            return div.website ? (
-              <a key={div.name} href={div.website} target="_blank" rel="noopener noreferrer" className={cls}>
-                {inner}
-              </a>
-            ) : (
-              <div key={div.name} className={cls}>
-                {inner}
-              </div>
+            return (
+              <ScrollFloatReveal
+                key={div.name}
+                direction="up"
+                delay={idx * 70}
+                hoverFloat
+              >
+                {div.website ? (
+                  <a href={div.website} target="_blank" rel="noopener noreferrer" className={cls}>
+                    {inner}
+                  </a>
+                ) : (
+                  <div className={cls}>
+                    {inner}
+                  </div>
+                )}
+              </ScrollFloatReveal>
             );
           })}
         </div>
 
-        <div className="mt-8 text-center">
-          <Link
-            href="/about"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-charcoal-900 hover:text-bronze-700 transition-colors"
-          >
-            About AfriSMME Hub
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
+        <ScrollFloatReveal direction="up" delay={450}>
+          <div className="mt-8 text-center">
+            <Link
+              href="/about"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-charcoal-900 hover:text-bronze-700 transition-colors"
+            >
+              About AfriSMME Hub
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </ScrollFloatReveal>
       </div>
     </section>
   );

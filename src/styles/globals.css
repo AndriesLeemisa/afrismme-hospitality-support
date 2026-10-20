@@ -108,6 +108,20 @@
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
   }
+
+  .hover-float {
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .hover-float:hover {
+    transform: translateY(-6px);
+  }
+
+  .float-card-shadow {
+    box-shadow: 0 12px 30px -10px rgba(19, 42, 31, 0.08), 0 4px 12px -4px rgba(19, 42, 31, 0.04);
+  }
+  .float-card-shadow:hover {
+    box-shadow: 0 20px 40px -12px rgba(19, 42, 31, 0.16), 0 8px 18px -6px rgba(197, 168, 128, 0.18);
+  }
 }
 
 /* Reduced motion preference */
