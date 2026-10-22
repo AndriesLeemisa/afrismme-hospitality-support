@@ -25,19 +25,19 @@ export function Button({
   className,
   ...props
 }: ButtonProps) {
-  const baseStyles = 'inline-flex items-center justify-center font-medium transition-all duration-300 rounded-sm select-none focus:outline-none focus:ring-2 focus:ring-bronze-400 focus:ring-offset-2 focus:ring-offset-charcoal-950 active:scale-[0.98]';
+  const baseStyles = 'inline-flex items-center justify-center font-bold transition-all duration-300 rounded-sm select-none focus:outline-none focus:ring-2 focus:ring-bronze-400 focus:ring-offset-2 focus:ring-offset-charcoal-950 active:scale-[0.98]';
 
   const sizeStyles = {
-    sm: 'text-xs uppercase tracking-wider py-2.5 px-4 gap-2',
-    md: 'text-sm tracking-wide py-3.5 px-6 gap-2.5',
-    lg: 'text-sm sm:text-base tracking-wide py-4 px-8 gap-3 font-semibold',
+    sm: 'text-xs sm:text-sm uppercase tracking-wider py-2.5 px-4 gap-2',
+    md: 'text-sm sm:text-base tracking-wide py-3.5 px-6 gap-2.5',
+    lg: 'text-base sm:text-lg tracking-wide py-4 px-8 gap-3 font-extrabold',
   }[size];
 
   const variantStyles = {
-    primary: 'bg-bronze-500 hover:bg-bronze-400 text-charcoal-950 font-semibold shadow-subtle-dark hover:shadow-bronze-glow hover:-translate-y-0.5',
-    secondary: 'bg-charcoal-800/80 hover:bg-charcoal-700 text-ivory-100 border border-charcoal-700 hover:border-bronze-500/40 hover:-translate-y-0.5',
-    outline: 'bg-transparent border border-bronze-500/40 hover:border-bronze-400 text-bronze-300 hover:text-ivory-50 hover:bg-bronze-500/10',
-    ghost: 'bg-transparent hover:bg-charcoal-800/50 text-ivory-200 hover:text-ivory-50',
+    primary: 'bg-bronze-400 hover:bg-bronze-300 text-charcoal-950 font-extrabold shadow-subtle-dark hover:shadow-bronze-glow hover:-translate-y-0.5',
+    secondary: 'bg-charcoal-800 hover:bg-charcoal-750 text-white border-2 border-charcoal-600 hover:border-bronze-400 hover:-translate-y-0.5 font-bold',
+    outline: 'bg-transparent border-2 border-bronze-400 hover:border-bronze-300 text-bronze-300 hover:text-white hover:bg-bronze-400/15 font-bold',
+    ghost: 'bg-transparent hover:bg-charcoal-800/70 text-white hover:text-bronze-300 font-semibold',
   }[variant];
 
   const content = (

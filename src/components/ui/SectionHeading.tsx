@@ -38,10 +38,10 @@ export function SectionHeading({
         {pillarNumber && (
           <span
             className={cn(
-              'font-mono text-xs tracking-widest font-semibold px-2.5 py-1 rounded border',
+              'font-mono text-xs sm:text-sm tracking-widest font-bold px-3 py-1 rounded border-2',
               isLight
-                ? 'text-bronze-800 border-bronze-500/40 bg-bronze-200/50'
-                : 'text-bronze-400 border-bronze-500/30 bg-bronze-500/10'
+                ? 'text-bronze-800 border-bronze-600/50 bg-bronze-100'
+                : 'text-bronze-300 border-bronze-400/50 bg-bronze-400/15'
             )}
           >
             PILLAR {pillarNumber}
@@ -50,8 +50,8 @@ export function SectionHeading({
         {badge && (
           <span
             className={cn(
-              'text-xs tracking-cinematic uppercase font-semibold',
-              isLight ? 'text-bronze-700' : 'text-bronze-400'
+              'text-xs sm:text-sm tracking-widest uppercase font-extrabold',
+              isLight ? 'text-bronze-700' : 'text-bronze-300'
             )}
           >
             {badge}
@@ -61,16 +61,16 @@ export function SectionHeading({
 
       <h2
         className={cn(
-          'text-display-2 font-display font-medium tracking-tight leading-[1.08] text-balance',
-          isLight ? 'text-charcoal-950' : 'text-ivory-50'
+          'text-display-2 font-display font-extrabold tracking-tight leading-[1.12] text-balance',
+          isLight ? 'text-charcoal-950' : 'text-white'
         )}
       >
         {title}{' '}
         {highlightedTitle && (
           <span
             className={cn(
-              'italic font-light font-display',
-              isLight ? 'text-bronze-700' : 'text-gold-gradient'
+              'font-extrabold font-display',
+              isLight ? 'text-bronze-600' : 'text-bronze-300'
             )}
           >
             {highlightedTitle}
@@ -81,8 +81,8 @@ export function SectionHeading({
       {description && (
         <p
           className={cn(
-            'mt-5 text-lead font-normal leading-relaxed text-pretty max-w-2xl',
-            isLight ? 'text-charcoal-800/85' : 'text-ivory-300/85'
+            'mt-5 text-lead font-medium leading-relaxed text-pretty max-w-2xl',
+            isLight ? 'text-charcoal-800' : 'text-ivory-100'
           )}
         >
           {description}
@@ -91,7 +91,7 @@ export function SectionHeading({
 
       <div
         className={cn(
-          'w-16 h-0.5 bg-gradient-to-r from-bronze-500 to-transparent mt-6',
+          'w-20 h-1 bg-gradient-to-r from-bronze-500 to-transparent mt-6 rounded-full',
           align === 'center' ? 'mx-auto' : ''
         )}
       />

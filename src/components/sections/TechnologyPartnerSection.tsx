@@ -38,21 +38,21 @@ export function TechnologyPartnerSection() {
 
           {/* Content */}
           <ScrollFloatReveal direction="up" delay={160} className="order-1 lg:order-2">
-            <span className="text-xs tracking-cinematic uppercase text-bronze-400 font-medium">
+            <span className="text-xs sm:text-sm tracking-widest uppercase text-bronze-300 font-extrabold">
               Technology Partner
             </span>
-            <h2 className="mt-4 text-display-2 font-display font-medium tracking-tight text-ivory-50 leading-[1.08]">
+            <h2 className="mt-4 text-display-2 font-display font-extrabold tracking-tight text-white leading-[1.12]">
               Powered by{' '}
-              <span className="italic font-light text-gold-gradient">Scinovalities.</span>
+              <span className="font-extrabold text-bronze-300">Scinovalities.</span>
             </h2>
-            <p className="mt-5 text-lead text-ivory-300/85 leading-relaxed max-w-xl">
+            <p className="mt-5 text-lead font-medium text-ivory-100 leading-relaxed max-w-xl">
               Your digital presence should match the quality of your venue. Scinovalities delivers the technology side of the ecosystem.
             </p>
 
-            <ul className="mt-8 grid grid-cols-2 gap-x-6 gap-y-4">
+            <ul className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
               {CAPABILITIES.map(({ icon: Icon, title }) => (
-                <li key={title} className="flex items-center gap-3 text-sm text-ivory-200">
-                  <Icon className="w-4 h-4 text-bronze-400 shrink-0" />
+                <li key={title} className="flex items-center gap-3 text-base font-bold text-white">
+                  <Icon className="w-5 h-5 text-bronze-400 shrink-0" />
                   {title}
                 </li>
               ))}
@@ -62,10 +62,10 @@ export function TechnologyPartnerSection() {
               href="https://scinovalities.co.za/"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 inline-flex items-center gap-2 text-sm text-bronze-300 hover:text-ivory-50 transition-colors group"
+              className="mt-8 inline-flex items-center gap-2 text-base font-bold text-bronze-300 hover:text-white transition-colors group"
             >
               <span>Visit Scinovalities</span>
-              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              <ArrowUpRight className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
           </ScrollFloatReveal>
         </div>

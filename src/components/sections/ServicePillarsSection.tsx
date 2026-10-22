@@ -66,7 +66,7 @@ export function ServicePillarsSection({ onRequestQuote }: ServicePillarsSectionP
 
         {/* Pillar tabs */}
         <ScrollFloatReveal direction="up" delay={90}>
-          <div className="grid grid-cols-3 lg:grid-cols-6 gap-2 mb-8" role="tablist">
+          <div className="grid grid-cols-3 lg:grid-cols-6 gap-2.5 mb-8" role="tablist">
             {SERVICE_PILLARS.map((pillar) => {
               const isActive = pillar.id === activeTabId;
               return (
@@ -77,10 +77,10 @@ export function ServicePillarsSection({ onRequestQuote }: ServicePillarsSectionP
                   aria-selected={isActive}
                   onClick={() => handleSelectPillar(pillar.id)}
                   className={cn(
-                    'flex items-center justify-center gap-2 py-3 px-2 rounded-sm border text-xs sm:text-sm font-mono tracking-wider transition-all duration-300 focus:outline-none focus:ring-1 focus:ring-bronze-400 hover:-translate-y-0.5',
+                    'flex items-center justify-center gap-2 py-3.5 px-3 rounded-sm border-2 text-sm sm:text-base font-mono tracking-wider transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-bronze-400 hover:-translate-y-0.5',
                     isActive
-                      ? 'bg-bronze-500 border-bronze-500 text-charcoal-950 font-bold shadow-bronze-glow'
-                      : 'bg-charcoal-950/60 border-charcoal-800 text-ivory-300 hover:text-ivory-50 hover:border-charcoal-700'
+                      ? 'bg-bronze-400 border-bronze-400 text-charcoal-950 font-extrabold shadow-bronze-glow'
+                      : 'bg-charcoal-950 border-charcoal-700 text-white font-bold hover:text-bronze-300 hover:border-bronze-400/60'
                   )}
                 >
                   <span className="hidden sm:inline">{pillarIcons[pillar.iconName]}</span>
@@ -93,8 +93,8 @@ export function ServicePillarsSection({ onRequestQuote }: ServicePillarsSectionP
 
         {/* Active pillar with floating presentation */}
         <ScrollFloatReveal direction="up" delay={160} hoverFloat>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-sm overflow-hidden border border-charcoal-800 bg-charcoal-950 shadow-elevated-dark">
-            <div className="relative aspect-[4/3] lg:aspect-auto lg:min-h-[420px]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-sm overflow-hidden border-2 border-charcoal-700 bg-charcoal-950 shadow-elevated-dark">
+            <div className="relative aspect-[4/3] lg:aspect-auto lg:min-h-[440px]">
               <Image
                 src={activePillar.image}
                 alt={activePillar.imageAlt}
@@ -106,18 +106,18 @@ export function ServicePillarsSection({ onRequestQuote }: ServicePillarsSectionP
             </div>
 
             <div className="p-8 sm:p-10 lg:p-12 flex flex-col justify-center">
-              <span className="text-xs font-mono tracking-widest text-bronze-400">
+              <span className="text-sm font-mono font-bold tracking-widest text-bronze-300">
                 {activePillar.pillarNumber} — {activePillar.name}
               </span>
-              <h3 className="mt-3 font-display text-2xl sm:text-3xl font-semibold text-ivory-50 leading-snug">
+              <h3 className="mt-3 font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white leading-snug">
                 {activePillar.tagline}
               </h3>
-              <p className="mt-3 text-base text-ivory-300 leading-relaxed">{activePillar.description}</p>
+              <p className="mt-4 text-base sm:text-lg font-medium text-ivory-100 leading-relaxed">{activePillar.description}</p>
 
-              <ul className="mt-6 space-y-2.5">
+              <ul className="mt-6 space-y-3">
                 {activePillar.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-2.5 text-sm text-ivory-200">
-                    <Check className="w-4 h-4 text-bronze-400 shrink-0 mt-0.5" />
+                  <li key={feature} className="flex items-start gap-3 text-base font-medium text-white">
+                    <Check className="w-5 h-5 text-bronze-400 shrink-0 mt-0.5" />
                     <span>{feature}</span>
                   </li>
                 ))}

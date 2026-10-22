@@ -88,29 +88,29 @@ export default function AboutPage() {
 
       <main className="flex-1">
         {/* Editorial Header */}
-        <section className="pt-36 sm:pt-44 pb-20 sm:pb-24 bg-charcoal-900 border-b border-charcoal-800 text-ivory-100">
+        <section className="pt-36 sm:pt-44 pb-20 sm:pb-24 bg-charcoal-950 border-b-2 border-charcoal-800 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center gap-2 text-xs font-mono text-ivory-300 mb-6">
+            <div className="flex items-center gap-2 text-xs sm:text-sm font-mono font-bold text-ivory-200 mb-6">
               <Link href="/" className="hover:text-bronze-300 transition-colors">
                 Home
               </Link>
-              <ChevronRight className="w-3.5 h-3.5 text-charcoal-500" />
-              <span className="text-bronze-300 font-semibold uppercase tracking-wider">
+              <ChevronRight className="w-4 h-4 text-charcoal-500" />
+              <span className="text-bronze-300 font-bold uppercase tracking-wider">
                 About AfriSMME Hub
               </span>
             </div>
 
             <div className="max-w-3xl">
-              <span className="text-xs font-mono tracking-widest uppercase text-bronze-300 font-semibold block mb-4">
+              <span className="text-xs sm:text-sm font-mono tracking-widest uppercase text-bronze-300 font-extrabold block mb-4">
                 From Supplier to Strategic Support Partner
               </span>
 
-              <h1 className="text-4xl sm:text-6xl font-display font-medium text-ivory-50 tracking-tight leading-[1.08] mb-6">
+              <h1 className="text-4xl sm:text-6xl font-display font-extrabold text-white tracking-tight leading-[1.08] mb-6">
                 One integrated ecosystem for{' '}
-                <span className="italic font-light text-gold-gradient">hospitality excellence.</span>
+                <span className="font-extrabold text-bronze-300">hospitality excellence.</span>
               </h1>
 
-              <p className="text-lg sm:text-xl text-ivory-200/90 leading-relaxed font-normal mb-8">
+              <p className="text-lg sm:text-xl text-ivory-100 leading-relaxed font-medium mb-8">
                 AfriSMME Hub helps restaurants and hospitality venues identify, solve, maintain, and improve the physical, operational, digital, and compliance aspects of their business through one coordinated partnership.
               </p>
 
@@ -156,12 +156,12 @@ export default function AboutPage() {
                   delay={idx * 80}
                   hoverFloat
                 >
-                  <div className="p-8 rounded-sm bg-ivory-50 border border-ivory-300 shadow-sm float-card-shadow transition-all h-full">
-                    <div className="w-10 h-10 rounded-sm bg-charcoal-900 flex items-center justify-center text-bronze-300 mb-6">
-                      <Icon className="w-5 h-5" />
+                  <div className="p-8 rounded-sm bg-white border-2 border-ivory-300 shadow-sm float-card-shadow transition-all h-full">
+                    <div className="w-12 h-12 rounded-sm bg-charcoal-950 flex items-center justify-center text-bronze-300 mb-6">
+                      <Icon className="w-6 h-6" />
                     </div>
-                    <h3 className="font-display text-xl font-semibold text-charcoal-950 mb-3">{title}</h3>
-                    <p className="text-sm text-charcoal-800 leading-relaxed font-normal">{description}</p>
+                    <h3 className="font-display text-2xl font-extrabold text-charcoal-950 mb-3">{title}</h3>
+                    <p className="text-base text-charcoal-800 leading-relaxed font-medium">{description}</p>
                   </div>
                 </ScrollFloatReveal>
               ))}
@@ -191,9 +191,9 @@ export default function AboutPage() {
                   delay={idx * 75}
                   hoverFloat
                 >
-                  <div className="rounded-sm bg-ivory-50 border border-ivory-300 overflow-hidden flex flex-col justify-between group hover:border-bronze-500 float-card-shadow transition-all shadow-sm h-full">
+                  <div className="rounded-sm bg-white border-2 border-ivory-300 overflow-hidden flex flex-col justify-between group hover:border-bronze-500 float-card-shadow transition-all shadow-sm h-full">
                     <div>
-                      <div className="relative aspect-[16/10] bg-charcoal-900">
+                      <div className="relative aspect-[16/10] bg-charcoal-950">
                         <Image
                           src={div.image}
                           alt={div.name}
@@ -202,31 +202,31 @@ export default function AboutPage() {
                           sizes="(max-width: 1024px) 100vw, 33vw"
                           className="object-cover transition-transform duration-700 group-hover:scale-105"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/60 via-transparent to-transparent" />
-                        <span className="absolute top-3 left-3 text-[10px] font-mono text-bronze-300 font-semibold px-2 py-0.5 rounded bg-charcoal-900/90 border border-bronze-500/30">
+                        <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/75 via-transparent to-transparent" />
+                        <span className="absolute top-3 left-3 text-xs font-mono text-bronze-300 font-bold px-2.5 py-1 rounded bg-charcoal-950/95 border border-bronze-400/50">
                           DIVISION {div.number}
                         </span>
                       </div>
 
-                      <div className="p-6">
-                        <span className="text-[11px] font-mono text-bronze-700 font-semibold uppercase tracking-wider block mb-1">
+                      <div className="p-6 sm:p-7">
+                        <span className="text-xs font-mono text-bronze-700 font-extrabold uppercase tracking-wider block mb-1.5">
                           {div.role}
                         </span>
-                        <h3 className="font-display text-2xl font-semibold text-charcoal-950 mb-3">{div.name}</h3>
-                        <p className="text-sm text-charcoal-800 leading-relaxed">{div.description}</p>
+                        <h3 className="font-display text-2xl font-extrabold text-charcoal-950 mb-3">{div.name}</h3>
+                        <p className="text-base font-medium text-charcoal-800 leading-relaxed">{div.description}</p>
                       </div>
                     </div>
 
                     {div.website && (
-                      <div className="px-6 pb-6 pt-3 border-t border-ivory-300 mt-auto">
+                      <div className="px-6 sm:px-7 pb-6 pt-3.5 border-t border-ivory-300 mt-auto">
                         <a
                           href={div.website}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-charcoal-900 hover:text-bronze-700 transition-colors"
+                          className="inline-flex items-center gap-2 text-sm font-mono font-bold text-charcoal-950 hover:text-bronze-600 transition-colors"
                         >
                           <span>Visit Specialist Portal</span>
-                          <ArrowUpRight className="w-3.5 h-3.5" />
+                          <ArrowUpRight className="w-4 h-4" />
                         </a>
                       </div>
                     )}
@@ -238,15 +238,15 @@ export default function AboutPage() {
         </section>
 
         {/* Operational Footprint & Final CTA */}
-        <section className="py-20 sm:py-24 bg-charcoal-900 text-ivory-100">
+        <section className="py-20 sm:py-24 bg-charcoal-950 text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <span className="text-xs font-mono tracking-widest uppercase text-bronze-400 font-semibold block mb-3">
+            <span className="text-xs sm:text-sm font-mono tracking-widest uppercase text-bronze-300 font-extrabold block mb-3">
               National Presence
             </span>
-            <h2 className="text-3xl sm:text-4xl font-display font-medium text-ivory-50 mb-4">
+            <h2 className="text-3xl sm:text-5xl font-display font-extrabold text-white mb-4">
               Supporting venues across South Africa.
             </h2>
-            <p className="text-sm sm:text-base text-ivory-300 mb-8 max-w-xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg font-medium text-ivory-100 mb-8 max-w-xl mx-auto leading-relaxed">
               Active operations in Johannesburg, Sandton, Cape Town, the Atlantic Seaboard, Pretoria, Durban, Umhlanga, and the Cape Winelands.
             </p>
 
@@ -261,7 +261,7 @@ export default function AboutPage() {
               </Button>
               <Link
                 href="/#contact"
-                className="text-xs uppercase tracking-wider font-semibold py-3 px-6 rounded-sm bg-charcoal-800 text-ivory-100 hover:text-bronze-300 hover:bg-charcoal-700 transition-colors"
+                className="text-sm uppercase tracking-wider font-bold py-3.5 px-7 rounded-sm bg-charcoal-800 border-2 border-charcoal-600 text-white hover:text-bronze-300 hover:border-bronze-400 transition-colors"
               >
                 Direct Inquiry
               </Link>

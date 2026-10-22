@@ -335,35 +335,35 @@ export function Hero({ onOpenAudit }: HeroProps) {
               fill
               priority={idx < 2}
               sizes="100vw"
-              className="object-cover object-center filter brightness-[0.88] contrast-[1.02]"
+              className="object-cover object-center filter brightness-[0.78] contrast-[1.05]"
             />
           </div>
         ))}
 
-        {/* Directional scrim: maintains typography clarity on the left while keeping the photography bright and unobstructed */}
-        <div className="absolute inset-0 bg-gradient-to-r from-charcoal-950/90 via-charcoal-950/50 to-transparent w-full md:w-[60%] pointer-events-none" />
+        {/* Directional scrim: guarantees crisp high-contrast typography readability across all slides */}
+        <div className="absolute inset-0 bg-gradient-to-r from-charcoal-950/95 via-charcoal-950/80 to-charcoal-950/35 w-full pointer-events-none" />
 
         {/* Soft bottom edge transition */}
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-charcoal-950 to-transparent pointer-events-none" />
+        <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-charcoal-950 to-transparent pointer-events-none" />
 
         {/* Soft top edge transition for navbar */}
-        <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-charcoal-950/70 to-transparent pointer-events-none" />
+        <div className="absolute top-0 left-0 right-0 h-28 bg-gradient-to-b from-charcoal-950/85 to-transparent pointer-events-none" />
       </div>
 
       {/* Floating Side Navigation Chevrons (Subtle, appear on hover, zero clutter) */}
       <button
         onClick={prevSlide}
         aria-label="Previous slide"
-        className="hidden md:flex absolute left-4 lg:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full items-center justify-center bg-charcoal-950/40 hover:bg-charcoal-950/80 text-ivory-300 hover:text-white backdrop-blur-sm border border-white/10 transition-all opacity-0 group-hover:opacity-100"
+        className="hidden md:flex absolute left-4 lg:left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full items-center justify-center bg-charcoal-950/75 hover:bg-charcoal-950 text-white backdrop-blur-sm border border-white/20 transition-all opacity-0 group-hover:opacity-100"
       >
-        <ChevronLeft className="w-5 h-5" />
+        <ChevronLeft className="w-6 h-6" />
       </button>
       <button
         onClick={nextSlide}
         aria-label="Next slide"
-        className="hidden md:flex absolute right-4 lg:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full items-center justify-center bg-charcoal-950/40 hover:bg-charcoal-950/80 text-ivory-300 hover:text-white backdrop-blur-sm border border-white/10 transition-all opacity-0 group-hover:opacity-100"
+        className="hidden md:flex absolute right-4 lg:right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full items-center justify-center bg-charcoal-950/75 hover:bg-charcoal-950 text-white backdrop-blur-sm border border-white/20 transition-all opacity-0 group-hover:opacity-100"
       >
-        <ChevronRight className="w-5 h-5" />
+        <ChevronRight className="w-6 h-6" />
       </button>
 
       {/* =========================================================================
@@ -372,29 +372,29 @@ export function Hero({ onOpenAudit }: HeroProps) {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto">
         <div className="max-w-3xl lg:max-w-4xl">
           {/* Ecosystem Pillar Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-charcoal-950/80 backdrop-blur-md border border-bronze-500/30 text-[11px] font-mono uppercase tracking-wider text-bronze-300 mb-5 shadow-sm animate-float-gentle">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-charcoal-950/90 backdrop-blur-md border-2 border-bronze-400/50 text-xs sm:text-sm font-mono font-bold uppercase tracking-wider text-bronze-300 mb-6 shadow-md animate-float-gentle">
+            <span className="w-2 h-2 rounded-full bg-emerald-400" />
             <span>AfriSMME Hub • Restaurant & Hospitality Support Ecosystem</span>
           </div>
 
           {/* Master Headline: Fluid Scale with Real-Time Live Writing for Each Image */}
           <h1
             ref={headlineRef}
-            className="text-display-1 font-display font-medium text-ivory-50 tracking-tight leading-[1.04] mb-5 sm:mb-6"
+            className="text-display-1 font-display font-extrabold text-white tracking-tight leading-[1.08] mb-6 drop-shadow-md"
           >
-            <span className="block min-h-[1.1em] text-emerald-400">
+            <span className="block min-h-[1.1em] text-white">
               {line1Typed}
-              {/* Real-time Blinking Emerald Cursor while Line 1 is typing */}
+              {/* Real-time Blinking Cursor while Line 1 is typing */}
               {isLine1Typing && (
-                <span className="inline-block w-[3px] md:w-[4px] lg:w-[5px] h-[0.85em] bg-emerald-400 ml-2 align-baseline shadow-[0_0_12px_#34d399] animate-pulse" />
+                <span className="inline-block w-[3px] md:w-[4px] lg:w-[5px] h-[0.85em] bg-bronze-400 ml-2 align-baseline shadow-[0_0_12px_#f59e0b] animate-pulse" />
               )}
             </span>
-            <span className="block mt-1 sm:mt-2 italic font-light text-gold-gradient min-h-[2.2em] sm:min-h-[1.15em]">
+            <span className="block mt-2 font-extrabold text-bronze-300 min-h-[2.2em] sm:min-h-[1.15em]">
               {line2Typed}
               {/* Real-time Blinking Bronze Cursor on Line 2 */}
               {!isLine1Typing && (
                 <span
-                  className={`inline-block w-[3px] md:w-[4px] lg:w-[5px] h-[0.85em] bg-bronze-400 ml-2 align-baseline shadow-[0_0_12px_#c5a880] transition-opacity duration-300 ${
+                  className={`inline-block w-[3px] md:w-[4px] lg:w-[5px] h-[0.85em] bg-bronze-400 ml-2 align-baseline shadow-[0_0_12px_#f59e0b] transition-opacity duration-300 ${
                     isTypingDone ? 'animate-pulse opacity-75' : 'opacity-100'
                   }`}
                 />
@@ -403,19 +403,19 @@ export function Hero({ onOpenAudit }: HeroProps) {
           </h1>
 
           {/* Core Strategic Narrative Subtitle */}
-          <p className="text-base sm:text-lg lg:text-xl text-ivory-200/90 font-normal leading-relaxed mb-8 max-w-2xl text-pretty">
+          <p className="text-lg sm:text-xl lg:text-2xl text-white font-medium leading-relaxed mb-8 max-w-2xl text-pretty drop-shadow-sm">
             We help restaurants, lodges, and hospitality venues improve their guest experience, physical spaces, operations, and technology through one coordinated ecosystem.
           </p>
 
           {/* High-Impact Action Buttons */}
-          <div ref={ctaRef} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4">
+          <div ref={ctaRef} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
             {onOpenAudit ? (
               <Button
                 variant="primary"
                 size="lg"
                 onClick={onOpenAudit}
                 withArrow
-                className="text-center shadow-lg shadow-bronze-500/10"
+                className="text-center shadow-lg shadow-bronze-500/20"
               >
                 Assess Your Venue
               </Button>
@@ -425,7 +425,7 @@ export function Hero({ onOpenAudit }: HeroProps) {
                 variant="primary"
                 size="lg"
                 withArrow
-                className="text-center shadow-lg shadow-bronze-500/10"
+                className="text-center shadow-lg shadow-bronze-500/20"
               >
                 Assess Your Venue
               </Button>
@@ -448,11 +448,11 @@ export function Hero({ onOpenAudit }: HeroProps) {
           ========================================================================= */}
       <div className="relative z-20 flex flex-col sm:flex-row items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-6 pb-2 gap-3">
         {/* Subtle Architectural Location Stamp */}
-        <div className="flex items-center gap-2.5 text-xs font-mono uppercase tracking-wider text-ivory-300/80 bg-charcoal-950/60 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/10 transition-opacity duration-300 shadow-sm animate-float-slow">
-          <span className="w-1.5 h-1.5 rounded-full bg-bronze-400 animate-pulse" />
-          <span className="text-ivory-200 font-medium">{HERO_SLIDES[activeIndex].location}</span>
-          <span className="text-white/30">•</span>
-          <span className="text-bronze-300/90 hidden md:inline">{HERO_SLIDES[activeIndex].category}</span>
+        <div className="flex items-center gap-2.5 text-xs sm:text-sm font-mono uppercase tracking-wider text-white bg-charcoal-950/90 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 transition-opacity duration-300 shadow-md animate-float-slow">
+          <span className="w-2 h-2 rounded-full bg-bronze-400 animate-pulse" />
+          <span className="text-white font-bold">{HERO_SLIDES[activeIndex].location}</span>
+          <span className="text-white/50">•</span>
+          <span className="text-bronze-300 font-bold hidden md:inline">{HERO_SLIDES[activeIndex].category}</span>
         </div>
 
         {/* 17 Slide Navigation Indicators */}

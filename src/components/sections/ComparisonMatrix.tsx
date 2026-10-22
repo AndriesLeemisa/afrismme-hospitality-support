@@ -55,30 +55,30 @@ export function ComparisonMatrix() {
 
         {/* Desktop Comparison Table */}
         <ScrollFloatReveal direction="up" delay={120} hoverFloat>
-          <div className="hidden md:block rounded-sm border border-ivory-300 bg-ivory-50 overflow-hidden shadow-sm float-card-shadow">
+          <div className="hidden md:block rounded-sm border-2 border-ivory-300 bg-white overflow-hidden shadow-md float-card-shadow">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="border-b border-ivory-300 text-xs font-mono tracking-wider text-charcoal-800 uppercase bg-ivory-100">
+                <tr className="border-b-2 border-ivory-300 text-xs sm:text-sm font-mono font-bold tracking-wider text-charcoal-950 uppercase bg-ivory-200">
                   <th className="py-4 px-6 w-1/4">Operational Area</th>
-                  <th className="py-4 px-6 w-3/8 text-charcoal-700">Traditional Fragmented Contractors</th>
-                  <th className="py-4 px-6 w-3/8 text-ivory-50 bg-charcoal-900 border-l border-charcoal-800">
+                  <th className="py-4 px-6 w-3/8 text-charcoal-900">Traditional Fragmented Contractors</th>
+                  <th className="py-4 px-6 w-3/8 text-white bg-charcoal-950 border-l border-charcoal-800">
                     AfriSMME Coordinated Ecosystem
                   </th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-ivory-300 text-sm">
+              <tbody className="divide-y divide-ivory-300 text-base">
                 {COMPARISON_ROWS.map((row) => (
-                  <tr key={row.area} className="hover:bg-ivory-100/70 transition-colors">
-                    <td className="py-4 px-6 font-display font-semibold text-charcoal-950">{row.area}</td>
-                    <td className="py-4 px-6 text-charcoal-700">
-                      <div className="flex items-start gap-2.5">
-                        <XCircle className="w-4 h-4 text-red-600/80 shrink-0 mt-0.5" />
+                  <tr key={row.area} className="hover:bg-ivory-100 transition-colors">
+                    <td className="py-5 px-6 font-display font-extrabold text-charcoal-950 text-base sm:text-lg">{row.area}</td>
+                    <td className="py-5 px-6 text-charcoal-800 font-medium">
+                      <div className="flex items-start gap-3">
+                        <XCircle className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
                         <span>{row.traditional}</span>
                       </div>
                     </td>
-                    <td className="py-4 px-6 text-charcoal-950 bg-bronze-100/60 border-l border-bronze-300 font-medium">
-                      <div className="flex items-start gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-charcoal-800 shrink-0 mt-0.5" />
+                    <td className="py-5 px-6 text-charcoal-950 bg-bronze-50 border-l-2 border-bronze-400 font-bold">
+                      <div className="flex items-start gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-emerald-700 shrink-0 mt-0.5" />
                         <span>{row.afrismme}</span>
                       </div>
                     </td>
@@ -90,24 +90,24 @@ export function ComparisonMatrix() {
         </ScrollFloatReveal>
 
         {/* Mobile Cards */}
-        <div className="md:hidden space-y-3 mt-4">
+        <div className="md:hidden space-y-4 mt-4">
           {COMPARISON_ROWS.map((row, idx) => (
             <ScrollFloatReveal
               key={row.area}
               direction="up"
               delay={idx * 60}
               hoverFloat
-              className="p-5 rounded-sm bg-ivory-50 border border-ivory-300 space-y-3 shadow-sm float-card-shadow"
+              className="p-6 rounded-sm bg-white border-2 border-ivory-300 space-y-3 shadow-sm float-card-shadow"
             >
-              <h3 className="font-display text-base font-semibold text-charcoal-950 pb-2 border-b border-ivory-300">
+              <h3 className="font-display text-lg font-extrabold text-charcoal-950 pb-2 border-b border-ivory-300">
                 {row.area}
               </h3>
-              <div className="flex items-start gap-2 text-xs text-charcoal-700">
-                <XCircle className="w-3.5 h-3.5 text-red-600/80 shrink-0 mt-0.5" />
+              <div className="flex items-start gap-2.5 text-sm font-medium text-charcoal-800">
+                <XCircle className="w-4 h-4 text-red-600 shrink-0 mt-0.5" />
                 <span>{row.traditional}</span>
               </div>
-              <div className="flex items-start gap-2 text-xs text-charcoal-950 font-medium pt-1">
-                <CheckCircle2 className="w-3.5 h-3.5 text-charcoal-800 shrink-0 mt-0.5" />
+              <div className="flex items-start gap-2.5 text-sm text-charcoal-950 font-bold pt-1">
+                <CheckCircle2 className="w-4 h-4 text-emerald-700 shrink-0 mt-0.5" />
                 <span>{row.afrismme}</span>
               </div>
             </ScrollFloatReveal>

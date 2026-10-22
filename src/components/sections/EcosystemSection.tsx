@@ -53,29 +53,29 @@ export function EcosystemSection() {
           />
         </ScrollFloatReveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 mt-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
           {DIVISIONS.map((div, idx) => {
             const inner = (
               <>
                 <div className="flex items-start justify-between">
-                  <span className="text-xs font-mono font-semibold text-bronze-700">0{idx + 1}</span>
+                  <span className="text-sm font-mono font-extrabold text-bronze-600">0{idx + 1}</span>
                   {div.website && (
-                    <ArrowUpRight className="w-4 h-4 text-charcoal-600 group-hover:text-bronze-700 transition-colors" />
+                    <ArrowUpRight className="w-5 h-5 text-charcoal-700 group-hover:text-bronze-600 transition-colors" />
                   )}
                 </div>
-                <h3 className="mt-6 font-display text-2xl font-semibold text-charcoal-950 group-hover:text-charcoal-800 transition-colors">
+                <h3 className="mt-5 font-display text-2xl font-extrabold text-charcoal-950 group-hover:text-bronze-700 transition-colors">
                   {div.name}
                 </h3>
-                <p className="mt-1 text-sm text-charcoal-700">{div.category}</p>
+                <p className="mt-1.5 text-base font-medium text-charcoal-800">{div.category}</p>
                 {div.featured && (
-                  <span className="mt-4 inline-block text-[10px] font-mono uppercase tracking-wider text-charcoal-900 bg-bronze-200/70 border border-bronze-500/40 rounded px-2 py-0.5 font-semibold">
+                  <span className="mt-4 inline-block text-xs font-mono uppercase tracking-wider text-charcoal-950 bg-bronze-200 border border-bronze-500 rounded px-2.5 py-1 font-bold">
                     Technology Partner
                   </span>
                 )}
               </>
             );
 
-            const cls = 'group block bg-ivory-50 p-7 sm:p-8 rounded-sm border border-ivory-300 hover:border-bronze-500/60 float-card-shadow transition-all h-full';
+            const cls = 'group block bg-white p-7 sm:p-8 rounded-sm border-2 border-ivory-300 hover:border-bronze-500 float-card-shadow transition-all h-full';
 
             return (
               <ScrollFloatReveal
@@ -102,10 +102,10 @@ export function EcosystemSection() {
           <div className="mt-8 text-center">
             <Link
               href="/about"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-charcoal-900 hover:text-bronze-700 transition-colors"
+              className="inline-flex items-center gap-2 text-base font-extrabold text-charcoal-950 hover:text-bronze-600 transition-colors"
             >
               About AfriSMME Hub
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
         </ScrollFloatReveal>

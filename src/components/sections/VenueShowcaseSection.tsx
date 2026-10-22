@@ -37,7 +37,7 @@ export function VenueShowcaseSection() {
               hoverFloat
               className="rounded-sm overflow-hidden float-card-shadow"
             >
-              <div className="group relative aspect-[4/3] rounded-sm overflow-hidden shadow-sm border border-ivory-300">
+              <div className="group relative aspect-[4/3] rounded-sm overflow-hidden shadow-md border-2 border-ivory-300">
                 <Image
                   src={venue.image}
                   alt={venue.title}
@@ -46,8 +46,8 @@ export function VenueShowcaseSection() {
                   sizes="(max-width: 1024px) 50vw, 33vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-108"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/90 via-charcoal-950/20 to-transparent transition-opacity duration-500 group-hover:opacity-90" />
-                <h3 className="absolute bottom-4 left-4 right-4 font-display text-lg sm:text-xl font-semibold text-ivory-50 tracking-tight">
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/95 via-charcoal-950/40 to-transparent transition-opacity duration-500 group-hover:opacity-95" />
+                <h3 className="absolute bottom-4 left-4 right-4 font-display text-xl sm:text-2xl font-extrabold text-white tracking-tight drop-shadow-md">
                   {venue.title}
                 </h3>
               </div>

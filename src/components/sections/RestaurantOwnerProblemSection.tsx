@@ -46,7 +46,7 @@ export function RestaurantOwnerProblemSection({ onOpenAudit }: RestaurantOwnerPr
 
           {/* Pain points */}
           <div className="lg:col-span-7">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {CHALLENGES.map(({ icon: Icon, title }, idx) => (
                 <ScrollFloatReveal
                   key={title}
@@ -54,18 +54,18 @@ export function RestaurantOwnerProblemSection({ onOpenAudit }: RestaurantOwnerPr
                   delay={idx * 65}
                   hoverFloat
                 >
-                  <div className="flex items-center gap-4 p-5 rounded-sm bg-ivory-50 border border-ivory-300 hover:border-bronze-500/60 shadow-sm float-card-shadow transition-all">
-                    <div className="w-10 h-10 rounded-sm bg-charcoal-900 text-bronze-300 flex items-center justify-center shrink-0">
-                      <Icon className="w-5 h-5" />
+                  <div className="flex items-center gap-4 p-5 sm:p-6 rounded-sm bg-white border-2 border-ivory-300 hover:border-bronze-500 shadow-sm float-card-shadow transition-all">
+                    <div className="w-12 h-12 rounded-sm bg-charcoal-950 text-bronze-300 flex items-center justify-center shrink-0">
+                      <Icon className="w-6 h-6" />
                     </div>
-                    <span className="font-display text-base sm:text-lg font-medium text-charcoal-950">{title}</span>
+                    <span className="font-display text-lg sm:text-xl font-bold text-charcoal-950">{title}</span>
                   </div>
                 </ScrollFloatReveal>
               ))}
             </div>
 
             <ScrollFloatReveal direction="up" delay={380}>
-              <p className="mt-6 pl-4 border-l-2 border-bronze-600 font-display text-lg sm:text-xl italic text-charcoal-900">
+              <p className="mt-7 pl-4 border-l-4 border-bronze-600 font-display text-xl sm:text-2xl font-bold text-charcoal-950">
                 Call us. We assess the business, identify the gaps and coordinate the solutions.
               </p>
             </ScrollFloatReveal>

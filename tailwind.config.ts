@@ -10,60 +10,70 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'warm-ivory': '#FAF8F5',
+        'warm-ivory': '#FFFFFF',
         charcoal: {
-          950: '#132A1F', // Deep Cypress Forest Green (replaces pitch black)
-          900: '#1B3B2B', // Signature Botanical Forest Green
-          850: '#214634', // Elevated Botanical Green
-          800: '#28523E', // Rich Emerald Slate
-          750: '#316149',
-          700: '#3C7257',
-          600: '#52876C',
-          500: '#74A089',
-          400: '#9BBAA9',
-          300: '#C2D6CB',
+          950: '#0B1120', // Deep Midnight Navy-Slate (Rich high-contrast dark surface & primary ink)
+          900: '#0F172A', // Oxford Slate (Elevated dark section & ultra-crisp dark text)
+          850: '#172033', // Elevated Navy Card surface
+          800: '#1E293B', // Strong Dark Slate (High-contrast body text on light & borders on dark)
+          750: '#283548',
+          700: '#334155', // Clear Slate (Readable secondary text on light & borders on dark)
+          600: '#475569',
+          500: '#64748B',
+          400: '#CBD5E1', // Crisp Light Silver (High visibility on dark backgrounds)
+          300: '#E2E8F0', // Bright Ice Silver (High contrast body text on dark backgrounds)
+          200: '#F1F5F9', // Near-white for dark-surface text
         },
         ivory: {
-          50: '#FCFBF9',
-          100: '#FAF8F5', // Warm Architectural Ivory
-          200: '#F3EDE2', // Warm Architectural Sand
-          300: '#E5DEC9',
-          400: '#C8BDA8',
-          500: '#9A8F7E',
+          50: '#FFFFFF',  // Pure Crisp White
+          100: '#F8FAFC', // Bright Architectural Alabaster
+          200: '#F1F5F9', // Clean Soft Pearl (Light alternating section & bright text on dark)
+          300: '#E2E8F0', // Crisp Light Border & Bright Readable Text on Dark
+          400: '#CBD5E1', // High-Visibility Silver Text on Dark
+          500: '#94A3B8',
         },
         bronze: {
-          100: '#F8F3EA',
-          200: '#EFE5D2',
-          300: '#E2CDAA',
-          400: '#D4B886',
-          500: '#C5A880', // Signature Champagne Bronze
-          600: '#A98754',
-          700: '#87693B',
-          800: '#644B27',
-          900: '#433119',
+          50: '#FFFBEB',
+          100: '#FEF3C7',
+          200: '#FDE68A',
+          300: '#FCD34D', // Luminous Bright Gold (High visibility on dark backgrounds)
+          400: '#F59E0B', // Vibrant Warm Amber Gold
+          500: '#D97706', // Rich Amber Gold (Primary CTA & Accents)
+          600: '#B45309', // Deep Burnished Amber (High contrast on light backgrounds)
+          700: '#92400E', // Deep Copper Bronze (WCAG AAA on light backgrounds)
+          800: '#78350F',
+          900: '#451A03',
         },
         naturalgreen: {
-          950: '#132A1F',
-          900: '#1B3B2B',
-          850: '#214634',
-          800: '#28523E',
-          700: '#34664D',
-          600: '#437D60',
-          500: '#589676',
+          950: '#0B1120',
+          900: '#0F172A',
+          850: '#172033',
+          800: '#1E293B',
+          700: '#334155',
+          600: '#475569',
+          500: '#64748B',
         },
       },
-      // Harmonised editorial type scale (fluid, ratio ~1.25 → 1.333 across viewports)
+      // High-visibility, generous editorial type scale across all viewports
       fontSize: {
-        '2xs': ['0.6875rem', { lineHeight: '1rem', letterSpacing: '0.04em' }],
-        'display-1': ['clamp(2.5rem, 1.55rem + 3.8vw, 5rem)', { lineHeight: '1.02', letterSpacing: '-0.025em' }],
-        'display-2': ['clamp(2rem, 1.45rem + 2.2vw, 3.5rem)', { lineHeight: '1.08', letterSpacing: '-0.02em' }],
-        'display-3': ['clamp(1.5rem, 1.25rem + 1vw, 2.125rem)', { lineHeight: '1.18', letterSpacing: '-0.01em' }],
-        'display-4': ['clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem)', { lineHeight: '1.25' }],
-        lead: ['clamp(1.0625rem, 1rem + 0.3vw, 1.25rem)', { lineHeight: '1.65' }],
+        '2xs': ['0.8125rem', { lineHeight: '1.25rem', letterSpacing: '0.03em' }],
+        xs: ['0.875rem', { lineHeight: '1.4rem' }],
+        sm: ['1rem', { lineHeight: '1.6rem' }],
+        base: ['1.125rem', { lineHeight: '1.75rem' }],
+        lg: ['1.25rem', { lineHeight: '1.8rem' }],
+        xl: ['1.375rem', { lineHeight: '1.85rem' }],
+        '2xl': ['1.625rem', { lineHeight: '2.1rem' }],
+        '3xl': ['2rem', { lineHeight: '2.4rem' }],
+        '4xl': ['2.5rem', { lineHeight: '2.85rem' }],
+        'display-1': ['clamp(2.65rem, 1.85rem + 3.5vw, 5rem)', { lineHeight: '1.08', letterSpacing: '-0.02em' }],
+        'display-2': ['clamp(2.15rem, 1.6rem + 2.2vw, 3.6rem)', { lineHeight: '1.12', letterSpacing: '-0.015em' }],
+        'display-3': ['clamp(1.65rem, 1.35rem + 1.1vw, 2.35rem)', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
+        'display-4': ['clamp(1.35rem, 1.2rem + 0.5vw, 1.7rem)', { lineHeight: '1.3' }],
+        lead: ['clamp(1.1875rem, 1.08rem + 0.35vw, 1.375rem)', { lineHeight: '1.7' }],
       },
       fontFamily: {
         sans: ['var(--font-sans)', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-        display: ['var(--font-display)', 'Georgia', 'serif'],
+        display: ['var(--font-sans)', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
         mono: ['var(--font-mono)', 'monospace'],
       },
       letterSpacing: {

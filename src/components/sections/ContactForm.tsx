@@ -43,20 +43,20 @@ export function ContactForm({ preselectedPillarId }: ContactFormProps) {
       {!submitted ? (
         <form
           onSubmit={handleSubmit}
-          className="bg-charcoal-900 border border-charcoal-700/80 rounded-sm p-6 sm:p-10 shadow-elevated-dark relative"
+          className="bg-charcoal-900 border-2 border-charcoal-700 rounded-sm p-6 sm:p-10 shadow-elevated-dark relative"
         >
           <div className="mb-8 pb-6 border-b border-charcoal-800">
-            <h3 className="font-display text-2xl sm:text-3xl font-semibold text-ivory-50 mb-2">
+            <h3 className="font-display text-2xl sm:text-3xl font-extrabold text-white mb-2">
               Request a Hospitality Support Assessment
             </h3>
-            <p className="text-sm text-ivory-300">
+            <p className="text-base font-medium text-ivory-100">
               Submit your venue specifications. Our team will review your requirements and coordinate a tailored diagnostic assessment and solution proposal.
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-6">
             <div>
-              <label className="block text-xs font-mono uppercase text-ivory-300 mb-2">
+              <label className="block text-xs sm:text-sm font-mono font-bold uppercase text-white mb-2">
                 Executive / Director Name *
               </label>
               <input
@@ -65,18 +65,18 @@ export function ContactForm({ preselectedPillarId }: ContactFormProps) {
                 value={formData.fullName}
                 onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                 placeholder="e.g. David van der Merwe"
-                className="w-full bg-charcoal-950 border border-charcoal-700 rounded-sm px-4 py-3 text-sm text-ivory-100 placeholder:text-charcoal-500 focus:outline-none focus:border-bronze-400 focus:ring-1 focus:ring-bronze-400"
+                className="w-full bg-charcoal-950 border-2 border-charcoal-700 rounded-sm px-4 py-3 text-base text-white placeholder:text-ivory-400/70 focus:outline-none focus:border-bronze-400 focus:ring-1 focus:ring-bronze-400"
               />
             </div>
 
             <div>
-              <label className="block text-xs font-mono uppercase text-ivory-300 mb-2">
+              <label className="block text-xs sm:text-sm font-mono font-bold uppercase text-white mb-2">
                 Role / Title
               </label>
               <select
                 value={formData.role}
                 onChange={(e) => setFormData({ ...formData, role: e.target.value })}
-                className="w-full bg-charcoal-950 border border-charcoal-700 rounded-sm px-4 py-3 text-sm text-ivory-100 focus:outline-none focus:border-bronze-400"
+                className="w-full bg-charcoal-950 border-2 border-charcoal-700 rounded-sm px-4 py-3 text-base text-white focus:outline-none focus:border-bronze-400"
               >
                 <option value="General Manager">General Manager</option>
                 <option value="Executive Chef / Culinary Director">Executive Chef / Culinary Director</option>
@@ -87,7 +87,7 @@ export function ContactForm({ preselectedPillarId }: ContactFormProps) {
             </div>
 
             <div>
-              <label className="block text-xs font-mono uppercase text-ivory-300 mb-2">
+              <label className="block text-xs sm:text-sm font-mono font-bold uppercase text-white mb-2">
                 Venue or Restaurant Name *
               </label>
               <input
@@ -96,18 +96,18 @@ export function ContactForm({ preselectedPillarId }: ContactFormProps) {
                 value={formData.venueName}
                 onChange={(e) => setFormData({ ...formData, venueName: e.target.value })}
                 placeholder="e.g. Marble Restaurant"
-                className="w-full bg-charcoal-950 border border-charcoal-700 rounded-sm px-4 py-3 text-sm text-ivory-100 placeholder:text-charcoal-500 focus:outline-none focus:border-bronze-400 focus:ring-1 focus:ring-bronze-400"
+                className="w-full bg-charcoal-950 border-2 border-charcoal-700 rounded-sm px-4 py-3 text-base text-white placeholder:text-ivory-400/70 focus:outline-none focus:border-bronze-400 focus:ring-1 focus:ring-bronze-400"
               />
             </div>
 
             <div>
-              <label className="block text-xs font-mono uppercase text-ivory-300 mb-2">
+              <label className="block text-xs sm:text-sm font-mono font-bold uppercase text-white mb-2">
                 City / Region
               </label>
               <select
                 value={formData.city}
                 onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                className="w-full bg-charcoal-950 border border-charcoal-700 rounded-sm px-4 py-3 text-sm text-ivory-100 focus:outline-none focus:border-bronze-400"
+                className="w-full bg-charcoal-950 border-2 border-charcoal-700 rounded-sm px-4 py-3 text-base text-white focus:outline-none focus:border-bronze-400"
               >
                 <option value="Johannesburg / Sandton">Johannesburg & Sandton</option>
                 <option value="Cape Town / Atlantic Seaboard">Cape Town & Atlantic Seaboard</option>
@@ -119,7 +119,7 @@ export function ContactForm({ preselectedPillarId }: ContactFormProps) {
             </div>
 
             <div>
-              <label className="block text-xs font-mono uppercase text-ivory-300 mb-2">
+              <label className="block text-xs sm:text-sm font-mono font-bold uppercase text-white mb-2">
                 Direct Contact Phone / WhatsApp *
               </label>
               <input
@@ -128,12 +128,12 @@ export function ContactForm({ preselectedPillarId }: ContactFormProps) {
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                 placeholder="+27 (0) 82 000 0000"
-                className="w-full bg-charcoal-950 border border-charcoal-700 rounded-sm px-4 py-3 text-sm text-ivory-100 placeholder:text-charcoal-500 focus:outline-none focus:border-bronze-400 focus:ring-1 focus:ring-bronze-400"
+                className="w-full bg-charcoal-950 border-2 border-charcoal-700 rounded-sm px-4 py-3 text-base text-white placeholder:text-ivory-400/70 focus:outline-none focus:border-bronze-400 focus:ring-1 focus:ring-bronze-400"
               />
             </div>
 
             <div>
-              <label className="block text-xs font-mono uppercase text-ivory-300 mb-2">
+              <label className="block text-xs sm:text-sm font-mono font-bold uppercase text-white mb-2">
                 Official Business Email *
               </label>
               <input
@@ -142,7 +142,7 @@ export function ContactForm({ preselectedPillarId }: ContactFormProps) {
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 placeholder="gm@restaurant.co.za"
-                className="w-full bg-charcoal-950 border border-charcoal-700 rounded-sm px-4 py-3 text-sm text-ivory-100 placeholder:text-charcoal-500 focus:outline-none focus:border-bronze-400 focus:ring-1 focus:ring-bronze-400"
+                className="w-full bg-charcoal-950 border-2 border-charcoal-700 rounded-sm px-4 py-3 text-base text-white placeholder:text-ivory-400/70 focus:outline-none focus:border-bronze-400 focus:ring-1 focus:ring-bronze-400"
               />
             </div>
           </div>
@@ -150,13 +150,13 @@ export function ContactForm({ preselectedPillarId }: ContactFormProps) {
           {/* Primary Pillar selector & Urgency */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-6">
             <div>
-              <label className="block text-xs font-mono uppercase text-ivory-300 mb-2">
+              <label className="block text-xs sm:text-sm font-mono font-bold uppercase text-white mb-2">
                 Primary Pillar of Interest
               </label>
               <select
                 value={formData.pillar}
                 onChange={(e) => setFormData({ ...formData, pillar: e.target.value })}
-                className="w-full bg-charcoal-950 border border-charcoal-700 rounded-sm px-4 py-3 text-sm text-ivory-100 focus:outline-none focus:border-bronze-400"
+                className="w-full bg-charcoal-950 border-2 border-charcoal-700 rounded-sm px-4 py-3 text-base text-white focus:outline-none focus:border-bronze-400"
               >
                 {SERVICE_PILLARS.map((p) => (
                   <option key={p.id} value={p.id}>
@@ -170,13 +170,13 @@ export function ContactForm({ preselectedPillarId }: ContactFormProps) {
             </div>
 
             <div>
-              <label className="block text-xs font-mono uppercase text-ivory-300 mb-2">
+              <label className="block text-xs sm:text-sm font-mono font-bold uppercase text-white mb-2">
                 Deployment Timeline
               </label>
               <select
                 value={formData.urgency}
                 onChange={(e) => setFormData({ ...formData, urgency: e.target.value })}
-                className="w-full bg-charcoal-950 border border-charcoal-700 rounded-sm px-4 py-3 text-sm text-ivory-100 focus:outline-none focus:border-bronze-400"
+                className="w-full bg-charcoal-950 border-2 border-charcoal-700 rounded-sm px-4 py-3 text-base text-white focus:outline-none focus:border-bronze-400"
               >
                 <option value="Immediate Emergency (<24 Hours)">Urgent Support Needed (&lt;24 Hours)</option>
                 <option value="Within 7 Days">Within 7 Days</option>
@@ -188,7 +188,7 @@ export function ContactForm({ preselectedPillarId }: ContactFormProps) {
 
           {/* Details / Brief Textarea */}
           <div className="mb-6">
-            <label className="block text-xs font-mono uppercase text-ivory-300 mb-2">
+            <label className="block text-xs sm:text-sm font-mono font-bold uppercase text-white mb-2">
               Specific Requirements or Current Venue Issues
             </label>
             <textarea
@@ -196,21 +196,21 @@ export function ContactForm({ preselectedPillarId }: ContactFormProps) {
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               placeholder="e.g. We have 32 solid oak tables that need stripping and hardwax oil sealing before the summer season. We would like to schedule phased batch restoration around our trading hours..."
-              className="w-full bg-charcoal-950 border border-charcoal-700 rounded-sm p-4 text-sm text-ivory-100 placeholder:text-charcoal-500 focus:outline-none focus:border-bronze-400 focus:ring-1 focus:ring-bronze-400 resize-none"
+              className="w-full bg-charcoal-950 border-2 border-charcoal-700 rounded-sm p-4 text-base text-white placeholder:text-ivory-400/70 focus:outline-none focus:border-bronze-400 focus:ring-1 focus:ring-bronze-400 resize-none"
             />
           </div>
 
           {/* Scheduled coordination checkbox */}
-          <div className="mb-8 p-4 rounded-sm bg-charcoal-950 border border-charcoal-800 flex items-start gap-3">
+          <div className="mb-8 p-4 rounded-sm bg-charcoal-950 border-2 border-charcoal-800 flex items-start gap-3">
             <input
               type="checkbox"
               id="schedule-check"
               checked={formData.requiresPhasedSchedule}
               onChange={(e) => setFormData({ ...formData, requiresPhasedSchedule: e.target.checked })}
-              className="mt-1 accent-bronze-500 w-4 h-4 cursor-pointer"
+              className="mt-1 accent-bronze-400 w-5 h-5 cursor-pointer"
             />
-            <label htmlFor="schedule-check" className="text-xs text-ivory-200 cursor-pointer">
-              <span className="font-semibold text-ivory-50 block">
+            <label htmlFor="schedule-check" className="text-sm text-ivory-100 cursor-pointer">
+              <span className="font-bold text-white block mb-0.5">
                 Phased Daytime & Scheduled Maintenance Window Coordination
               </span>
               Coordinate installations, servicing, or batch workshop collections around our quieter daytime slots and planned maintenance schedule.
@@ -221,44 +221,44 @@ export function ContactForm({ preselectedPillarId }: ContactFormProps) {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full sm:w-auto py-4 px-8 rounded-sm bg-bronze-500 text-charcoal-950 font-semibold text-xs uppercase tracking-wider hover:bg-bronze-400 transition-colors flex items-center justify-center gap-2.5 shadow-subtle-dark hover:shadow-bronze-glow"
+              className="w-full sm:w-auto py-4 px-8 rounded-sm bg-bronze-400 text-charcoal-950 font-extrabold text-sm uppercase tracking-wider hover:bg-bronze-300 transition-colors flex items-center justify-center gap-2.5 shadow-subtle-dark hover:shadow-bronze-glow"
             >
               <Send className="w-4 h-4" />
               <span>{isSubmitting ? 'Transmitting Request...' : 'Submit Assessment Request'}</span>
             </button>
 
-            <span className="text-xs text-ivory-400 flex items-center gap-1.5">
+            <span className="text-xs sm:text-sm font-medium text-ivory-200 flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-bronze-400" />
               Non-disclosure & operator confidentiality assured
             </span>
           </div>
         </form>
       ) : (
-        <div className="bg-charcoal-900 border border-emerald-500/50 rounded-sm p-8 sm:p-12 text-center shadow-elevated-dark animate-fade-in">
+        <div className="bg-charcoal-900 border-2 border-emerald-500/60 rounded-sm p-8 sm:p-12 text-center shadow-elevated-dark animate-fade-in">
           <div className="w-14 h-14 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto mb-5">
             <CheckCircle2 className="w-8 h-8" />
           </div>
 
-          <h3 className="font-display text-3xl font-semibold text-ivory-50 mb-3">
+          <h3 className="font-display text-3xl font-extrabold text-white mb-3">
             Assessment Request Received
           </h3>
 
-          <p className="text-base text-ivory-200 max-w-lg mx-auto mb-6 leading-relaxed">
+          <p className="text-base sm:text-lg font-medium text-ivory-100 max-w-lg mx-auto mb-6 leading-relaxed">
             Thank you, {formData.fullName}. Your assessment inquiry for <strong className="text-bronze-300">{formData.venueName}</strong> has been received by our support team. We will contact you promptly to review priority recommendations.
           </p>
 
-          <div className="p-4 rounded-sm bg-charcoal-950 border border-charcoal-800 max-w-md mx-auto text-left text-xs text-ivory-300 space-y-2 mb-8">
+          <div className="p-5 rounded-sm bg-charcoal-950 border border-charcoal-700 max-w-md mx-auto text-left text-sm text-ivory-100 space-y-2 mb-8">
             <div className="flex justify-between">
-              <span className="text-ivory-400">Pillar:</span>
-              <span className="font-mono text-bronze-300 uppercase">{formData.pillar}</span>
+              <span className="text-ivory-300 font-semibold">Pillar:</span>
+              <span className="font-mono font-bold text-bronze-300 uppercase">{formData.pillar}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-ivory-400">Target Region:</span>
-              <span>{formData.city}</span>
+              <span className="text-ivory-300 font-semibold">Target Region:</span>
+              <span className="font-semibold text-white">{formData.city}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-ivory-400">Target Protocol:</span>
-              <span>{formData.requiresPhasedSchedule ? 'Phased Daytime & Scheduled Maintenance' : 'Standard Consultation'}</span>
+              <span className="text-ivory-300 font-semibold">Target Protocol:</span>
+              <span className="font-semibold text-white">{formData.requiresPhasedSchedule ? 'Phased Daytime & Scheduled Maintenance' : 'Standard Consultation'}</span>
             </div>
           </div>
 
@@ -266,7 +266,7 @@ export function ContactForm({ preselectedPillarId }: ContactFormProps) {
             <button
               type="button"
               onClick={() => setSubmitted(false)}
-              className="text-xs uppercase tracking-wider font-semibold py-3 px-6 rounded-sm border border-charcoal-700 text-ivory-300 hover:text-ivory-50 hover:bg-charcoal-800 transition-colors"
+              className="text-sm uppercase tracking-wider font-bold py-3.5 px-6 rounded-sm border-2 border-charcoal-700 text-white hover:text-bronze-300 hover:bg-charcoal-800 transition-colors"
             >
               Submit Another Commission
             </button>
@@ -275,7 +275,7 @@ export function ContactForm({ preselectedPillarId }: ContactFormProps) {
               href="https://wa.me/27834328394?text=Hello%20AfriSMME%20Hospitality%20Support,%20I%20have%20submitted%20a%20support%20request."
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs uppercase tracking-wider font-semibold py-3 px-6 rounded-sm bg-emerald-600 text-ivory-50 hover:bg-emerald-500 transition-colors inline-flex items-center gap-2"
+              className="text-sm uppercase tracking-wider font-bold py-3.5 px-6 rounded-sm bg-emerald-600 text-white hover:bg-emerald-500 transition-colors inline-flex items-center gap-2"
             >
               <MessageSquare className="w-4 h-4" />
               <span>Connect via WhatsApp Hotline</span>
